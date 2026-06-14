@@ -1,0 +1,10 @@
+# Raw source snapshots: ~1.1 GB, redownloadable, hashes recorded in the run summaries.
+data/raw/
+data/external/mavedb/
+
+# Derived score extracts are rebuilt by the project scripts.
+data/processed/gate0/*.npz
+
+# data/processed/gate0/blinded_flank_events.csv is deliberately NOT ignored.
+# It carries no clinical label and is the frozen input the preregistration refers to.
+snapshots/
