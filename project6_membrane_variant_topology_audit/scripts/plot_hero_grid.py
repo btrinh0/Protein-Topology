@@ -1,4 +1,4 @@
-"""Hero figure: evolution's footprint, two predictors, and a slot for the lab data.
+"""Hero figure: evolution's footprint, two predictors, and the lab data.
 
 Rows are sources of evidence, columns are the two positive-charge rules. Every
 predictor curve is divided by that model's own spread of within-site penalties,
@@ -10,7 +10,7 @@ units. In the gain column it is drawn sign-flipped, because the rule's predictio
 flips: positive residues are depleted from outer flanks, so *adding* one there is
 the costly direction.
 
-The fourth row is deliberately empty until Phase C runs.
+The fourth row uses the finalized Phase C summary and reports its sample sizes.
 """
 
 from __future__ import annotations
@@ -101,16 +101,24 @@ def run(args: argparse.Namespace) -> Path:
         figure.text(0.012, (box.y0 + box.y1) / 2, title, color=TEXT_PRIMARY,
                     fontsize=11, fontweight="700", ha="left", va="center")
 
-    for column, note in enumerate(("awaiting Phase C", "awaiting Phase C")):
+    lab = json.loads((ROOT / "results" / "phase_c_20260928"
+                      / "lab_row_for_hero.json").read_text(encoding="utf-8"))
+    lab_n = {"loss": [62, 44, 16, 29, 36], "gain": [292, 179, 112, 234, 305]}
+    for column, key in enumerate(("loss", "gain")):
         ax = axes[3][column]
         style(ax, "standardised\nside difference" if column == 0 else None, show_x=True)
-        ax.set_ylim(-1, 1)
-        ax.text(0.5, 0.5, note, transform=ax.transAxes, ha="center", va="center",
-                color=PENDING, fontsize=12, fontweight="600", style="italic")
+        draw(ax, lab[key], LOSS if key == "loss" else GAIN, "K/R " + key)
+        for x, (value, n) in enumerate(zip(lab[key], lab_n[key])):
+            ax.annotate(f"n={n}", (x, value), textcoords="offset points",
+                        xytext=(0, -14), ha="center", color=TEXT_MUTED, fontsize=6.5)
         ax.set_xlabel("residues from the transmembrane boundary",
                       color=TEXT_SECONDARY, fontsize=8.5)
+    axes[3][1].text(0.03, 0.04,
+                    "UNINFORMATIVE\nprimary ≤10: −0.085, 95% CI [−0.41, +0.17], p = 0.61",
+                    transform=axes[3][1].transAxes, color="#b03a2e", fontsize=7.5,
+                    fontweight="700", va="bottom")
     box = axes[3][0].get_position()
-    figure.text(0.012, (box.y0 + box.y1) / 2, "Lab data", color=PENDING,
+    figure.text(0.012, (box.y0 + box.y1) / 2, "Lab data\n(10 proteins)", color=TEXT_PRIMARY,
                 fontsize=11, fontweight="700", ha="left", va="center")
 
     for column, heading, prediction in (
