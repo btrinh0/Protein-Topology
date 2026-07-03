@@ -87,7 +87,8 @@ def candidates_for(sequence: str, index: dict[str, set[str]], top: int = 5) -> l
 def align_to_census(target: str, census: str, aligner: Align.PairwiseAligner):
     alignment = aligner.align(target, census)[0]
     target_aligned, census_aligned = alignment[0], alignment[1]
-    mapping: dict[int, int] = {}      # census position -> target position, identical only
+    # Only identical residues can transfer a census position to the target.
+    mapping: dict[int, int] = {}
     target_pos = census_pos = 0
     identical = compared = 0
     gap_census: set[int] = set()
