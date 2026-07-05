@@ -1,9 +1,8 @@
-"""Fix F3, second half: simulate the design Phase C actually realized, using the analysis engine.
+"""Simulate Phase C using the realized design and shared analysis engine.
 
-The earlier simulation used the planned design (16 genes, 1,183 sites) and its own
-private estimator. This uses the realized stratum structure — the actual per-(gene,
-reference residue) cell sizes from the corrected run — and calls the same functions
-the analysis calls, so size and power describe the procedure that produced the result.
+Uses the observed per-(gene, reference residue) cell sizes from the corrected run.
+The analysis and simulation share the estimator implementation so the reported
+size and power apply to the fitted procedure.
 """
 
 from __future__ import annotations
