@@ -1,24 +1,18 @@
-"""Phase C blind-spot test: lab minus predictor on identical variants.
+"""Compare lab and predictor side effects on identical variants.
 
-Required by the frozen preregistration section 7. The headline claim is about a
-*difference between two measurements*, so it is tested as one: the same within-site
-estimator is run on the lab scores and on each predictor, restricted to exactly the
-same (protein, position, substitution) set, and the two are resampled in the SAME
-bootstrap draw so their correlation is preserved.
+Implements section 7 of the frozen preregistration. The same within-site estimator
+is applied to lab scores and each predictor on a shared set of protein, position,
+and substitution tuples. Each bootstrap draw resamples both measurements together
+to preserve their correlation.
 
-Both sides are standardised by their own within-site penalty spread before
-differencing, because the lab scores, AlphaMissense and ESM1b are on three
-different scales.
-
-ESM1b is the positive control, with a prediction of no difference from the lab.
+Each source is standardized by its within-site penalty spread before differencing.
+ESM1b is the positive control.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
-import math
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -26,7 +20,7 @@ from pathlib import Path
 import numpy as np
 
 from run_gate0 import load_frame
-from run_phase_c import (CHARGED, NEGATIVE, POSITIVE, PRIMARY_WINDOW, SCORE_SETS,
+from run_phase_c import (POSITIVE, PRIMARY_WINDOW, SCORE_SETS,
                          WEBB, assemble, site_penalties)
 
 ROOT = Path(__file__).resolve().parents[1]

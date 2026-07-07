@@ -1,20 +1,17 @@
-"""Phase C, rerun under the frozen correction plan.
+"""Run Phase C under the frozen correction plan.
 
 Correction plan: docs/PHASE_C_CORRECTION_PLAN.md
 SHA-256 c74e03ec741bcd08c4062e6a282db972e145d486b4e54540c4295d0a331dca41
 frozen before any corrected number was computed.
 
 Protocol unchanged: docs/PHASE_C_PREREGISTRATION.md, SHA-256 754a9a71...
-This repairs the engine, not the protocol.
-
-F1 matched substitutions · F2 weights through inference · F3 shared estimator
-F4 interval by test inversion · F5 honest contributing counts
+Implements matched substitutions, consistent inference weights, a shared analysis
+and simulation estimator, test-inversion intervals, and contributing-site counts.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -26,7 +23,7 @@ from extract_am_flank_scores import build_flank_map
 from phase_c_engine import build_strata, fit, statistic, wild_interval, wild_p_value
 from run_gate0 import load_frame
 from run_gate1 import read_topology
-from run_phase_c import (CHARGED, CROSS_SPECIES, GPCR_FAMILY, NEGATIVE, POSITIVE,
+from run_phase_c import (CROSS_SPECIES, GPCR_FAMILY, NEGATIVE, POSITIVE,
                          PRIMARY_WINDOW, SCORE_SETS, classify, direction_for,
                          score_rows, site_penalties)
 from run_within_site_controls import load_pore_spans, sequon_positions
