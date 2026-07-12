@@ -31,7 +31,7 @@ import pandas as pd
 
 from run_gate0 import load_frame
 from run_gate0_within_site import site_penalties
-from verify_estimator import bootstrap_interval, simulate, stratified_estimate
+from verify_estimator import bootstrap_interval, simulate
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SCORES = ROOT / "data" / "processed" / "gate0" / "am_full_flank_scores.npz"
