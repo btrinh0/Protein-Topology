@@ -1,20 +1,13 @@
-"""Verification of the primary estimator: independent implementation plus simulation.
+"""Verify the primary estimator with an independent implementation and simulation.
 
-Two checks that use no outcome data of any kind.
+The independent implementation uses fixed-effects least squares rather than the
+production stratified weighted mean. The two algebraically equivalent estimates
+must agree without sharing estimator code.
 
-1. **Independent implementation.** The primary estimator is a stratified weighted
-   mean difference with weights n1*n0/(n1+n0). This recomputes it by a different
-   algorithm — a within-stratum (fixed-effects) least-squares regression of the
-   penalty on the side indicator — and requires the two to agree. The two routes
-   share no code beyond loading the data. They are algebraically equivalent, so
-   any disagreement is a bug in one of them.
-
-2. **Simulation on the real design.** The real sites, sides, strata, proteins and
-   distances are kept exactly as they are; only the outcome is replaced by
-   simulated values with a known planted effect. This measures whether the
-   estimator is unbiased and whether the protein-clustered bootstrap interval
-   actually covers at 95% under this design's clustering — which a dozen large
-   proteins could easily break.
+The simulation preserves the observed sites, sides, strata, proteins, and
+distances while replacing outcomes with values generated from a known effect. It
+checks estimator bias and protein-clustered interval coverage. No measured outcome
+is used.
 """
 
 from __future__ import annotations
@@ -107,7 +100,6 @@ def run(args: argparse.Namespace) -> dict:
     sites = site_penalties(frame, set("KR"))
     sites = sites[sites["distance"] <= PRIMARY_WINDOW].reset_index(drop=True)
 
-    # --- Check 1: two implementations on the real AlphaMissense penalties ---
     stratified = stratified_estimate(sites, "penalty")
     fixed_effects = fixed_effects_estimate(sites, "penalty")
     agreement = {
@@ -118,7 +110,6 @@ def run(args: argparse.Namespace) -> dict:
         "n_sites": int(len(sites)),
     }
 
-    # --- Check 2: simulation on the real design ---
     scenarios = {
         "null_no_effect": {"effect": 0.0, "decay_lambda": None},
         "flat_effect_0.05": {"effect": 0.05, "decay_lambda": None},
