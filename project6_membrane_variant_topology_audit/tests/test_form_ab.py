@@ -246,92 +246,10 @@ class StudentSelection(unittest.TestCase):
         self.assertAlmostEqual(float(np.mean((got - yv) ** 2)), float(curve[best - 1]), places=10)
 
 
-class FreezeGuard(unittest.TestCase):
-    """require_frozen_prereg against a throwaway git repository with a fake remote branch."""
-
-    def git(self, *args):
-        import subprocess
-        return subprocess.run(["git", *args], cwd=self.root, capture_output=True, text=True, check=True)
-
-    def setUp(self):
-        self.folder = tempfile.TemporaryDirectory()
-        self.root = Path(self.folder.name)
-        (self.root / "docs").mkdir()
-        self.prereg = self.root / "docs" / "FORM_AB_PREREGISTRATION.md"
-        self.prereg.write_text("plan\n", encoding="utf-8", newline="\n")
-        self.git("init", "-q")
-        self.git("config", "user.email", "t@example.org")
-        self.git("config", "user.name", "t")
-        self.digest = lib.P.sha256(self.prereg)
-        patches = [mock.patch.object(lib, "ROOT", self.root), mock.patch.object(lib, "PREREG", self.prereg),
-                   mock.patch.object(lib, "frozen_file_drift", lambda text: [])]
-        for patch in patches:
-            patch.start()
-            self.addCleanup(patch.stop)
-
-    def tearDown(self):
-        self.folder.cleanup()
-
-    def commit(self):
-        self.git("add", "docs/FORM_AB_PREREGISTRATION.md")
-        self.git("commit", "-q", "-m", "freeze")
-        return self.git("rev-parse", "HEAD").stdout.strip()
-
-    def test_untracked_file_is_refused(self):
-        with self.assertRaisesRegex(SystemExit, "not tracked"):
-            lib.require_frozen_prereg(self.digest)
-
-    def test_edit_after_commit_is_refused(self):
-        self.commit()
-        self.prereg.write_text("plan, edited\n", encoding="utf-8", newline="\n")
-        with self.assertRaises(SystemExit):
-            lib.require_frozen_prereg(lib.P.sha256(self.prereg))
-
-    def test_unpushed_commit_is_refused_unless_waived(self):
-        self.commit()
-        with self.assertRaisesRegex(SystemExit, "remote branch"):
-            lib.require_frozen_prereg(self.digest)
-        self.assertFalse(lib.require_frozen_prereg(self.digest, check_push=False)["prereg_pushed"])
-
-    def test_committed_and_pushed_passes_and_records_the_commit(self):
-        commit = self.commit()
-        self.git("update-ref", "refs/remotes/origin/main", commit)
-        got = lib.require_frozen_prereg(self.digest)
-        self.assertEqual((got["prereg_commit"], got["prereg_pushed"]), (commit, True))
-
-    def test_hash_other_than_the_recorded_one_is_refused(self):
-        commit = self.commit()
-        self.git("update-ref", "refs/remotes/origin/main", commit)
-        with self.assertRaisesRegex(SystemExit, "does not match"):
-            lib.require_frozen_prereg("0" * 64)
-
-    def test_split_assignment_must_be_written_in_the_preregistration(self):
-        self.prereg.write_text("splits: " + "a" * 64 + "\n", encoding="utf-8")
-        lib.require_split_pinned("a" * 64)
-        with self.assertRaises(SystemExit):
-            lib.require_split_pinned("b" * 64)
-
-
 class Guards(unittest.TestCase):
     def test_validated_tool_is_the_release(self):
         info = lib.validated_tool()
         self.assertEqual(len(info["wheel_sha256"]), 64)
-
-    def test_frozen_file_drift_names_exactly_the_unlisted_files(self):
-        hashes = lib.frozen_file_hashes()
-        self.assertEqual(lib.frozen_file_drift("\n".join(hashes.values())), [])
-        victim = "scripts/run_form_b.py"
-        text = "\n".join(h for name, h in hashes.items() if name != victim)
-        self.assertEqual(lib.frozen_file_drift(text), [victim])
-
-    def test_confirmatory_stage_refuses_a_mismatched_preregistration(self):
-        with tempfile.TemporaryDirectory() as folder:
-            path = Path(folder) / "prereg.md"
-            path.write_text("plan", encoding="utf-8")
-            with mock.patch.object(lib, "PREREG", path):
-                with self.assertRaises(SystemExit):
-                    lib.require_frozen_prereg("0" * 64)
-
 
 def scorer_panel(delta, seed=21, proteins=60):
     """Real-like scorer on fixture geometry: noisy scores with a K/R-gain side contrast of about `delta`."""

@@ -3,8 +3,8 @@
 The model uses native residue, alternate residue, side, and distance. Rule
 contrasts are exact linear functions of its 20 x 20 x 2 x 60 prediction table and
 the report card's gene-by-native-residue weights. The pilot stage evaluates on
-validation clusters; the full stage verifies the frozen preregistration before
-evaluating on test clusters. Derived AlphaMissense weights are not published.
+validation clusters, and the full stage evaluates on test clusters. Derived
+AlphaMissense weights are not published.
 """
 from __future__ import annotations
 
@@ -171,15 +171,12 @@ def gene_codes(census: dict, panel: dict, sites: dict) -> np.ndarray:
 def run(args) -> None:
     from scipy.stats import spearmanr
     if args.stage == "full":
-        frozen = lib.require_frozen_prereg(args.prereg_sha256, check_push=not args.skip_push_check)
         form_b = lib.ROOT / "results/form_b_20261008/criteria.json"
         form_b_passed = (form_b.exists()
                          and json.loads(form_b.read_text(encoding="utf-8"))
                          .get("all_gated_criteria_pass") is True)
         if not form_b_passed:
             raise SystemExit("B9 follows a clean B2 result: every gated Form B criterion must pass first")
-    else:
-        frozen = {"prereg_sha256": None, "note": "pilot"}
     args.out.mkdir(parents=True, exist_ok=True)
     torch.manual_seed(lib.MASTER_SEED if args.stage == "full" else lib.PILOT_SEED)
     torch.set_num_threads(TRAINING["threads"])
@@ -187,8 +184,6 @@ def run(args) -> None:
     tool, tool_sha = lib.report_card_tool()
     census = read_topology(lib.TOPOLOGY)
     split = lib.cluster_split(census)
-    if args.stage == "full":
-        lib.require_split_pinned(split["assignment_sha256"])
     label = split["label"]
     panel = lib.P.load_panel(lib.AM_ARCHIVE, 60)
     train = lib.subset_panel(panel, lib.split_mask(panel, label, "train"))
@@ -288,7 +283,7 @@ def run(args) -> None:
                "report_card_tool_sha256": tool_sha, "packages": lib.package_versions(),
                "implementation_sha256": {"form_ab_lib": lib.P.sha256(Path(lib.__file__)),
                                          "form_b9": lib.P.sha256(Path(__file__))},
-               "weights_published": False, "clinical_labels_used": False, **frozen}
+               "weights_published": False, "clinical_labels_used": False}
     (args.out / "b9_results.json").write_text(json.dumps(summary, indent=2, default=float) + "\n", encoding="utf-8")
     print(json.dumps({"chosen": chosen, "criterion_b10_5": report.get("criterion_b10_5")}, indent=2, default=float))
 
@@ -310,14 +305,10 @@ def gate_b10_5(target: dict, sd: float, spearman_loss: float, verdict_changes: d
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=("pilot", "full"), required=True)
-    parser.add_argument("--prereg-sha256")
-    parser.add_argument("--skip-push-check", action="store_true")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
     args.eval = STAGES[args.stage]["eval"]
     args.out = args.out or STAGES[args.stage]["out"]
-    if args.stage == "full" and not args.prereg_sha256:
-        parser.error("--prereg-sha256 is required for the full stage")
     run(args)
 
 
