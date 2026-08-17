@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "membrane-rule-audit"
+version = "0.1.0"
+description = "Audit biological patterns in protein variant scores"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23"]
+
+[project.urls]
+Repository = "https://github.com/btrinh0/Protein-Topology"
+Documentation = "https://github.com/btrinh0/Protein-Topology/blob/main/project6_membrane_variant_topology_audit/tools/README.md"
+
+[project.scripts]
+membrane-rule-audit = "membrane_rule_audit.audit:main"
+membrane-rule-panel = "membrane_rule_audit.panel:main"
+disulfide-rule-audit = "membrane_rule_audit.disulfide:main"
+proline-rule-audit = "membrane_rule_audit.proline:main"
+multi-rule-refine = "membrane_rule_audit.refinement:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["membrane_rule_audit*"]
