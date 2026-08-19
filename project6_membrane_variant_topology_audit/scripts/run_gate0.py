@@ -1,31 +1,4 @@
-"""Gate 0: does AlphaMissense itself encode the positive-inside rule?
-
-Label-free. This script never reads ClinVar. It asks whether AlphaMissense scores
-the *same* amino-acid substitution in the *same* protein differently depending on
-which side of the membrane the flank faces.
-
-Side difference (per substitution class, per scope):
-  Stratify by (protein, exact substitution). Keep strata with at least one scored
-  variant on each side. Within a stratum take the cytosolic-minus-outer difference
-  in AlphaMissense pathogenicity, then combine strata with efficient weights
-  n_cyto*n_outer/(n_cyto+n_outer). Also report the stratified rank statistic
-  P(cytosolic score > outer score), which assumes no scale.
-
-  Positive = AlphaMissense calls the substitution more damaging on the cytosolic side.
-
-A raw side difference is not evidence for the positive-inside rule on its own: if
-cytosolic flanks are simply more constrained, every substitution class shifts the
-same way. The rule makes a *directional* prediction, so the primary quantities are
-differences in differences:
-
-  positive_loss_minus_gain     losing K/R should hurt more inside while gaining K/R
-                               should hurt more outside, so the contrast is signed
-                               and cancels any side baseline shared by all classes.
-  positive_loss_minus_placebo  excess over substitutions that change no charge.
-
-Uncertainty is a protein-clustered bootstrap. Every class in a scope is resampled
-under the same protein draw, so contrasts keep the correlation between classes.
-"""
+"""Measure AlphaMissense score contrasts across membrane sides and distances."""
 
 from __future__ import annotations
 
@@ -43,7 +16,7 @@ DEFAULT_OUT = ROOT / "results" / "gate0_20260924"
 
 POSITIVE = set("KR")
 NEGATIVE = set("DE")
-# Histidine is only partly protonated at physiological pH.
+# Exclude histidine from fixed charge classes because it is only partly protonated at physiological pH.
 AMBIGUOUS = set("H")
 
 CLASSES = ["positive_charge_loss", "positive_charge_gain", "negative_charge_loss",
@@ -90,7 +63,7 @@ def load_frame(path: Path) -> tuple[pd.DataFrame, dict]:
     })
     qc = {"rows_loaded": int(len(frame))}
 
-    # One genomic SNV per row; two SNVs in a codon can encode the same substitution.
+    # Different nucleotide substitutions can encode the same amino-acid substitution.
     qc["rows_in_duplicate_protein_variants"] = int(
         frame.duplicated(subset=["protein", "position", "alt_aa"], keep=False).sum()
     )
@@ -119,7 +92,7 @@ def stratum_statistics(frame: pd.DataFrame) -> dict[str, np.ndarray]:
     keys = ["protein", "substitution"]
     groups = work.groupby(keys, sort=False)
 
-    # Rank-based U: within-stratum ranks of cytosolic scores, ties averaged.
+    # Compute the within-stratum rank statistic with averaged ties.
     work["rank"] = groups["score"].rank(method="average")
     work["cyto_rank"] = np.where(work["is_cytosolic"], work["rank"], 0.0)
     work["cyto_score"] = np.where(work["is_cytosolic"], work["score"], 0.0)
@@ -239,7 +212,7 @@ def run(args: argparse.Namespace) -> dict:
         results["distance_dose_response"][f"{low}-{high}"] = estimate_block(
             split_classes(subset), n_proteins, args.draws, args.seed)
 
-    # Distance-matched: strata must also share a 5-residue distance bin.
+    # Distance-matched strata also share a five-residue distance bin.
     matched = named[named["distance"] <= PRIMARY_WINDOW].copy()
     matched["substitution"] = (matched["substitution"] + "@"
                                + np.where(matched["distance"].to_numpy() <= 5, "1-5", "6-10"))

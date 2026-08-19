@@ -1,13 +1,4 @@
-"""Complete the ortholog sweep by querying every MaveDB target name.
-
-The score-set search endpoint returns at most 100 results and exposes no paging
-parameter, so the first sweep screened only 100 deposits and found Kir2.1 only by
-direct URN lookup. This queries each of the ~1,157 target gene names in turn,
-caching every response, so the screen covers the whole catalogue.
-
-Applies the ortholog rule frozen in PHASE_B_INCLUSION_RULES_FROZEN.md section 4a.
-Counts only; no measured effect is read.
-"""
+"""Complete the ortholog sweep by querying every MaveDB target name."""
 
 from __future__ import annotations
 

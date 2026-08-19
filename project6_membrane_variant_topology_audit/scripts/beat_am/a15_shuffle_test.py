@@ -1,38 +1,4 @@
-"""A15: composition-preserving shuffle test on the UNRESOLVED homology pairs.
-
-a12 left 9 pairs UNRESOLVED: 30-35% identity over long, compositionally normal
-alignments. They are not low-complexity artifacts, but nor is there positive
-evidence they are homologous. One of them decides a real question:
-
-  G003 chains KCNQ4 --[SUPPORTED]-- KCNQ1 --[UNRESOLVED]-- AMFR
-                                       |--[UNRESOLVED]-- PPM1D
-
-KCNQ4 is the only branch-(b) candidate that adds genuine two-sided K/R-gain
-flank coverage (69 cytosolic / 20 outer), so admitting it is what would give the
-flank claim its missing margin (n=6 -> 7, and the smallest attainable exact p
-0.031 -> 0.016). But admitting it bars every G003 member from fitting, and
-**PPM1D was already fitted in L1**. If the two UNRESOLVED links are chance
-alignments, G003 splits and KCNQ4 becomes nearly free.
-
-The test. For each pair, align, then re-align the same pair 300 times with one
-sequence SHUFFLED, preserving its exact amino-acid composition. Composition is
-the confound -- two proteins rich in the same residues score well by chance --
-so holding composition fixed while destroying order isolates whether the
-observed score reflects shared ancestry or shared composition. The empirical
-p-value is the fraction of shuffles scoring at least the real alignment.
-
-Real homology sits far above its shuffled distribution (p ~ 0). A chance
-alignment sits inside it. The 8 SUPPORTED pairs are included as positive
-controls: if the test does not separate them from the UNRESOLVED ones, the test
-itself is uninformative and nothing should be concluded from it.
-
-Also recorded: whether the pair's curated census families CONFLICT. a12 used
-shared family only as support, never conflicting family as counter-evidence,
-which was a gap -- KCNQ1 is isIonChannel while AMFR is isE3Ligase, and PPM1D is
-not a membrane protein at all.
-
-Sequences only. No outcome label is read. Creates new files only.
-"""
+"""Test unresolved homology pairs with composition-preserving sequence shuffles."""
 
 from __future__ import annotations
 
@@ -75,7 +41,7 @@ def main() -> None:
     rows = []
     for p in pairs:
         if p["verdict"] == "ARTIFACT":
-            continue                      # already settled
+            continue
         a, b = p["accession_a"], p["accession_b"]
         sa, sb = universe[a]["sequence"], universe[b]["sequence"]
 

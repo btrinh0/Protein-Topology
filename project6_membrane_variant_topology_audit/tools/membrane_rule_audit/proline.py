@@ -1,9 +1,4 @@
-"""Conditional Pro-gain audit in independently defined native structural contexts.
-
-Native Pro loss is excluded. A TM-context contrast is not by itself proof of a
-membrane-specific physical mechanism or clinical pathogenicity. Geometry and
-matching are fixed before score access; comparator/scale sensitivity is retained.
-"""
+"""Audit proline-gain scores in independently defined structural contexts."""
 from __future__ import annotations
 import argparse
 from collections import defaultdict

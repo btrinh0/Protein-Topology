@@ -1,28 +1,4 @@
-"""A4: group manifest and homology overlap audit (Section 5 step 2).
-
-One manifest, one split, for every fitted stage. Groups cover protein, gene and
-homologs; all assays of one protein stay together.
-
-Sequences only -- no outcome label is read anywhere in this file. Sequences come
-from two metadata sources: the Oxford census embedded in topology_viewer.html
-(field `sequence`, 4863 membrane proteins) and ProteinGym's reference table
-(field `target_seq`). No assay score file is opened.
-
-Clustering: MMseqs2 is not installed locally, so this falls back to the
-Biopython aligner already used for construct mapping in route_a_common.py --
-same BLOSUM62 matrix and same gap scores -- but in LOCAL mode rather than
-global. Local is the right tool for "do these two share a homologous region",
-and over-grouping is the safe direction for leakage. Recorded in the manifest.
-
-Grouping criterion, from the prompt's overlap audit: any pair at >=30% identity
-over >=50% coverage joins the same group, by single linkage.
-
-Coverage uses min(len_a, len_b) as the denominator. That inflates coverage
-relative to a max() denominator, so more pairs qualify and more merging happens
--- again the safe direction.
-
-Creates new files only.
-"""
+"""Build protein dependence groups and audit overlap between fitting and confirmation sets."""
 
 from __future__ import annotations
 
@@ -47,29 +23,28 @@ MIN_SINGLES_FOR_POOL = 200
 SEED = 20261016
 N_CONFIRM_ALLHUMAN = 20
 
-# Roles fixed by the feasibility analysis and the student's instruction.
-CONFIRM_FLANK = {       # the 6 eligible proteins with substantial flank<=60 coverage
+# Roles are fixed by the outcome-blind feasibility analysis.
+CONFIRM_FLANK = {       # These confirmation candidates have substantial coverage within 60 residues of a boundary.
     "O15245": "S22A1", "P04035": "HMDH", "P07550": "ADRB2",
     "P15391": "CD19", "O15118": "NPC1", "P05067": "A4",
 }
-DEV_NO_FLANK = {        # eligible but no/token flank coverage -> development by default
+DEV_NO_FLANK = {
     "Q9BYF1": "ACE2", "P08581": "MET", "P29323": "EPHB2",
     "P14151": "LYAM1", "P02724": "GLPA", "Q14524": "SCN5A", "P04626": "ERBB2",
 }
-DEV_EXPOSED = {         # outcomes already seen -> training/development only
+DEV_EXPOSED = {         # Previously exposed outcomes are restricted to training and development.
     "P51681": "CCR5", "P11712": "CP2C9", "P15382": "KCNE1", "Q12809": "KCNH2",
     "P08100": "OPSD", "Q9BQB6": "VKOR1", "P31645": "SC6A4",
 }
 DEV_OPENED = {"P51787": "KCNQ1", "P30518": "AVPR2"}
 
-# Branch (b) candidates, admitted to the homology audit NOW as pending groups so
-# that a relative of one of them is never fitted before it is assigned.
+# Register pending candidates before fitting so their relatives cannot enter training unnoticed.
 PENDING = {
     "P32245": ("MC4R", "pending_confirmation_candidate"),
     "Q86VZ1": ("P2RY8", "pending_confirmation_candidate"),
     "Q86YT5": ("SLC13A5", "pending_confirmation_candidate"),
     "Q9NZ01": ("TECR", "pending_confirmation_candidate"),
-    "P56696": ("KCNQ4", "development"),          # default role: development only
+    "P56696": ("KCNQ4", "development"),
     "O95461": ("LARGE1", "pending_confirmation_candidate"),
     "Q9H9S5": ("FKRP", "pending_confirmation_candidate"),
 }
@@ -142,7 +117,7 @@ def build_universe() -> dict[str, dict]:
     uni = json.loads(UNIPROT_MAP.read_text(encoding="utf-8"))["entries"]
     a0 = json.loads(A0.read_text(encoding="utf-8"))
 
-    # singles count per accession, from the outcome-blind A0 inventory
+
     singles: dict[str, int] = {}
     for a in a0["per_assay"]:
         acc = a.get("accession")
@@ -153,7 +128,7 @@ def build_universe() -> dict[str, dict]:
 
     def add(acc: str, gene: str, role: str, seq: str, source: str, membrane: bool):
         if acc in universe:
-            # a protein can arrive from several routes; keep the stronger role
+            # Keep the stronger role when a protein arrives through multiple acquisition routes.
             return
         universe[acc] = {
             "accession": acc, "gene": gene, "role": role, "sequence": seq,
@@ -181,7 +156,7 @@ def build_universe() -> dict[str, dict]:
         if s:
             add(acc, gene, role, s, "census", True)
 
-    # human ProteinGym proteins, for the separate all-human claim
+
     with PGYM_REF.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh):
             if row.get("taxon") != "Human":
@@ -218,8 +193,7 @@ def main() -> None:
     for r, n in sorted(by_role.items()):
         print(f"  {r}: {n}")
 
-    # The all-against-all alignment is the expensive part and depends only on the
-    # sequences and thresholds, not on role assignment, so cache it.
+    # Cache sequence alignments because they are independent of role assignments.
     cache_path = OUT / "homologous_pairs_cache.json"
     cache_key = {
         "accessions": keys,
@@ -279,7 +253,7 @@ def main() -> None:
     for k in keys:
         universe[k]["group_id"] = gid[uf.find(k)]
 
-    # ---- leakage check: a confirmation protein sharing a group with anything fitted
+
     conflicts = []
     for root, members in groups.items():
         roles = {universe[m]["role"] for m in members}
@@ -295,7 +269,7 @@ def main() -> None:
                 }
             )
 
-    # ---- seeded draw for the separate all-human confirmation set
+
     rng = random.Random(SEED)
     allhuman_groups = sorted(
         {
@@ -310,11 +284,7 @@ def main() -> None:
         if universe[k]["group_id"] in drawn and universe[k]["role"] == "allhuman_pool":
             universe[k]["role"] = "confirmation_allhuman"
 
-    # ---- resolution rule
-    # "exclude them AND THEIR RELATIVES from every fitted stage": any group that
-    # contains a confirmation protein (membrane or all-human) has its entire
-    # membership barred from supervised training, rule fitting, correction
-    # coefficients, learned normalisation and hyperparameter selection.
+    # Bar every relative of a confirmation protein from all fitted stages, including normalization and selection.
     CONFIRM_ROLES = {"confirmation_membrane", "confirmation_allhuman"}
     barred_groups = {
         universe[k]["group_id"] for k in keys if universe[k]["role"] in CONFIRM_ROLES
@@ -335,8 +305,7 @@ def main() -> None:
         else:
             v["fitting_exclusion_reason"] = ""
 
-    # after the rule is applied there must be no group mixing confirmation with
-    # anything still fitted
+
     residual = []
     for root, members in groups.items():
         roles = {universe[m]["role"] for m in members}

@@ -1,39 +1,4 @@
-"""A22: the frozen split. Admit KCNQ4, apply the shuffle-test filter, verify no leak.
-
-Three changes, each with its justification stated:
-
-1. **Homology pairs are filtered by the shuffle test, uniformly.** Any pair whose
-   local alignment score is indistinguishable from composition-matched chance
-   (empirical p > 0.05 over 300 shuffles) is dropped; every pair with p <= 0.05
-   is kept. The 8 positive controls all have p = 0.0000 and z from 12.1 to 103.4,
-   so the instrument separates signal from chance before it is used to decide
-   anything.
-
-   This is applied as a RULE rather than pair by pair on purpose. Dropping the
-   PPM1D-KCNQ1 link happens to be convenient -- PPM1D is the one protein in G003
-   that was actually fitted in L1 -- and a convenient edit to a split is exactly
-   the kind of thing that should not be made ad hoc. The shuffle test was run in
-   session 11, before this decision existed, and the filter applies to all 17
-   non-artifact pairs equally.
-
-2. **KCNQ4 is admitted to the confirmation set.** Branch (b) recovery qualified
-   it on every hard gate (reference agreement 1.000000 on the measured mutant
-   column, zero non-finite, 197 flank positions at <=60) and it is the only
-   candidate adding genuine two-sided K/R-gain coverage (69 cytosolic / 20 outer).
-   It lifts the flank-substantial confirmation set from 6 to 7, taking the
-   smallest attainable exact sign-flip p from 0.031 to 0.016.
-
-3. **beta must be refit.** KCNQ4's group retains AMFR (shuffle z = 4.70, kept
-   conservatively), and AMFR sits in the census sequence-TRAIN partition that
-   beta was fitted on. Admitting KCNQ4 therefore contaminates the existing beta,
-   which has to be refitted with AMFR excluded. KCNQ4 itself is in census
-   *validation* and KCNQ1 in *test*, so neither was ever in a fitting partition.
-
-Then the gate: no member of any confirmation-containing group may appear in
-l1_table.npz, i.e. may have been fitted. Checked exhaustively, not spot-checked.
-
-Writes new files only. No outcome is read.
-"""
+"""Freeze the curated protein split and verify exclusion of confirmation relatives."""
 
 from __future__ import annotations
 
@@ -114,7 +79,7 @@ def main() -> None:
     gid = {root: f"F{n:03d}" for n, root in enumerate(sorted(groups), start=1)}
     gof = {k: gid[uf.find(k)] for k in keys}
 
-    # roles: carry forward, then admit KCNQ4
+
     role = {k: prior.get(k, {}).get("role", "unassigned") for k in keys}
     before = role.get(KCNQ4)
     role[KCNQ4] = "confirmation_membrane"
@@ -125,7 +90,7 @@ def main() -> None:
     confirm_groups = {gof[k] for k in keys if role[k] in CONFIRM_ROLES}
     barred = {k for k in keys if gof[k] in confirm_groups}
 
-    # ---- THE GATE: nothing barred may have been fitted
+
     t = np.load(FEAT / "l1_table.npz", allow_pickle=True)
     fitted = set(t["accession"].astype(str))
     violations = sorted(barred & fitted)

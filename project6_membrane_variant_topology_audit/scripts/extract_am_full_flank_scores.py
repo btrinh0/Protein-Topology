@@ -1,17 +1,4 @@
-"""Extract AlphaMissense scores at TMD flanks from the ALL-substitutions table.
-
-The genomic hg38 table only contains substitutions reachable by a single nucleotide
-change, about 6 of the 19 per residue, and which 6 depends on the codon. That is a
-real limitation of the earlier audit: the charge-preserving comparator K<->R needs
-an AGA/AGG arginine codon, so CGN arginines were dropped entirely.
-
-AlphaMissense_aa_substitutions.tsv.gz carries all 19 substitutions per residue, so
-this removes the codon selection and puts AlphaMissense on the same alphabet as
-ESM1b and a saturating deep mutational scan.
-
-Output matches the schema of extract_am_flank_scores.py so every downstream
-estimator runs unchanged.
-"""
+"""Extract AlphaMissense scores at TMD flanks from the ALL-substitutions table."""
 
 from __future__ import annotations
 

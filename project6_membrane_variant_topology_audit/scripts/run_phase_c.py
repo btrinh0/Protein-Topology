@@ -1,17 +1,4 @@
-"""Phase C, run exactly as preregistered.
-
-Frozen protocol: docs/PHASE_C_PREREGISTRATION.md
-SHA-256 754a9a713a2afc7fd2e3e43be9af55bb762805feeb3d3991be0667c207635d79
-Frozen 2026-09-28 23:16:29 PDT, verified before this script was written.
-
-Primary: the within-site K/R gain side difference over the <=10 residue window,
-cytosolic minus outer, with a restricted wild cluster bootstrap-t clustered on
-gene, reported under both Webb and Rademacher weights.
-
-Every residue set, sensitivity fit and decision rule here is transcribed from the
-frozen text. Deviations are recorded in the output under `deviations` and belong
-in the decision log, never in the frozen document.
-"""
+"""Run the original preregistered Phase C variant-score analysis."""
 
 from __future__ import annotations
 
@@ -47,8 +34,7 @@ THREE = {"Ala": "A", "Arg": "R", "Asn": "N", "Asp": "D", "Cys": "C", "Gln": "Q",
          "Tyr": "Y", "Val": "V"}
 MISSENSE = re.compile(r"p\.([A-Z][a-z]{2})(\d+)([A-Z][a-z]{2})")
 
-# Score sets chosen by the frozen rule 4: expression-type readout, then the most
-# flank charge changes at <=10. Offsets are the Phase B / recovery values.
+# Use the frozen expression-readout selection and Phase B coordinate offsets.
 SCORE_SETS = {
     "CCR5":    ("urn:mavedb:00000047-a-1", "P51681", 0),
     "CXCR4":   ("urn:mavedb:00000048-a-1", "P61073", 0),
@@ -216,10 +202,7 @@ def assemble(args) -> tuple[list[dict], dict]:
         if direction["flip"] is None:
             meta[gene]["status"] = "EXCLUDED: no usable anchors"
             continue
-        # Frozen rule: "a score set whose anchors do not separate is excluded".
-        # Separation is the rank statistic; 0.5 is no separation at all. The
-        # observed values fall in two clean groups, 0.501 and then 0.615 upward,
-        # so this threshold does not sit near any set's value.
+        # Exclude score sets whose anchors fail the frozen rank-separation criterion.
         if abs(direction["separation"] - 0.5) < 0.05:
             meta[gene]["status"] = "EXCLUDED: anchors do not separate"
             continue
@@ -313,7 +296,7 @@ def wild_bootstrap(rows: list[dict], draws: int, weights_kind: str, seed: int) -
     beta, t_observed = statistic(diff)
     if not np.isfinite(t_observed):
         return {"estimate": beta, "p_value": float("nan"), "n_genes": n_clusters}
-    # Center stratum effects before applying one multiplier per gene.
+    # Center stratum effects before applying one bootstrap multiplier per gene.
     centred = diff - beta
     rng = np.random.default_rng(seed)
     extreme = 0

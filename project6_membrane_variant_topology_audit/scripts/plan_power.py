@@ -1,13 +1,4 @@
-"""Design quantities for the preregistration, computed without unblinding outcomes.
-
-Reads the blinded flank-event table. The only outcome information it uses is the
-pooled P/LP fraction across all flank events, which Gate 1 already reported and
-which is not split by side or charge class.
-
-Reports, per preregistered cell: cluster structure (events per gene), the number of
-conditional strata that carry information, and the difference a two-sided test can
-detect at 80% power once gene clustering is taken into account.
-"""
+"""Design quantities for the preregistration, computed without unblinding outcomes."""
 
 from __future__ import annotations
 
@@ -21,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_EVENTS = ROOT / "data" / "processed" / "gate0" / "blinded_flank_events.csv"
 DEFAULT_OUT = ROOT / "results" / "prereg_v1"
 
-# Gate 1, pooled across all flank events and both charge classes. Not a per-cell rate.
+# Use the pooled flank-event rate rather than a per-cell rate.
 POOLED_PATHOGENIC = 935
 POOLED_LABELED = 1724
 

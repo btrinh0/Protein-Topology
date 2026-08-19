@@ -1,14 +1,4 @@
-"""Verify the primary estimator with an independent implementation and simulation.
-
-The independent implementation uses fixed-effects least squares rather than the
-production stratified weighted mean. The two algebraically equivalent estimates
-must agree without sharing estimator code.
-
-The simulation preserves the observed sites, sides, strata, proteins, and
-distances while replacing outcomes with values generated from a known effect. It
-checks estimator bias and protein-clustered interval coverage. No measured outcome
-is used.
-"""
+"""Verify the primary estimator with an independent implementation and simulation."""
 
 from __future__ import annotations
 
@@ -42,7 +32,7 @@ def fixed_effects_estimate(sites: pd.DataFrame, outcome: str) -> float:
     frame["x"] = frame["is_cytosolic"].astype(float)
     keys = ["protein", "substitution"]
     grouped = frame.groupby(keys, sort=False)
-    # A stratum with one side only contributes nothing after demeaning.
+    # A stratum represented on only one side contributes nothing after demeaning.
     frame["x_within"] = frame["x"] - grouped["x"].transform("mean")
     frame["y_within"] = frame[outcome] - grouped[outcome].transform("mean")
     denominator = float((frame["x_within"] ** 2).sum())
@@ -126,8 +116,7 @@ def run(args: argparse.Namespace) -> dict:
             estimates.append(estimate)
             low, high = bootstrap_interval(sites, "simulated", n_proteins,
                                            args.boot_draws, rng)
-            # The estimand under damping is the design-weighted mean of the
-            # damped signal over cytosolic sites, not the raw effect size.
+            # Under damping, the estimand is the cytosolic-site-weighted damped signal rather than the raw effect.
             if spec["decay_lambda"] is None:
                 truth = spec["effect"]
             else:

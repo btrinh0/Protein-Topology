@@ -1,27 +1,4 @@
-"""A18: score the census panel, fit the one-parameter correction, measure its cost.
-
-Section 5 step 6(a), the prescribed cheapest route.
-
-Pipeline:
-  1. fit the general scorer (a17 feature set) on the whole fitting pool
-  2. score all 726,444 panel sites x 20 alternatives, in site chunks
-  3. build the census split; remove confirmation proteins AND their homology-group
-     relatives from the TRAIN side, rather than reusing cluster_split unchanged
-  4. on census train: audit -> delta0 and penalty SD; probe the sensitivity k
-     empirically; fit_beta
-  5. apply_correction to the full panel
-  6. on HELD-OUT census clusters: audit the corrected scores -- the headline
-     rule number -- and run the full 8-rule report card, with the diff vs AM
-  7. fidelity(original, corrected), and the accuracy cost on development
-     proteins by applying the identical shift to their rows
-
-Unit note. `fit_beta` computes `target = declared * margin * sd`, so the -0.03
-audit target is in **SD units** and the raw target is -0.03 * penalty_sd. That
-resolves the ambiguity flagged in session 14; it is read from the code, not
-assumed.
-
-Label-free throughout on the panel side. Confirmation outcomes are never opened.
-"""
+"""Score the membrane census and calibrate the positive-inside correction."""
 
 from __future__ import annotations
 
@@ -54,7 +31,7 @@ CONFIRM_ROLES = {"confirmation_membrane", "confirmation_allhuman"}
 
 from a17_general_scorer import GENERAL, _backend  # noqa: E402
 
-# amino-acid property tables, same as a9
+
 from a9_l1_features import (GR_C, GR_P, GR_V, HYDRO, CHARGE, HELIX, STRAND,  # noqa: E402
                             grantham, blosum62)
 
@@ -106,7 +83,7 @@ def main() -> None:
     print(f"  panel: {n_sites:,} sites x {panel['scores'].shape[1]} alternatives",
           flush=True)
 
-    # per-protein topology extras
+
     from run_gate1 import read_topology
     census = read_topology(ROOT / "data" / "raw" / "topology_viewer.html")
     accs = [str(a) for a in panel["accessions"]]
@@ -131,7 +108,7 @@ def main() -> None:
     emb = np.load(PANEL_EMB, mmap_mode="r")
     assert emb.shape[0] == n_sites, (emb.shape, n_sites)
 
-    # substitution descriptor tables indexed by alphabet position
+    # Index substitution tables by the declared amino-acid alphabet.
     idx = {a: i for i, a in enumerate(alphabet)}
     def tab(dct):
         return np.array([dct[a] for a in alphabet], dtype=np.float32)
@@ -188,7 +165,7 @@ def main() -> None:
     np.savez_compressed(OUT / "model_panel_scores.npz", scores=scores)
     print(f"  panel scored, saved", flush=True)
 
-    # ---- census split, confirmation groups removed from TRAIN
+    # Exclude every confirmation group from the training census.
     split = lib.cluster_split(census)
     label = dict(split["label"])
     manifest = {}
@@ -212,14 +189,14 @@ def main() -> None:
           f"barred set size {len(barred)}", flush=True)
 
     win = lib.window_panel(panel, window=10)
-    win_scores_idx = None  # window_panel subsets rows; rebuild aligned scores
-    # window_panel keeps a 'keys' field we can use to map back
+    win_scores_idx = None  # Map scores by keys because window_panel subsets and reorders the rows.
+
     tr_mask = lib.split_mask(win, label, "train")
     te_mask = lib.split_mask(win, label, "test")
     print(f"  window-10 panel: {win['scores'].shape[0]:,} sites; "
           f"train {int(tr_mask.sum()):,}  test {int(te_mask.sum()):,}", flush=True)
 
-    # map full-panel scores onto the window panel rows
+
     full_keys = (panel["protein"].astype(np.int64) << 32) | panel["position"].astype(np.int64)
     win_keys = (win["protein"].astype(np.int64) << 32) | win["position"].astype(np.int64)
     order = np.argsort(full_keys, kind="stable")
@@ -234,7 +211,7 @@ def main() -> None:
     delta0, sd = float(a0["estimate_raw"]), float(a0["penalty_sd"])
     print(f"\n  model raw contrast on census TRAIN: {delta0:+.6f}  penalty_sd {sd:.6f}")
 
-    # probe the sensitivity k empirically: contrast moves by -k * beta
+    # Estimate sensitivity empirically because the contrast shifts by minus k times beta.
     probe = 0.05
     probed = lib.apply_correction(train_panel, probe, DECAY_LENGTH)
     d_probe = float(lib.audit_matrix(train_panel, probed, draws=200)[0]["estimate_raw"])

@@ -1,18 +1,4 @@
-"""Recover DMS score sets that Phase B could not place on a census sequence.
-
-Phase B located a deposit by searching for its target sequence as an exact
-substring of the census protein. That fails whenever the deposit uses a different
-isoform, and eleven targets were lost that way.
-
-Exact substring matching is not needed. Every scored variant already carries its
-own reference residue and position, so the offset can be recovered from the
-variants themselves: scan every offset that keeps the variants inside the census
-sequence and keep the one that reconciles the most reference residues. This is the
-rule already frozen in PHASE_B_INCLUSION_RULES_FROZEN.md section 2, applied
-without the substring precondition.
-
-Reads counts only. No measured effect is examined.
-"""
+"""Recover DMS score sets that Phase B could not place on a census sequence."""
 
 from __future__ import annotations
 

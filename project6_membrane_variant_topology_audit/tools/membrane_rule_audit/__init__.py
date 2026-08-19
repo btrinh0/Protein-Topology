@@ -1,3 +1,4 @@
+"""Expose the membrane-rule audit and refinement APIs."""
 from .audit import run_audit, main
 from .panel import run_panel_audit
 

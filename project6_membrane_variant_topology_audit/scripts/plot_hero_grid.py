@@ -1,17 +1,4 @@
-"""Hero figure: evolution's footprint, two predictors, and the lab data.
-
-Rows are sources of evidence, columns are the two positive-charge rules. Every
-predictor curve is divided by that model's own spread of within-site penalties,
-because AlphaMissense is bounded 0-1 and ESM1b is an unbounded log-likelihood
-ratio; raw numbers across the two mean nothing.
-
-The composition row is a residue count, not a model output, so it keeps its own
-units. In the gain column it is drawn sign-flipped, because the rule's prediction
-flips: positive residues are depleted from outer flanks, so *adding* one there is
-the costly direction.
-
-The fourth row uses the finalized Phase C summary and reports its sample sizes.
-"""
+"""Plot charge-composition profiles, predictor contrasts and experimental comparisons."""
 
 from __future__ import annotations
 

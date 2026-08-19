@@ -1,10 +1,4 @@
-"""Shared Phase C estimator for the analysis and design simulation.
-
-Implements corrections F2 through F4 from the frozen correction plan. The same
-stratified estimator and weights are used for point estimates, percentile
-bootstrap draws, wild bootstrap draws, and design simulations. Confidence
-intervals are obtained by inverting the preregistered test.
-"""
+"""Shared Phase C estimator for the analysis and design simulation."""
 
 from __future__ import annotations
 
@@ -48,7 +42,7 @@ def build_strata(rows: list[dict], equal_gene_weight: bool = False) -> dict:
     weight = np.array(weights, dtype=float)
 
     if equal_gene_weight and len(names):
-        # Each gene contributes the same total weight, spread over its strata.
+        # Give each gene equal total weight across its strata.
         per_gene = np.bincount(cluster, weights=weight, minlength=len(names))
         scale = np.where(per_gene > 0, 1.0 / np.maximum(per_gene, 1e-12), 0.0)
         weight = weight * scale[cluster]
@@ -87,7 +81,7 @@ def wild_p_value(strata: dict, null_value: float, draws: int, weights_kind: str,
     _, t_observed = statistic(strata, shifted)
     if not np.isfinite(t_observed):
         return float("nan")
-    # Center once so every bootstrap draw is generated under the null.
+    # Center effects once so every bootstrap draw is generated under the null.
     centred = shifted - beta
     rng = np.random.default_rng(seed)
     extreme = 0
@@ -123,7 +117,7 @@ def wild_interval(strata: dict, draws: int, weights_kind: str, seed: int,
     for direction in (-1.0, 1.0):
         inside, outside = beta, beta + direction * reach
         if not rejected(outside):
-            # Return the search boundary when inversion finds no rejection.
+            # Return the search boundary when test inversion finds no rejection.
             bounds.append(float(outside))
             continue
         while abs(outside - inside) > tolerance:

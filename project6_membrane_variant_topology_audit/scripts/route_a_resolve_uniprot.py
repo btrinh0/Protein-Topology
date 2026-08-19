@@ -1,13 +1,4 @@
-"""Resolve ProteinGym UniProt entry names to accessions (Route A, step A2).
-
-ProteinGym's `UniProt_ID` column holds UniProt entry names such as `PAI1_HUMAN`, while the
-topology census is keyed by accession such as `P05121`. This script asks the UniProt REST
-search for every distinct entry name in the reference table and writes the answer, with the
-query and the UniProt release, to a JSON file. Nothing here reads DMS scores.
-
-Input:  data/raw/proteingym/reference_github_main/DMS_substitutions.csv
-Output: data/raw/proteingym/uniprot_entry_map_v1.3.json (raw API answer, gitignored with data/raw/)
-"""
+"""Resolve ProteinGym UniProt entry names to canonical accessions."""
 
 from __future__ import annotations
 
@@ -60,7 +51,7 @@ def run(reference: Path, out: Path) -> dict:
         releases.add(release)
         for row in rows:
             name = row["Entry Name"]
-            # The id search also returns retired accessions that keep the name, with blank fields.
+            # UniProt name searches can return retired accessions with empty metadata.
             if not row["Length"]:
                 obsolete_skipped.setdefault(name, []).append(row["Entry"])
                 continue
@@ -71,7 +62,7 @@ def run(reference: Path, out: Path) -> dict:
                 "reviewed": row["Reviewed"] == "reviewed",
                 "organism": row["Organism"],
             }
-            # The id search also returns neighbouring entries; only requested names are kept.
+            # Filter neighboring search hits to the exact requested entry names.
             if name not in requested:
                 returned_not_requested[name] = record
                 continue

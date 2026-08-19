@@ -1,9 +1,4 @@
-"""Shared implementation for the Form A and Form B studies.
-
-Form A reads site geometry without loading AlphaMissense scores. Estimation uses
-the installed validated panel module. The working-copy audit module supplies the
-report card and is pinned by SHA-256.
-"""
+"""Shared implementation for the Form A and Form B studies."""
 from __future__ import annotations
 
 import hashlib
@@ -39,7 +34,7 @@ P = _validated_panel()
 ALPHABET, NEUTRAL = P.ALPHABET, P.NEUTRAL
 NEUTRAL_INDEX = np.array([ALPHABET.index(a) for a in NEUTRAL])
 KR_INDEX = np.array([ALPHABET.index("K"), ALPHABET.index("R")])
-# Row i lists the 19 alternatives of native residue i.
+# Row i contains the 19 non-native alternatives for native residue i.
 ALT_TABLE = np.array([[a for a in range(20) if a != r] for r in range(20)], dtype=np.int64)
 
 AM_ARCHIVE = ROOT / "data/processed/gate0/am_full_flank_scores.npz"
@@ -51,7 +46,7 @@ WORKING_AUDIT = ROOT / "tools/membrane_rule_audit/audit.py"
 GEOMETRY = ("protein", "position", "side", "distance", "tmd_index", "ref_aa")
 
 MASTER_SEED, PILOT_SEED = 20261008, 20261001
-# Keep clustering aligned with the composition-control analysis.
+# Use the composition-control analysis's clustering seed and definitions.
 MINHASH_SEED = 20260929
 PANEL_SEED, PANEL_DRAWS = 20261003, 1999
 REPORT_CARD = {"max_distance": 60, "folds": 5, "draws": 999, "seed": 20261006}
@@ -345,7 +340,7 @@ def wilson(k: int, n: int) -> list[float]:
     return [float(centre - half), float(centre + half)]
 
 
-# Fixed ten-residue K/R-gain penalty SD per predictor (verified_values.json), the paper's unit.
+# The paper's score unit is the frozen ten-residue K/R-gain penalty SD for each predictor.
 SD_FIXED = {"alphamissense": 0.15656056894897286, "esm1b": 2.0195231488036884}
 CORRECTION = {"margin": 0.05, "decay_length": 8.0}
 

@@ -1,13 +1,4 @@
-"""Run Phase C under the frozen correction plan.
-
-Correction plan: docs/PHASE_C_CORRECTION_PLAN.md
-SHA-256 c74e03ec741bcd08c4062e6a282db972e145d486b4e54540c4295d0a331dca41
-frozen before any corrected number was computed.
-
-Protocol unchanged: docs/PHASE_C_PREREGISTRATION.md, SHA-256 754a9a71...
-Implements matched substitutions, consistent inference weights, a shared analysis
-and simulation estimator, test-inversion intervals, and contributing-site counts.
-"""
+"""Run Phase C under the frozen correction plan."""
 
 from __future__ import annotations
 

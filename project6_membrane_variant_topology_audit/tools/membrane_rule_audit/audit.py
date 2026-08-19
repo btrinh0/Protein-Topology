@@ -1,22 +1,4 @@
-"""Audit mutation-score contrasts near membrane boundaries.
-
-For each charge and neutral-placebo rule, the audit reports:
-
-1. A within-site side difference that removes additive position effects.
-2. A descriptive, cross-fitted composition baseline.
-3. A distance profile relative to the nearest membrane boundary.
-
-Each rule has a declared direction; placebo rules expect zero. Differences against
-a placebo use shared protein resamples to preserve correlation. The composition
-calibration is descriptive and does not identify an internal model mechanism.
-
-Usage
------
-    python -m membrane_rule_audit --topology census.html --scores scores.tsv \\
-        --score-direction higher-is-damaging --out results/
-
-See README.md for the score-file formats and for how to add a new predictor.
-"""
+"""Audit mutation-score contrasts near membrane boundaries."""
 
 from __future__ import annotations
 
@@ -42,21 +24,14 @@ RULES = {
     "positive_charge_gain": ("gain", POSITIVE),
     "negative_charge_loss": ("loss", NEGATIVE),
     "negative_charge_gain": ("gain", NEGATIVE),
-    # Uncharged, conservative, and with no side asymmetry of their own: whatever
-    # these pick up is a side baseline the charge rules also inherit. Two sets, so
-    # a placebo reading cannot rest on one choice of residues.
+    # Use two hydrophobic comparator pairs so a placebo result does not depend on one residue choice.
     "neutral_placebo_gain_vi": ("gain", PLACEBO_VI),
     "neutral_placebo_gain_lm": ("gain", PLACEBO_LM),
-    # Polar probes rather than placebos. If a side effect tracks polarity instead of
-    # charge, these carry it and the hydrophobic pair above does not. N is the
-    # N-glycosylation residue, so gaining it on the outer side can create a sequon;
-    # Q is its non-glycosylatable isostere and isolates polarity on its own.
+    # Use Q to isolate polarity without the potential glycosylation confound carried by N.
     "neutral_placebo_gain_nq": ("gain", PLACEBO_NQ),
     "neutral_placebo_gain_q": ("gain", PLACEBO_Q),
 }
-# What the positive-inside rule predicts for each cytosolic-minus-outer contrast.
-# Losing a cytosolic K/R should hurt more inside; gaining a K/R should hurt more
-# outside. None means this tool declares no direction, so no verdict is issued.
+# Positive-inside predicts positive K/R-loss and negative K/R-gain cytosolic-minus-outer contrasts.
 EXPECTED_SIGN = {
     "positive_charge_loss": +1,
     "positive_charge_gain": -1,
@@ -75,16 +50,13 @@ CONTRASTS = {
     "negative_gain_minus_placebo_vi": ("negative_charge_gain", "neutral_placebo_gain_vi"),
     "positive_gain_minus_placebo_nq": ("positive_charge_gain", "neutral_placebo_gain_nq"),
     "positive_gain_minus_placebo_q": ("positive_charge_gain", "neutral_placebo_gain_q"),
-    # Does a polar swap behave differently by side than a hydrophobic one? A large
-    # value here means the side effect tracks polarity, not charge.
+    # Use polar-versus-hydrophobic swaps to diagnose side effects that track polarity rather than charge.
     "placebo_nq_minus_placebo_vi": ("neutral_placebo_gain_nq", "neutral_placebo_gain_vi"),
     "placebo_q_minus_placebo_vi": ("neutral_placebo_gain_q", "neutral_placebo_gain_vi"),
-    # Two hydrophobic pairs should agree; this says whether they do.
+    # The two hydrophobic placebo pairs should agree.
     "placebo_lm_minus_placebo_vi": ("neutral_placebo_gain_lm", "neutral_placebo_gain_vi"),
 }
-# Every gain rule's group held out at once, so one comparator serves them all and a
-# contrast between two gain rules differs only in its numerator. Narrower than the
-# per-rule comparator, so it is reported beside the 14-residue definition, not instead.
+# Hold every gain rule's group out together so their contrasts differ only in the numerator.
 COMMON_COMPARATOR = frozenset(
     set(AMINO_ACIDS) - CHARGED - PLACEBO_VI - PLACEBO_LM - PLACEBO_NQ - PLACEBO_Q)
 VARIANT = re.compile(r"^([A-Z])(\d+)([A-Z])$")

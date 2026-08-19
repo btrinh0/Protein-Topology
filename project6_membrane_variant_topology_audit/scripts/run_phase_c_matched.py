@@ -1,13 +1,4 @@
-"""Compare lab and predictor side effects on identical variants.
-
-Implements section 7 of the frozen preregistration. The same within-site estimator
-is applied to lab scores and each predictor on a shared set of protein, position,
-and substitution tuples. Each bootstrap draw resamples both measurements together
-to preserve their correlation.
-
-Each source is standardized by its within-site penalty spread before differencing.
-ESM1b is the positive control.
-"""
+"""Compare lab and predictor side effects on identical variants."""
 
 from __future__ import annotations
 

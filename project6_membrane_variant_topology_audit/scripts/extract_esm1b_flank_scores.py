@@ -1,19 +1,4 @@
-"""Extract ESM1b scores at TMD flanks, in the same shape as the AlphaMissense extract.
-
-Source: ALL_hum_isoforms_ESM1b_LLR.zip from the esm_variants portal (Brandes et al.,
-Nat Genet 2023), one CSV per UniProt accession. Each file is a matrix: columns are
-"<wild-type residue> <position>", rows are the 20 possible residues, values are
-log-likelihood ratios.
-
-Two conventions differ from AlphaMissense and are normalised here:
-
-* **Sign.** ESM1b's LLR is negative for damaging substitutions; AlphaMissense's
-  pathogenicity is positive for them. This writes `score = -LLR`, so in the output
-  higher always means more damaging and every downstream estimator is unchanged.
-* **Alphabet coverage.** ESM1b scores all 19 substitutions per residue, while the
-  AlphaMissense genomic table only covers those reachable by one nucleotide change.
-  Everything is kept here; restricting to a common set is done at comparison time.
-"""
+"""Extract ESM1b scores at TMD flanks, in the same shape as the AlphaMissense extract."""
 
 from __future__ import annotations
 
@@ -84,8 +69,7 @@ def run(args: argparse.Namespace) -> dict:
                 with io.TextIOWrapper(raw, encoding="utf-8", errors="replace") as handle:
                     header_positions, rows = parse_matrix(handle)
 
-            # The header carries a position index; column labels are the source of
-            # truth for which residue ESM1b thinks is wild type there.
+            # Treat ESM1b header labels as the authoritative native residue and position.
             label_by_column = {}
             with archive.open(member) as raw:
                 with io.TextIOWrapper(raw, encoding="utf-8", errors="replace") as handle:

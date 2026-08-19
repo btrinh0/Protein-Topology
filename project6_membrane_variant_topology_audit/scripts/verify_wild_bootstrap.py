@@ -1,23 +1,4 @@
-"""Compare inference methods on the real design: percentile bootstrap vs wild cluster bootstrap-t.
-
-The audit currently uses a protein-clustered percentile bootstrap, which the
-simulation showed rejects at 6.0% against a nominal 5%. That is typical with a
-few dozen clusters, but the restricted wild cluster bootstrap-t usually controls
-size better, because it imposes the null when generating replicates and
-studentises the statistic.
-
-Implementation, for the fixed-effects form of the estimator:
-
-    y~ and x~ are stratum-demeaned outcome and side indicator
-    beta = sum(x~ y~) / sum(x~^2)
-    cluster-robust se from per-protein score sums
-
-Restricted (null-imposed) replicates take the residual under H0: beta = 0, which
-is simply y~, and flip it by a protein-level Rademacher weight. The bootstrap t
-distribution is then compared with the observed t.
-
-Uses no outcome data: the outcome is simulated on the real design.
-"""
+"""Compare percentile and wild-cluster bootstrap inference on the observed design."""
 
 from __future__ import annotations
 
@@ -69,7 +50,7 @@ def wild_cluster_p_value(x: np.ndarray, y: np.ndarray, cluster: np.ndarray,
     beta, t_observed = fixed_effects_t(x, y, cluster, n_clusters)
     if not np.isfinite(t_observed):
         return beta, float("nan")
-    # Under H0 the fitted value is zero, so the restricted residual is y itself.
+    # The restricted residual equals y because the fitted value is zero under the null.
     extreme = 0
     for _ in range(draws):
         flips = rng.choice((-1.0, 1.0), size=n_clusters)
@@ -87,7 +68,7 @@ def run(args: argparse.Namespace) -> dict:
     sites = site_penalties(frame, set("KR"))
     sites = sites[sites["distance"] <= PRIMARY_WINDOW].reset_index(drop=True)
 
-    # Observed result under both inference methods.
+
     x, y, cluster = demean(sites, "penalty")
     beta, t_observed = fixed_effects_t(x, y, cluster, n_proteins)
     rng = np.random.default_rng(args.seed)
@@ -102,7 +83,7 @@ def run(args: argparse.Namespace) -> dict:
         "n_clusters_with_data": int(np.unique(cluster).size),
     }
 
-    # Size and power on the real design.
+
     scenarios = {"null_no_effect": 0.0, "flat_effect_0.05": 0.05}
     simulation: dict = {}
     for name, effect in scenarios.items():

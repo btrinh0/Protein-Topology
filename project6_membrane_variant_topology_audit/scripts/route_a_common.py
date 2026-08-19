@@ -1,16 +1,5 @@
-"""Shared loading, alignment-based mapping and flank geometry for Route A.
-
-Route A asks whether the one-parameter correction helps on ProteinGym deep mutational scans.
-Every ProteinGym assay has to be placed on the topology census before any score is looked up.
-This module does that placement and nothing else: it never reads a DMS_score value.
-
-Mapping is an alignment, not a global offset. The SERT cassette (scripts/load_sert.py) is the
-reason: a best-fit offset of -24 mismaps 215 residues, while the two-segment alignment is exact.
-
-Geometry (side and distance to the nearest TMD edge) comes from read_topology() in run_gate1.py
-followed by build_flank_map() in extract_am_flank_scores.py, which is what produced
-data/processed/gate0/am_full_flank_scores.npz. Using the same path keeps Route A on the geometry
-that every earlier analysis used.
+"""Load Route A data and reconcile assay coordinates with census sequences and flank
+geometry.
 """
 
 from __future__ import annotations
@@ -36,12 +25,12 @@ CENSUS = ROOT / "data/raw/topology_viewer.html"
 AM_ARCHIVE = ROOT / "data/processed/gate0/am_full_flank_scores.npz"
 ESM_ARCHIVE = ROOT / "data/processed/gate0/esm1b_flank_scores.npz"
 
-WINDOW = 10                 # flank sites within 10 residues of a TMD edge
-MAX_DISTANCE = 60           # geometry depth used by the existing archives
-NEUTRAL = "ACFGILMNPQSTVWY"  # native residues eligible for the K/R-gain contrast (validated panel)
+WINDOW = 10                 # The rule window extends ten residues from a TM boundary.
+MAX_DISTANCE = 60           # The score archives retain geometry through 60 residues from the boundary.
+NEUTRAL = "ACFGILMNPQSTVWY"  # Use the native-residue eligibility definition from the validated K/R-gain panel.
 KR = "KR"
-MIN_AGREEMENT = 0.99        # reject an assay whose reference residues disagree with the census
-CONTAMINATION_RADIUS = 10   # flank site this close to a construct insertion is flagged
+MIN_AGREEMENT = 0.99        # Reject assays whose reference residues fail the census agreement threshold.
+CONTAMINATION_RADIUS = 10   # Flag flank sites close to a construct insertion.
 
 MUTANT_TOKEN = re.compile(r"^([A-Z])(\d+)([A-Z])$")
 
@@ -88,7 +77,7 @@ def _aligner():
     aligner.substitution_matrix = substitution_matrices.load("BLOSUM62")
     aligner.open_gap_score = -10
     aligner.extend_gap_score = -0.5
-    # Free end gaps: a construct that is a fragment of the census protein is not penalised at its ends.
+    # Allow free end gaps because assay constructs can be fragments of the census protein.
     aligner.end_insertion_score = 0.0
     aligner.end_deletion_score = 0.0
     return aligner
@@ -141,7 +130,7 @@ def insertions_of(mapping: np.ndarray, census_length: int) -> list[dict]:
         return []
     out = []
     last = len(mapping) - 1
-    # Leading and trailing runs are construct residues outside the census protein.
+    # Leading and trailing alignment runs represent construct residues outside the census protein.
     if mapped[0] > 1:
         out.append({"construct_start": 1, "construct_end": int(mapped[0] - 1),
                     "census_before": 0, "census_after": int(mapping[mapped[0]])})
@@ -176,7 +165,7 @@ def map_assay(reference_row: dict, census_record: dict, mutants: list[list[tuple
     identity = float(np.mean([census_seq[mapping[i] - 1] == construct[i - 1]
                               for i in np.flatnonzero(mapping)])) if aligned_pairs else 0.0
 
-    # Reference residues: the wild-type letter of every substitution, against the census residue it maps to.
+    # Check each substituted wild-type residue against its mapped census residue.
     checked = agree = mapped_variants = dropped_variants = 0
     mismatch_to_target = 0
     for variant in mutants:

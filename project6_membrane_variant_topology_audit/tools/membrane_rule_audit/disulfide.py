@@ -1,12 +1,4 @@
-"""Evidence-aware, matched-site audit of structural disulfide loss.
-
-The estimand compares an IDENTICAL Cys replacement at bonded and experimentally
-verified free sites. It never subtracts the other replacements at that position:
-every non-Cys replacement removes the original bond. Unknown is not free.
-
-Only NumPy and the standard library are required. Score files are not opened
-until annotation, matching, exposure and independent-family gates have passed.
-"""
+"""Audit structural disulfide-loss scores with evidence-qualified matched controls."""
 from __future__ import annotations
 
 import argparse
@@ -206,7 +198,7 @@ def qualification(pairs, partition, min_families):
     reasons = []
     if len(families) < min_families:
         reasons.append(f'Only {len(families)} matched families; need {min_families}')
-    # Require the exposure gate again at the point where score access is authorized.
+    # Recheck the exposure gate immediately before authorizing score access.
     if partition == 'confirmation':
         if any(r.get('exposure_status') != 'unseen_and_homology_checked'
                for p in selected for r in (p['bonded'],p['free'])):

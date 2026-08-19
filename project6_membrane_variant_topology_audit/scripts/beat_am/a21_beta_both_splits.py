@@ -1,23 +1,4 @@
-"""A21: fit a single beta that satisfies BOTH census splits, not just the sequence one.
-
-a19 found the correction passes the sequence split (standardized -0.0543, interval
-upper -0.0026) and FAILS the symbol-family split (-0.0212, interval upper +0.0003,
-so the interval includes zero). The prompt asks for the symbol-family split to be
-reported and for a genuine attempt to pass it.
-
-Cause: beta was fitted on the sequence split's TRAIN partition only. The symbol
-split starts from a larger violation (+0.1277 standardized vs +0.0938), so the
-beta that just clears the sequence target undershoots the symbol one.
-
-Fix, declared before running: fit beta on each split's own train partition, then
-take the LARGER of the two. A single beta must satisfy the stricter requirement,
-and over-correcting is the safe direction because the accuracy cost measured in
-a20 was zero to slightly positive (+0.0001 overall, +0.0017 on the flank).
-Both splits are then re-audited on their own held-out clusters with that one beta,
-and the accuracy cost is re-measured so the trade is visible.
-
-Label-free. Confirmation outcomes never opened.
-"""
+"""Fit one positive-inside coefficient across both census split schemes."""
 
 from __future__ import annotations
 
@@ -35,11 +16,7 @@ CUR = ROOT / "results" / "beat_am_20261016" / "inventory_curated"
 RULE = ROOT / "results" / "beat_am_20261016" / "rule"
 
 MARGIN = 0.03
-# Deliberate over-correction on TRAIN only. Declared before seeing whether it
-# passes: fit to 1.5x the real target so held-out clears 0.03 with headroom.
-# Justified because a20 measured the accuracy cost of the correction at zero to
-# slightly POSITIVE (+0.0001 overall, +0.0017 on the flank), so over-correcting
-# is the cheap direction. The real target stays 0.03 for every verdict.
+# Calibrate on training data at 1.5 times the target while retaining the 0.03 held-out criterion.
 MARGIN_FIT = float(__import__("os").environ.get("MARGIN_FIT", "0.045"))
 DECAY_LENGTH = 8.0
 PROBE = 0.05

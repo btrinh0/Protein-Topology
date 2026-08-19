@@ -1,22 +1,4 @@
-"""Ortholog-aware rerun of the Phase B search.
-
-Phase B matched MaveDB deposits to the census by human gene symbol. That hid
-`mKir2.1`, a mouse deposit of a protein whose human ortholog KCNJ2 is in the
-census, and the same bug could hide other rodent scans.
-
-This enumerates every MaveDB score set, aligns each target sequence to the census
-by global alignment, and applies the ortholog rule frozen in
-PHASE_B_INCLUSION_RULES_FROZEN.md section 4a:
-
-* at least 95% identity over the mapped region
-* topology conserved, checked here as: the alignment covers every transmembrane
-  segment and its +/-10 flank with no gaps, so census topology transfers position
-  by position
-* only positions where the two reference residues are identical are usable
-* cross-species sets flagged
-
-Counts only. No measured effect is read.
-"""
+"""Search for orthologous deep-mutational-scan score sets for the Phase B inventory."""
 
 from __future__ import annotations
 
@@ -87,7 +69,7 @@ def candidates_for(sequence: str, index: dict[str, set[str]], top: int = 5) -> l
 def align_to_census(target: str, census: str, aligner: Align.PairwiseAligner):
     alignment = aligner.align(target, census)[0]
     target_aligned, census_aligned = alignment[0], alignment[1]
-    # Only identical residues can transfer a census position to the target.
+    # Transfer a census coordinate only across an identical aligned residue.
     mapping: dict[int, int] = {}
     target_pos = census_pos = 0
     identical = compared = 0

@@ -1,21 +1,4 @@
-"""Route A, step A0: the feasibility count, which is the decision gate.
-
-Three numbers, then a power simulation, then the decision floor. The DMS_score column is never
-read; every count uses variant identity and position only.
-
-Counts
-  1. ProteinGym assays whose protein maps onto the topology census (accepted mapping).
-  2. Of those, membrane proteins with at least one measured flank site inside the 10-residue window.
-  3. K/R-gain substitutions (single mutants, alternative K or R, native residue in ACFGILMNPQSTVWY)
-     at in-window flank sites.
-
-Floor, fixed in the build plan before looking: at least 8 assays with at least 30 K/R-gain flank
-substitutions each. Below the floor, Route A's capability test is too thin to answer.
-
-The power simulation uses the real K/R-gain flank variants and their real uncorrected AlphaMissense
-scores, with a hypothetical DMS outcome whose side effect is planted in SD units. It answers "what
-paired difference in per-assay Spearman can this design detect?" Every outcome in it is simulated.
-"""
+"""Assess mapped assay coverage and feasibility for the Route A variant panel."""
 
 from __future__ import annotations
 
@@ -36,7 +19,7 @@ import form_ab_lib as lib  # noqa: E402
 
 FLOOR_ASSAYS = 8
 FLOOR_SITES = 30
-BETA = 0.02971251410524106  # Form B value fitted on the sequence-split training buckets
+BETA = 0.02971251410524106  # The Form B coefficient was fitted on sequence-split training buckets.
 DECAY_LENGTH = 8.0
 OUT = common.ROOT / "results/route_a_20261012/a0_feasibility.json"
 ALPHA_INDEX = {aa: i for i, aa in enumerate(lib.ALPHABET)}
@@ -70,8 +53,8 @@ def assay_counts(row: dict, census: dict, uniprot: dict, mutants: list[list[tupl
 
     sequence = record["sequence"]
     flank_sites_measured = set()
-    kr_gain = []   # (census_position, wt, alt, side, distance)
-    neutral_alt_sites = defaultdict(set)   # census position -> neutral alternatives measured
+    kr_gain = []
+    neutral_alt_sites = defaultdict(set)
     kr_sites = set()
     for wt, position, alt in single_variants(mutants):
         census_pos = int(mapping_array[position])
@@ -88,10 +71,10 @@ def assay_counts(row: dict, census: dict, uniprot: dict, mutants: list[list[tupl
         if wt in NEUTRAL_SET and alt in NEUTRAL_SET and alt != wt:
             neutral_alt_sites[census_pos].add(alt)
 
-    # Eligible for the contrast: a site with both a K/R alternative and a neutral alternative measured.
+    # Eligible sites require both a K/R alternative and an uncharged alternative.
     eligible_sites = {s for s in kr_sites if neutral_alt_sites.get(s)}
     eligible_gain = [v for v in kr_gain if v[0] in eligible_sites]
-    # Strata of the estimator: protein x native residue, with both sides present among eligible sites.
+    # Match estimator strata by protein and native residue with both sides represented.
     strata = defaultdict(lambda: {0: 0, 1: 0})
     for census_pos, wt, _alt, side, _d in eligible_gain:
         strata[wt][side] += 1
@@ -185,7 +168,7 @@ def simulate(assays: list[dict], lookup: dict, gammas, reps: int, boot: int, see
                 diffs.append(rho_c - rho_u)
             diffs = np.asarray(diffs)
             d_mean.append(diffs.mean())
-            # Cluster bootstrap over proteins: resample clusters with replacement, average within each.
+            # Bootstrap whole proteins to preserve within-protein dependence.
             idx = rng.integers(0, len(clusters), size=(boot, len(clusters)))
             cluster_sums = np.bincount(cluster_of, weights=diffs, minlength=len(clusters))
             cluster_counts = np.bincount(cluster_of, minlength=len(clusters))
@@ -219,7 +202,7 @@ def main() -> None:
             if header[0] != "mutant":
                 raise SystemExit(f"{path.name}: expected mutant in the first column, found {header[0]!r}")
             for line in handle:
-                # Only the first field is split off; mutated_sequence and DMS_score are never parsed.
+                # Parse only the mutant field so measured outcomes and mutated sequences remain unopened.
                 token = line.split(",", 1)[0].strip()
                 if token:
                     mutants.append(common.parse_mutant(token))
@@ -251,7 +234,7 @@ def main() -> None:
         cor = corrected(am, side, dist, wt, alt)
         candidates.append({"dms_id": r["dms_id"], "accession": r["accession"], "am": am, "corrected": cor,
                            "side": side, "distance": dist, "n_kr": len(variants), "n_am_missing": int(np.isnan(am).sum())})
-    # Predictor-only perturbation: how much the correction reorders the capability variants (no outcome used).
+    # Measure correction-induced ranking changes without using experimental outcomes.
     perturbation = []
     for c in candidates:
         keep = np.isfinite(c["am"])

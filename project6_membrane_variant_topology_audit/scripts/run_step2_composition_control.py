@@ -1,20 +1,4 @@
-"""Step 2: does a predictor follow the compositional footprint, fall short, or go beyond it?
-
-Frozen design: docs/STEP2_COMPOSITION_CONTROL_PREREG.md
-SHA-256 06cdc2e8449ab03ced939b6cf1599d7d754a5fcec36c4a2ca992c5e9d1de5385
-
-Composition by side and distance is the evolutionary footprint of the topology
-rules, not a rival explanation to them. So the baselines here are not controls to
-be subtracted; they are alternative "predictors" scored through the same
-within-site estimator, and the question is whether a real predictor reproduces
-them, falls short, or exceeds them.
-
-Label-free: no clinical label and no deep-mutational-scanning effect is read.
-
-Within-site penalties use the audit's residue definitions (run_gate0_within_site),
-so the predictor numbers here reproduce the ones disclosed in section 2 of the
-frozen design rather than a differently-defined variant of them.
-"""
+"""Compare predictor score contrasts with cross-fitted sequence-composition controls."""
 
 from __future__ import annotations
 
@@ -60,8 +44,7 @@ def minhash_clusters(proteins: dict, seed: int) -> dict[str, int]:
         if not kmers:
             signatures[row] = np.arange(SIGNATURE)
             continue
-        # Python's hash(str) changes between processes, independently of the
-        # analysis seed. A stable digest makes cross-validation families repeat.
+        # Use stable digests because Python string hashes vary across processes despite a fixed analysis seed.
         hashed = np.array([
             int.from_bytes(hashlib.blake2b(k.encode("ascii"), digest_size=8,
                                          person=b"p6-kmers-v1").digest(), "little")
@@ -118,8 +101,7 @@ def fit_b1(frame: pd.DataFrame, train_mask: np.ndarray) -> np.ndarray:
     bin_of_train = train["bin"].to_numpy()
     side_of_train = train["side"].to_numpy()
     ref_of_train = train["ref_aa"].to_numpy()
-    # One count per residue position, not per substitution, so the alphabet is
-    # not weighted by how many alternates each codon reaches.
+    # Count each residue position once so codon-accessible alternative counts do not reweight the alphabet.
     seen = set()
     for side, bucket, ref, protein, position in zip(
             side_of_train, bin_of_train, ref_of_train,

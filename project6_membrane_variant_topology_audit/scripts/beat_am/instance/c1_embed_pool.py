@@ -1,36 +1,4 @@
-"""Per-residue embeddings for every measured site in the fitting pool.
-
-The cached panel embeddings cover flank sites only (726,444 sites at census
-distance <=60), which reach just 9.1% of the L1 table's rows and none of the
-83,820 non-membrane rows. This embeds the sites that actually carry measured
-outcomes.
-
-Recipe matched EXACTLY to the cached panel so new and old vectors are
-interchangeable (`scripts/route_b_embed_modal.py`):
-  Rostlab/prot_t5_xl_uniref50, T5Tokenizer(do_lower_case=False, legacy=True),
-  T5EncoderModel in float16, residues space-separated, U/Z/O/B -> X per the
-  model card, add_special_tokens=True, and row r of the output is residue r
-  because the tokenizer appends </s> AFTER the last residue.
-Chunking also matches: window 1022, overlap 128.
-
-Frontend choice. ProtT5 is the default here and ESM2 is opt-in behind
---model esm2, because of the project's own documented reasoning in
-route_b_embed_modal.py: ESM1b already satisfies the K/R-gain rule
-(comparator-robust at -0.073), so building on ESM representations risks rule
-compliance arriving from the frontend rather than from the rule loss term, which
-would make the central claim unfalsifiable. ESM2 is the same lineage and the
-same risk. ProtT5 is a different lineage.
-
-Coordinates. Reference sequences are rebuilt from the extracted AlphaMissense
-wild-type residues, exactly as a8/a9 did, so site positions line up with the L1
-table with no offset.
-
-Sharding and resume. --shard k --n-shards n takes every n-th accession, so one
-process per GPU pinned with CUDA_VISIBLE_DEVICES. One output file per accession,
-skipped if present, so a rerun only does what is missing.
-
-Label-free: reads positions, never outcomes.
-"""
+"""Generate per-residue protein embeddings for the fitting pool."""
 
 from __future__ import annotations
 
@@ -185,13 +153,13 @@ def main() -> None:
                               add_special_tokens=True)
                     enc = {kk: vv.cuda() for kk, vv in enc.items()}
                     rep = model(**enc).last_hidden_state[0]
-                    # row r is residue r; </s> follows the last residue
+                    # ProtT5 row r represents residue r and the terminator follows the last residue.
                     offset = 0
                 else:
                     enc = tok(sub, return_tensors="pt", add_special_tokens=True)
                     enc = {kk: vv.cuda() for kk, vv in enc.items()}
                     rep = model(**enc).last_hidden_state[0]
-                    # ESM2 prepends <cls>, so residue r is row r+1
+                    # ESM2 prepends a classification token, so residue r occupies row r plus 1.
                     offset = 1
                 rep = rep.float().cpu().numpy()
                 for p in ps:

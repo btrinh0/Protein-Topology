@@ -1,19 +1,4 @@
-"""Embed every residue of every sequence in a FASTA with ProtT5-XL.
-
-Standalone: needs only the FASTA and the model, not the project bundle. Used to
-embed the confirmation proteins without re-uploading 4.13 GB.
-
-Recipe matched exactly to route_b_embed_modal.py and c1_embed_pool.py, so these
-vectors are interchangeable with the cached panel (validated at cosine 1.0000):
-Rostlab/prot_t5_xl_uniref50, T5Tokenizer(do_lower_case=False, legacy=True),
-T5EncoderModel in float16, residues space-separated, U/Z/O/B -> X, row r is
-residue r because the tokenizer appends </s> after the last residue.
-Chunking: window 1022, overlap 128; each position takes the chunk giving it the
-most context.
-
---shard k --n-shards n splits sequences across GPUs. One npz per accession,
-skipped if present, so reruns only do what is missing.
-"""
+"""Embed every residue in a FASTA sequence collection with ProtT5-XL."""
 
 from __future__ import annotations
 

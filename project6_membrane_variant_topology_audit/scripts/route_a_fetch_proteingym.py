@@ -1,14 +1,4 @@
-"""Route A, step A1: fetch and verify ProteinGym v1.3 substitutions, and write the download manifest.
-
-Each file goes into its own directory under data/raw/proteingym/, which must be empty before the
-first download. Downloads are checked against the size and SHA-256 recorded here, so a changed
-upstream file stops the run instead of flowing into the analysis. Archive members are checked for
-unsafe paths before extraction, and nothing in the archive is executed.
-
-Sources, both from the ProteinGym repository (https://github.com/OATML-Markslab/ProteinGym):
-  * DMS_ProteinGym_substitutions.zip, release v1.3, as listed in the repository README.
-  * reference_files/DMS_substitutions.csv, the reference table on the main branch (blob 8d1ea9a1).
-"""
+"""Fetch ProteinGym v1.3 substitution data and record verified download provenance."""
 
 from __future__ import annotations
 

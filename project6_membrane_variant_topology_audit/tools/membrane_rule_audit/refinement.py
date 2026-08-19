@@ -1,11 +1,4 @@
-"""Annotation-driven additions to a predictor that consumes no predictor scores.
-
-These are directional correction features, not clinical probabilities or a claim
-that every mutation following a chemical pattern has the same functional effect.
-Real coefficients must be calibrated and the complete predictions evaluated
-later. In particular, the control-free disulfide arm tests predictive utility;
-it does not identify a causal disulfide-specific penalty.
-"""
+"""Apply annotation-derived rule corrections to standalone variant scores."""
 from __future__ import annotations
 
 from collections import Counter, defaultdict
@@ -169,7 +162,7 @@ def prepare_record(accession, topology, annotation, *, spec=FeatureSpec()):
                 exclusions["competing_function_signal_or_nonstructural_bond"] += 1
                 continue
             bonds.append(dict(start=start, end=end, role="annotated_bond_not_independently_functionally_validated", **evidence))
-    # Duplicate source records are harmless; competing partners are not.
+    # Allow duplicate records but reject conflicting disulfide partners.
     glycosites = list({g["position"]: g for g in glycosites}.values())
     bonds = list({(b["start"],b["end"]): b for b in bonds}.values())
     partners = defaultdict(set)
@@ -221,7 +214,7 @@ def variant_features(record, positions, natives, alternatives):
             matrix[i,0] = (-0.5 if context["side"] == 1 else 0.5) * np.exp(-(distance-1)/spec.decay_length)
         if neutral_gain and alt in "DEKR" and context.get("in_tm") == 1 and context["tm_length"] >= spec.minimum_tm_length:
             matrix[i,1] = context["depth"]
-        # Binary union: a single mutation is not counted twice for overlapping motifs.
+        # Use a binary union so overlapping motifs cannot count one mutation twice.
         matrix[i,2] = float(any((offset == 0 and alt != "N") or (offset == 1 and alt == "P") or
                                (offset == 2 and alt not in "ST") for offset in glyco.get(int(position), [])))
         matrix[i,3] = float(int(position) in bonded)

@@ -1,45 +1,5 @@
-"""Route B, step B1b: ProtT5-XL per-residue embeddings for the panel sites, on Modal.
-
-Reads `results/route_b_20261012/chunk_plan.npz`, which `route_b_chunk_plan.py` wrote after verifying every
-one of the 726,444 panel sites against the census sequence. Embeds the 5,043 chunks, gathers the
-per-residue vector for each panel site, and writes one fp16 array per batch to a Modal Volume.
-
-The gather happens inside the GPU function on purpose. Returning whole chunk embeddings would move
-2,605,296 x 1024 x 2 bytes, about 5.3 GB; gathering first reduces it to 726,444 x 1024 x 2, about 1.49 GB.
-
-Frontend choice. ProtT5-XL-UniRef50, not ESM. ESM1b already satisfies the K/R-gain rule
-(comparator-robust at -0.073, 2026-09-29 entry), so building on ESM representations risks rule compliance
-arriving from the frontend rather than from the loss term, which would make the central claim
-unfalsifiable. ESM2 is the same family and the same risk. ProtT5 is a different lineage, and the plain
-student control measures its baseline contrast rather than assuming anything.
-
-Run
----
-    pip install modal && modal setup          # one time, authenticates to your account
-    modal run scripts/route_b_embed_modal.py
-
-Then fetch the output and assemble it:
-
-    modal volume get route-b-embeddings / ./results/route_b_20261012/embeddings
-    python scripts/route_b_embed_modal.py --assemble
-
-Cost and GPU choice
--------------------
-The weights are baked into the image by `_bake_model`, so the ~11 GB pull happens once at image build and
-no container ever downloads them. Chunks are length-bucketed into padded forwards under TOKEN_BUDGET
-tokens, which turns 5,043 single-sequence forwards into a few hundred batched ones; without that the job
-is launch-overhead-bound and a faster GPU buys nothing.
-
-With both fixes, 2,605,296 tokens is roughly 1-2 minutes of compute plus about a minute of model load:
-
-    A100 40GB  $2.10/hr   ~4 min container   ~$0.14
-    H100 SXM5  $3.95/hr   ~3 min container   ~$0.20
-    L4 24GB    $0.80/hr   ~9 min container   ~$0.12
-
-The fixed overhead (cold start, model load to GPU) does not shrink with a faster card, so H100 saves about
-a minute over A100 and costs a few cents more. Any of the three is fine; pick whichever has capacity.
-Modal bills per second and the batch files are idempotent, so a failed or partial run is cheap and a rerun
-only redoes missing batches.
+"""Generate ProtT5-XL embeddings for panel sites on Modal and assemble the downloaded
+results.
 """
 from __future__ import annotations
 
@@ -47,13 +7,11 @@ import argparse
 import json
 from pathlib import Path
 
-# One task for the whole job. The model is loaded inside the function, so each task costs another load
-# (about a minute); with only ~2 minutes of compute in total, splitting the work would cost more in
-# repeated loads than it saves in parallelism. 5,043 chunks pickle to ~8 MB, which Modal moves as a blob.
+# Keep the job in one task to avoid repeated model-loading overhead.
 BATCH = 6000
-TOKEN_BUDGET = 32768             # padded tokens per GPU forward, length-bucketed to limit padding waste
+TOKEN_BUDGET = 32768             # Bound padded tokens per forward pass to limit GPU memory use.
 MAX_CONTAINERS = 1
-GPU = "A100"                     # "H100" and "L4" both work; see the note in the module docstring
+GPU = "A100"
 MODEL = "Rostlab/prot_t5_xl_uniref50"
 VOLUME = "route-b-embeddings"
 PLAN = "results/route_b_20261012/chunk_plan.npz"
@@ -61,7 +19,7 @@ OUT = "results/route_b_20261012"
 
 try:
     import modal
-except ImportError:                                  # --assemble runs without modal installed
+except ImportError:                                  # Keep assembly usable without installing Modal.
     modal = None
 
 
@@ -130,13 +88,13 @@ if modal is not None:
         from transformers import T5EncoderModel, T5Tokenizer
 
         out_path = Path(f"/out/batch_{batch_id:05d}.npz")
-        if out_path.exists():                        # idempotent across reruns
+        if out_path.exists():
             return {"batch": batch_id, "skipped": True}
 
         tokenizer = T5Tokenizer.from_pretrained(MODEL, do_lower_case=False, legacy=True)
         model = T5EncoderModel.from_pretrained(MODEL, torch_dtype=torch.float16).cuda().eval()
 
-        # Length-bucket so each forward pads to roughly its own longest sequence, not to 1022.
+        # Bucket sequences by length to avoid padding every batch to the maximum context.
         order = sorted(range(len(chunks)), key=lambda i: len(chunks[i]["sequence"]))
         groups, current = [], []
         for i in order:
@@ -153,14 +111,14 @@ if modal is not None:
         with torch.no_grad():
             for group in groups:
                 seqs = [chunks[i]["sequence"] for i in group]
-                # ProtT5 wants space-separated residues; U/Z/O/B map to X per the model card.
+                # Space-separate ProtT5 residues and map U/Z/O/B to X as specified by the model card.
                 spaced = [" ".join("X" if r in "UZOB" else r for r in s) for s in seqs]
                 encoded = tokenizer(spaced, return_tensors="pt", padding=True, add_special_tokens=True)
                 hidden = model(input_ids=encoded["input_ids"].cuda(),
                                attention_mask=encoded["attention_mask"].cuda()).last_hidden_state
                 for slot, i in enumerate(group):
                     seq = chunks[i]["sequence"]
-                    # Row r is residue r; the tokenizer appends </s> after the last residue.
+                    # ProtT5 row r represents residue r and the tokenizer appends a terminator.
                     residues = hidden[slot, : len(seq)].float().cpu().numpy()
                     if residues.shape[0] != len(seq):
                         raise RuntimeError(f"chunk {chunks[i]['chunk_id']}: {residues.shape[0]} rows "
@@ -191,8 +149,7 @@ def assemble() -> None:
     root = ROOT / OUT
     plan = np.load(root / "chunk_plan.npz", allow_pickle=False)
     n_sites = len(plan["site_chunk"])
-    # `modal volume get <vol> / <dest>` writes a lone volume file *as* <dest> rather than into a
-    # directory of that name, so accept both shapes.
+    # Accept either download layout because Modal treats a lone volume file differently from a directory.
     target = root / "embeddings"
     if target.is_dir():
         files = sorted(target.glob("batch_*.npz"))

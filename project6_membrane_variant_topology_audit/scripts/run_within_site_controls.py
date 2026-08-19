@@ -1,30 +1,4 @@
-"""Controls and scale fixes for the within-site charge audit.
-
-Five things the headline result needs before it can be frozen.
-
-**Standardised units.** AlphaMissense scores run 0 to 1; ESM1b is an unbounded
-log-likelihood ratio. "+1.11 versus +0.051" compares nothing. Every side
-difference here is also divided by the standard deviation of that model's own
-within-site penalties, and reported as a rank statistic P(cytosolic > outer),
-which assumes no scale at all.
-
-**Glycosylation control.** On the outer side, S/T to K/R destroys an N-X-S/T
-sequon, and N to K/R destroys it too. Losing glycosylation is damaging for
-reasons that have nothing to do with the positive-inside rule, and it only
-happens on the outer side, so it biases the gain contrast toward the hypothesis.
-Sites participating in a sequon are excluded here.
-
-**Lysine versus arginine.** Lysine is a ubiquitination target, so losing one can
-look benign and gaining one damaging for degradation reasons. That biases against
-the hypothesis. Arginine-only is the cleaner test.
-
-**Floor effects.** AlphaMissense is bounded, so a side difference could be
-compression near an endpoint. Repeated on the logit scale and on ranks.
-
-**Ion channels.** The census carries no pore or re-entrant loop annotation, so
-pore loops cannot be excluded directly. Excluding ion channels entirely is the
-available proxy, and it matters because Kir2.1 has a pore loop.
-"""
+"""Controls and scale fixes for the within-site charge audit."""
 
 from __future__ import annotations
 
@@ -45,7 +19,7 @@ from run_gate1 import read_topology
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TOPOLOGY = ROOT / "data" / "raw" / "topology_viewer.html"
 DEFAULT_INTRAMEM = ROOT / "data" / "external" / "uniprot" / "human_intramem.tsv"
-# Include the pore span and the flank window on each side.
+# Include the pore span and both flank windows in the control region.
 PORE_MARGIN = 10
 PRIMARY_WINDOW = 10
 ALPHABET = "ACDEFGHIKLMNPQRSTVWY"

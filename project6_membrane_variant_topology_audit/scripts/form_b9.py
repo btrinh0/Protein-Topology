@@ -1,11 +1,4 @@
-"""Train the B9 neural student with a K/R-gain consistency term.
-
-The model uses native residue, alternate residue, side, and distance. Rule
-contrasts are exact linear functions of its 20 x 20 x 2 x 60 prediction table and
-the report card's gene-by-native-residue weights. The pilot stage evaluates on
-validation clusters, and the full stage evaluates on test clusters. Derived
-AlphaMissense weights are not published.
-"""
+"""Train the B9 neural student with a K/R-gain consistency term."""
 from __future__ import annotations
 
 import argparse

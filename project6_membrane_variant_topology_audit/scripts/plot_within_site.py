@@ -1,7 +1,4 @@
-"""Figure: within-site charge penalties by membrane side and distance.
-
-Reads results/gate0_*/gate0_within_site.json and writes within_site_charge_rules.png.
-"""
+"""Plot within-site charge penalties by membrane side and boundary distance."""
 
 from __future__ import annotations
 

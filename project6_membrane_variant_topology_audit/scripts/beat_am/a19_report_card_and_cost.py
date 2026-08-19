@@ -1,27 +1,4 @@
-"""A19: the rest of the rule deliverable -- report card, splits, and the accuracy cost.
-
-a18 produced the headline rule number. Four required pieces were still missing:
-
-  1. the full 8-rule report card for the corrected model, on held-out census
-     clusters, plus the diff against the SAME model without the correction --
-     which is what "every other report-card rule keeps its verdict" means, and
-     what shows the placebo rules still read null
-  2. the report card for AlphaMissense on the same held-out clusters, for the
-     diff the deliverable asks for
-  3. the **symbol-family split**, the one Form B missed
-  4. the accuracy cost: per-protein Spearman on development proteins before and
-     after the identical correction
-
-Side-convention hazard, handled explicitly. `apply_correction` treats panel
-`side == 0` as cytosolic. The L1 feature table uses a DIFFERENT encoding from
-a9: 1 = inside/cytosolic, 2 = outside/outer, 0 = in-TM or unknown. Applying the
-panel rule directly to L1 rows would invert the shift for every cytosolic row.
-The mapping is made explicit below and the fraction of changed rows is checked
-against the panel's 7.35%.
-
-Label-free on the panel side. Development outcomes only; confirmation outcomes
-are never opened.
-"""
+"""Report rule contrasts and the correction's cross-split accuracy cost."""
 
 from __future__ import annotations
 
@@ -90,7 +67,7 @@ def main() -> None:
         print(f"\n=== {kind} split: held-out {int(te.sum()):,} panel sites "
               f"({removed} removed from train of {n_barred} barred) ===", flush=True)
 
-        # the rule contrast lives on the +-10 window
+        # The rule contrast uses the ten-residue window rather than the accuracy panel's full depth.
         win = lib.window_panel(held, window=10)
         fk = (held["protein"].astype(np.int64) << 32) | held["position"].astype(np.int64)
         wk = (win["protein"].astype(np.int64) << 32) | win["position"].astype(np.int64)
@@ -119,7 +96,7 @@ def main() -> None:
                   f"pass={entry[name]['passes_target']}", flush=True)
         results["splits"][kind] = entry
 
-    # ---- full report card on the sequence split's held-out clusters
+
     label, _, _ = census_labels(lib, census, "sequence")
     te = lib.split_mask(panel, label, "test")
     held = lib.subset_panel(panel, te)
@@ -146,22 +123,22 @@ def main() -> None:
     results["card_diff_pre_to_post"] = diff_rule
     results["card_diff_am_to_post"] = diff_am
 
-    # ---- accuracy cost on development proteins
+
     print("\n=== accuracy cost on development proteins ===", flush=True)
     t = np.load(FEAT / "l1_table.npz", allow_pickle=True)
     d = {k: t[k] for k in t.files}
     y = d["target"].astype(np.float32)
-    # the model's own dev predictions come from the general scorer's outer folds
+    # Use the general scorer's outer-fold development predictions for accuracy costs.
     gp = ROOT / "results" / "beat_am_20261016" / "evaluation" / "general_scorer_per_protein.csv"
     if not gp.exists():
         print("  general scorer per-protein table missing; run a17 first")
         return
 
-    # replicate the panel shift on dev rows, with the L1 side encoding mapped
+
     beta = json.loads((RULE / "correction_fit.json").read_text())["fitted_beta"]
     native = d["native"].astype(str)
     alt = d["alt"].astype(str)
-    side_l1 = d["side"].astype(int)       # 1 = inside/cytosolic, 2 = outside/outer
+    side_l1 = d["side"].astype(int)       # The feature head encodes cytosol as 1 and the outer side as 2.
     dist = d["distance"].astype(np.float32)
     neutral = set("ACFGILMNPQSTVWY")
     is_kr_gain = np.array([(n in neutral) and (a in "KR")

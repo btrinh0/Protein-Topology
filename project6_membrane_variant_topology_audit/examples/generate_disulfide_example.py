@@ -1,4 +1,4 @@
-"""Write a declared SYNTHETIC matched-site example; no biological data."""
+"""Generate synthetic matched-site inputs for demonstrating the disulfide audit."""
 import csv
 import hashlib
 import json

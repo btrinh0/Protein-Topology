@@ -1,12 +1,4 @@
-"""A label-free lower bound for the existing glycosylation-loss coefficient.
-
-The inputs are matched score contrasts, never experimental outcome labels.
-Each constraint is affine in the coefficient: delta(beta) = delta(0) +
-beta * feature_delta.  A expects a nonnegative delta; B a nonpositive delta.
-The smallest shared nonnegative beta satisfying the calibration constraints
-is the maximum of their individual lower bounds.  Application to a new
-protein is not guaranteed to satisfy that protein's constraints.
-"""
+"""Calibrate a label-free lower bound for the glycosylation-loss coefficient."""
 from __future__ import annotations
 
 import math

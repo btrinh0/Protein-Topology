@@ -1,18 +1,4 @@
-"""Phase B: inventory deep mutational scans that map onto the census topology.
-
-The gate asks whether at least four census membrane proteins have an abundance,
-surface-expression or trafficking scan with enough charge changes in the aqueous
-flanks to fit the Phase C model. Function readouts (currents, signalling, binding,
-catalysis) are reported but flagged, because mixing them with expression readouts
-would muddy the model.
-
-Numbering is resolved against the target sequence that MaveDB stores with each
-score set, not against an accession, so an isoform offset cannot silently shift
-every residue. A score set is only counted when its target sequence can be
-located exactly inside the census sequence.
-
-Label-free with respect to ClinVar: no clinical classification is read here.
-"""
+"""Inventory deep mutational scans that map onto the membrane topology census."""
 from __future__ import annotations
 
 import argparse
@@ -35,8 +21,7 @@ DEFAULT_OUT = ROOT / "results" / "phaseB_20260924"
 
 API = "https://api.mavedb.org"
 
-# Readout keywords. EXPRESSION_RE marks the assays the Phase C model can use;
-# FUNCTION_RE marks readouts that must not be pooled with them.
+# Keep expression-type readouts separate from functional readouts in Phase C.
 EXPRESSION_RE = re.compile(
     r"abundance|surface expression|surface-expression|cell.surface|surface level|"
     r"surface presentation|trafficking|traffick|localization|localisation|"
@@ -48,7 +33,7 @@ FUNCTION_RE = re.compile(
     r"growth|proliferat|fitness|luciferase", re.I)
 
 MIN_VARIANTS = 150
-# A score set is only used when this fraction of its reference residues match the census.
+# Require the declared reference-residue agreement before admitting a score set.
 MIN_REFERENCE_AGREEMENT = 0.95
 
 AA3 = {
@@ -61,7 +46,7 @@ HGVS_PRO_RE = re.compile(r"^p\.([A-Za-z]{3})(\d+)([A-Za-z]{3})$")
 POSITIVE = {"K", "R"}
 WINDOWS = (5, 10, 15)
 
-# NCBI genetic code table 1, in the conventional TCAG x TCAG x TCAG codon order.
+# Codons follow NCBI table 1 in TCAG-by-TCAG-by-TCAG order.
 _BASES = "TCAG"
 _AMINO_ACIDS = ("FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG")
 CODON_TABLE = {
@@ -162,8 +147,7 @@ def readout_kind(score_set: dict) -> tuple[bool, bool, str]:
     parts = [score_set.get("title"), score_set.get("shortDescription"),
              experiment.get("title"), experiment.get("shortDescription"),
              experiment.get("abstractText"), experiment.get("methodText")]
-    # The score set's own title decides the readout; the experiment abstract often
-    # mentions every assay in the paper, so it is used only as a fallback signal.
+    # Prefer the score-set title because an experiment abstract can describe several different assays.
     own = " | ".join(str(p) for p in parts[:2] if p)
     full = " | ".join(str(p) for p in parts if p)
     expression = bool(EXPRESSION_RE.search(own)) or bool(EXPRESSION_RE.search(full))
@@ -245,9 +229,7 @@ def audit_score_set(score_set: dict, proteins: dict[str, dict],
         raw_sequence = (sequence_block.get("sequence") or "").strip().upper()
         if not raw_sequence:
             continue
-        # Most MaveDB targets store the coding DNA, so translate it. The deposited
-        # region is not always in frame 0, so every frame is tried and the one that
-        # lands inside a census sequence wins.
+        # Try every translation frame because deposited coding regions may not start in frame zero.
         if sequence_type == "protein":
             attempts = [(raw_sequence, "protein")]
         elif sequence_type == "dna":
@@ -259,7 +241,7 @@ def audit_score_set(score_set: dict, proteins: dict[str, dict],
         name = str(target.get("name") or "").strip().upper()
         candidates = symbols.get(name, [])
         if not candidates:
-            # Search the full census when the target name does not identify a gene.
+
             candidates = list(proteins)
         accession = offset = None
         for target_sequence, how in attempts:
@@ -285,10 +267,7 @@ def audit_score_set(score_set: dict, proteins: dict[str, dict],
         if not variants:
             return {"urn": score_set["urn"], "status": "no_scored_simple_missense"}
 
-        # Locating the target sequence gives a candidate offset, but some deposits
-        # omit the start codon while still numbering hgvs_pro in full-protein
-        # coordinates. Choose the offset that actually reconciles the reference
-        # residues, and keep the agreement rate as the evidence that it is right.
+        # Choose the offset that reconciles reference residues because deposits can omit the start codon while retaining full-protein numbering.
         offset, agreement = best_offset(variants, sequence, offset)
         if agreement < MIN_REFERENCE_AGREEMENT:
             return {"urn": score_set["urn"], "target_name": name,
@@ -387,7 +366,7 @@ def run(args: argparse.Namespace) -> dict:
         for row in sorted(audited, key=lambda r: -r.get("flank_10_charge_change", 0)):
             writer.writerow({key: row.get(key, 0) for key in fields})
 
-    # Gate: proteins whose best expression score set has usable flank charge changes.
+
     best: dict[str, dict] = {}
     for row in audited:
         if row["readout"] != "expression":

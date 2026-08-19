@@ -1,27 +1,4 @@
-"""A6: extract AlphaMissense and ESM1b scores for the manifest proteins.
-
-One streaming pass over AlphaMissense_aa_substitutions.tsv.gz (1.2 GB gzipped)
-pulls every needed accession at once, so the file is never scanned twice.
-ESM1b comes from per-accession CSVs inside ESM1b_ALL_hum_isoforms_LLR.zip by
-random access.
-
-Scope discipline. Confirmation-protein scores are written to a SEPARATE
-directory, `features/confirmation_held/`, which no development or fitting
-script reads. Extracting a predictor score is not looking at an outcome and is
-not a model-versus-AM comparison, but keeping the two sets physically apart
-makes an accidental peek take a deliberate act.
-
-Orientation (locked decision 1): AM pathogenicity is already damage-oriented
-(higher = more pathogenic). ESM1b LLR is fitness-oriented (alternative minus
-wild type), so the damage score written here is NEGATED: damage = -LLR.
-
-AlphaMissense data is (c) 2023 DeepMind Technologies Limited. The file header
-declares CC BY-NC-SA 4.0 (note: the project prompt says CC BY 4.0; the file
-itself is the more restrictive NC-SA). Not validated for, and not approved for,
-any clinical use.
-
-Creates new files only.
-"""
+"""Extract AlphaMissense and ESM1b scores for the manifest proteins."""
 
 from __future__ import annotations
 
@@ -98,7 +75,7 @@ def extract_esm(accessions: dict[str, Path]) -> dict[str, int]:
                 counts[acc] = 0
                 continue
             header = rows[0].split(",")
-            # header[0] is empty; the rest are "<native_aa> <position>"
+            # The first header cell is empty and remaining labels encode native residue and position.
             sites = []
             for cell in header[1:]:
                 parts = cell.strip().split()
@@ -119,7 +96,7 @@ def extract_esm(accessions: dict[str, Path]) -> dict[str, int]:
                             llr = float(value)
                         except ValueError:
                             continue
-                        # fitness-oriented LLR -> damage score
+                        # Negate fitness-oriented LLR values to obtain damage-oriented scores.
                         oh.write(f"{native}{pos}{alt}\t{-llr:.4f}\n")
                         n += 1
             counts[acc] = n

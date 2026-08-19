@@ -1,14 +1,4 @@
-"""Export the Gate 1 flank cohort as a per-event table with no clinical label.
-
-The ClinVar classification is used only as an inclusion filter, exactly as in
-run_gate1.py: an event must carry a high-confidence P/LP or B/LB aggregate
-classification at two stars or better. The label itself is never written out, so
-this table can be used to plan the analysis (cluster sizes, power, covariate
-structure) while the outcome stays blind.
-
-Labels are attached later, after the preregistration is frozen, by joining on
-variation_id.
-"""
+"""Export the Gate 1 flank cohort as a per-event table with no clinical label."""
 
 from __future__ import annotations
 

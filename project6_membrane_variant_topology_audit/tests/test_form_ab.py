@@ -1,7 +1,4 @@
-"""Test the Form A/B generator, oracle, students, split, guards, and correction.
-
-Run with: .venv_ml/Scripts/python.exe -m unittest discover -s tests -p test_form_ab.py -v
-"""
+"""Test the Form A/B generators, estimators, students, splits and correction guards."""
 from __future__ import annotations
 
 import tempfile

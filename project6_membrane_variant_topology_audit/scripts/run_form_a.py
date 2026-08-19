@@ -1,9 +1,4 @@
-"""Train Form A student models on planted rules and audit held-out predictions.
-
-The pilot stage uses separate seeds to verify the pipeline and model capacity.
-Synthetic targets use observed membrane geometry without
-reading AlphaMissense scores. `summarize_form_a.py` reads the outputs.
-"""
+"""Train Form A student models on planted rules and audit held-out predictions."""
 from __future__ import annotations
 
 import argparse
@@ -31,7 +26,7 @@ STUDENT_ORDER = ("S0", "S0n", "S1", "S2", "S3")
 STAGES = {
     "pilot": dict(seed=lib.PILOT_SEED, replicates=3, train=40_000, validation=20_000,
                   out=lib.ROOT / "results/form_ab_pilot_20261008/form_a"),
-    # The full-stage cap exceeds the available training positions, so all are used.
+    # The full-stage cap exceeds the available positions, so the run uses all training positions.
     "full": dict(seed=lib.MASTER_SEED, replicates=20, train=1_000_000, validation=30_000,
                  out=lib.ROOT / "results/form_a_20261008"),
 }

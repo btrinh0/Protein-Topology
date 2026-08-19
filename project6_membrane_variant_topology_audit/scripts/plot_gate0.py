@@ -1,8 +1,4 @@
-"""Figure for Gate 0: side asymmetry in AlphaMissense scores versus distance to the TMD.
-
-Reads results/gate0_*/gate0_summary.json and writes gate0_side_asymmetry.png.
-The matching table view is gate0_estimates.csv in the same directory.
-"""
+"""Plot AlphaMissense side contrasts by distance from the transmembrane boundary."""
 
 from __future__ import annotations
 
@@ -23,8 +19,7 @@ TEXT_SECONDARY = "#52514e"
 TEXT_MUTED = "#8a8980"
 GRID = "#e6e5e1"
 
-# Colour follows the role (loss / gain / placebo), so it means the same thing in
-# every panel. Validated: worst all-pairs CVD dE 9.2, normal-vision dE 24.0.
+# Use consistent loss, gain and placebo colors across panels.
 ROLE_COLOUR = {"loss": "#2a78d6", "gain": "#eb6834", "placebo": "#1baf7a"}
 
 BINS = ["1-5", "6-10", "11-15", "16-30", "31-60"]
@@ -117,7 +112,7 @@ def run(args: argparse.Namespace) -> Path:
     ], {"loss − gain": -7, "loss − placebo": 7})
     axes[1][0].set_xlabel("residues from the transmembrane boundary", color=TEXT_SECONDARY, fontsize=9)
 
-    # Panel D: the subgroup where the confound disappears.
+
     ax = axes[1][1]
     style_axis(ax, "First transmembrane segment only",
                "Window ≤10 residues; faded = all segments, solid = first segment only", None)

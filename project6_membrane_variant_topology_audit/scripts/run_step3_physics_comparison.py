@@ -1,18 +1,4 @@
-"""Compare cytosolic K/R gain profiles with ER insertion measurements.
-
-Frozen design: docs/STEP3_PHYSICAL_ANCHOR_PREREG.md
-SHA-256 40a411e3968bb1c0f0ad1365bc4cf47878411a82894371c1814e75aa701021af
-
-Lerch-Bader et al. (2008) measured the free-energy effect of adding a positive
-charge at different distances on the cytosolic side. The corresponding model
-quantity is the cytosolic within-site gain penalty by distance.
-
-Negative insertion ddG and negative model penalties both indicate favorability.
-Both values are negated for comparisons on a common favorability axis. These
-descriptive comparisons do not establish model failure.
-
-Label-free.
-"""
+"""Compare cytosolic K/R gain profiles with ER insertion measurements."""
 
 from __future__ import annotations
 
@@ -135,7 +121,7 @@ def physics_profile() -> dict:
         label = mapping.get(p["distance"])
         if label:
             buckets[label].append(p["ddGapp"])
-    # Convert physical costs to the same favorability direction as model scores.
+    # Orient physical costs and predictor scores to the same favorability direction.
     return {label: -float(np.mean(values)) for label, values in buckets.items()}
 
 

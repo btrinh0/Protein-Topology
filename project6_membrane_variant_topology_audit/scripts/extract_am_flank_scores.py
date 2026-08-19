@@ -1,11 +1,4 @@
-"""Extract AlphaMissense scores at TMD-flank positions of the human ER membrane census.
-
-Label-free: this script never reads ClinVar. It produces the substrate for Gate 0,
-which asks whether AlphaMissense itself encodes the positive-inside rule.
-
-Output is a compact .npz with one row per (canonical protein position, alternate
-amino acid) inside `--max-distance` residues of an annotated TMD edge.
-"""
+"""Extract AlphaMissense scores at TMD-flank positions of the human ER membrane census."""
 
 from __future__ import annotations
 

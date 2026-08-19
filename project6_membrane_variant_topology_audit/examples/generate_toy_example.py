@@ -1,8 +1,4 @@
-"""Create small, fully synthetic inputs for both installed command interfaces.
-
-These examples are software fixtures, not measurements or real predictor data.
-The mapped K/R-gain contrast has a known cytosolic-minus-outer value of -0.30.
-"""
+"""Generate synthetic inputs for the audit command-line interfaces."""
 from __future__ import annotations
 
 import argparse

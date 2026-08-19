@@ -1,9 +1,4 @@
-"""Simulate Phase C using the realized design and shared analysis engine.
-
-Uses the observed per-(gene, reference residue) cell sizes from the corrected run.
-The analysis and simulation share the estimator implementation so the reported
-size and power apply to the fitted procedure.
-"""
+"""Simulate Phase C using the realized design and shared analysis engine."""
 
 from __future__ import annotations
 

@@ -1,8 +1,4 @@
-"""Reusable raw-score panel analysis using the earlier uncharged comparator.
-
-This module packages the existing within-site estimator. It does not run
-alternative comparators, transformed scales, subgroups, or calibration studies.
-"""
+"""Compute raw-score panel contrasts using the frozen uncharged comparator."""
 from __future__ import annotations
 
 import argparse

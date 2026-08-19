@@ -1,9 +1,4 @@
-"""Run the Form B correction and evaluate it on held-out clusters.
-
-The pilot stage fits on training clusters and evaluates on validation clusters.
-The full stage evaluates on test clusters. Corrected scores are temporary audit
-inputs and are deleted after use. No clinical labels are read.
-"""
+"""Run the Form B correction and evaluate it on held-out clusters."""
 from __future__ import annotations
 
 import argparse
@@ -130,7 +125,7 @@ def evaluate(scorer, panel, label, key_of, kind, args, tool, primary: bool) -> d
                                      "moved_to_declared_side": bool(plus_ok)}
     out["controls"] = controls
 
-    # Refit the correction across the configured sensitivity grid.
+
     grid = []
     for sens_length in (4.0, 8.0, 16.0, None):
         for sens_margin in (0.025, 0.05, 0.075):

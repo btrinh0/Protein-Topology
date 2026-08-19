@@ -1,26 +1,4 @@
-"""A17: a GENERAL scorer, applicable to any missense variant with no assay metadata.
-
-Why this exists. The best development model consumes two features a census panel
-site cannot supply:
-
-  * `endpoint_type` one-hot -- a panel site belongs to no assay, so it is undefined
-  * the local-window embedding mean -- needs neighbours, and the panel stops at
-    distance 60, so the window is truncated at the edges
-
-The audit needs scores for all 726,444 panel sites, and the deliverable requires
-`score_variants.py` to score *any* missense variant list. Both demand a scorer
-with no assay-dependent and no neighbour-dependent inputs. This trains that
-scorer and measures what the generality costs, so the price is visible rather
-than buried.
-
-Feature set: AM, ESM1b (damage-oriented), the substitution descriptors, the
-per-site topology, and a PCA projection of the ProtT5 vector AT the position.
-No endpoint, no window.
-
-PCA is fit on outer-training rows only, per locked decision 5.
-
-Scope: fitting pool only. Confirmation proteins are absent from l1_table.npz.
-"""
+"""Score missense variants with the fitted general prediction head."""
 
 from __future__ import annotations
 
@@ -43,7 +21,7 @@ N_OUTER, N_INNER = 5, 4
 SEED = 20261016
 N_PC = 64
 
-# the general feature set: no endpoint one-hot, no window term
+# Exclude endpoint indicators and window terms from the general feature set.
 GENERAL = [
     "am", "esm1b", "blosum62", "grantham",
     "d_composition", "d_polarity", "d_volume", "d_hydro", "d_charge",

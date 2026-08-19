@@ -1,29 +1,4 @@
-"""A12: curate the 22 homologous pairs, then rebuild the split from the survivors.
-
-MMseqs2 (instance) and the local Biopython audit disagreed badly: 4 pairs vs 22,
-with 0 found by MMseqs2 alone. Neither is simply right. MMseqs2's k-mer
-prefilter and e-value cutoff lose remote homologs near 30% identity; exhaustive
-local Smith-Waterman with no low-complexity masking invents pairs from
-compositionally biased segments. BLAST and MMseqs2 both mask low complexity by
-default; a4 did not, which is the defect being corrected here.
-
-Three independent lines of evidence per pair, none of them my own alignment
-score:
-
-  1. Curated family membership from the Oxford census annotation
-     (isGPCR / isIonChannel / isSLC / isABC / isATPase / isE3Ligase).
-  2. Whether MMseqs2 independently found the pair.
-  3. Composition of the aligned segments: Shannon entropy and the largest
-     single-residue fraction. Real homologous segments look like normal protein
-     (entropy near 4.0 bits over 20 letters); low-complexity artifacts do not.
-
-A pair is dropped only when it fails ALL supporting tests and shows positive
-evidence of compositional bias, because over-grouping merely costs training
-data while under-grouping risks leaking a confirmation protein's relative into
-a fitted stage.
-
-Creates new files only.
-"""
+"""Curate homologous protein pairs and rebuild the split from the retained groups."""
 
 from __future__ import annotations
 
@@ -44,7 +19,7 @@ OUT = ROOT / "results" / "beat_am_20261016" / "inventory_curated"
 
 FAMILY_FLAGS = ["isGPCR", "isIonChannel", "isSLC", "isABC", "isATPase", "isE3Ligase"]
 
-# A compositionally normal globular segment sits near 4.0 bits over 20 letters.
+# A compositionally balanced globular segment has about four bits of residue entropy.
 ENTROPY_SUSPECT = 3.55
 MAXFRAC_SUSPECT = 0.22
 HIGH_COVERAGE = 0.80
@@ -94,7 +69,7 @@ def main() -> None:
         for r in csv.DictReader(fh):
             manifest[r["accession"]] = r
 
-    # pairs MMseqs2 independently confirmed
+
     mm_pairs = set()
     mm_file = MMS / "overlap_audit_mmseqs.csv"
     if mm_file.exists():
@@ -117,7 +92,7 @@ def main() -> None:
         key = tuple(sorted((a, b)))
         sa, sb = universe[a]["sequence"], universe[b]["sequence"]
 
-        # re-derive the aligned segments so composition can be measured
+        # Measure composition on aligned segments rather than full sequences.
         aln = aligner.align(sa, sb)[0]
         seg_a = "".join(sa[x:y] for x, y in aln.aligned[0])
         seg_b = "".join(sb[x:y] for x, y in aln.aligned[1])
@@ -168,7 +143,7 @@ def main() -> None:
         w.writeheader()
         w.writerows(rows)
 
-    # ---- rebuild the split keeping SUPPORTED and UNRESOLVED (drop only ARTIFACT)
+    # Retain supported and unresolved pairs while excluding artifact calls.
     keys = sorted(universe)
     uf = Union(keys)
     kept = [r for r in rows if r["verdict"] != "ARTIFACT"]

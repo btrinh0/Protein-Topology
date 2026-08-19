@@ -1,15 +1,4 @@
-"""Estimate slope uncertainty and decompose the gain penalty by arm.
-
-The five folds share training data, so their slopes are not independent estimates.
-This script computes a protein-clustered bootstrap interval for the slope.
-
-The gain penalty is score(X -> K/R) - score(X -> uncharged). The analysis regresses
-the K/R and comparator arms separately against their B1 counterparts, then repeats
-the comparator analysis for polar-only and hydrophobic-only residue sets. This
-distinguishes a charge-specific signal from constraints in the comparator arm.
-
-Label-free throughout.
-"""
+"""Estimate slope uncertainty and decompose the gain penalty by arm."""
 
 from __future__ import annotations
 

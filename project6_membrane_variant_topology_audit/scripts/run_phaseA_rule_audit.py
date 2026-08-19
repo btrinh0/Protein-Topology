@@ -1,16 +1,4 @@
-"""Phase A: does AlphaMissense already encode the positive-inside rule?
-
-Label-free audit. Reads only the Oxford-MRC census topology and AlphaMissense
-pathogenicity scores. No ClinVar classification is opened, so this cannot
-unblind the Gate 1 side-by-charge-change cells.
-
-The audit asks how AlphaMissense's score varies with (a) which side of the
-membrane an aqueous residue sits on, (b) the signed change in formal charge the
-substitution makes, and (c) how far the residue is from the nearest TMD edge.
-If the predictor already encodes the rule, cytosolic positive-charge losses
-should score higher than the same losses on the outer side, and the gap should
-decay with distance from the membrane.
-"""
+"""Audit positive-inside score contrasts in AlphaMissense."""
 from __future__ import annotations
 
 import argparse
@@ -38,8 +26,7 @@ AA_INDEX = {aa: i for i, aa in enumerate(AA_ORDER)}
 POSITIVE = {"K", "R"}
 NEGATIVE = {"D", "E"}
 
-# Upper edge of each distance band, in residues from the nearest TMD edge.
-# The far bands act as an internal control: the rule should fade out there.
+# Use distant bands as an internal control for the expected decay of the rule contrast.
 DISTANCE_BANDS = ((5, "1-5"), (10, "6-10"), (15, "11-15"),
                   (25, "16-25"), (50, "26-50"), (math.inf, "51+"))
 PRIMARY_BAND_MAX = 10
@@ -256,8 +243,7 @@ def run(args: argparse.Namespace) -> dict:
             writer.writerow([side, band, kind, stats.n,
                              _round(stats.mean), _round(stats.sd)])
 
-    # Exact-transition contrast inside the primary window: same amino-acid change,
-    # compared across the two sides, which removes the substitution-identity confound.
+    # Compare identical amino-acid transitions across sides to remove substitution-identity confounding.
     transition_path = out_dir / "am_score_by_transition_primary_window.csv"
     transitions = sorted({transition for _, transition in by_transition})
     with transition_path.open("w", encoding="utf-8", newline="") as handle:

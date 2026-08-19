@@ -1,18 +1,4 @@
-"""Positive control: are the charge-topology rules visible in the census sequences?
-
-Label-free and model-free. This reads only the amino-acid sequences and the
-topology annotations, and measures how often K/R and D/E actually occur at each
-distance from a transmembrane boundary, on each side.
-
-If the positive-inside rule is real in this proteome, cytosolic flanks should be
-K/R-enriched relative to outer flanks, and the enrichment should fade with
-distance. That gives an evolutionary decay length to compare against the decay
-length in AlphaMissense's scores: a predictor that learned the rule from sequence
-should show a similar profile.
-
-Nothing here depends on a predictor or a clinical label, so it is the reference
-both of those are measured against.
-"""
+"""Measure charge-composition profiles across the membrane topology census."""
 
 from __future__ import annotations
 
@@ -65,7 +51,7 @@ def enrichment(data: dict, member: np.ndarray, mask: np.ndarray,
     if cytosolic.sum() == 0 or (~cytosolic).sum() == 0:
         return {}
 
-    # Per-protein sufficient statistics keep the bootstrap cheap.
+    # Retain per-protein sufficient statistics to avoid rebuilding observations during bootstrap resampling.
     counts = np.zeros((n_proteins, 4))
     np.add.at(counts, protein, np.column_stack([
         cytosolic & hit, cytosolic, (~cytosolic) & hit, ~cytosolic]).astype(float))

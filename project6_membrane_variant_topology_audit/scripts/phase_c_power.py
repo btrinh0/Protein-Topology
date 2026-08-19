@@ -1,14 +1,4 @@
-"""Phase C feasibility, computed from Phase B counts only.
-
-Reads the DMS inventory, which records how many variants fall in each flank cell.
-It does not read any measured effect, so running this does not break the Phase C
-blind on DMS outcomes.
-
-The binding constraint in Phase C is not the variant count, it is the number of
-independent proteins. Three GPCRs assayed by surface expression contribute most of
-the data, so this script reports the leave-one-family-out picture alongside the
-full one.
-"""
+"""Compute Phase C feasibility from outcome-blind Phase B counts."""
 
 from __future__ import annotations
 

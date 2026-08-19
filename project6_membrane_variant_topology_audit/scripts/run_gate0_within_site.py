@@ -1,24 +1,4 @@
-"""Gate 0 robustness check: within-site charge contrasts in AlphaMissense.
-
-Label-free. Gate 0 stratified by protein and exact substitution, which controls
-protein identity and substitution identity but *not* how constrained the
-individual residue is. If cytosolic K/R residues sit in more constrained sites
-than outer ones, Gate 0's side difference is still confounded.
-
-This removes that. At each K or R site, AlphaMissense scores both the
-charge-preserving substitution (K<->R) and charge-losing ones. Their difference
-is a charge-loss penalty computed entirely inside one site, so any constraint
-shared by the whole residue cancels:
-
-    penalty(site) = mean(score | charge lost) - mean(score | charge preserved)
-
-The side comparison is then a second difference, taken across sites within the
-same protein and the same reference residue. The same construction runs at D/E
-sites using D<->E as the preserving substitution.
-
-If the positive-inside rule is what drives Gate 0, the penalty should be larger
-on the cytosolic side and should shrink with distance from the membrane.
-"""
+"""Audit within-site charge contrasts in AlphaMissense as a Gate 0 robustness check."""
 
 from __future__ import annotations
 
@@ -70,7 +50,7 @@ def site_penalties(frame: pd.DataFrame, group: set[str]) -> pd.DataFrame:
         return stats
     stats["penalty"] = stats["score_lost"] - stats["score_preserved"]
     stats["is_cytosolic"] = stats["side"].to_numpy() == 0
-    # Stratify on the reference residue: a K site is only compared with K sites.
+    # Stratify by native residue so a K site is compared only with other K sites.
     stats["substitution"] = np.array(alphabet)[stats["ref_aa"].to_numpy()]
     return stats
 
@@ -176,9 +156,7 @@ def run(args: argparse.Namespace) -> dict:
         first = sites[(sites["distance"] <= PRIMARY_WINDOW) & (sites["tmd_index"] == 1)]
         block["first_tmd_only"] = estimate(first, "penalty", n_proteins, args.draws, args.seed)
 
-        # Diagnostic: the charge-preserving substitution on its own. A side
-        # difference here is residual site-level constraint that the penalty
-        # construction is designed to cancel.
+        # A charge-preserving side difference diagnoses residual site effects that the penalty contrast should cancel.
         primary = sites[sites["distance"] <= PRIMARY_WINDOW]
         block["diagnostic_preserving_substitution_only"] = estimate(
             primary, "score_preserved", n_proteins, args.draws, args.seed)

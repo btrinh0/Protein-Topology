@@ -1,26 +1,4 @@
-"""Route B, step B1a: build and verify the ProtT5 chunk plan before any GPU time is spent.
-
-Why this runs first
--------------------
-ProtT5 attention is quadratic and the census holds proteins up to 14,507 residues, so sequences are
-embedded in overlapping chunks. Only chunks containing panel sites need to be run: 726,444 sites across
-4,837 proteins, which is roughly 5,100 chunks rather than 4,863 whole proteins.
-
-The failure mode is silent. An off-by-one in the chunk offset misaligns every embedding to the wrong
-residue, the model still trains, and nothing downstream complains. SERT is the precedent: a best-fit
-global offset mismapped 215 residues at 66.8% agreement and only an explicit reference-residue check
-caught it.
-
-The check here is free and exact. The panel stores `ref_aa` for every site, so for each site the residue
-the census sequence carries at that position must equal the residue the panel says is native. Any
-mismatch is a mapping bug, and the plan is refused rather than written.
-
-Output
-------
-`chunk_plan.npz` holds, per panel site, the chunk it belongs to and its offset inside that chunk, plus the
-chunk table itself (accession, start, end). The embedding job reads the chunk table; the trainer reads the
-per-site index.
-"""
+"""Build and verify the ProtT5 sequence-chunk plan before GPU embedding."""
 from __future__ import annotations
 
 import argparse
@@ -33,8 +11,8 @@ import numpy as np
 import form_ab_lib as lib
 from run_gate1 import read_topology
 
-CHUNK = 1022          # ProtT5 context budget, leaving room for the terminator
-OVERLAP = 128         # so every panel site sits at least OVERLAP/2 from a chunk edge where possible
+CHUNK = 1022          # Reserve one token in the ProtT5 context budget for the terminator.
+OVERLAP = 128         # Keep panel sites away from chunk edges wherever overlap permits.
 
 
 def plan_chunks(length: int) -> list[tuple[int, int]]:
@@ -62,7 +40,7 @@ def main() -> None:
     position = panel["position"].astype(np.int64)
     ref_aa = panel["ref_aa"].astype(np.int64)
 
-    # --- the correctness check, before anything is built -------------------------------------------
+
     mismatch = []
     missing = []
     for p in np.unique(protein):
@@ -110,7 +88,7 @@ def main() -> None:
                          f"See {args.out / 'chunk_plan_refused.json'}")
     print(f"reference residues verified for all {len(protein):,} panel sites", flush=True)
 
-    # --- build the plan ---------------------------------------------------------------------------
+
     chunk_acc, chunk_start, chunk_end, chunk_seq = [], [], [], []
     site_chunk = np.full(len(protein), -1, dtype=np.int64)
     site_offset = np.full(len(protein), -1, dtype=np.int64)
@@ -120,8 +98,8 @@ def main() -> None:
         seq = census[acc]["sequence"]
         windows = plan_chunks(len(seq))
         rows = np.flatnonzero(protein == p)
-        pos0 = position[rows] - 1            # 0-based residue index
-        # For each site pick the chunk whose centre it is closest to, so sites avoid chunk edges.
+        pos0 = position[rows] - 1            # Convert canonical residue coordinates to zero-based indices.
+        # Choose the nearest chunk center to maximize context around each site.
         centres = np.array([(s + e) / 2 for s, e in windows])
         starts = np.array([s for s, _ in windows])
         ends = np.array([e for _, e in windows])
@@ -137,7 +115,7 @@ def main() -> None:
             chunk_acc.append(acc)
             chunk_start.append(int(windows[w][0]))
             chunk_end.append(int(windows[w][1]))
-            # Carry the subsequence itself so the embedding job needs only numpy, not the analysis stack.
+            # Store subsequences so the embedding job can run without the analysis stack.
             chunk_seq.append(seq[windows[w][0]:windows[w][1]])
         site_chunk[rows] = [used[int(w)] for w in pick]
         site_offset[rows] = pos0 - np.array([windows[w][0] for w in pick])
@@ -146,7 +124,7 @@ def main() -> None:
     lengths = np.array(chunk_end) - np.array(chunk_start)
     assert (site_offset < lengths[site_chunk]).all(), "offset past the end of its chunk"
 
-    # The embedding job reads this file with numpy alone; `alphabet` lets it check its own gather.
+    # Retain the alphabet so the NumPy-only embedding job can verify gathered alternatives.
     np.savez_compressed(
         args.out / "chunk_plan.npz",
         chunk_accession=np.array(chunk_acc), chunk_start=np.array(chunk_start),

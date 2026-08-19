@@ -1,24 +1,4 @@
-"""A9: L1 feature matrix for the development pool.
-
-Builds one row per usable measured single substitution across the fitting-pool
-proteins, with:
-
-  predictors            AM pathogenicity, ESM1b damage (both damage-oriented)
-  substitution          BLOSUM62, Grantham distance and its three components,
-                        hydrophobicity / volume / charge / helix / strand deltas
-  topology              side, distance to nearest TM boundary, in-TM flag,
-                        TM index, loop length, TM count  (membrane proteins only)
-  assay                 endpoint-type indicator, is_membrane
-  target                within-assay rank-normalised damage
-
-Coordinates come through route_a_common.align_construct exactly as in a8 -- no
-global offset -- and the >=0.99 native-residue gate is applied.
-
-Scope discipline: reads ONLY features/fitting_pool/. Confirmation proteins are
-absent from this table entirely.
-
-Creates new files only.
-"""
+"""Construct the development pool's substitution and topology feature matrix."""
 
 from __future__ import annotations
 
@@ -48,12 +28,12 @@ CONFIRM_ROLES = {"confirmation_membrane", "confirmation_allhuman"}
 
 AA = "ACDEFGHIKLMNPQRSTVWY"
 
-# Kyte-Doolittle hydropathy
+# Hydropathy values follow Kyte-Doolittle.
 HYDRO = {"A": 1.8, "C": 2.5, "D": -3.5, "E": -3.5, "F": 2.8, "G": -0.4,
          "H": -3.2, "I": 4.5, "K": -3.9, "L": 3.8, "M": 1.9, "N": -3.5,
          "P": -1.6, "Q": -3.5, "R": -4.5, "S": -0.8, "T": -0.7, "V": 4.2,
          "W": -0.9, "Y": -1.3}
-# Grantham's composition, polarity and molecular volume
+# Composition, polarity and molecular volume values follow Grantham.
 GR_C = {"A": 0.00, "C": 2.75, "D": 1.38, "E": 0.92, "F": 0.00, "G": 0.74,
         "H": 0.58, "I": 0.00, "K": 0.33, "L": 0.00, "M": 0.00, "N": 1.33,
         "P": 0.39, "Q": 0.89, "R": 0.65, "S": 1.42, "T": 0.71, "V": 0.00,
@@ -67,7 +47,7 @@ GR_V = {"A": 31.0, "C": 55.0, "D": 54.0, "E": 83.0, "F": 132.0, "G": 3.0,
         "P": 32.5, "Q": 85.0, "R": 124.0, "S": 32.0, "T": 61.0, "V": 84.0,
         "W": 170.0, "Y": 136.0}
 CHARGE = {a: 0 for a in AA} | {"D": -1, "E": -1, "K": 1, "R": 1, "H": 1}
-# Chou-Fasman helix / strand propensity
+# Helix and strand propensities follow Chou-Fasman.
 HELIX = {"A": 1.42, "C": 0.70, "D": 1.01, "E": 1.51, "F": 1.13, "G": 0.57,
          "H": 1.00, "I": 1.08, "K": 1.16, "L": 1.21, "M": 1.45, "N": 0.67,
          "P": 0.57, "Q": 1.11, "R": 0.98, "S": 0.77, "T": 0.83, "V": 1.06,
@@ -77,7 +57,7 @@ STRAND = {"A": 0.83, "C": 1.19, "D": 0.54, "E": 0.37, "F": 1.38, "G": 0.75,
           "P": 0.55, "Q": 1.10, "R": 0.93, "S": 0.75, "T": 1.19, "V": 1.70,
           "W": 1.37, "Y": 1.47}
 
-# Grantham constants, mean-distance normalised as in the original paper
+# Normalize Grantham distances by the original mean-distance constants.
 GR_ALPHA, GR_BETA, GR_GAMMA, GR_SCALE = 1.833, 0.1018, 0.000399, 50.723
 
 

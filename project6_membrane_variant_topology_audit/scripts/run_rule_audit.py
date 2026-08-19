@@ -1,8 +1,4 @@
-"""Demonstrate the reusable tool on two models using the earlier raw settings.
-
-Only the original raw-score, all-uncharged K/R-gain comparison is run.
-No comparator, scale, subgroup or simulation robustness analyses are invoked.
-"""
+"""Demonstrate the reusable tool on two models using the earlier raw settings."""
 from __future__ import annotations
 
 import argparse
@@ -28,7 +24,7 @@ def main() -> None:
     results = {}
     for model, path in (("alphamissense", args.am), ("esm1b", args.esm)):
         print(f"Running packaged raw-score comparison: {model}", flush=True)
-        # Both stored archives already orient scores as higher-is-damaging.
+        # Both stored archives already use higher-is-damaging scores.
         results[model] = run_panel_audit(path, args.out/model, model,
                                         "higher-is-damaging", 10, args.draws, args.seed)
     summary = {

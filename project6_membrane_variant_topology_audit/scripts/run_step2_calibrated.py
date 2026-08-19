@@ -1,21 +1,4 @@
-"""Compare each predictor with the compositional footprint after calibration.
-
-The preregistered self-normalized metric is unsuitable here because B1 is a
-deterministic function of side, distance bin, reference residue, and alternate
-residue. Within a stratum it has no measurement noise, so comparisons with noisy
-predictors primarily reflect noise rather than footprint use. The deviation is
-recorded in the decision log.
-
-Primary analysis: fit the predictor's within-site penalties on B0 and B1 using
-training families. On held-out families, compare the observed side difference
-with beta times the B1 side difference. The residual measures side-specific over-
-or under-use of the footprint in the predictor's own units.
-
-Secondary analysis: average penalties within reference, alternate, and distance
-strata, then correlate the predictor and B1 side differences.
-
-Label-free throughout.
-"""
+"""Compare each predictor with the compositional footprint after calibration."""
 
 from __future__ import annotations
 
@@ -36,7 +19,7 @@ from run_step2_composition_control import (BINS, PSEUDOCOUNT, b2_features,
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "results" / "step2_20260929"
-# Treat each B2 context cell as if it had 50 pooled B1 observations.
+# Shrink each B2 context cell toward 50 pooled B1 observations.
 B2_SHRINKAGE = 50.0
 
 
@@ -56,12 +39,11 @@ def frequency_tables(frame: pd.DataFrame, mask: np.ndarray, context: np.ndarray)
     np.add.at(b1_counts, (side, bucket, ref), 1.0)
     b1_freq = b1_counts / b1_counts.sum(axis=2, keepdims=True)
 
-    # Preserve original row indices when applying context after deduplication.
+    # Preserve original row indices when adding context after deduplication.
     ctx = context[rows.index.to_numpy()]
     b2_counts = np.zeros((2, len(BINS), 6, 20))
     np.add.at(b2_counts, (side, bucket, ctx.astype(int), ref), 1.0)
-    # Hierarchical shrinkage toward B1: sparse context cells fall back to the
-    # pooled footprint rather than to noise.
+    # Shrink sparse context cells toward the pooled footprint rather than unstable cell estimates.
     b2_freq = ((b2_counts + B2_SHRINKAGE * b1_freq[:, :, None, :])
                / (b2_counts.sum(axis=3, keepdims=True) + B2_SHRINKAGE))
     return np.log(b1_freq), np.log(b2_freq)
@@ -129,9 +111,7 @@ def build_scored_frame(args) -> tuple[pd.DataFrame, dict]:
 
 def penalties(frame: pd.DataFrame, column: str, kind: str, group: set[str]) -> pd.DataFrame:
     if kind == "loss":
-        # The older Gate 0 helper defines loss as every alternate outside the
-        # reference charge group, including reversals and histidine. Step 2 must
-        # use the clean, uncharged comparator used by the project's later rules.
+        # Use the later uncharged comparator because the older Gate 0 loss helper includes charge reversals and histidine.
         alphabet = "ACDEFGHIKLMNPQRSTVWY"
         allowed = {alphabet.index(aa) for aa in (set("ACFGILMNPQSTVWY") | group)}
         frame = frame[frame["alt_aa"].isin(allowed)]
