@@ -14,6 +14,23 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import form_ab_lib as lib  # noqa: E402
 
 
+class InstalledReleaseLookup(unittest.TestCase):
+    def test_working_tree_metadata_cannot_shadow_the_installed_release(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            metadata = root / "membrane_rule_audit.egg-info"
+            package = root / "membrane_rule_audit"
+            metadata.mkdir()
+            package.mkdir()
+            (metadata / "PKG-INFO").write_text(
+                "Metadata-Version: 2.1\nName: membrane-rule-audit\nVersion: 0.1.0\n", encoding="utf-8")
+            (package / "panel.py").write_text(
+                'raise AssertionError("Working-tree metadata selected as the installed release")\n', encoding="utf-8")
+            with mock.patch.object(sys, "path", [str(root), *sys.path]):
+                loaded = lib._validated_panel()
+            self.assertEqual(Path(loaded.__file__).resolve(), Path(lib.P.__file__).resolve())
+
+
 def fixture_sites(seed=3, proteins=40, per_protein=120, side_composition=False):
     """Two-sided synthetic geometry; optionally a different native-residue mix on each side."""
     rng = np.random.default_rng(seed)

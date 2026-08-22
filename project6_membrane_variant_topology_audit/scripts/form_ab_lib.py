@@ -15,13 +15,17 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 
 def _validated_panel():
-    """The installed validated panel.py, loaded under its own module name.
-
-    The working-copy tools package has the same import name. Importing the package here would make the
-    project's own tests (which put tools/ first on sys.path) pick up whichever copy was imported first.
-    """
+    """Load the installed panel without consulting working-tree package metadata."""
     import importlib.metadata as metadata
-    location = metadata.distribution("membrane-rule-audit").locate_file("membrane_rule_audit/panel.py")
+    import site
+    locations = site.getsitepackages()
+    if site.ENABLE_USER_SITE:
+        locations.append(site.getusersitepackages())
+    distribution = next((item for item in metadata.distributions(path=locations)
+                         if item.metadata.get("Name", "").lower().replace("_", "-") == "membrane-rule-audit"), None)
+    if distribution is None:
+        raise metadata.PackageNotFoundError("membrane-rule-audit")
+    location = distribution.locate_file("membrane_rule_audit/panel.py")
     spec = importlib.util.spec_from_file_location("membrane_rule_audit_validated_panel", location)
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
