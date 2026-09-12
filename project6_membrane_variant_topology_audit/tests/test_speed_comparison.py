@@ -1,7 +1,10 @@
-"""Test timing normalization and published-model adapters."""
+"""Test timing normalization, published-model adapters and measured-source provenance."""
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+import shutil
+import json
 from unittest.mock import patch
 
 import numpy as np
@@ -11,6 +14,69 @@ from scipy.special import expit
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts/beat_am"))
 import m13_local_speed_benchmark as speed
+import m15_finalize_speed_report as finalizer
+
+
+class TimingProvenanceChecks(unittest.TestCase):
+    expected = "6c1e5f4a42afa5008b5b9465262ff800636f558fc43a5d13fe6120b0a6e4c1ac"
+
+    def test_retained_source_matches_the_recorded_measurement_hash(self):
+        snapshot = finalizer.timing_snapshot(self.expected)
+        self.assertEqual(snapshot, (ROOT / "provenance/runner_at_measurement_20261026.py").read_bytes())
+
+    def test_current_runner_documentation_does_not_change_measurement_provenance(self):
+        with tempfile.TemporaryDirectory() as folder:
+            current = Path(folder) / "current_runner.py"
+            current.write_text('"""A revised publication introduction."""\n', encoding="utf-8")
+            with patch.object(speed, "__file__", str(current)):
+                snapshot = finalizer.timing_snapshot(self.expected)
+        self.assertEqual(snapshot, (ROOT / "provenance/runner_at_measurement_20261026.py").read_bytes())
+
+    def test_modified_historical_source_is_rejected(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            provenance = root / "provenance"
+            provenance.mkdir()
+            copied = provenance / "runner_at_measurement_20261026.py"
+            shutil.copy2(ROOT / "provenance/runner_at_measurement_20261026.py", copied)
+            copied.write_bytes(copied.read_bytes() + b"\n")
+            with patch.object(finalizer, "ROOT", root), self.assertRaises(ValueError):
+                finalizer.timing_snapshot(self.expected)
+
+    def test_missing_historical_source_is_rejected(self):
+        with tempfile.TemporaryDirectory() as folder:
+            with patch.object(finalizer, "ROOT", Path(folder)), self.assertRaises(FileNotFoundError):
+                finalizer.timing_snapshot(self.expected)
+
+    def test_report_finalization_preserves_samples_and_historical_test_evidence(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            out = root / "results/speed"
+            out.mkdir(parents=True)
+            (root / "provenance").mkdir()
+            (root / "docs").mkdir()
+            (root / "tests").mkdir()
+            shutil.copy2(ROOT / "provenance/runner_at_measurement_20261026.py",
+                         root / "provenance/runner_at_measurement_20261026.py")
+            shutil.copy2(Path(__file__), root / "tests/test_speed_comparison.py")
+            samples = [dict(threads=1, method="cached_embedding/Standalone_raw", rows=43991,
+                            median_seconds=0.1),
+                       dict(threads=1, method="correction_only/Standalone_PI_disulfide", rows=43991,
+                            median_seconds=0.001)]
+            result = dict(source_hashes=dict(source_code=self.expected), unavailable_stages={},
+                          threads=[1], primary_rows=43991, measurements=samples)
+            historical = dict(passed=6, failed=0, skipped=0, sha256="a" * 64)
+            (out / "results.json").write_text(json.dumps(result), encoding="utf-8")
+            (out / "verification.json").write_text(json.dumps(dict(timing_tests=historical)), encoding="utf-8")
+            with patch.object(finalizer, "ROOT", root), patch.object(speed, "OUT", out), \
+                    patch.object(speed, "write_report"), patch.object(speed, "threadpool_info", return_value=[]):
+                finalizer.main()
+            updated = json.loads((out / "results.json").read_text(encoding="utf-8"))
+            verification = json.loads((out / "verification.json").read_text(encoding="utf-8"))
+            self.assertEqual(updated["measurements"], samples)
+            self.assertEqual(updated["source_hashes"], result["source_hashes"])
+            self.assertEqual(verification["timing_tests"], historical)
+            self.assertEqual(verification["timing_runner_snapshot_sha256"], self.expected)
 
 
 class TimingChecks(unittest.TestCase):
