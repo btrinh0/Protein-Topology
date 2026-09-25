@@ -1,3 +1,9 @@
+"""Compute outcome-blind feasibility counts for the membrane-topology study.
+
+Clinical labels select eligible variants, but cell-level outputs combine benign
+and pathogenic events so the analysis remains blinded before preregistration.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -79,6 +85,7 @@ def read_topology(path: Path) -> dict[str, dict]:
 
 
 def build_flanks(protein: dict) -> dict[int, dict[int, str]]:
+    """Index loop residues by side and distance from the nearest adjacent TMD."""
     windows = {window: {} for window in WINDOWS_DEFAULT}
     tmds = protein["tmds"]
     loops = protein["loops"]
@@ -178,6 +185,7 @@ def load_clinvar_candidates(path: Path, proteins: dict[str, dict]) -> tuple[dict
             except (TypeError, ValueError):
                 qc["clinvar_missing_variation_id"] += 1
                 continue
+            # Retain labels for cohort selection and pooled totals, never for cell-level output.
             by_key[key].append({
                 "variation_id": variation_id,
                 "label": label,
@@ -209,6 +217,7 @@ def run(args: argparse.Namespace) -> dict:
     proteins = read_topology(topology_path)
     clinvar_by_key, clinvar_qc = load_clinvar_candidates(clinvar_path, proteins)
     qc = defaultdict(int, clinvar_qc)
+    # Preserve conflicting labels until repeated mappings can be excluded as one event.
     mapped: dict[tuple[str, str, str], dict] = {}
 
     with gzip.open(am_path, "rt", encoding="utf-8-sig", newline="") as handle:
