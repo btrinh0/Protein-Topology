@@ -1,0 +1,63 @@
+{
+  "analysis": "Size and power of Phase C inference on Phase C's own design",
+  "uses_measured_data": false,
+  "as_of_utc": "2026-09-27T21:33:28.590943+00:00",
+  "nominal_level": 0.05,
+  "settings": {
+    "gene_sd": 0.3,
+    "site_sd": 1.0,
+    "replicates": 400,
+    "wild_draws": 999,
+    "boot_draws": 499
+  },
+  "results": {
+    "all_16_genes": {
+      "null": {
+        "planted_effect": 0.0,
+        "n_genes": 16,
+        "n_sites": 1183,
+        "distinct_rademacher_draws": 65536,
+        "rejection_rates": {
+          "percentile": 0.0825,
+          "rademacher": 0.0275,
+          "webb": 0.04
+        }
+      },
+      "effect_0.30_sd": {
+        "planted_effect": 0.3,
+        "n_genes": 16,
+        "n_sites": 1183,
+        "distinct_rademacher_draws": 65536,
+        "rejection_rates": {
+          "percentile": 0.9975,
+          "rademacher": 0.9775,
+          "webb": 0.9875
+        }
+      }
+    },
+    "no_gpcr_12_genes": {
+      "null": {
+        "planted_effect": 0.0,
+        "n_genes": 12,
+        "n_sites": 465,
+        "distinct_rademacher_draws": 4096,
+        "rejection_rates": {
+          "percentile": 0.11,
+          "rademacher": 0.0625,
+          "webb": 0.0725
+        }
+      },
+      "effect_0.30_sd": {
+        "planted_effect": 0.3,
+        "n_genes": 12,
+        "n_sites": 465,
+        "distinct_rademacher_draws": 4096,
+        "rejection_rates": {
+          "percentile": 0.8375,
+          "rademacher": 0.6525,
+          "webb": 0.675
+        }
+      }
+    }
+  }
+}
