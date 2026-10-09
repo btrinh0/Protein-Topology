@@ -124,7 +124,7 @@ def run(args: argparse.Namespace) -> dict:
                     tmd_col.append(min(tmd_index, 127))
                     ref_col.append(AA_INDEX[ref_aa])
                     alt_col.append(AA_INDEX[alt_aa])
-                    score_col.append(-llr)  # higher = more damaging
+                    score_col.append(-llr)
                     qc["flank_rows_kept"] += 1
 
     out_path = out_dir / "esm1b_flank_scores.npz"

@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import gzip
-import hashlib
 import json
 from array import array
 from collections import defaultdict
