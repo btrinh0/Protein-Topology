@@ -24,7 +24,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from run_phaseB_dms_inventory import (census_symbols, flank_map, parse_missense,
-                                      readout_kind, score_set_rows, translate)
+                                      readout_kind, score_set_rows)
 from run_gate1 import read_topology
 
 ROOT = Path(__file__).resolve().parents[1]
