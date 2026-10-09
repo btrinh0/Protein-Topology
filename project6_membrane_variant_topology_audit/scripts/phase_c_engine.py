@@ -1,16 +1,9 @@
-"""Shared estimator for Phase C: one implementation, used by the analysis and the simulation.
+"""Shared Phase C estimator for the analysis and design simulation.
 
-Fix F3 of the frozen correction plan. The original analysis formed per-(gene,
-reference residue) stratum differences and took an efficiency-weighted mean of
-them, while the design simulation demeaned site-level values within gene and
-regressed on the side indicator. Those are different estimators, so the reported
-size and power did not describe the procedure that produced the result. Both now
-call the functions here.
-
-Also carries fix F2 — the weighting scheme reaches the point estimate, the
-percentile bootstrap and the wild bootstrap alike — and fix F4, an interval
-obtained by inverting the preregistered test rather than from the percentile
-bootstrap the frozen protocol demotes.
+Implements corrections F2 through F4 from the frozen correction plan. The same
+stratified estimator and weights are used for point estimates, percentile
+bootstrap draws, wild bootstrap draws, and design simulations. Confidence
+intervals are obtained by inverting the preregistered test.
 """
 
 from __future__ import annotations
