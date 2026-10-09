@@ -1,23 +1,20 @@
-"""Simulation on Phase C's own design, not the audit's.
+"""Evaluate inference methods on the planned Phase C design.
 
-The verification already on file was run on the AlphaMissense audit, which has
-thousands of protein clusters. Phase C has sixteen genes, and twelve once GPCRs
-are dropped. That is the regime where cluster-robust inference misbehaves, so the
-size check has to be run there.
+Phase C has 16 genes, or 12 after excluding GPCRs. The simulation uses these
+cluster counts and the blinded gene-level cell sizes.
 
-Compares three inference methods at the real gene sizes:
+The following methods are compared:
 
-* percentile bootstrap over genes
-* restricted wild cluster bootstrap-t, Rademacher weights (2-point)
-* restricted wild cluster bootstrap-t, Webb weights (6-point)
+1. Percentile bootstrap over genes.
+2. Restricted wild cluster bootstrap-t with Rademacher weights.
+3. Restricted wild cluster bootstrap-t with Webb weights.
 
 Rademacher weights admit only 2^G distinct draws. At G = 12 that is 4,096, fewer
 than the 9,999 replicates planned, so the bootstrap distribution is coarse and the
 attainable p-values are granular. Webb's 6-point distribution is the standard fix
 below about 12 clusters.
 
-No measured data of any kind is used: gene sizes come from blinded counts, and
-every outcome is simulated.
+No measured outcomes are used.
 """
 
 from __future__ import annotations
@@ -33,7 +30,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUT = ROOT / "results" / "verification_phase_c_20260927"
 
-# Blinded K/R gain cell counts, window <=10: gene -> (cytosolic sites, outer sites)
+# Blinded K/R gain counts store (cytosolic sites, outer sites) by gene.
 GAIN_CELL = {
     "RHO": (92, 90), "CXCR4": (90, 98), "GPR68": (86, 92), "CCR5": (80, 90),
     "KCNH2": (66, 94), "VKORC1": (32, 36), "KCNJ2": (26, 28), "LDLR": (16, 14),
@@ -81,7 +78,8 @@ def wild_p_value(values, side, gene, n_genes, draws, rng, weights) -> float:
     _, t_observed = estimate_t(values, side, gene, n_genes)
     if not np.isfinite(t_observed):
         return float("nan")
-    y, x = demean(values, side, gene, n_genes)   # restricted: null residual is y
+    # Under the restricted null, the demeaned outcome is the residual.
+    y, x = demean(values, side, gene, n_genes)
     extreme = 0
     for _ in range(draws):
         flips = (rng.choice((-1.0, 1.0), size=n_genes) if weights == "rademacher"
