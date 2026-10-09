@@ -259,7 +259,8 @@ def audit_score_set(score_set: dict, proteins: dict[str, dict],
         name = str(target.get("name") or "").strip().upper()
         candidates = symbols.get(name, [])
         if not candidates:
-            candidates = list(proteins)  # fall back to a sequence search over the census
+            # Search the full census when the target name does not identify a gene.
+            candidates = list(proteins)
         accession = offset = None
         for target_sequence, how in attempts:
             if len(target_sequence) < 20:

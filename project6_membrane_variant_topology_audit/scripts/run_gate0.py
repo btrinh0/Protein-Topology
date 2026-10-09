@@ -43,7 +43,8 @@ DEFAULT_OUT = ROOT / "results" / "gate0_20260924"
 
 POSITIVE = set("KR")
 NEGATIVE = set("DE")
-AMBIGUOUS = set("H")  # histidine is only partly protonated at physiological pH
+# Histidine is only partly protonated at physiological pH.
+AMBIGUOUS = set("H")
 
 CLASSES = ["positive_charge_loss", "positive_charge_gain", "negative_charge_loss",
            "negative_charge_gain", "charge_neutral_placebo"]
