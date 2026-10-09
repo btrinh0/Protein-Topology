@@ -1,27 +1,12 @@
-"""Step 2 follow-ups: an interval on the slope, and which arm of the penalty produces it.
+"""Estimate slope uncertainty and decompose the gain penalty by arm.
 
-Two things the five-fold run could not answer.
+The five folds share training data, so their slopes are not independent estimates.
+This script computes a protein-clustered bootstrap interval for the slope.
 
-**1. An interval on beta.** The five fold slopes agree to 0.0011, but the folds are
-not independent replications — each training set shares about three quarters of its
-data with every other. Their agreement therefore overstates certainty. This computes
-a protein-clustered bootstrap interval for beta directly. "Inverted" requires an
-interval excluding zero; if it includes zero the correct word is "flat", which is a
-different sentence.
-
-**2. Which arm.** The gain penalty is `score(X -> K/R) - score(X -> uncharged)`, so a
-negative slope on the footprint can arise two ways:
-
-* the **K/R arm** — the predictor fails to raise its K/R penalty where K/R are rare,
-  which is what the mechanism claim says; or
-* the **comparator arm** — the predictor raises its penalty for *uncharged*
-  substitutions in those same contexts, for reasons that have nothing to do with
-  charge. Outer flanks near the membrane carry aromatic-belt constraints, for
-  instance.
-
-If the comparator arm drives the slope, the mechanism claim is misattributed. Each
-arm is regressed on its own B1 arm, and the comparator set is then restricted to
-polar-only and hydrophobic-only residues as a sensitivity.
+The gain penalty is score(X -> K/R) - score(X -> uncharged). The analysis regresses
+the K/R and comparator arms separately against their B1 counterparts, then repeats
+the comparator analysis for polar-only and hydrophobic-only residue sets. This
+distinguishes a charge-specific signal from constraints in the comparator arm.
 
 Label-free throughout.
 """
@@ -30,7 +15,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 

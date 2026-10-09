@@ -1,28 +1,18 @@
-"""Step 2, calibrated comparison: does a predictor use the footprint more or less than its own calibration implies?
+"""Compare each predictor with the compositional footprint after calibration.
 
-Replaces the frozen metric for the reason given in the deviation log, not because
-of any result. The frozen design compares each source's side difference after
-dividing by that source's own within-site spread. B1 is a deterministic function
-of side, distance bin and the two residues, so within a stratum every cytosolic
-site carries one B1 penalty and every outer site another. Its self-normalised side
-difference is therefore near its maximum, and any noisy predictor sits closer to
-zero whether or not it learned the footprint. The same holds for a rank statistic:
-B1's pins near 1 or 0 by construction. Both metrics measure noise, not learning,
-and that was knowable before the numbers.
+The preregistered self-normalized metric is unsuitable here because B1 is a
+deterministic function of side, distance bin, reference residue, and alternate
+residue. Within a stratum it has no measurement noise, so comparisons with noisy
+predictors primarily reflect noise rather than footprint use. The deviation is
+recorded in the decision log.
 
-The replacement:
+Primary analysis: fit the predictor's within-site penalties on B0 and B1 using
+training families. On held-out families, compare the observed side difference
+with beta times the B1 side difference. The residual measures side-specific over-
+or under-use of the footprint in the predictor's own units.
 
-**Primary — calibrated residual.** On training families, regress the predictor's
-within-site penalties on B0 and B1 across *all* within-site variation. The slope on
-B1 says how strongly that predictor uses composition in general, in its own units.
-On held-out families, compare the predictor's observed side difference with
-`beta * (B1's side difference)`. The residual is side-specific over- or under-use
-of the footprint. Predictor noise inflates nothing here, and B1 being noiseless is
-exactly what a good regressor should be.
-
-**Secondary — shape agreement.** Average penalties within (reference, alternate,
-distance bin) strata, then correlate the predictor's stratum-level side differences
-with B1's. Averaging suppresses noise and correlation ignores scale.
+Secondary analysis: average penalties within reference, alternate, and distance
+strata, then correlate the predictor and B1 side differences.
 
 Label-free throughout.
 """
