@@ -1,16 +1,15 @@
-"""Step 3: compare the cytosolic K/R gain profile of each source against ER insertion physics.
+"""Compare cytosolic K/R gain profiles with ER insertion measurements.
 
 Frozen design: docs/STEP3_PHYSICAL_ANCHOR_PREREG.md
 SHA-256 40a411e3968bb1c0f0ad1365bc4cf47878411a82894371c1814e75aa701021af
 
-The physics (Lerch-Bader et al. 2008) measures the free-energy cost or benefit of
-adding a positive charge at a given distance on the CYTOSOLIC side. So the matching
-model quantity is the cytosolic-side within-site gain penalty by distance, not the
-side difference used elsewhere in this project.
+Lerch-Bader et al. (2008) measured the free-energy effect of adding a positive
+charge at different distances on the cytosolic side. The corresponding model
+quantity is the cytosolic within-site gain penalty by distance.
 
-Both raw quantities describe cost: negative insertion ddG and negative model
-penalty each indicate favourability. Negate BOTH for comparisons on the
-favourability axis. These descriptive comparisons do not establish model failure.
+Negative insertion ddG and negative model penalties both indicate favorability.
+Both values are negated for comparisons on a common favorability axis. These
+descriptive comparisons do not establish model failure.
 
 Label-free.
 """
@@ -136,7 +135,7 @@ def physics_profile() -> dict:
         label = mapping.get(p["distance"])
         if label:
             buckets[label].append(p["ddGapp"])
-    # Physical favourability. Compare with NEGATED model penalties below.
+    # Convert physical costs to the same favorability direction as model scores.
     return {label: -float(np.mean(values)) for label, values in buckets.items()}
 
 

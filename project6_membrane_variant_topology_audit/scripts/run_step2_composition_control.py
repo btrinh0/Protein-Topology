@@ -102,7 +102,6 @@ def symbol_families(proteins: dict) -> dict[str, str]:
     out = {}
     for accession, record in proteins.items():
         gene = str(record.get("gene") or accession).upper()
-        match = re.match(r"^([A-Z]+\d*[A-Z]*?)(?:\d+)?$", gene)
         root = re.sub(r"\d+$", "", gene) or gene
         out[accession] = root
     return out
