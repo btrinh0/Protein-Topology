@@ -45,7 +45,8 @@ from run_gate1 import read_topology
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TOPOLOGY = ROOT / "data" / "raw" / "topology_viewer.html"
 DEFAULT_INTRAMEM = ROOT / "data" / "external" / "uniprot" / "human_intramem.tsv"
-PORE_MARGIN = 10  # a pore span plus the flank window either side of it
+# Include the pore span and the flank window on each side.
+PORE_MARGIN = 10
 PRIMARY_WINDOW = 10
 ALPHABET = "ACDEFGHIKLMNPQRSTVWY"
 
