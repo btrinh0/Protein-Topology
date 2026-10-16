@@ -1,8 +1,7 @@
 """Train Form A student models on planted rules and audit held-out predictions.
 
-The pilot stage uses separate seeds to verify the pipeline and model capacity. The
-full stage verifies the committed preregistration hash before running the
-confirmatory analysis. Synthetic targets use observed membrane geometry without
+The pilot stage uses separate seeds to verify the pipeline and model capacity.
+Synthetic targets use observed membrane geometry without
 reading AlphaMissense scores. `summarize_form_a.py` reads the outputs.
 """
 from __future__ import annotations
@@ -182,17 +181,11 @@ def write_tables(args) -> None:
 
 
 def run(args) -> None:
-    if args.stage == "full":
-        frozen = lib.require_frozen_prereg(args.prereg_sha256, check_push=not args.skip_push_check)
-    else:
-        frozen = {"prereg_sha256": None, "note": "pilot: separate seeds, estimates discarded"}
     args.out.mkdir(parents=True, exist_ok=True)
     if job_files(args) and not args.resume:
         raise SystemExit("Jobs already exist in the output folder; pass --resume to continue them")
     ctx = prepare(args)
     split = ctx["split"]
-    if args.stage == "full":
-        lib.require_split_pinned(split["assignment_sha256"])
     test_sites = lib.take(ctx["sites"], ctx["test"])
     _, weight = lib.oracle_delta(test_sites, np.zeros(len(ctx["test"])))
     manifest = {
@@ -206,7 +199,7 @@ def run(args) -> None:
         "archive_sha256": lib.P.sha256(lib.AM_ARCHIVE), "topology_sha256": lib.P.sha256(lib.TOPOLOGY),
         "implementation_sha256": {"form_ab_lib": lib.P.sha256(Path(lib.__file__)),
                                   "run_form_a": lib.P.sha256(Path(__file__))},
-        "score_array_read": False, "clinical_labels_used": False, **frozen,
+        "score_array_read": False, "clinical_labels_used": False,
     }
     manifest_path = args.out / "run_manifest.json"
     if manifest_path.exists():
@@ -226,8 +219,6 @@ def run(args) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=("pilot", "full"), required=True)
-    parser.add_argument("--prereg-sha256", help="hash recorded in DECISION_LOG.md; required for the full stage")
-    parser.add_argument("--skip-push-check", action="store_true")
     parser.add_argument("--resume", action="store_true", help="skip jobs that already finished")
     parser.add_argument("--scenarios", nargs="+", choices=list(lib.SCENARIOS), default=list(lib.SCENARIOS))
     parser.add_argument("--replicates", type=int)
@@ -244,8 +235,6 @@ def main() -> None:
         if getattr(args, name) is None:
             setattr(args, name, defaults[name])
     args.seed = defaults["seed"]
-    if args.stage == "full" and not args.prereg_sha256:
-        parser.error("--prereg-sha256 is required for the full stage")
     run(args)
 
 

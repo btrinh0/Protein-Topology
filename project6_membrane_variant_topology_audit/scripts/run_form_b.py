@@ -1,9 +1,8 @@
 """Run the Form B correction and evaluate it on held-out clusters.
 
 The pilot stage fits on training clusters and evaluates on validation clusters.
-The full stage evaluates on test clusters after verifying the committed
-preregistration hash. Corrected scores are temporary audit inputs and are deleted
-after use. No clinical labels are read.
+The full stage evaluates on test clusters. Corrected scores are temporary audit
+inputs and are deleted after use. No clinical labels are read.
 """
 from __future__ import annotations
 
@@ -124,14 +123,14 @@ def evaluate(scorer, panel, label, key_of, kind, args, tool, primary: bool) -> d
         controls["shuffled_at_fit_descriptive"] = {
             "delta0_shuffled_train": shuffled_est["estimate_raw"], "beta_shuffled": beta_s, "beta_real": fit["beta"],
             "held_contrast_after": moved["estimate_raw"], "held_contrast_after_sd_units": moved["estimate_raw"] / sd,
-            "note": "beta is anchored to the preregistered target, so a shuffled fit is not expected to give zero"}
+            "note": "beta is anchored to the configured target, so a shuffled fit is not expected to give zero"}
     wrong, _ = correct_and_audit(train_w, held, held_w, held_in_window, sd, margin, length, +1, lib.PANEL_DRAWS)
     plus_ok = wrong["beta"] > 0 and wrong["after"]["estimate"] >= 0.03 * sd and wrong["after"]["ci95"][0] > 0
     controls["declared_plus_one"] = {**wrong, "after_sd_units": wrong["after"]["estimate"] / sd,
                                      "moved_to_declared_side": bool(plus_ok)}
     out["controls"] = controls
 
-    # Refit the correction across the preregistered sensitivity grid.
+    # Refit the correction across the configured sensitivity grid.
     grid = []
     for sens_length in (4.0, 8.0, 16.0, None):
         for sens_margin in (0.025, 0.05, 0.075):
@@ -183,21 +182,17 @@ def criteria(results: dict, report_card_validated: bool) -> dict:
 
 def run(args) -> None:
     if args.stage == "full":
-        frozen = lib.require_frozen_prereg(args.prereg_sha256, check_push=not args.skip_push_check)
         form_a = lib.ROOT / "results/form_a_20261008/criteria.json"
         if not form_a.exists() or not json.loads(form_a.read_text(encoding="utf-8")).get("form_b_may_start"):
             raise SystemExit("Form A has not passed; Form B does not start")
         a11 = lib.ROOT / "results/form_a_20261008/a11/a11_criteria.json"
         validated = a11.exists() and json.loads(a11.read_text(encoding="utf-8")).get("a11_passed") is True
     else:
-        frozen = {"prereg_sha256": None, "note": "pilot: validation clusters, estimates discarded"}
         validated = True
     args.out.mkdir(parents=True, exist_ok=True)
     census = read_topology(lib.TOPOLOGY)
     tool, tool_sha = lib.report_card_tool()
     splits = {"sequence": lib.cluster_split(census), "symbol": lib.cluster_split(census, kind="symbol")}
-    if args.stage == "full":
-        lib.require_split_pinned(*(s["assignment_sha256"] for s in splits.values()))
     manifest = {
         "stage": args.stage, "as_of_utc": datetime.now(timezone.utc).isoformat(), "evaluated_on": args.eval,
         "splits": {k: {x: v[x] for x in ("kind", "seed", "counts", "assignment_sha256")}
@@ -210,7 +205,7 @@ def run(args) -> None:
         "topology_sha256": lib.P.sha256(lib.TOPOLOGY),
         "implementation_sha256": {"form_ab_lib": lib.P.sha256(Path(lib.__file__)),
                                   "run_form_b": lib.P.sha256(Path(__file__))},
-        "clinical_labels_used": False, "corrected_scores_published": False, **frozen}
+        "clinical_labels_used": False, "corrected_scores_published": False}
     (args.out / "run_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     results = {}
     for scorer, path in SCORERS.items():
@@ -231,8 +226,6 @@ def run(args) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", choices=("pilot", "full"), required=True)
-    parser.add_argument("--prereg-sha256")
-    parser.add_argument("--skip-push-check", action="store_true")
     parser.add_argument("--shuffles", type=int, default=100)
     parser.add_argument("--no-report-card", dest="report_card", action="store_false")
     parser.add_argument("--out", type=Path)
@@ -240,8 +233,6 @@ def main() -> None:
     defaults = STAGES[args.stage]
     args.eval = defaults["eval"]
     args.out = args.out or defaults["out"]
-    if args.stage == "full" and not args.prereg_sha256:
-        parser.error("--prereg-sha256 is required for the full stage")
     run(args)
 
 

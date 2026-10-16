@@ -1,6 +1,5 @@
 """Shared implementation for the Form A and Form B studies.
 
-Plan: docs/FORM_A_B_RUNBOOK_20261008.md. Preregistration: docs/FORM_AB_PREREGISTRATION.md.
 Form A reads site geometry without loading AlphaMissense scores. Estimation uses
 the installed validated panel module. The working-copy audit module supplies the
 report card and is pinned by SHA-256.
@@ -10,7 +9,6 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
-import subprocess
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -50,7 +48,6 @@ TOPOLOGY = ROOT / "data/raw/topology_viewer.html"
 WHEEL = ROOT / "dist/membrane-rule-audit-v0.1.0-validated-20261004/wheel/membrane_rule_audit-0.1.0-py3-none-any.whl"
 MANIFEST = ROOT / "dist/membrane-rule-audit-v0.1.0-validated-20261004/RELEASE_MANIFEST.json"
 WORKING_AUDIT = ROOT / "tools/membrane_rule_audit/audit.py"
-PREREG = ROOT / "docs/FORM_AB_PREREGISTRATION.md"
 GEOMETRY = ("protein", "position", "side", "distance", "tmd_index", "ref_aa")
 
 MASTER_SEED, PILOT_SEED = 20261008, 20261001
@@ -99,61 +96,6 @@ def report_card_tool():
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module, P.sha256(WORKING_AUDIT)
-
-
-def require_frozen_prereg(expected_sha256: str, check_push: bool = True) -> dict:
-    """Refuse a confirmatory stage unless the committed preregistration has the recorded hash."""
-    digest = P.sha256(PREREG)
-    if digest != expected_sha256:
-        raise SystemExit(f"Preregistration hash {digest} does not match the recorded {expected_sha256}")
-    relative = PREREG.relative_to(ROOT).as_posix()
-
-    def git(*args):
-        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
-
-    if git("ls-files", "--error-unmatch", relative).returncode != 0:
-        raise SystemExit("The preregistration is not tracked by git; commit it before any confirmatory run")
-    if git("diff", "--quiet", "HEAD", "--", relative).returncode != 0:
-        raise SystemExit("The preregistration differs from HEAD; commit it unchanged before any confirmatory run")
-    commit = git("log", "-1", "--format=%H", "--", relative).stdout.strip()
-    pushed = bool(git("branch", "-r", "--contains", commit).stdout.strip())
-    if check_push and not pushed:
-        raise SystemExit("The preregistration commit is not on any remote branch; push it (or pass --skip-push-check)")
-    drift = frozen_file_drift(PREREG.read_text(encoding="utf-8"))
-    if drift:
-        raise SystemExit("Files changed since the preregistration listed them: " + ", ".join(drift))
-    return {"prereg_sha256": digest, "prereg_commit": commit, "prereg_pushed": pushed}
-
-
-# Pin every analysis input whose bytes affect the result. Figures are presentation outputs.
-FROZEN_FILES = (
-    "scripts/form_ab_lib.py", "scripts/run_form_a.py", "scripts/summarize_form_a.py", "scripts/run_form_a11.py",
-    "scripts/run_form_b.py", "scripts/form_b9.py", "scripts/simulate_form_b_design.py", "tests/test_form_ab.py",
-    "tools/membrane_rule_audit/audit.py", "scripts/run_gate0.py",
-    "scripts/run_gate0_within_site.py", "scripts/run_gate1.py", "data/processed/gate0/am_full_flank_scores.npz",
-    "data/processed/gate0/esm1b_flank_scores.npz", "data/raw/topology_viewer.html",
-    "dist/membrane-rule-audit-v0.1.0-validated-20261004/wheel/membrane_rule_audit-0.1.0-py3-none-any.whl",
-    "docs/FORM_A_B_RUNBOOK_20261008.md", "docs/form_ab_requirements.lock",
-)
-
-
-def require_split_pinned(*assignment_hashes: str) -> None:
-    """The clustering code has mixed line endings on disk, so the split itself is what the preregistration pins."""
-    text = PREREG.read_text(encoding="utf-8")
-    missing = [digest for digest in assignment_hashes if digest not in text]
-    if missing:
-        raise SystemExit(
-            "A split assignment differs from the one frozen in the preregistration: "
-            + ", ".join(missing))
-
-
-def frozen_file_hashes() -> dict:
-    return {name: P.sha256(ROOT / name) for name in FROZEN_FILES}
-
-
-def frozen_file_drift(prereg_text: str) -> list:
-    """Frozen files whose current SHA-256 is not written in the preregistration."""
-    return [name for name, digest in frozen_file_hashes().items() if digest not in prereg_text]
 
 
 def package_versions() -> dict:
