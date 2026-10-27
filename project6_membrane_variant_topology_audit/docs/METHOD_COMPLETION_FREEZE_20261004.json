@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-04",
+  "saved_utc": "2026-10-05T06:14:52.530973+00:00",
+  "status": "Saved before any new outcome-bearing benchmark or label-control run",
+  "independent_design_review": "benchmark_design_review_20261004: cleared revised scripts before execution; literal arm fixture also added",
+  "files": {
+    "docs/METHOD_COMPLETION_PLAN_20261004.json": {
+      "sha256": "1479f696ba358cfd8fb76b8e75b4be42e72333982de13a842a76626ee9496a5d",
+      "bytes": 8230
+    },
+    "docs/GATE0_METHOD_RESEARCH_PLAN_20261004.md": {
+      "sha256": "71c0eeeac70dcc6a4d69dbd7189ac7a10ecb0adbd4dd8d35e5c95ac8f703d469",
+      "bytes": 1960
+    },
+    "scripts/validate_method_benchmark.py": {
+      "sha256": "b8c110ab36371f8ced8a5adc0f7d2128a088cf4732757f6b96c5420c303fa94c",
+      "bytes": 19927
+    },
+    "scripts/run_method_label_controls.py": {
+      "sha256": "459c55018dabdd37751463673a72fc16af76955175dbbb8fa4be3b196a9243c5",
+      "bytes": 10945
+    },
+    "tools/membrane_rule_audit/panel.py": {
+      "sha256": "c04805510465606b5590275f646d4a5f387e3b5521f4e848157ff26eccf71117",
+      "bytes": 9670
+    },
+    "tools/membrane_rule_audit/audit.py": {
+      "sha256": "061e949d53acca5a40831c398f83442c0bf8ed9bf6e0e84338989dd789cf6a43",
+      "bytes": 21445
+    },
+    "tools/pyproject.toml": {
+      "sha256": "2e278bd8ee91503560a63ebfb7531f24d6968aaf2dc6dd4435d4d0252c5f8101",
+      "bytes": 544
+    },
+    "data/processed/gate0/am_full_flank_scores.npz": {
+      "sha256": "f7641bdb32d020c804c849a1db029290d273d3aa9ec89848282baf6ef698c1a4",
+      "bytes": 39633714
+    },
+    "data/processed/gate0/esm1b_flank_scores.npz": {
+      "sha256": "f2203763815a08242c3a7cfe2022ca41ee6b1e4987063d1cc33dab9346fef640",
+      "bytes": 43184911
+    },
+    "docs/HARM_ANCHOR_ANALYSIS_PLAN_20261002.json": {
+      "sha256": "3d709e18e206e11e5b1b442740f2281282e6a912e1e93db79966fc97ee983069",
+      "bytes": 4380
+    },
+    "docs/PHASE_B_INCLUSION_RULES_FROZEN.md": {
+      "sha256": "c868d28a3bdf59aed54c7895ed09ed38540126d19c656bbe059a5107709de4a6",
+      "bytes": 6522
+    },
+    "docs/PHASE_C_CORRECTION_PLAN.md": {
+      "sha256": "c74e03ec741bcd08c4062e6a282db972e145d486b4e54540c4295d0a331dca41",
+      "bytes": 6581
+    },
+    "docs/PHASE_C_PREREGISTRATION.md": {
+      "sha256": "754a9a713a2afc7fd2e3e43be9af55bb762805feeb3d3991be0667c207635d79",
+      "bytes": 19974
+    },
+    "docs/PLEINER_HARM_ANALYSIS_PLAN_20261002.json": {
+      "sha256": "21cbb85b462a4c63f78da752a8ef8cd86b2a0628519967324c78bba15d7ba003",
+      "bytes": 3402
+    },
+    "docs/PREREGISTRATION_v1_DRAFT.md": {
+      "sha256": "636a6489552292a95f05bbfc2587352719bf902b8c65ed8d5e0db27950e5ce1c",
+      "bytes": 17346
+    },
+    "docs/SERT_TRAFFICKING_PREREG.md": {
+      "sha256": "6ae781b5e403ce8e700b597808254b5870bbd3460e615fce2de8dac88a5a707b",
+      "bytes": 15854
+    },
+    "docs/STEP2_COMPOSITION_CONTROL_PREREG.md": {
+      "sha256": "06cdc2e8449ab03ced939b6cf1599d7d754a5fcec36c4a2ca992c5e9d1de5385",
+      "bytes": 7542
+    },
+    "docs/STEP3_PHYSICAL_ANCHOR_PREREG.md": {
+      "sha256": "40a411e3968bb1c0f0ad1365bc4cf47878411a82894371c1814e75aa701021af",
+      "bytes": 5601
+    }
+  },
+  "protected_files": [
+    "docs/HARM_ANCHOR_ANALYSIS_PLAN_20261002.json",
+    "docs/PHASE_B_INCLUSION_RULES_FROZEN.md",
+    "docs/PHASE_C_CORRECTION_PLAN.md",
+    "docs/PHASE_C_PREREGISTRATION.md",
+    "docs/PLEINER_HARM_ANALYSIS_PLAN_20261002.json",
+    "docs/PREREGISTRATION_v1_DRAFT.md",
+    "docs/SERT_TRAFFICKING_PREREG.md",
+    "docs/STEP2_COMPOSITION_CONTROL_PREREG.md",
+    "docs/STEP3_PHYSICAL_ANCHOR_PREREG.md"
+  ]
+}

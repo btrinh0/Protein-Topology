@@ -1,0 +1,20 @@
+{
+  "glyco_site_rows": 1907,
+  "charge_sites": 3954,
+  "cysteine_sites": 283,
+  "cysteine_inventory": {
+    "census_proteins": 13,
+    "census_in_reviewed_uniprot": 13,
+    "proteins_considered": 12,
+    "cysteines_total": 290,
+    "excluded_Signal_peptide": 4,
+    "disulfide_features": 59,
+    "bonded_sites": 117,
+    "free_sites": 166,
+    "bonds_complete_both_endpoints_eligible": 58,
+    "excluded_Binding_site": 3,
+    "bond_orphaned_one_endpoint_excluded": 1
+  },
+  "cys_background_is_verified_free": false,
+  "complete_scored_missense_cells": 193515
+}

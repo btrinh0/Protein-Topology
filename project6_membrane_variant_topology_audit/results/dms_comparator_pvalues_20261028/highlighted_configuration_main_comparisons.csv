@@ -1,0 +1,4 @@
+scheme,model,reference,model_mean_spearman,reference_mean_spearman,delta_spearman,ci95_delta_spearman,p_two_sided,proteins,dependence_groups,sign_patterns,nonzero_group_sums,wins,losses,ties,p_holm_three_main_for_configuration,p_holm_27_main_across_configurations,p_holm_36_all_across_configurations
+guarded_loocv,positive_inside+disulfide_loss,GEMME,0.4625964005606832,0.42798858012635915,0.03460782043432393,"[-0.009903820365097437, 0.08357317769935976]",0.21142578125,13,12,4096,12,8,5,0,0.4228515625,1.0,1.0
+guarded_loocv,positive_inside+disulfide_loss,VESPA,0.4625964005606832,0.4045224040973891,0.05807399646329409,"[0.011003352848665323, 0.09984756043514313]",0.04833984375,13,12,4096,12,10,3,0,0.14501953125,1.0,1.0
+guarded_loocv,positive_inside+disulfide_loss,VespaG,0.4625964005606832,0.45089454596953976,0.011701854591143417,"[-0.027806100779819445, 0.050385518805898005]",0.5859375,13,12,4096,12,5,8,0,0.5859375,1.0,1.0

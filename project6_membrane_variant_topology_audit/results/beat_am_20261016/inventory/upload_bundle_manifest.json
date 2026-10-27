@@ -1,0 +1,49 @@
+{
+  "as_of_utc": "2026-10-18T05:04:03.759093+00:00",
+  "tarball": "C:\\Users\\test2\\beat_am_bundle\\project6_bundle.tar.gz",
+  "tarball_bytes": 4125914692,
+  "tarball_sha256": "8ff6a3409050463b86f98eb37db92230235c87f9545cde5515cdc3515029b0c3",
+  "n_files": 620,
+  "uncompressed_bytes": 5289115881,
+  "clinical_column_scan": {
+    "tokens": [
+      "clinvar",
+      "hgmd",
+      "gnomad",
+      "pathogenic",
+      "acmg",
+      "clinical",
+      "clnsig",
+      "dbsnp",
+      "rsid"
+    ],
+    "method": "first non-comment line of every .csv/.tsv/.txt/.lock and *.tsv.gz in the allowlist; header names only",
+    "tables_with_matches": 89,
+    "files_excluded_for_unexplained_columns": [],
+    "predictor_allowlist": {
+      "am_pathogenicity": "AlphaMissense pathogenicity score; the predictor feature itself, not a clinical label",
+      "am_class": "AlphaMissense's own three-way output class; not a ClinVar label"
+    },
+    "record": "inventory/upload_clinical_column_scan.csv"
+  },
+  "never_upload_rules": {
+    "paths": [
+      "snapshots",
+      "archive",
+      "results/form_ab_pilot_20261008",
+      "data/raw/AlphaMissense_hg38.tsv.gz",
+      "data/raw/clinvar_variant_summary.txt.gz",
+      "results/clinvar_comparison_20261016"
+    ],
+    "patterns": [
+      ".xlsx",
+      ".venv",
+      "/.git",
+      "__pycache__",
+      "data/processed/gate0/blinded_",
+      "results/clinvar_comparison_"
+    ]
+  },
+  "notes": "Includes results/beat_am_20261016 and scripts/beat_am so the instance continues from the local state. The tarball is written outside the project tree and is not a project file.",
+  "attribution": "AlphaMissense data (c) 2023 DeepMind Technologies Limited; the distributed file header declares CC BY-NC-SA 4.0. Not validated for, and not approved for, any clinical use."
+}

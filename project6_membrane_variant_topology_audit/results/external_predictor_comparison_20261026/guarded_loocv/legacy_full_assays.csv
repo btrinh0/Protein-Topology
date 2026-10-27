@@ -1,0 +1,485 @@
+assay,accession,gene,membrane,coarse_selection_type,selection_assay,selection_type,original_endpoint_type,existing_rows,rows,model,spearman,rank_mse,group
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,raw,0.23195828321278225,0.12800692651006815,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside,0.23195828321278225,0.12800692651006815,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+charge_burial,0.23195828321278225,0.12800692651006815,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+glycosylation_loss,0.2016810847789804,0.13305312521273596,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+disulfide_loss,0.23195828321278225,0.12800692651006815,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+charge_burial+glycosylation_loss,0.20123349210528207,0.13312772397636588,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+charge_burial+disulfide_loss,0.23195828321278225,0.12800692651006815,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+glycosylation_loss+disulfide_loss,0.20157947739369175,0.133070059773473,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.2011376173877638,0.1331437030926708,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,AlphaMissense,0.24844195280700979,0.12525963666508969,DG_Q9BYF1
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223,2223,ESM1b,0.24353651684865008,0.12607721358801355,DG_Q9BYF1
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,raw,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+charge_burial,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+glycosylation_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+disulfide_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+charge_burial+glycosylation_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+charge_burial+disulfide_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+glycosylation_loss+disulfide_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.44770937099533775,0.09195779886999361,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,AlphaMissense,0.488318885449219,0.08519602043041716,DG_Q9GZX7
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209,209,ESM1b,0.41487363467214455,0.09742473954000343,DG_Q9GZX7
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,raw,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+charge_burial,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+glycosylation_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+disulfide_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+charge_burial+glycosylation_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+charge_burial+disulfide_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+glycosylation_loss+disulfide_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.434052096985719,0.09432462255076605,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,AlphaMissense,0.5795808172043022,0.07006983174323245,DG_P38398
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837,1837,ESM1b,0.49902383869889516,0.08349599688784821,DG_P38398
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,raw,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+charge_burial,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+glycosylation_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+disulfide_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+charge_burial+glycosylation_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+charge_burial+disulfide_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+glycosylation_loss+disulfide_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.2725312423425631,0.12124306642396074,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,AlphaMissense,0.4334445839988025,0.09442439060432439,DG_P51587
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265,265,ESM1b,0.4816382605130423,0.08639233729857534,DG_P51587
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,raw,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+charge_burial,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+glycosylation_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+disulfide_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+charge_burial+glycosylation_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+charge_burial+disulfide_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+glycosylation_loss+disulfide_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5069444841331371,0.08217588312701953,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,AlphaMissense,0.6514105519093266,0.058098188011356564,DG_P42574
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507,1507,ESM1b,0.6302742524290851,0.06162092496166811,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,raw,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+charge_burial,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+glycosylation_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+disulfide_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+charge_burial+glycosylation_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+charge_burial+disulfide_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+glycosylation_loss+disulfide_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.547473790407178,0.07542100820983155,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,AlphaMissense,0.6534993243550083,0.05775007592322643,DG_P42574
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680,1680,ESM1b,0.5843009190625644,0.06928315061143504,DG_P42574
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,raw,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+charge_burial,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+glycosylation_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+disulfide_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+charge_burial+glycosylation_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+charge_burial+disulfide_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+glycosylation_loss+disulfide_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6077518582669199,0.06537461152673502,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,AlphaMissense,0.4200586267806519,0.09663602722949338,DG_O00257
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917,917,ESM1b,0.1725038622033244,0.13791583802764448,DG_O00257
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,raw,0.32030696513045587,0.11328156768622868,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside,0.3204154405086739,0.11326348855304763,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+charge_burial,0.3224870094378897,0.11291822890813774,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+glycosylation_loss,0.3204154405086739,0.11326348855304763,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+disulfide_loss,0.3201912978829402,0.1133008454578933,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+charge_burial+glycosylation_loss,0.3224870094378897,0.11291822890813774,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+charge_burial+disulfide_loss,0.3222633355508409,0.11295550769028638,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+glycosylation_loss+disulfide_loss,0.3201912978829402,0.1133008454578933,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.3222633355508409,0.11295550769028638,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,AlphaMissense,0.3658742241817065,0.10568706080591667,DG_P08100
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137,6137,ESM1b,0.3579803466806045,0.10700270254573886,DG_P08100
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,raw,0.5641138165154418,0.07264769544525092,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside,0.5641261913675492,0.07264563296995086,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+charge_burial,0.5675783604732815,0.07207027146660183,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+glycosylation_loss,0.5641261913675492,0.07264563296995086,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+disulfide_loss,0.5641259941955586,0.07264566583194845,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+charge_burial+glycosylation_loss,0.5675783604732815,0.07207027146660183,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+charge_burial+disulfide_loss,0.5675919621836467,0.0720680045149305,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+glycosylation_loss+disulfide_loss,0.5641259941955586,0.07264566583194845,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5675919621836467,0.0720680045149305,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,AlphaMissense,0.5983381035360773,0.06694364545010498,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370,6370,ESM1b,0.5130006085646076,0.0811665613830526,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,raw,0.5737711215744288,0.0710381444898954,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside,0.5738200730351307,0.07102998591333161,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+charge_burial,0.5734113839342959,0.07109810076163514,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+glycosylation_loss,0.5738200730351307,0.07102998591333161,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+disulfide_loss,0.573819473609513,0.07103008581759852,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+charge_burial+glycosylation_loss,0.5734113839342959,0.07109810076163514,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+charge_burial+disulfide_loss,0.5734081025529242,0.0710986476585157,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+glycosylation_loss+disulfide_loss,0.573819473609513,0.07103008581759852,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5734081025529242,0.0710986476585157,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,AlphaMissense,0.643223515140512,0.059462743834677034,DG_P11712
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142,6142,ESM1b,0.5192798474573244,0.0801200214181552,DG_P11712
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,raw,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+charge_burial,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+glycosylation_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+disulfide_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+charge_burial+glycosylation_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+charge_burial+disulfide_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+glycosylation_loss+disulfide_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5634863291239711,0.07275222897529601,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,AlphaMissense,0.45370317077643624,0.09104302048683167,DG_P78352
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280,1280,ESM1b,0.3507483139374259,0.10820853018760682,DG_P78352
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,raw,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+charge_burial,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+glycosylation_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+disulfide_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+charge_burial+glycosylation_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+charge_burial+disulfide_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+glycosylation_loss+disulfide_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4927873207157233,0.08453538824855317,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,AlphaMissense,0.28222781288328874,0.11962713154538203,DG_P31689
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216,1216,ESM1b,0.3074638425445143,0.11542260464330267,DG_P31689
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,raw,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+charge_burial,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+glycosylation_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+disulfide_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+charge_burial+glycosylation_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+charge_burial+disulfide_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+glycosylation_loss+disulfide_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6808598748275875,0.05318998604553006,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,AlphaMissense,0.5673724749980988,0.07210448673667842,DG_P29323
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239,1239,ESM1b,0.47267971797379865,0.0878866468554761,DG_P29323
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,raw,0.6185677936052263,0.06357140869692919,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside,0.6166582889879778,0.0638896563341151,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+charge_burial,0.6208953595453516,0.06318348485838586,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+glycosylation_loss,0.6166582889879778,0.0638896563341151,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+disulfide_loss,0.6166582889879778,0.0638896563341151,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+charge_burial+glycosylation_loss,0.6208953595453516,0.06318348485838586,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+charge_burial+disulfide_loss,0.6208953595453516,0.06318348485838586,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+glycosylation_loss+disulfide_loss,0.6166582889879778,0.0638896563341151,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6208953595453516,0.06318348485838586,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,AlphaMissense,0.45858705231779806,0.09023454845087925,DG_P04626
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326,326,ESM1b,0.4483238185672129,0.09194509342152751,DG_P04626
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,raw,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+charge_burial,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+glycosylation_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+disulfide_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+charge_burial+glycosylation_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+charge_burial+disulfide_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+glycosylation_loss+disulfide_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4069007979276687,0.09884980194142204,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,AlphaMissense,0.4349460403062105,0.0941755709387399,DG_O00257
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237,1237,ESM1b,0.20193881675306694,0.13301008519592494,DG_O00257
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,raw,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+charge_burial,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+glycosylation_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+disulfide_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+charge_burial+glycosylation_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+charge_burial+disulfide_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+glycosylation_loss+disulfide_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.40151199201672616,0.09974753231822714,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,AlphaMissense,0.468376408433546,0.08860339250956817,DG_P31150
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154,1154,ESM1b,0.3907026515398489,0.10154906929401725,DG_P31150
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,raw,0.5145729463316715,0.08090316109784187,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside,0.5145729463316715,0.08090316109784187,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+charge_burial,0.5181396829023494,0.08030871490620405,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+glycosylation_loss,0.5145729463316715,0.08090316109784187,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+disulfide_loss,0.5145729463316715,0.08090316109784187,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+charge_burial+glycosylation_loss,0.5181396829023494,0.08030871490620405,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+charge_burial+disulfide_loss,0.5180858268937324,0.08031769075810248,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+glycosylation_loss+disulfide_loss,0.5145729463316715,0.08090316109784187,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5180858268937324,0.08031769075810248,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,AlphaMissense,0.47651475912426233,0.0872459264422137,DG_P02724
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245,245,ESM1b,0.38811241879784997,0.10197948133855791,DG_P02724
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,raw,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+charge_burial,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+glycosylation_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+disulfide_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+charge_burial+glycosylation_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+charge_burial+disulfide_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+glycosylation_loss+disulfide_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4302846459883069,0.09457312240624409,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,AlphaMissense,0.4561129869815503,0.09028558556229095,DG_P08397
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689,5689,ESM1b,0.3879248179015876,0.10160478021300047,DG_P08397
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,raw,0.4897474273410033,0.0850399375,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside,0.48921191375234585,0.08512918750000001,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+charge_burial,0.4940525365831506,0.0843224375,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+glycosylation_loss,0.48921191375234585,0.08512918750000001,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+disulfide_loss,0.48921191375234585,0.08512918750000001,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+charge_burial+glycosylation_loss,0.4940525365831506,0.0843224375,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+charge_burial+disulfide_loss,0.49390403281486744,0.0843471875,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+glycosylation_loss+disulfide_loss,0.48921191375234585,0.08512918750000001,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.49390403281486744,0.0843471875,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,AlphaMissense,0.4638410258808877,0.0893166875,DG_Q12809
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200,200,ESM1b,0.30681138050192847,0.11552837499999999,DG_Q12809
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,raw,0.4288566956666763,0.09518980595755462,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside,0.4288566956666763,0.09518980595755462,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+charge_burial,0.4198140149685156,0.09669690761569066,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+glycosylation_loss,0.4288566956666763,0.09518980595755462,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+disulfide_loss,0.4288566956666763,0.09518980595755462,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+charge_burial+glycosylation_loss,0.4198140149685156,0.09669690761569066,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+charge_burial+disulfide_loss,0.4198793734327837,0.09668601462353937,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+glycosylation_loss+disulfide_loss,0.4288566956666763,0.09518980595755462,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4198793734327837,0.09668601462353937,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,AlphaMissense,0.35512991556826445,0.10747745772000729,DG_P14151
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359,359,ESM1b,0.43636833547780396,0.09393785751140646,DG_P14151
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,raw,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+charge_burial,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+glycosylation_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+disulfide_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+charge_burial+glycosylation_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+charge_burial+disulfide_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+glycosylation_loss+disulfide_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5706004978059401,0.07156658121646141,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,AlphaMissense,0.6131280021702199,0.06447585831859255,DG_P08581
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393,5393,ESM1b,0.5507490712793285,0.07487515087051315,DG_P08581
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,raw,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+charge_burial,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+glycosylation_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+disulfide_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+charge_burial+glycosylation_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+charge_burial+disulfide_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+glycosylation_loss+disulfide_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.621618242382133,0.06306361847278413,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,AlphaMissense,0.6800801919216248,0.053319956928701576,DG_Q9NV35
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844,2844,ESM1b,0.6031872877320068,0.06613544151335385,DG_Q9NV35
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,raw,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+charge_burial,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+glycosylation_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+disulfide_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+charge_burial+glycosylation_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+charge_burial+disulfide_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+glycosylation_loss+disulfide_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6803439194590262,0.05327597712547928,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,AlphaMissense,0.4714295474013117,0.08809498949852994,DG_Q5VST9
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213,1213,ESM1b,0.29979177593534756,0.11670128018138792,DG_Q5VST9
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,raw,0.6412737424197902,0.059785513537579646,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside,0.6413645713675101,0.059770375935665185,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+charge_burial,0.6420164026393824,0.059661741380749644,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+glycosylation_loss,0.6413645713675101,0.059770375935665185,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+disulfide_loss,0.6460208906579756,0.05899435122575619,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+charge_burial+glycosylation_loss,0.6420164026393824,0.059661741380749644,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+charge_burial+disulfide_loss,0.6464750353965754,0.05891866321618387,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+glycosylation_loss+disulfide_loss,0.6460208906579756,0.05899435122575619,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6464750353965754,0.05891866321618387,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,AlphaMissense,0.5443277900705991,0.07594156440437431,DG_P08100
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165,165,ESM1b,0.3972884887665964,0.10044822884492306,DG_P08100
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,raw,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+charge_burial,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+glycosylation_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+disulfide_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+charge_burial+glycosylation_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+charge_burial+disulfide_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+glycosylation_loss+disulfide_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.49149024219124565,0.08475141611700546,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,AlphaMissense,0.23871579105708815,0.12687810043336623,DG_Q8TE49
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635,635,ESM1b,0.1390031412646799,0.1434990936753527,DG_Q8TE49
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,raw,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+charge_burial,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+glycosylation_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+disulfide_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+charge_burial+glycosylation_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+charge_burial+disulfide_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+glycosylation_loss+disulfide_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.3854350690929015,0.10242735053341742,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,AlphaMissense,0.3876528314173018,0.10205771939563481,DG_P05121
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345,5345,ESM1b,0.43530337070922237,0.09411597542504814,DG_P05121
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,raw,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+charge_burial,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+glycosylation_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+disulfide_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+charge_burial+glycosylation_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+charge_burial+disulfide_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+glycosylation_loss+disulfide_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6256672148915875,0.062388795080967105,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,AlphaMissense,0.6957998493332667,0.05069794399644902,DG_P37231
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576,9576,ESM1b,0.622855157965046,0.06285747048952213,DG_P37231
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,raw,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+charge_burial,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+glycosylation_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+disulfide_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+charge_burial+glycosylation_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+charge_burial+disulfide_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+glycosylation_loss+disulfide_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5799754625403555,0.07000405707501564,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,AlphaMissense,0.6363180263729917,0.06061135569780337,DG_O15297
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889,7889,ESM1b,0.5776874412682912,0.07038539284339507,DG_O15297
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,raw,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+charge_burial,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+glycosylation_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+disulfide_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+charge_burial+glycosylation_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+charge_burial+disulfide_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+glycosylation_loss+disulfide_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5395669638276518,0.07673878248008756,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,AlphaMissense,0.5108698203944747,0.08148910523251417,DG_O75400
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163,1163,ESM1b,0.3227120452320581,0.11288123049726155,DG_O75400
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,raw,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+charge_burial,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+glycosylation_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+disulfide_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+charge_burial+glycosylation_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+charge_burial+disulfide_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+glycosylation_loss+disulfide_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5304267439944768,0.07826220830226205,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,AlphaMissense,0.6372357211366275,0.060460707871401086,DG_O60260
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756,8756,ESM1b,0.5822626773540981,0.06962288532896592,DG_O60260
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,raw,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+charge_burial,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+glycosylation_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+disulfide_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+charge_burial+glycosylation_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+charge_burial+disulfide_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+glycosylation_loss+disulfide_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4931633161511966,0.0844727750988798,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,AlphaMissense,0.47694717450868673,0.08717067258137885,DG_P31150
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083,5083,ESM1b,0.4487102200810777,0.0918816222849611,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,raw,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+charge_burial,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+glycosylation_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+disulfide_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+charge_burial+glycosylation_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+charge_burial+disulfide_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+glycosylation_loss+disulfide_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5119647594445315,0.0813392051414188,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,AlphaMissense,0.539483786426037,0.07674768412287661,DG_P31150
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260,7260,ESM1b,0.4748595690705345,0.08752340227640211,DG_P31150
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,raw,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+charge_burial,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+glycosylation_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+disulfide_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+charge_burial+glycosylation_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+charge_burial+disulfide_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+glycosylation_loss+disulfide_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.36747406032475344,0.10536091719417684,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,AlphaMissense,0.4962177985720719,0.08391432072122251,DG_P04049
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297,297,ESM1b,0.47102013818924593,0.08811304556636666,DG_P04049
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,raw,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+charge_burial,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+glycosylation_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+disulfide_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+charge_burial+glycosylation_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+charge_burial+disulfide_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+glycosylation_loss+disulfide_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5512650741847236,0.07478903420887884,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,AlphaMissense,0.5703223184160817,0.07161194328211594,DG_O00257
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798,798,ESM1b,0.4635859619627045,0.08940218819704585,DG_O00257
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,raw,0.4805747178168001,0.08657087879348598,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside,0.48076069270184885,0.08653988297987346,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+charge_burial,0.48358611509760213,0.08606897925579003,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+glycosylation_loss,0.48076069270184885,0.08653988297987346,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+disulfide_loss,0.4815611454102025,0.08640647419756786,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+charge_burial+glycosylation_loss,0.48358611509760213,0.08606897925579003,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+charge_burial+disulfide_loss,0.4844375468291352,0.08592707396977531,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+glycosylation_loss+disulfide_loss,0.4815611454102025,0.08640647419756786,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.4844375468291352,0.08592707396977531,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,AlphaMissense,0.5418552847091178,0.0763574418851602,DG_P31645
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576,11576,ESM1b,0.5452693702565661,0.07578843619421322,DG_P31645
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,raw,0.07395623186042019,0.1543366457213466,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside,0.07395623186042019,0.1543366457213466,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+charge_burial,0.041017751012484484,0.15982625088260752,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+glycosylation_loss,0.07395623186042019,0.1543366457213466,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+disulfide_loss,0.07395623186042019,0.1543366457213466,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+charge_burial+glycosylation_loss,0.041017751012484484,0.15982625088260752,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+charge_burial+disulfide_loss,0.04102308950208707,0.15982536115729773,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+glycosylation_loss+disulfide_loss,0.07395623186042019,0.1543366457213466,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.04102308950208707,0.15982536115729773,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,AlphaMissense,0.21023766301625052,0.131612838878576,DG_Q14524
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224,224,ESM1b,0.14165098707587012,0.14305443944458365,DG_Q14524
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,raw,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+charge_burial,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+glycosylation_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+disulfide_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+charge_burial+glycosylation_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+charge_burial+disulfide_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+glycosylation_loss+disulfide_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5324087702689029,0.07793185034872709,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,AlphaMissense,0.5672197033584787,0.07213001851741237,DG_Q9Y617
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914,1914,ESM1b,0.5180976433877418,0.0803170331469441,DG_Q9Y617
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,raw,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+charge_burial,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+glycosylation_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+disulfide_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+charge_burial+glycosylation_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+charge_burial+disulfide_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+glycosylation_loss+disulfide_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5817254060752034,0.06971242610792587,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,AlphaMissense,0.5809110080068357,0.06983611398926733,DG_P12931
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372,3372,ESM1b,0.46863852820138663,0.08856023495413337,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,raw,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+charge_burial,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+glycosylation_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+disulfide_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+charge_burial+glycosylation_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+charge_burial+disulfide_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+glycosylation_loss+disulfide_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.48987827790440375,0.08502028046658457,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,AlphaMissense,0.5104539274369074,0.08157661967927769,DG_P12931
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637,3637,ESM1b,0.40306614143438413,0.09948896617045198,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,raw,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+charge_burial,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+glycosylation_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+disulfide_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+charge_burial+glycosylation_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+charge_burial+disulfide_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+glycosylation_loss+disulfide_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.48974873710575206,0.08504186954276283,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,AlphaMissense,0.5164223838800859,0.08058240791637211,DG_P12931
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366,3366,ESM1b,0.4010063804217728,0.09983225824405666,DG_P12931
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,raw,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+charge_burial,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+glycosylation_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+disulfide_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+charge_burial+glycosylation_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+charge_burial+disulfide_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+glycosylation_loss+disulfide_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.5171191236583254,0.08048013374801949,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,AlphaMissense,0.5484565022925912,0.07525715197640534,DG_P63279
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563,2563,ESM1b,0.39802522663732554,0.10032910874007744,DG_P63279
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,raw,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+charge_burial,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+glycosylation_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+disulfide_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+charge_burial+glycosylation_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+charge_burial+disulfide_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+glycosylation_loss+disulfide_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.6034432212048658,0.06609274330462477,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,AlphaMissense,0.4656465288654901,0.08905833030998911,DG_O95155
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118,1118,ESM1b,0.46468364631865106,0.08921931362192474,DG_O95155
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,raw,0.4140941204980174,0.09765096647205096,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside,0.41470058985351316,0.09754988826005181,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+charge_burial,0.42245170956069183,0.09625803515338917,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+glycosylation_loss,0.41470058985351316,0.09754988826005181,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+disulfide_loss,0.41469589624436104,0.09755067052813614,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+charge_burial+glycosylation_loss,0.42245170956069183,0.09625803515338917,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+charge_burial+disulfide_loss,0.42252445559804663,0.09624591081549934,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+glycosylation_loss+disulfide_loss,0.41469589624436104,0.09755067052813614,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.42252445559804663,0.09624591081549934,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,AlphaMissense,0.4834904224451044,0.08608491045697897,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695,2695,ESM1b,0.4383508601258395,0.09360817384830206,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,raw,0.3660556552641262,0.10565704224767908,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside,0.3659689177352905,0.10567149845479684,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+charge_burial,0.3713798156475091,0.10476968511099827,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+glycosylation_loss,0.3659689177352905,0.10567149845479684,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+disulfide_loss,0.3659689177352905,0.10567149845479684,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+charge_burial+glycosylation_loss,0.3713798156475091,0.10476968511099827,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+charge_burial+disulfide_loss,0.3714366247419824,0.10476021695981959,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+glycosylation_loss+disulfide_loss,0.3659689177352905,0.10567149845479684,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,positive_inside+charge_burial+glycosylation_loss+disulfide_loss,0.3714366247419824,0.10476021695981959,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,AlphaMissense,0.41758100663321046,0.09706947933405158,DG_Q9BQB6
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697,697,ESM1b,0.4192682111988389,0.09678829503088657,DG_Q9BQB6

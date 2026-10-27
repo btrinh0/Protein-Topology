@@ -1,0 +1,1331 @@
+{
+  "date": "2026-10-04",
+  "scope": "Known-answer validation for the predeclared additive-score generators only",
+  "plan_sha256": "1479f696ba358cfd8fb76b8e75b4be42e72333982de13a842a76626ee9496a5d",
+  "script_sha256": "b8c110ab36371f8ced8a5adc0f7d2128a088cf4732757f6b96c5420c303fa94c",
+  "production_sha256": "c04805510465606b5590275f646d4a5f387e3b5521f4e848157ff26eccf71117",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 20261004,
+  "replicates_per_scenario": 1000,
+  "bootstrap_draws": 999,
+  "scenario_count": 7,
+  "method_count": 4,
+  "literal_arm_fixture": {
+    "name": "literal_charge_and_comparator_arms",
+    "expected_penalties": [
+      3,
+      5,
+      1,
+      null,
+      5,
+      3,
+      3
+    ],
+    "expected_eligibility": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "max_error": 0.0,
+    "native_reference": "A excluded from its own comparator; K/H/D references ineligible",
+    "excluded_alternatives": "D/E/H are scored 10000 and must not enter the neutral arm",
+    "passed": true
+  },
+  "fixtures": [
+    {
+      "scenario": "null",
+      "oracle": 0.0,
+      "n_sites": 3840,
+      "oracle_error": 0.0,
+      "fixed_effects_error": 0.0,
+      "shared_constraint_cancellation_error": 1.2212453270876722e-15,
+      "uniform_protein_by_side_injection_error": 2.7755575615628914e-17,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 6.938893903907228e-18,
+      "weighted_bootstrap_fixed_effects_error": 2.7755575615628914e-17,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "shared_position_confound",
+      "oracle": 0.0,
+      "n_sites": 3840,
+      "oracle_error": 1.9428902930940238e-17,
+      "fixed_effects_error": 6.938893903907227e-18,
+      "shared_constraint_cancellation_error": 2.1094237467877974e-15,
+      "uniform_protein_by_side_injection_error": 2.7755575615628914e-17,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 3.469446951953614e-18,
+      "weighted_bootstrap_fixed_effects_error": 1.2793585635328952e-17,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "reference_composition_confound",
+      "oracle": 0.0,
+      "n_sites": 4800,
+      "oracle_error": 5.828670879282072e-17,
+      "fixed_effects_error": 5.828670879282071e-17,
+      "shared_constraint_cancellation_error": 1.2212453270876722e-15,
+      "uniform_protein_by_side_injection_error": 5.551115123125783e-17,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 4.5102810375396984e-17,
+      "weighted_bootstrap_fixed_effects_error": 3.469446951953614e-17,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "true_outer_preference",
+      "oracle": -0.14999999999999974,
+      "n_sites": 3840,
+      "oracle_error": 1.942890293094024e-16,
+      "fixed_effects_error": 6.38378239159465e-16,
+      "shared_constraint_cancellation_error": 1.887379141862766e-15,
+      "uniform_protein_by_side_injection_error": 2.7755575615628914e-17,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 2.7755575615628914e-17,
+      "weighted_bootstrap_fixed_effects_error": 8.326672684688674e-17,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "opposite_preference",
+      "oracle": 0.14999999999999974,
+      "n_sites": 3840,
+      "oracle_error": 1.942890293094024e-16,
+      "fixed_effects_error": 6.38378239159465e-16,
+      "shared_constraint_cancellation_error": 1.3322676295501878e-15,
+      "uniform_protein_by_side_injection_error": 2.220446049250313e-16,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 8.326672684688674e-17,
+      "weighted_bootstrap_fixed_effects_error": 1.3877787807814457e-16,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "distance_decay",
+      "oracle": -0.1607593299146432,
+      "n_sites": 3840,
+      "oracle_error": 1.3877787807814457e-16,
+      "fixed_effects_error": 5.551115123125783e-17,
+      "shared_constraint_cancellation_error": 1.7763568394002505e-15,
+      "uniform_protein_by_side_injection_error": 5.551115123125783e-17,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 5.551115123125783e-17,
+      "weighted_bootstrap_fixed_effects_error": 1.1102230246251565e-16,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    },
+    {
+      "scenario": "uneven_clustered_null",
+      "oracle": 0.0,
+      "n_sites": 9600,
+      "oracle_error": 2.7755575615628914e-19,
+      "fixed_effects_error": 2.7755575615628914e-19,
+      "shared_constraint_cancellation_error": 1.2212453270876722e-15,
+      "uniform_protein_by_side_injection_error": 0.0,
+      "production_point_bridge_error": 0.0,
+      "production_interval_bridge_error": 2.7755575615628914e-17,
+      "weighted_bootstrap_fixed_effects_error": 2.7755575615628914e-17,
+      "weighted_bootstrap_fixed_effects_draws_checked": 25,
+      "passed": true
+    }
+  ],
+  "max_simulated_fixed_effects_error": 1.3877787807814457e-16,
+  "cells": [
+    {
+      "scenario": "null",
+      "method": "naive_charge_arm_only",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 7.414881314901596e-05,
+      "bias": 7.414881314901596e-05,
+      "bias_mcse": 0.00042128895972058005,
+      "bias_mc95": [
+        -0.0007515623749876665,
+        0.0008998600012856983
+      ],
+      "rmse": 0.013315870277280319,
+      "rmse_mcse_delta_method": 0.00028992819581214136,
+      "rmse_mc95_delta_method": [
+        0.012747621455385846,
+        0.013884119099174792
+      ],
+      "coverage": 0.947,
+      "coverage_mc95": [
+        0.9313253831625082,
+        0.9592534947514054
+      ],
+      "coverage_exact_binomial_p": 0.6629325141687603,
+      "zero_rejection": 0.053,
+      "zero_rejection_mc95": [
+        0.04074650524859452,
+        0.06867461683749176
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "null",
+      "method": "naive_unstratified_paired",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.00011353864786583052,
+      "bias": -0.00011353864786583052,
+      "bias_mcse": 0.0003439131223039417,
+      "bias_mc95": [
+        -0.000787595981392275,
+        0.0005605186856606141
+      ],
+      "rmse": 0.010870641677551161,
+      "rmse_mcse_delta_method": 0.0002490776348525277,
+      "rmse_mc95_delta_method": [
+        0.010382458483885788,
+        0.011358824871216535
+      ],
+      "coverage": 0.942,
+      "coverage_mc95": [
+        0.9257504237337675,
+        0.9548667217650018
+      ],
+      "coverage_exact_binomial_p": 0.24521511704521157,
+      "zero_rejection": 0.058,
+      "zero_rejection_mc95": [
+        0.04513327823499824,
+        0.0742495762662325
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "null",
+      "method": "packaged_within_site_stratified",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.00011353864786583083,
+      "bias": -0.00011353864786583083,
+      "bias_mcse": 0.0003439131223039417,
+      "bias_mc95": [
+        -0.0007875959813922754,
+        0.0005605186856606138
+      ],
+      "rmse": 0.010870641677551161,
+      "rmse_mcse_delta_method": 0.00024907763485252764,
+      "rmse_mc95_delta_method": [
+        0.010382458483885788,
+        0.011358824871216535
+      ],
+      "coverage": 0.942,
+      "coverage_mc95": [
+        0.9257504237337675,
+        0.9548667217650018
+      ],
+      "coverage_exact_binomial_p": 0.24521511704521157,
+      "zero_rejection": 0.058,
+      "zero_rejection_mc95": [
+        0.04513327823499824,
+        0.0742495762662325
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 1.0,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "null",
+      "method": "standard_fixed_effects",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.0001135386478658306,
+      "bias": -0.0001135386478658306,
+      "bias_mcse": 0.0003439131223039417,
+      "bias_mc95": [
+        -0.0007875959813922752,
+        0.000560518685660614
+      ],
+      "rmse": 0.010870641677551161,
+      "rmse_mcse_delta_method": 0.00024907763485252764,
+      "rmse_mc95_delta_method": [
+        0.010382458483885788,
+        0.011358824871216535
+      ],
+      "coverage": 0.942,
+      "coverage_mc95": [
+        0.9257504237337675,
+        0.9548667217650018
+      ],
+      "coverage_exact_binomial_p": 0.24521511704521157,
+      "zero_rejection": 0.058,
+      "zero_rejection_mc95": [
+        0.04513327823499824,
+        0.0742495762662325
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "shared_position_confound",
+      "method": "naive_charge_arm_only",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.5999198317850241,
+      "bias": 0.5999198317850241,
+      "bias_mcse": 0.00042482262536159936,
+      "bias_mc95": [
+        0.5990871947394976,
+        0.6007524688305506
+      ],
+      "rmse": 0.6000700778723496,
+      "rmse_mcse_delta_method": 0.00042494186501960686,
+      "rmse_mc95_delta_method": [
+        0.5992372071213878,
+        0.6009029486233113
+      ],
+      "coverage": 0.0,
+      "coverage_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "coverage_exact_binomial_p": 0.0,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "shared_position_confound",
+      "method": "naive_unstratified_paired",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -3.982836614844412e-05,
+      "bias": -3.982836614844412e-05,
+      "bias_mcse": 0.0003261220354745791,
+      "bias_mc95": [
+        -0.0006790158102435131,
+        0.0005993590779466248
+      ],
+      "rmse": 0.010307803487591846,
+      "rmse_mcse_delta_method": 0.00023803690826052466,
+      "rmse_mc95_delta_method": [
+        0.009841259720409954,
+        0.010774347254773739
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 0.052,
+      "zero_rejection_mc95": [
+        0.03987303628377742,
+        0.06755573931927998
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "shared_position_confound",
+      "method": "packaged_within_site_stratified",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -3.982836614844404e-05,
+      "bias": -3.982836614844404e-05,
+      "bias_mcse": 0.0003261220354745791,
+      "bias_mc95": [
+        -0.000679015810243513,
+        0.0005993590779466249
+      ],
+      "rmse": 0.010307803487591846,
+      "rmse_mcse_delta_method": 0.00023803690826052472,
+      "rmse_mc95_delta_method": [
+        0.009841259720409952,
+        0.01077434725477374
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 0.052,
+      "zero_rejection_mc95": [
+        0.03987303628377742,
+        0.06755573931927998
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 1.0,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "shared_position_confound",
+      "method": "standard_fixed_effects",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -3.982836614844398e-05,
+      "bias": -3.982836614844398e-05,
+      "bias_mcse": 0.0003261220354745791,
+      "bias_mc95": [
+        -0.000679015810243513,
+        0.0005993590779466249
+      ],
+      "rmse": 0.010307803487591846,
+      "rmse_mcse_delta_method": 0.00023803690826052472,
+      "rmse_mc95_delta_method": [
+        0.009841259720409952,
+        0.01077434725477374
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 0.052,
+      "zero_rejection_mc95": [
+        0.03987303628377742,
+        0.06755573931927998
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "reference_composition_confound",
+      "method": "naive_charge_arm_only",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 4800,
+      "mean_estimate": 0.0004261313717962376,
+      "bias": 0.0004261313717962376,
+      "bias_mcse": 0.0004482518729485806,
+      "bias_mc95": [
+        -0.0004524261551856045,
+        0.0013046888987780798
+      ],
+      "rmse": 0.014174286571335343,
+      "rmse_mcse_delta_method": 0.0003078065207087874,
+      "rmse_mc95_delta_method": [
+        0.013570996876539537,
+        0.014777576266131149
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 0.052,
+      "zero_rejection_mc95": [
+        0.03987303628377742,
+        0.06755573931927998
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "reference_composition_confound",
+      "method": "naive_unstratified_paired",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 4800,
+      "mean_estimate": 0.5428885051959623,
+      "bias": 0.5428885051959623,
+      "bias_mcse": 0.00033400458537293583,
+      "bias_mc95": [
+        0.5422338682379602,
+        0.5435431421539645
+      ],
+      "rmse": 0.5429911385813708,
+      "rmse_mcse_delta_method": 0.00033389283532193344,
+      "rmse_mc95_delta_method": [
+        0.5423367206494438,
+        0.5436455565132978
+      ],
+      "coverage": 0.0,
+      "coverage_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "coverage_exact_binomial_p": 0.0,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "reference_composition_confound",
+      "method": "packaged_within_site_stratified",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 4800,
+      "mean_estimate": 0.0006239034121626725,
+      "bias": 0.0006239034121626725,
+      "bias_mcse": 0.000351259978874727,
+      "bias_mc95": [
+        -6.455349564209276e-05,
+        0.0013123603199674378
+      ],
+      "rmse": 0.011119777185448583,
+      "rmse_mcse_delta_method": 0.00026035186262794155,
+      "rmse_mc95_delta_method": [
+        0.010609496911389897,
+        0.011630057459507268
+      ],
+      "coverage": 0.938,
+      "coverage_mc95": [
+        0.9213119396866343,
+        0.9513358198800193
+      ],
+      "coverage_exact_binomial_p": 0.09445774964877075,
+      "zero_rejection": 0.062,
+      "zero_rejection_mc95": [
+        0.04866418011998064,
+        0.07868806031336564
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 0.6612042475413953,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "reference_composition_confound",
+      "method": "standard_fixed_effects",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 4800,
+      "mean_estimate": 0.0006239034121626744,
+      "bias": 0.0006239034121626744,
+      "bias_mcse": 0.0003512599788747281,
+      "bias_mc95": [
+        -6.455349564209287e-05,
+        0.0013123603199674417
+      ],
+      "rmse": 0.011119777185448617,
+      "rmse_mcse_delta_method": 0.0002603518626279423,
+      "rmse_mc95_delta_method": [
+        0.01060949691138993,
+        0.011630057459507305
+      ],
+      "coverage": 0.938,
+      "coverage_mc95": [
+        0.9213119396866343,
+        0.9513358198800193
+      ],
+      "coverage_exact_binomial_p": 0.09445774964877075,
+      "zero_rejection": 0.062,
+      "zero_rejection_mc95": [
+        0.04866418011998064,
+        0.07868806031336564
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "true_outer_preference",
+      "method": "naive_charge_arm_only",
+      "target": -0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.14992868345436672,
+      "bias": 0.29992868345436646,
+      "bias_mcse": 0.0004321017939211888,
+      "bias_mc95": [
+        0.2990817795006258,
+        0.3007755874081071
+      ],
+      "rmse": 0.30023947176715315,
+      "rmse_mcse_delta_method": 0.0004322093445488942,
+      "rmse_mc95_delta_method": [
+        0.29939235701805567,
+        0.30108658651625064
+      ],
+      "coverage": 0.0,
+      "coverage_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "coverage_exact_binomial_p": 0.0,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 0.0,
+      "point_correct_direction_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "correct_direction_rejection": 0.0,
+      "correct_direction_rejection_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "true_outer_preference",
+      "method": "naive_unstratified_paired",
+      "target": -0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.1500969739448149,
+      "bias": -9.697394481514299e-05,
+      "bias_mcse": 0.00033562179497492414,
+      "bias_mc95": [
+        -0.0007547805753926804,
+        0.0005608326857623944
+      ],
+      "rmse": 0.010608428310494484,
+      "rmse_mcse_delta_method": 0.00023335698086414454,
+      "rmse_mc95_delta_method": [
+        0.010151057032459759,
+        0.01106579958852921
+      ],
+      "coverage": 0.944,
+      "coverage_mc95": [
+        0.927976651850269,
+        0.9566251866145581
+      ],
+      "coverage_exact_binomial_p": 0.3833671674200203,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "true_outer_preference",
+      "method": "packaged_within_site_stratified",
+      "target": -0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.1500969739448149,
+      "bias": -9.697394481514299e-05,
+      "bias_mcse": 0.00033562179497492414,
+      "bias_mc95": [
+        -0.0007547805753926804,
+        0.0005608326857623944
+      ],
+      "rmse": 0.010608428310494484,
+      "rmse_mcse_delta_method": 0.00023335698086414457,
+      "rmse_mc95_delta_method": [
+        0.010151057032459759,
+        0.01106579958852921
+      ],
+      "coverage": 0.944,
+      "coverage_mc95": [
+        0.927976651850269,
+        0.9566251866145581
+      ],
+      "coverage_exact_binomial_p": 0.3833671674200203,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 1.0,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "true_outer_preference",
+      "method": "standard_fixed_effects",
+      "target": -0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.1500969739448149,
+      "bias": -9.697394481514299e-05,
+      "bias_mcse": 0.00033562179497492414,
+      "bias_mc95": [
+        -0.0007547805753926804,
+        0.0005608326857623944
+      ],
+      "rmse": 0.010608428310494484,
+      "rmse_mcse_delta_method": 0.00023335698086414462,
+      "rmse_mc95_delta_method": [
+        0.010151057032459759,
+        0.01106579958852921
+      ],
+      "coverage": 0.944,
+      "coverage_mc95": [
+        0.927976651850269,
+        0.9566251866145581
+      ],
+      "coverage_exact_binomial_p": 0.3833671674200203,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "opposite_preference",
+      "method": "naive_charge_arm_only",
+      "target": 0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.149467163620628,
+      "bias": -0.29946716362062775,
+      "bias_mcse": 0.0004076777642712531,
+      "bias_mc95": [
+        -0.3002661973558972,
+        -0.2986681298853583
+      ],
+      "rmse": 0.2997442527310667,
+      "rmse_mcse_delta_method": 0.00040685203831449315,
+      "rmse_mc95_delta_method": [
+        0.2989468373889336,
+        0.3005416680731998
+      ],
+      "coverage": 0.0,
+      "coverage_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "coverage_exact_binomial_p": 0.0,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 0.0,
+      "point_correct_direction_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "correct_direction_rejection": 0.0,
+      "correct_direction_rejection_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "opposite_preference",
+      "method": "naive_unstratified_paired",
+      "target": 0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.14992111246723083,
+      "bias": -7.888753276891203e-05,
+      "bias_mcse": 0.00032915640559362275,
+      "bias_mc95": [
+        -0.000724022233013071,
+        0.000566247167475247
+      ],
+      "rmse": 0.010403932845169491,
+      "rmse_mcse_delta_method": 0.00022040070253522112,
+      "rmse_mc95_delta_method": [
+        0.009971955406033132,
+        0.01083591028430585
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "opposite_preference",
+      "method": "packaged_within_site_stratified",
+      "target": 0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.14992111246723083,
+      "bias": -7.888753276891203e-05,
+      "bias_mcse": 0.0003291564055936228,
+      "bias_mc95": [
+        -0.0007240222330130711,
+        0.0005662471674752471
+      ],
+      "rmse": 0.010403932845169491,
+      "rmse_mcse_delta_method": 0.00022040070253522115,
+      "rmse_mc95_delta_method": [
+        0.009971955406033132,
+        0.01083591028430585
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 1.0,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "opposite_preference",
+      "method": "standard_fixed_effects",
+      "target": 0.14999999999999974,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.14992111246723083,
+      "bias": -7.888753276891203e-05,
+      "bias_mcse": 0.00032915640559362275,
+      "bias_mc95": [
+        -0.000724022233013071,
+        0.000566247167475247
+      ],
+      "rmse": 0.01040393284516949,
+      "rmse_mcse_delta_method": 0.00022040070253522112,
+      "rmse_mc95_delta_method": [
+        0.00997195540603313,
+        0.010835910284305849
+      ],
+      "coverage": 0.948,
+      "coverage_mc95": [
+        0.93244426068072,
+        0.9601269637162226
+      ],
+      "coverage_exact_binomial_p": 0.7713760883684773,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "distance_decay",
+      "method": "naive_charge_arm_only",
+      "target": -0.1607593299146432,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": 0.2392543877762011,
+      "bias": 0.40001371769084426,
+      "bias_mcse": 0.00041781602615223766,
+      "bias_mc95": [
+        0.39919481332742224,
+        0.4008326220542663
+      ],
+      "rmse": 0.40023164542840495,
+      "rmse_mcse_delta_method": 0.0004172418881436431,
+      "rmse_mc95_delta_method": [
+        0.3994138663548019,
+        0.401049424502008
+      ],
+      "coverage": 0.0,
+      "coverage_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "coverage_exact_binomial_p": 0.0,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 0.0,
+      "point_correct_direction_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "correct_direction_rejection": 0.0,
+      "correct_direction_rejection_mc95": [
+        2.168404344971009e-19,
+        0.0038267584855551234
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "distance_decay",
+      "method": "naive_unstratified_paired",
+      "target": -0.1607593299146432,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.16032853260010232,
+      "bias": 0.0004307973145408761,
+      "bias_mcse": 0.00033703102554645797,
+      "bias_mc95": [
+        -0.0002297713572027804,
+        0.0010913659862845327
+      ],
+      "rmse": 0.010661233915215064,
+      "rmse_mcse_delta_method": 0.000231328945706234,
+      "rmse_mc95_delta_method": [
+        0.010207837513049224,
+        0.011114630317380905
+      ],
+      "coverage": 0.951,
+      "coverage_mc95": [
+        0.9358092984933898,
+        0.9627389653526394
+      ],
+      "coverage_exact_binomial_p": 0.9422120162855059,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "distance_decay",
+      "method": "packaged_within_site_stratified",
+      "target": -0.1607593299146432,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.16032853260010232,
+      "bias": 0.0004307973145408761,
+      "bias_mcse": 0.0003370310255464579,
+      "bias_mc95": [
+        -0.0002297713572027803,
+        0.0010913659862845325
+      ],
+      "rmse": 0.010661233915215064,
+      "rmse_mcse_delta_method": 0.00023132894570623394,
+      "rmse_mc95_delta_method": [
+        0.010207837513049224,
+        0.011114630317380905
+      ],
+      "coverage": 0.951,
+      "coverage_mc95": [
+        0.9358092984933898,
+        0.9627389653526394
+      ],
+      "coverage_exact_binomial_p": 0.9422120162855059,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 1.0,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "distance_decay",
+      "method": "standard_fixed_effects",
+      "target": -0.1607593299146432,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 3840,
+      "mean_estimate": -0.16032853260010232,
+      "bias": 0.0004307973145408761,
+      "bias_mcse": 0.00033703102554645797,
+      "bias_mc95": [
+        -0.0002297713572027804,
+        0.0010913659862845327
+      ],
+      "rmse": 0.010661233915215064,
+      "rmse_mcse_delta_method": 0.000231328945706234,
+      "rmse_mc95_delta_method": [
+        0.010207837513049224,
+        0.011114630317380905
+      ],
+      "coverage": 0.951,
+      "coverage_mc95": [
+        0.9358092984933898,
+        0.9627389653526394
+      ],
+      "coverage_exact_binomial_p": 0.9422120162855059,
+      "zero_rejection": 1.0,
+      "zero_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "zero_rejection_kind": "power",
+      "point_correct_direction_fraction": 1.0,
+      "point_correct_direction_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "correct_direction_rejection": 1.0,
+      "correct_direction_rejection_mc95": [
+        0.996173241514445,
+        1.0
+      ],
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    },
+    {
+      "scenario": "uneven_clustered_null",
+      "method": "naive_charge_arm_only",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 9600,
+      "mean_estimate": -9.435460087159692e-05,
+      "bias": -9.435460087159692e-05,
+      "bias_mcse": 0.0005316402493412098,
+      "bias_mc95": [
+        -0.0011363503423122623,
+        0.0009476411405690685
+      ],
+      "rmse": 0.016803797670632965,
+      "rmse_mcse_delta_method": 0.00039549592508945035,
+      "rmse_mc95_delta_method": [
+        0.01602863990142529,
+        0.01757895543984064
+      ],
+      "coverage": 0.944,
+      "coverage_mc95": [
+        0.927976651850269,
+        0.9566251866145581
+      ],
+      "coverage_exact_binomial_p": 0.3833671674200203,
+      "zero_rejection": 0.056,
+      "zero_rejection_mc95": [
+        0.043374813385442,
+        0.07202334814973096
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "uneven_clustered_null",
+      "method": "naive_unstratified_paired",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 9600,
+      "mean_estimate": -9.852625883725969e-05,
+      "bias": -9.852625883725969e-05,
+      "bias_mcse": 0.0005135286103028087,
+      "bias_mc95": [
+        -0.0011050238400616692,
+        0.0009079713223871499
+      ],
+      "rmse": 0.01623137792639968,
+      "rmse_mcse_delta_method": 0.0003791009010923612,
+      "rmse_mc95_delta_method": [
+        0.015488353813751972,
+        0.01697440203904739
+      ],
+      "coverage": 0.94,
+      "coverage_mc95": [
+        0.9235289252086434,
+        0.953103527324068
+      ],
+      "coverage_exact_binomial_p": 0.1465470574367264,
+      "zero_rejection": 0.06,
+      "zero_rejection_mc95": [
+        0.04689647267593196,
+        0.07647107479135655
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null
+    },
+    {
+      "scenario": "uneven_clustered_null",
+      "method": "packaged_within_site_stratified",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 9600,
+      "mean_estimate": -9.852625883726022e-05,
+      "bias": -9.852625883726022e-05,
+      "bias_mcse": 0.0005135286103028087,
+      "bias_mc95": [
+        -0.0011050238400616699,
+        0.0009079713223871493
+      ],
+      "rmse": 0.016231377926399684,
+      "rmse_mcse_delta_method": 0.0003791009010923611,
+      "rmse_mc95_delta_method": [
+        0.015488353813751975,
+        0.016974402039047393
+      ],
+      "coverage": 0.94,
+      "coverage_mc95": [
+        0.9235289252086434,
+        0.953103527324068
+      ],
+      "coverage_exact_binomial_p": 0.1465470574367264,
+      "zero_rejection": 0.06,
+      "zero_rejection_mc95": [
+        0.04689647267593196,
+        0.07647107479135655
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": null,
+      "coverage_holm_adjusted_p": 0.8792823446203585,
+      "bias_check_passed": true
+    },
+    {
+      "scenario": "uneven_clustered_null",
+      "method": "standard_fixed_effects",
+      "target": 0.0,
+      "replicates": 1000,
+      "n_proteins": 120,
+      "n_sites": 9600,
+      "mean_estimate": -9.852625883726007e-05,
+      "bias": -9.852625883726007e-05,
+      "bias_mcse": 0.0005135286103028087,
+      "bias_mc95": [
+        -0.0011050238400616696,
+        0.0009079713223871496
+      ],
+      "rmse": 0.016231377926399684,
+      "rmse_mcse_delta_method": 0.0003791009010923611,
+      "rmse_mc95_delta_method": [
+        0.015488353813751975,
+        0.016974402039047393
+      ],
+      "coverage": 0.94,
+      "coverage_mc95": [
+        0.9235289252086434,
+        0.953103527324068
+      ],
+      "coverage_exact_binomial_p": 0.1465470574367264,
+      "zero_rejection": 0.06,
+      "zero_rejection_mc95": [
+        0.04689647267593196,
+        0.07647107479135655
+      ],
+      "zero_rejection_kind": "false_claim_rate_for_charge_specific_target",
+      "point_correct_direction_fraction": null,
+      "point_correct_direction_mc95": null,
+      "correct_direction_rejection": null,
+      "correct_direction_rejection_mc95": null,
+      "interval": "Percentile whole-protein resampling; same draws across methods within each replicate",
+      "fixed_effects_interval_note": "Fixed-effects point coefficients and sampled coefficients agree algebraically; reuse primary bootstrap draws rather than claim independent uncertainty"
+    }
+  ],
+  "oracle_checks_passed": true,
+  "primary_bias_checks_passed": true,
+  "limited_calibration_check_passed": true,
+  "limited_benchmark_passed": true,
+  "limitations": [
+    "Validates explicit additive generators, not every nonlinear predictor or biological mechanism",
+    "Independent simulated proteins do not establish homology-disjoint generalization",
+    "Naive baselines intentionally omit one control and target different observed quantities; their charge-specific errors are not numerical bugs",
+    "Standard fixed effects is established prior art and agrees with the packaged point estimate",
+    "Interval calibration cannot be transferred to small-gene Phase C or to clinical outcomes"
+  ]
+}

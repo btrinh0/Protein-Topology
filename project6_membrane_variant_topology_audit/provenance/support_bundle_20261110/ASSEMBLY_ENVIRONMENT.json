@@ -1,0 +1,18 @@
+{
+  "purpose": "Environment used to inspect and validate this bundle, not a claim about the original GPU run",
+  "python": "3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "biopython": "1.88",
+    "torch": "2.14.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "membrane-rule-audit": "0.1.0",
+    "h5py": "3.16.0"
+  }
+}

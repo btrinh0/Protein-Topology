@@ -1,0 +1,464 @@
+{
+  "fold": 24,
+  "plan_sha256": "4f72b7ac61a29fcec9a4e816271da520e5c444221387ac283c03f5e219f37757",
+  "outer_model_cache_key": "dd20ac3dfe7c9575ecab",
+  "training_groups": [
+    "DG_O00257",
+    "DG_O15297",
+    "DG_O60260",
+    "DG_O75400",
+    "DG_O95155",
+    "DG_P02724",
+    "DG_P04049",
+    "DG_P04626",
+    "DG_P05121",
+    "DG_P08100",
+    "DG_P08397",
+    "DG_P08581",
+    "DG_P11712",
+    "DG_P12931",
+    "DG_P14151",
+    "DG_P29323",
+    "DG_P31150",
+    "DG_P31645",
+    "DG_P31689",
+    "DG_P37231",
+    "DG_P38398",
+    "DG_P42574",
+    "DG_P51587",
+    "DG_P78352",
+    "DG_Q12809",
+    "DG_Q14524",
+    "DG_Q5VST9",
+    "DG_Q8TE49",
+    "DG_Q9BQB6",
+    "DG_Q9BYF1",
+    "DG_Q9GZX7",
+    "DG_Q9NV35",
+    "DG_Q9Y617"
+  ],
+  "evaluation_groups": [
+    "DG_P63279"
+  ],
+  "evaluation_accessions": [
+    "P63279"
+  ],
+  "inner": [
+    {
+      "inner": 1,
+      "model_cache_key": "f1826ab0030b68caadbc",
+      "training_groups": [
+        "DG_O15297",
+        "DG_O75400",
+        "DG_P02724",
+        "DG_P05121",
+        "DG_P08100",
+        "DG_P11712",
+        "DG_P12931",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_P37231",
+        "DG_P38398",
+        "DG_P42574",
+        "DG_P51587",
+        "DG_P78352",
+        "DG_Q14524",
+        "DG_Q5VST9",
+        "DG_Q8TE49",
+        "DG_Q9BQB6",
+        "DG_Q9NV35",
+        "DG_Q9Y617"
+      ],
+      "calibration_groups": [
+        "DG_O00257",
+        "DG_O60260",
+        "DG_O95155",
+        "DG_P04049",
+        "DG_P04626",
+        "DG_P08397",
+        "DG_P08581",
+        "DG_P31150",
+        "DG_P31689",
+        "DG_Q12809",
+        "DG_Q9BYF1",
+        "DG_Q9GZX7"
+      ]
+    },
+    {
+      "inner": 2,
+      "model_cache_key": "7ccbab499ae28e1191fe",
+      "training_groups": [
+        "DG_O00257",
+        "DG_O15297",
+        "DG_O60260",
+        "DG_O95155",
+        "DG_P02724",
+        "DG_P04049",
+        "DG_P04626",
+        "DG_P08397",
+        "DG_P08581",
+        "DG_P12931",
+        "DG_P14151",
+        "DG_P31150",
+        "DG_P31645",
+        "DG_P31689",
+        "DG_P42574",
+        "DG_P51587",
+        "DG_P78352",
+        "DG_Q12809",
+        "DG_Q5VST9",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1",
+        "DG_Q9GZX7",
+        "DG_Q9Y617"
+      ],
+      "calibration_groups": [
+        "DG_O75400",
+        "DG_P05121",
+        "DG_P08100",
+        "DG_P11712",
+        "DG_P29323",
+        "DG_P37231",
+        "DG_P38398",
+        "DG_Q14524",
+        "DG_Q8TE49",
+        "DG_Q9NV35"
+      ]
+    },
+    {
+      "inner": 3,
+      "model_cache_key": "c0cce13f6567303c9a60",
+      "training_groups": [
+        "DG_O00257",
+        "DG_O60260",
+        "DG_O75400",
+        "DG_O95155",
+        "DG_P04049",
+        "DG_P04626",
+        "DG_P05121",
+        "DG_P08100",
+        "DG_P08397",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P29323",
+        "DG_P31150",
+        "DG_P31689",
+        "DG_P37231",
+        "DG_P38398",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q8TE49",
+        "DG_Q9BYF1",
+        "DG_Q9GZX7",
+        "DG_Q9NV35"
+      ],
+      "calibration_groups": [
+        "DG_O15297",
+        "DG_P02724",
+        "DG_P12931",
+        "DG_P14151",
+        "DG_P31645",
+        "DG_P42574",
+        "DG_P51587",
+        "DG_P78352",
+        "DG_Q5VST9",
+        "DG_Q9BQB6",
+        "DG_Q9Y617"
+      ]
+    }
+  ],
+  "correction_calibration_groups": [
+    "DG_P02724",
+    "DG_P04626",
+    "DG_P08100",
+    "DG_P08581",
+    "DG_P11712",
+    "DG_P14151",
+    "DG_P29323",
+    "DG_P31645",
+    "DG_Q12809",
+    "DG_Q14524",
+    "DG_Q9BQB6",
+    "DG_Q9BYF1"
+  ],
+  "correction_fits": {
+    "positive_inside": {
+      "coefficients": {
+        "positive_inside": 0.04590667894892868,
+        "charge_burial": 0.0,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.0
+      },
+      "converged": true,
+      "iterations": 2,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "charge_burial",
+        "disulfide_loss",
+        "glycosylation_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+charge_burial": {
+      "coefficients": {
+        "positive_inside": 0.04600878998111,
+        "charge_burial": 0.03932040364585234,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.0
+      },
+      "converged": true,
+      "iterations": 3,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "disulfide_loss",
+        "glycosylation_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+glycosylation_loss": {
+      "coefficients": {
+        "positive_inside": 0.04590667894892868,
+        "charge_burial": 0.0,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.0
+      },
+      "converged": true,
+      "iterations": 2,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "charge_burial",
+        "disulfide_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+disulfide_loss": {
+      "coefficients": {
+        "positive_inside": 0.04567865054391496,
+        "charge_burial": 0.0,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.07030392644394103
+      },
+      "converged": true,
+      "iterations": 4,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "charge_burial",
+        "glycosylation_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+charge_burial+glycosylation_loss": {
+      "coefficients": {
+        "positive_inside": 0.04600878998111,
+        "charge_burial": 0.03932040364585234,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.0
+      },
+      "converged": true,
+      "iterations": 3,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "disulfide_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+charge_burial+disulfide_loss": {
+      "coefficients": {
+        "positive_inside": 0.045774769253109374,
+        "charge_burial": 0.03971916847056963,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.07247070537619614
+      },
+      "converged": true,
+      "iterations": 5,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "glycosylation_loss"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+glycosylation_loss+disulfide_loss": {
+      "coefficients": {
+        "positive_inside": 0.04567865054391496,
+        "charge_burial": 0.0,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.07030392644394103
+      },
+      "converged": true,
+      "iterations": 4,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [
+        "charge_burial"
+      ],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    },
+    "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+      "coefficients": {
+        "positive_inside": 0.045774769253109374,
+        "charge_burial": 0.03971916847056963,
+        "glycosylation_loss": 0.0,
+        "disulfide_loss": 0.07247070537619614
+      },
+      "converged": true,
+      "iterations": 5,
+      "ridge": 0.001,
+      "target_scale": "within_assay_rank_damage",
+      "label_provenance": "existing exposed 44-assay development table; inner group-OOF residuals only",
+      "calibration_families": [
+        "DG_P02724",
+        "DG_P04626",
+        "DG_P08100",
+        "DG_P08581",
+        "DG_P11712",
+        "DG_P14151",
+        "DG_P29323",
+        "DG_P31645",
+        "DG_Q12809",
+        "DG_Q14524",
+        "DG_Q9BQB6",
+        "DG_Q9BYF1"
+      ],
+      "locked_zero_rules": [],
+      "unsupported_rules": [],
+      "disulfide_design": "control_free_predictive_refinement_not_causal_effect_estimation",
+      "total_rule_compliance_guaranteed": false,
+      "evaluation_required": "group-disjoint accuracy, rule audits, ablations and collateral changes"
+    }
+  },
+  "calibrated_on_outer_evaluation": false,
+  "experimental_confirmation_opened": false
+}

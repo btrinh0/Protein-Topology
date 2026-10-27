@@ -1,0 +1,298 @@
+{
+  "completed_utc": "2026-11-01T04:31:07.447867+00:00",
+  "criterion": "existing annotation-defined matched endpoint-minus-background C-to-S gap; original whole-protein interval must be positive",
+  "evaluation_kind": "internal_annotation_consistency",
+  "same_annotations_select_correction_and_evaluation_targets": true,
+  "background_is_verified_free_cysteine": false,
+  "current_model_passes": true,
+  "current_proteins_positive": 7,
+  "current_contributing_proteins": 7,
+  "no_new_refinement_needed": true,
+  "C_to_S_scores_unchanged_after_glycosylation_repair": true,
+  "new_model_or_coefficient_fits": 0,
+  "experimental_outcome_reads": 0,
+  "results": {
+    "raw": {
+      "S": {
+        "whole_protein": {
+          "estimate": 0.05985714789839747,
+          "ci95": [
+            -0.0009287290722388968,
+            0.10438059794081743
+          ],
+          "sd_of_values": 0.12337627878960519,
+          "estimate_standardized_within_this_scorer": 0.4851592906321357,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6101300995513972,
+          "mean_free": 0.5502729516529996
+        },
+        "status": "inconclusive",
+        "dependence_group_sensitivity": {
+          "estimate": 0.05985714789839745,
+          "ci95": [
+            0.0006364668694951825,
+            0.10489241909789448
+          ],
+          "n_groups": 6,
+          "n_proteins": 7,
+          "n_strata": 8,
+          "n_target_sites": 44,
+          "n_reference_sites": 55
+        }
+      },
+      "A": {
+        "whole_protein": {
+          "estimate": 0.08289091356302267,
+          "ci95": [
+            0.04324893623844615,
+            0.1320287934413363
+          ],
+          "sd_of_values": 0.11165254600412744,
+          "estimate_standardized_within_this_scorer": 0.7424005679186075,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.5528352773184468,
+          "mean_free": 0.46994436375542425
+        },
+        "status": "pass_internal_loss_criterion"
+      },
+      "all19_mean": {
+        "whole_protein": {
+          "estimate": 0.05776574635027057,
+          "ci95": [
+            -0.015276397548530381,
+            0.10708617085999451
+          ],
+          "sd_of_values": 0.1303854457842355,
+          "estimate_standardized_within_this_scorer": 0.4430383008074575,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6654489984498272,
+          "mean_free": 0.6076832520995565
+        },
+        "status": "inconclusive"
+      }
+    },
+    "existing_PI_DS": {
+      "S": {
+        "whole_protein": {
+          "estimate": 0.12571905739302744,
+          "ci95": [
+            0.07139069400815681,
+            0.17022480263423853
+          ],
+          "sd_of_values": 0.1490207712140569,
+          "estimate_standardized_within_this_scorer": 0.8436344569203823,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6759920090460271,
+          "mean_free": 0.5502729516529996
+        },
+        "status": "pass_internal_loss_criterion",
+        "dependence_group_sensitivity": {
+          "estimate": 0.12571905739302744,
+          "ci95": [
+            0.07087380208903403,
+            0.17208308590985952
+          ],
+          "n_groups": 6,
+          "n_proteins": 7,
+          "n_strata": 8,
+          "n_target_sites": 44,
+          "n_reference_sites": 55
+        }
+      },
+      "A": {
+        "whole_protein": {
+          "estimate": 0.14875282305765272,
+          "ci95": [
+            0.10611425216333017,
+            0.2013361512970364
+          ],
+          "sd_of_values": 0.13823869553507942,
+          "estimate_standardized_within_this_scorer": 1.0760577744304975,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.618697186813077,
+          "mean_free": 0.46994436375542425
+        },
+        "status": "pass_internal_loss_criterion"
+      },
+      "all19_mean": {
+        "whole_protein": {
+          "estimate": 0.12368378591512405,
+          "ci95": [
+            0.05785549482688326,
+            0.17451420461242875
+          ],
+          "sd_of_values": 0.1550407364174005,
+          "estimate_standardized_within_this_scorer": 0.7977502479228601,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.7314012688238043,
+          "mean_free": 0.6077174829086802
+        },
+        "status": "pass_internal_loss_criterion"
+      }
+    },
+    "existing_PI_glyco_DS": {
+      "S": {
+        "whole_protein": {
+          "estimate": 0.12576312968646264,
+          "ci95": [
+            0.07139069400815681,
+            0.17031823341559685
+          ],
+          "sd_of_values": 0.14902995263936916,
+          "estimate_standardized_within_this_scorer": 0.8438782101125076,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6760360813394625,
+          "mean_free": 0.5502729516529996
+        },
+        "status": "pass_internal_loss_criterion",
+        "dependence_group_sensitivity": {
+          "estimate": 0.12576312968646267,
+          "ci95": [
+            0.07093333065235934,
+            0.1722914656160452
+          ],
+          "n_groups": 6,
+          "n_proteins": 7,
+          "n_strata": 8,
+          "n_target_sites": 44,
+          "n_reference_sites": 55
+        }
+      },
+      "A": {
+        "whole_protein": {
+          "estimate": 0.14879689535108795,
+          "ci95": [
+            0.10624884797355078,
+            0.20154256714907992
+          ],
+          "sd_of_values": 0.1382479260174234,
+          "estimate_standardized_within_this_scorer": 1.0763047203495484,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6187412591065121,
+          "mean_free": 0.46994436375542425
+        },
+        "status": "pass_internal_loss_criterion"
+      },
+      "all19_mean": {
+        "whole_protein": {
+          "estimate": 0.12372785820855926,
+          "ci95": [
+            0.05785549482688326,
+            0.17460313840874384
+          ],
+          "sd_of_values": 0.15504856999216093,
+          "estimate_standardized_within_this_scorer": 0.7979941912061156,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.7314453411172397,
+          "mean_free": 0.6077174829086802
+        },
+        "status": "pass_internal_loss_criterion"
+      }
+    },
+    "PI_DS_constraint_glyco": {
+      "S": {
+        "whole_protein": {
+          "estimate": 0.12571905739302744,
+          "ci95": [
+            0.07139069400815681,
+            0.17022480263423853
+          ],
+          "sd_of_values": 0.1490207712140569,
+          "estimate_standardized_within_this_scorer": 0.8436344569203823,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6759920090460271,
+          "mean_free": 0.5502729516529996
+        },
+        "status": "pass_internal_loss_criterion",
+        "dependence_group_sensitivity": {
+          "estimate": 0.12571905739302744,
+          "ci95": [
+            0.07087380208903403,
+            0.17208308590985952
+          ],
+          "n_groups": 6,
+          "n_proteins": 7,
+          "n_strata": 8,
+          "n_target_sites": 44,
+          "n_reference_sites": 55
+        }
+      },
+      "A": {
+        "whole_protein": {
+          "estimate": 0.14875282305765272,
+          "ci95": [
+            0.10611425216333017,
+            0.2013361512970364
+          ],
+          "sd_of_values": 0.13823869553507942,
+          "estimate_standardized_within_this_scorer": 1.0760577744304975,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.618697186813077,
+          "mean_free": 0.46994436375542425
+        },
+        "status": "pass_internal_loss_criterion"
+      },
+      "all19_mean": {
+        "whole_protein": {
+          "estimate": 0.12368378591512405,
+          "ci95": [
+            0.05785549482688326,
+            0.17451420461242875
+          ],
+          "sd_of_values": 0.1550744194578933,
+          "estimate_standardized_within_this_scorer": 0.7975769720595819,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.7314012688238043,
+          "mean_free": 0.6077174829086802
+        },
+        "status": "pass_internal_loss_criterion"
+      }
+    }
+  },
+  "source_sha256": {
+    "scripts\\beat_am\\m35_verify_current_disulfide.py": "ed528f4304dca28222bdd770a2a851fec6ca5785474bc2371d1f0575c04b61a0",
+    "results\\glycosylation_constraint_repair_20261031\\run2\\guarded_position_scores.npz": "d14a16cf39e953347166351e21564b1088aadd329f47a1522baddb4930a82be5",
+    "results\\standalone_multirule_20261025\\annotation_bank.json": "b7c75cc155ee6cdce2d0824766aaf79235ace4661de7f29f843b62fc828e301c",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\BENCHMARK_PLAN.json": "4f72b7ac61a29fcec9a4e816271da520e5c444221387ac283c03f5e219f37757",
+    "data\\external\\disulfide_rule_20261025\\human_reviewed_features.tsv": "d55f10ea7318421dec14ca7da53bdfbdabb1fbcd695fe57c9904586a4b4af56c",
+    "scripts\\beat_am\\m7_audit_standalone_rules.py": "21a3524205c2cc3da3ebb66ece266056276f809a7daf7d2739240c16d4f7d343",
+    "scripts\\beat_am\\b10_disulfide_rule.py": "2d82600785e8873888a2c72f4c4e7103b9520e1bff174b0060212cff3f530208",
+    "data\\raw\\topology_viewer.html": "c18aba78ca89abda12113eb4ecbd83f5dc45bfc86cc3144687e506060f6426bd"
+  }
+}

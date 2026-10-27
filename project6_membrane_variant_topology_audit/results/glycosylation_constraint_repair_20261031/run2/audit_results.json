@@ -1,0 +1,1294 @@
+{
+  "guarded_group_out": {
+    "raw": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.011496317771467696,
+            "ci95": [
+              -0.018558422184850477,
+              -0.0033676711095380154
+            ],
+            "sd_of_z": 0.04636995309362066,
+            "estimate_standardized": -0.24792601683803084,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": -0.011496317771467689,
+            "ci95": [
+              -0.018685516646799516,
+              -0.0038729557808186567
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0006139637802807724,
+            "ci95": [
+              -0.0038769115470937377,
+              0.00581105402523586
+            ],
+            "sd_of_z": 0.0454876892900692,
+            "estimate_standardized": -0.013497361371020708,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": -0.0006139637802807726,
+            "ci95": [
+              -0.003692766027162548,
+              0.005869126692328725
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.018047614537941695,
+            "ci95": [
+              0.008462018870793335,
+              0.030002652280472046
+            ],
+            "sd_of_z": 0.03314249367430678,
+            "estimate_standardized": 0.5445460657033432,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": 0.01804761453794169,
+            "ci95": [
+              0.008474277474466179,
+              0.03079779609939956
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.004187155002002002,
+            "ci95": [
+              -0.014955354720165334,
+              0.011034700942593026
+            ],
+            "sd_of_z": 0.030654585364340115,
+            "estimate_standardized": 0.13659147407267946,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.004187155002002002,
+            "ci95": [
+              -0.014890298888485374,
+              0.011074956420332377
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.013303420147608321,
+            "ci95": [
+              -0.03215264139004746,
+              -0.0044735305667707075
+            ],
+            "sd_of_z": 0.04793716251623543,
+            "estimate_standardized": -0.27751788903030505,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": -0.013303420147608321,
+            "ci95": [
+              -0.03140331695638389,
+              -0.004737428138842918
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0226034951783456,
+            "ci95": [
+              0.0045800839651434395,
+              0.03929754077367813
+            ],
+            "sd_of_z": 0.032612244386270924,
+            "estimate_standardized": 0.6930984237276598,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": 0.022603495178345607,
+            "ci95": [
+              0.00462914551597728,
+              0.04016468641410679
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    },
+    "existing_PI_DS": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.011404225267981807,
+            "ci95": [
+              -0.018467144949885814,
+              -0.003250074319869082
+            ],
+            "sd_of_z": 0.04653461669123581,
+            "estimate_standardized": -0.24506971538307834,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": -0.011404225267981799,
+            "ci95": [
+              -0.018621855658162167,
+              -0.003792544154819976
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0005571132921967195,
+            "ci95": [
+              -0.0037879461106601602,
+              0.005812860638173593
+            ],
+            "sd_of_z": 0.04554232865570036,
+            "estimate_standardized": -0.012232867941569074,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": -0.0005571132921967187,
+            "ci95": [
+              -0.0036239910833792206,
+              0.005938595454195877
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.018112908616789186,
+            "ci95": [
+              0.008542715468871897,
+              0.030169574241841475
+            ],
+            "sd_of_z": 0.0330807244657523,
+            "estimate_standardized": 0.5475366367970889,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": 0.018112908616789183,
+            "ci95": [
+              0.008579001376853908,
+              0.030960550971731227
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.015002665736938137,
+              0.011117613394848052
+            ],
+            "sd_of_z": 0.030624072639888644,
+            "estimate_standardized": 0.13913266789462378,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.014961939886674033,
+              0.011155272039354456
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.01294510328770535,
+            "ci95": [
+              -0.03204000377997535,
+              -0.003940192765948099
+            ],
+            "sd_of_z": 0.048095495679514884,
+            "estimate_standardized": -0.2691541714002753,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": -0.01294510328770535,
+            "ci95": [
+              -0.03125718138445115,
+              -0.004297479769530938
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.022911623997423573,
+            "ci95": [
+              0.004762960322346865,
+              0.03978722823074815
+            ],
+            "sd_of_z": 0.032564027128517775,
+            "estimate_standardized": 0.7035869337351964,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": 0.02291162399742358,
+            "ci95": [
+              0.004778701232550436,
+              0.040683520480596896
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    },
+    "existing_PI_glyco_DS": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0019056616801894001,
+            "ci95": [
+              -0.013318174668712563,
+              0.01587562809917282
+            ],
+            "sd_of_z": 0.04688015573602585,
+            "estimate_standardized": -0.040649644828823855,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": -0.001905661680189397,
+            "ci95": [
+              -0.013508530918489949,
+              0.01654069859748751
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "inconclusive"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0005571132921967195,
+            "ci95": [
+              -0.0037879461106601602,
+              0.005812860638173593
+            ],
+            "sd_of_z": 0.04554232865570036,
+            "estimate_standardized": -0.012232867941569074,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": -0.0005571132921967187,
+            "ci95": [
+              -0.0036239910833792206,
+              0.005938595454195877
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.008778687968340484,
+            "ci95": [
+              -0.01610669156513215,
+              0.029109010412021564
+            ],
+            "sd_of_z": 0.035229181090671746,
+            "estimate_standardized": 0.2491879656738593,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": 0.008778687968340483,
+            "ci95": [
+              -0.01844370498643288,
+              0.030045235643539704
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "inconclusive"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.015002665736938137,
+              0.011117613394848052
+            ],
+            "sd_of_z": 0.030624072639888644,
+            "estimate_standardized": 0.13913266789462378,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.014961939886674033,
+              0.011155272039354456
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.008989794955929307,
+            "ci95": [
+              -0.019994751669393088,
+              0.04926223538563903
+            ],
+            "sd_of_z": 0.04920330646133466,
+            "estimate_standardized": 0.1827071309322218,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": 0.008989794955929305,
+            "ci95": [
+              -0.019479904346294215,
+              0.04667394584208389
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "inconclusive"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0014014372745672905,
+            "ci95": [
+              -0.05173050871695834,
+              0.038983950996365105
+            ],
+            "sd_of_z": 0.03602396445549147,
+            "estimate_standardized": 0.038902916315576595,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": 0.0014014372745672907,
+            "ci95": [
+              -0.05404285958942273,
+              0.040458298972153896
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "inconclusive"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    },
+    "constraint_glyco": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0474764620021212,
+            "ci95": [
+              0.01578678044604407,
+              0.07916229761597161
+            ],
+            "sd_of_z": 0.051614644607261694,
+            "estimate_standardized": 0.919825417056959,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": 0.04747646200212118,
+            "ci95": [
+              0.015014656055481985,
+              0.08106090455886548
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0006139637802807724,
+            "ci95": [
+              -0.0038769115470937377,
+              0.00581105402523586
+            ],
+            "sd_of_z": 0.0454876892900692,
+            "estimate_standardized": -0.013497361371020708,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": -0.0006139637802807726,
+            "ci95": [
+              -0.003692766027162548,
+              0.005869126692328725
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.040412931869287246,
+            "ci95": [
+              -0.06357780396237757,
+              -0.014440630399331652
+            ],
+            "sd_of_z": 0.04208164351274441,
+            "estimate_standardized": -0.96034585381743,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": -0.04041293186928724,
+            "ci95": [
+              -0.06396054375733869,
+              -0.016128907668377063
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.004187155002002002,
+            "ci95": [
+              -0.014955354720165334,
+              0.011034700942593026
+            ],
+            "sd_of_z": 0.030654585364340115,
+            "estimate_standardized": 0.13659147407267946,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.004187155002002002,
+            "ci95": [
+              -0.014890298888485374,
+              0.011074956420332377
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.12458188665888678,
+            "ci95": [
+              0.09038771492828857,
+              0.14818215425918937
+            ],
+            "sd_of_z": 0.059650047602908055,
+            "estimate_standardized": 2.0885463074268054,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": 0.12458188665888678,
+            "ci95": [
+              0.09361574562559347,
+              0.14709457857123118
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.11320244760596136,
+            "ci95": [
+              -0.12261833758741797,
+              -0.10250441415212132
+            ],
+            "sd_of_z": 0.04606544384103736,
+            "estimate_standardized": -2.4574266123778243,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": -0.11320244760596136,
+            "ci95": [
+              -0.12309587304253526,
+              -0.10274980586318412
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    },
+    "PI_DS_constraint_glyco": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.046959187736639936,
+            "ci95": [
+              0.015529808203172341,
+              0.07844019713845497
+            ],
+            "sd_of_z": 0.05164745519325027,
+            "estimate_standardized": 0.9092255864481966,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": 0.046959187736639915,
+            "ci95": [
+              0.014732169544241619,
+              0.0804134593660544
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.0005571132921967195,
+            "ci95": [
+              -0.0037879461106601602,
+              0.005812860638173593
+            ],
+            "sd_of_z": 0.04554232865570036,
+            "estimate_standardized": -0.012232867941569074,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": -0.0005571132921967187,
+            "ci95": [
+              -0.0036239910833792206,
+              0.005938595454195877
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.039768275170724184,
+            "ci95": [
+              -0.06250873028697636,
+              -0.014129363738029093
+            ],
+            "sd_of_z": 0.041841252678951536,
+            "estimate_standardized": -0.9504561317957343,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": -0.039768275170724184,
+            "ci95": [
+              -0.06309643601582207,
+              -0.015920488713747988
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.015002665736938137,
+              0.011117613394848052
+            ],
+            "sd_of_z": 0.030624072639888644,
+            "estimate_standardized": 0.13913266789462378,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.004260808928186461,
+            "ci95": [
+              -0.014961939886674033,
+              0.011155272039354456
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.12351240659173189,
+            "ci95": [
+              0.0892395447536031,
+              0.14736335785601262
+            ],
+            "sd_of_z": 0.059592910643231356,
+            "estimate_standardized": 2.0726023491480627,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": 0.12351240659173189,
+            "ci95": [
+              0.09230736760619013,
+              0.14635282922409248
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.11156742512694011,
+            "ci95": [
+              -0.12166591438109427,
+              -0.1012129982674874
+            ],
+            "sd_of_z": 0.04575628703535075,
+            "estimate_standardized": -2.438297168665466,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": -0.11156742512694014,
+            "ci95": [
+              -0.12208165356436936,
+              -0.10141368768485254
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    }
+  },
+  "saved_full_head": {
+    "raw": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.015512058949582113,
+            "ci95": [
+              -0.027650891087041413,
+              -0.006829761564556058
+            ],
+            "sd_of_z": 0.047937374250675485,
+            "estimate_standardized": -0.32359008377192316,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": -0.015512058949582108,
+            "ci95": [
+              -0.027755629664774403,
+              -0.007257421846266416
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0010677221250058647,
+            "ci95": [
+              -0.008273177186542089,
+              0.01420504299497157
+            ],
+            "sd_of_z": 0.05295488869218327,
+            "estimate_standardized": 0.020162862228118937,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": 0.0010677221250058645,
+            "ci95": [
+              -0.007989089968767122,
+              0.014166606644207207
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.018142850408242497,
+            "ci95": [
+              0.0076908621644308115,
+              0.02832991209864574
+            ],
+            "sd_of_z": 0.03044081841746205,
+            "estimate_standardized": 0.5960040285196486,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": 0.018142850408242494,
+            "ci95": [
+              0.00751146618060965,
+              0.02824253752396583
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0008506460025395577,
+            "ci95": [
+              -0.020328019918168305,
+              0.0080916534931127
+            ],
+            "sd_of_z": 0.030846759829889228,
+            "estimate_standardized": 0.02757651070098186,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.0008506460025395577,
+            "ci95": [
+              -0.019700369374492523,
+              0.008025949080811107
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.024010420847410844,
+            "ci95": [
+              -0.056287554024982804,
+              -0.010581620437489482
+            ],
+            "sd_of_z": 0.04687560824719224,
+            "estimate_standardized": -0.5122156649316444,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": -0.024010420847410837,
+            "ci95": [
+              -0.058062471039839504,
+              -0.010638098002771969
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.021658120617985884,
+            "ci95": [
+              0.002211748417918595,
+              0.037108341164639284
+            ],
+            "sd_of_z": 0.029447231092379747,
+            "estimate_standardized": 0.7354892061002808,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": 0.02165812061798589,
+            "ci95": [
+              0.002233330034595136,
+              0.03778116844354133
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "opposite_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    },
+    "constraint_glyco": {
+      "original_all_motifs": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.04472052191802582,
+            "ci95": [
+              0.014157090351736745,
+              0.07249367246282691
+            ],
+            "sd_of_z": 0.05215846591060656,
+            "estimate_standardized": 0.8573971863871821,
+            "n_strata": 45,
+            "n_proteins": 10,
+            "n_sequon_sites": 54,
+            "n_control_sites": 488
+          },
+          "group_resampling": {
+            "estimate": 0.04472052191802579,
+            "ci95": [
+              0.013037882333876247,
+              0.07490849457256518
+            ],
+            "n_groups": 9,
+            "n_proteins": 10,
+            "n_strata": 45,
+            "n_target_sites": 54,
+            "n_reference_sites": 488
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0010677221250058647,
+            "ci95": [
+              -0.008273177186542089,
+              0.01420504299497157
+            ],
+            "sd_of_z": 0.05295488869218327,
+            "estimate_standardized": 0.020162862228118937,
+            "n_strata": 16,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 190
+          },
+          "group_resampling": {
+            "estimate": 0.0010677221250058645,
+            "ci95": [
+              -0.007989089968767122,
+              0.014166606644207207
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 16,
+            "n_target_sites": 19,
+            "n_reference_sites": 190
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.042757121280876026,
+            "ci95": [
+              -0.07037128464492835,
+              -0.015466621143538882
+            ],
+            "sd_of_z": 0.04092337660255302,
+            "estimate_standardized": -1.0448092222724508,
+            "n_strata": 16,
+            "n_proteins": 11,
+            "n_sequon_sites": 57,
+            "n_control_sites": 410
+          },
+          "group_resampling": {
+            "estimate": -0.04275712128087601,
+            "ci95": [
+              -0.06973511829824414,
+              -0.017284514528612387
+            ],
+            "n_groups": 10,
+            "n_proteins": 11,
+            "n_strata": 16,
+            "n_target_sites": 57,
+            "n_reference_sites": 410
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.0008506460025395577,
+            "ci95": [
+              -0.020328019918168305,
+              0.0080916534931127
+            ],
+            "sd_of_z": 0.030846759829889228,
+            "estimate_standardized": 0.02757651070098186,
+            "n_strata": 9,
+            "n_proteins": 6,
+            "n_sequon_sites": 19,
+            "n_control_sites": 439
+          },
+          "group_resampling": {
+            "estimate": 0.0008506460025395577,
+            "ci95": [
+              -0.019700369374492523,
+              0.008025949080811107
+            ],
+            "n_groups": 6,
+            "n_proteins": 6,
+            "n_strata": 9,
+            "n_target_sites": 19,
+            "n_reference_sites": 439
+          },
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      },
+      "feature_eligible": {
+        "A_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": 0.11681743479988055,
+            "ci95": [
+              0.0845403016223086,
+              0.13024623520980189
+            ],
+            "sd_of_z": 0.057439721082428875,
+            "estimate_standardized": 2.0337395899301405,
+            "n_strata": 21,
+            "n_proteins": 7,
+            "n_sequon_sites": 23,
+            "n_control_sites": 236
+          },
+          "group_resampling": {
+            "estimate": 0.11681743479988055,
+            "ci95": [
+              0.08276538460745192,
+              0.13018975764451943
+            ],
+            "n_groups": 7,
+            "n_proteins": 7,
+            "n_strata": 21,
+            "n_target_sites": 23,
+            "n_reference_sites": 236
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "A_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        },
+        "B_noncytosolic": {
+          "legacy_whole_protein": {
+            "estimate": -0.1191697350293055,
+            "ci95": [
+              -0.13861610722937284,
+              -0.10371951448265214
+            ],
+            "sd_of_z": 0.0452233755173514,
+            "estimate_standardized": -2.6351357824579504,
+            "n_strata": 12,
+            "n_proteins": 9,
+            "n_sequon_sites": 26,
+            "n_control_sites": 271
+          },
+          "group_resampling": {
+            "estimate": -0.11916973502930554,
+            "ci95": [
+              -0.1385945256126963,
+              -0.10304668720375011
+            ],
+            "n_groups": 9,
+            "n_proteins": 9,
+            "n_strata": 12,
+            "n_target_sites": 26,
+            "n_reference_sites": 271
+          },
+          "directional_verdict": "expected_direction_supported"
+        },
+        "B_cytosolic": {
+          "legacy_whole_protein": null,
+          "group_resampling": null,
+          "directional_verdict": "placebo_check_not_equivalence_test"
+        }
+      }
+    }
+  }
+}

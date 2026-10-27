@@ -1,0 +1,5398 @@
+{
+  "scheme": "guarded_loocv",
+  "plan_sha256": "4f72b7ac61a29fcec9a4e816271da520e5c444221387ac283c03f5e219f37757",
+  "outer_fits": 34,
+  "baseline_refitted_per_outer_partition": true,
+  "preprocessing_refitted_per_inner_partition": true,
+  "outer_evaluation_groups_excluded_from_all_training_and_calibration": true,
+  "comparisons_vs_raw": {
+    "membrane": [
+      {
+        "model": "raw",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.462330194841874,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 13,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.4621941017707059,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.00013609307116804108,
+        "ci95_delta_spearman": [
+          -0.000493404755236434,
+          7.941732579723933e-05
+        ],
+        "equal_group_mean_delta": -0.00015573850734612593,
+        "wins": 5,
+        "losses": 2,
+        "ties": 6,
+        "mean_mse_delta": 4.949435424826355e-06,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0001474341604320445
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 1.1691224338662246e-05
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0001789558410111353
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0001474341604320445
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0001499894234657656
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0001474341604320445
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0001474341604320445
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.000162932067519439
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0001028080280439242
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0001474341604320445
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.00016908965320954852
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0001474341604320445
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.46098755098776345,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.0013426438541104422,
+        "ci95_delta_spearman": [
+          -0.007467706286265546,
+          0.0026527314259720603
+        ],
+        "equal_group_mean_delta": -0.0015763101972457328,
+        "wins": 8,
+        "losses": 2,
+        "ties": 3,
+        "mean_mse_delta": 0.00040752873532221815,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.001751758889509467
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0016484946702967531
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0018524613300419852
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0014545308419529792
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.00158389777185743
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.000700974117106257
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0014545308419529792
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.0017054806153531474
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0018132899454652567
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.001290342562041663
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0020246037355386988
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0014545308419529792
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.45986508650656727,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.002465108335306646,
+        "ci95_delta_spearman": [
+          -0.0077333424627106725,
+          5.7502517399605364e-05
+        ],
+        "equal_group_mean_delta": -0.002678838376829614,
+        "wins": 5,
+        "losses": 3,
+        "ties": 5,
+        "mean_mse_delta": 0.00017211205857311634,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0026705340299155327
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.002511408645144826
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0029314284259022135
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0026705340299155327
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.002673089292949254
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0026705340299155327
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0026705340299155327
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.0026860319370029273
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0026259078975274124
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0026705340299155327
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.002692189522693037
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0001474341604320445
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+disulfide_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.4625964005606832,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": 0.00026620571880929213,
+        "ci95_delta_spearman": [
+          -0.0003926517833952037,
+          0.0009670245902533484
+        ],
+        "equal_group_mean_delta": 9.541115409882524e-05,
+        "wins": 4,
+        "losses": 3,
+        "ties": 6,
+        "mean_mse_delta": -1.1404922854384372e-05,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": 0.00028838952871006646
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 0.0004475149134807732
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.00010643696783172654
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": 0.00028838952871006646
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": 0.0002858674572433495
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": 0.00028838952871006646
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": 0.00028838952871006646
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": 0.0002061872292598669
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": 0.00033301566109818676
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.00028838952871006646
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": 0.00026692960298057195
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 0.00028838952871006646
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.4586241055179557,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.003706089323918148,
+        "ci95_delta_spearman": [
+          -0.011555163433442681,
+          0.0021611231640444525
+        ],
+        "equal_group_mean_delta": -0.004136709456204081,
+        "wins": 8,
+        "losses": 3,
+        "ties": 2,
+        "mean_mse_delta": 0.0005783437082131952,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.004312158148467815
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.004208893929255101
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0046456241579965465
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.004014930100911327
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.004144297030815778
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.003261373376064605
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.004014930100911327
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.004265879874311496
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.004373689204423605
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.001270056696916685
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.004585002994497047
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0014545308419529792
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+disulfide_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.4613740637192295,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.0009561311226444048,
+        "ci95_delta_spearman": [
+          -0.007304471655632362,
+          0.0031339566860602245
+        ],
+        "equal_group_mean_delta": -0.0013340446910801978,
+        "wins": 8,
+        "losses": 2,
+        "ties": 3,
+        "mean_mse_delta": 0.00039244656174749554,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.001328548763036513
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.001229772544541879
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0017806698174134077
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0010358087161981052
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0011656056598106142
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0002876985300403901
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0010358087161981052
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.001357711133892696
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0013821925056867843
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.001708619813662988
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0016112797402766624
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0010358087161981052
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.46025956934383,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.002070625498043823,
+        "ci95_delta_spearman": [
+          -0.007711291843594275,
+          0.0008355388877069865
+        ],
+        "equal_group_mean_delta": -0.0024361559974920496,
+        "wins": 4,
+        "losses": 4,
+        "ties": 5,
+        "mean_mse_delta": 0.00015651804110225433,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0022431776228808084
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.002084052238110102
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0028681465877490445
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0022431776228808084
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0022456996943475255
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0022431776228808084
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0022431776228808084
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.002325379922331008
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.002198551490492688
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0022431776228808084
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.002264637548610303
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 0.00028838952871006646
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "membrane",
+        "proteins": 13,
+        "groups": 12,
+        "model_mean_spearman": 0.45900324327115116,
+        "reference_mean_spearman": 0.462330194841874,
+        "delta_spearman": -0.0033269515707227463,
+        "ci95_delta_spearman": [
+          -0.011391981161047568,
+          0.0026830331322849573
+        ],
+        "equal_group_mean_delta": -0.0039024335098317344,
+        "wins": 8,
+        "losses": 3,
+        "ties": 2,
+        "mean_mse_delta": 0.0005640859138265016,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0038969375817880497
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0037981613632934157
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.00458254852877872
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.003604197534949642
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.003733994478562151
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0028560873487919265
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.003604197534949642
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.003926099952644232
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.003950581324438321
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0008597690050885486
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.004179668559028199
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0010358087161981052
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      }
+    ],
+    "all": [
+      {
+        "model": "raw",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.4915634721716636,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 39,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49151810781460764,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -4.536435705601369e-05,
+        "ci95_delta_spearman": [
+          -0.0001633008958640749,
+          2.5903334511075997e-05
+        ],
+        "equal_group_mean_delta": -5.4966532004515035e-05,
+        "wins": 5,
+        "losses": 2,
+        "ties": 32,
+        "mean_mse_delta": 1.6498118082754519e-06,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -4.914472014401483e-05
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 3.6919655806301832e-06
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -5.320308786817536e-05
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -4.73650810944523e-05
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -4.781648446444686e-05
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -5.14522318482439e-05
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -4.781648446444686e-05
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -3.246569306650238e-05
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -5.3396732592489014e-05
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -4.6558155925908785e-05
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49111592422029343,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.00044754795137014745,
+        "ci95_delta_spearman": [
+          -0.002523989045824494,
+          0.0009156994217145259
+        ],
+        "equal_group_mean_delta": -0.0005563447754984939,
+        "wins": 8,
+        "losses": 2,
+        "ties": 29,
+        "mean_mse_delta": 0.0001358429117740727,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.00048484361398432637
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0005531870177398316
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0005205772643042378
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0005507317467692388
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0005001782437444516
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.00022136024750723905
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.0004717397325252905
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.0005385728259009939
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.0004717397325252905
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0005726178775153442
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.00040747659853947253
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0006393485480648522
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.0004593255290377829
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.490741769393228,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.0008217027784355486,
+        "ci95_delta_spearman": [
+          -0.0025932528935410292,
+          1.7434942004227565e-05
+        ],
+        "equal_group_mean_delta": -0.000945472368292805,
+        "wins": 5,
+        "losses": 3,
+        "ties": 31,
+        "mean_mse_delta": 5.7370686191038785e-05,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.0008901780099718442
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0007930764142562609
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0008715057482411987
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0008441334609313434
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.0008661191448374701
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.000848220611685135
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.0008661191448374701
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0008292340729033935
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0008501651124293801
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -4.6558155925908785e-05
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.0008433265357627998
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.0008433265357627998
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+disulfide_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49165220741126664,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": 8.873523960309738e-05,
+        "ci95_delta_spearman": [
+          -0.0001252095402951295,
+          0.00036685059987669985
+        ],
+        "equal_group_mean_delta": 3.367452497605597e-05,
+        "wins": 4,
+        "losses": 3,
+        "ties": 32,
+        "mean_mse_delta": -3.8016409514614574e-06,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 9.612984290335549e-05
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": 0.00014132049899392838
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -3.164342286889167e-05
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": 9.02739338663209e-05
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 9.353173904110264e-05
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": 6.511175660837902e-05
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 9.353173904110264e-05
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": 0.00010516284034679582
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": 8.42935588359701e-05
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 9.107037748738942e-05
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.4903281090636908,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.001235363107972716,
+        "ci95_delta_spearman": [
+          -0.003904642233244862,
+          0.0007124859150265487
+        ],
+        "equal_group_mean_delta": -0.0014600151021896756,
+        "wins": 8,
+        "losses": 3,
+        "ties": 28,
+        "mean_mse_delta": 0.00019278123607106506,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.001338310033637109
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0013617341521477311
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0013291243987121372
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0013811315064314058
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.001308725378152351
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0010299073819151384
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.0013021394921874576
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.0013471199603088933
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.0013021394921874576
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0013811650119232436
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.00040107053586842684
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0014478956824727515
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0004593255290377829
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.0012678726634456823
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.0012678726634456823
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+disulfide_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49124476179744875,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.0003187103742148016,
+        "ci95_delta_spearman": [
+          -0.002443381596523276,
+          0.0010981335352191692
+        ],
+        "equal_group_mean_delta": -0.00047083930273418746,
+        "wins": 8,
+        "losses": 2,
+        "ties": 29,
+        "mean_mse_delta": 0.00013081552058249852,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.00034526957206603505
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0004195417146431094
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.00038834922459217235
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.000529388324095878
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0003680859978349308
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -9.08521673811758e-05
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.0003359379620101963
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.00042875088438716716
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.0003359379620101963
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0004364818439010898
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": 0.0005395641516830488
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0005088251811399987
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.0003270974893257174
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49087326367231565,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.000690208499347941,
+        "ci95_delta_spearman": [
+          -0.0025258693808512525,
+          0.00029934694948529375
+        ],
+        "equal_group_mean_delta": -0.0008598197638207234,
+        "wins": 4,
+        "losses": 4,
+        "ties": 31,
+        "mean_mse_delta": 5.217268036741811e-05,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.0007477258742936028
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.00065812175940319
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0008526922287902565
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0007091683245307975
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.0007275170668802622
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.0007343305017887394
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.0007275170668802622
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0006942794180503226
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0007151486995611482
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": 9.107037748738942e-05
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.000708371880909729
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.000708371880909729
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "all",
+        "proteins": 39,
+        "groups": 34,
+        "model_mean_spearman": 0.49045448831475597,
+        "reference_mean_spearman": 0.4915634721716636,
+        "delta_spearman": -0.001108983856907582,
+        "ci95_delta_spearman": [
+          -0.0038065174364787973,
+          0.0008732568281238596
+        ],
+        "equal_group_mean_delta": -0.0013773294740582593,
+        "wins": 8,
+        "losses": 3,
+        "ties": 28,
+        "mean_mse_delta": 0.00018802863794216721,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": -0.0012013991783165472
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P02724",
+            "delta": -0.0012306118679330682
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P04626",
+            "delta": -0.0011994193778821314
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P08100",
+            "delta": -0.0013623792923396195
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P08581",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P11712",
+            "delta": -0.0011791561511248897
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P14151",
+            "delta": -0.0009019223206711347
+          },
+          {
+            "omitted": "DG_P29323",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": -0.001168928930253938
+          },
+          {
+            "omitted": "DG_P31645",
+            "delta": -0.001239821037677126
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": -0.001168928930253938
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_Q12809",
+            "delta": -0.0012475519971910487
+          },
+          {
+            "omitted": "DG_Q14524",
+            "delta": -0.0002715060016069101
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_Q9BQB6",
+            "delta": -0.0013198953344299577
+          },
+          {
+            "omitted": "DG_Q9BYF1",
+            "delta": -0.0003270974893257174
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": -0.0011381676426156764
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": -0.0011381676426156764
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      }
+    ],
+    "non_membrane": [
+      {
+        "model": "raw",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+disulfide_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+disulfide_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      },
+      {
+        "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+        "reference": "raw",
+        "scope": "non_membrane",
+        "proteins": 26,
+        "groups": 22,
+        "model_mean_spearman": 0.5061801108365583,
+        "reference_mean_spearman": 0.5061801108365583,
+        "delta_spearman": 0.0,
+        "ci95_delta_spearman": [
+          0.0,
+          0.0
+        ],
+        "equal_group_mean_delta": 0.0,
+        "wins": 0,
+        "losses": 0,
+        "ties": 26,
+        "mean_mse_delta": 0.0,
+        "leave_one_group_out_delta": [
+          {
+            "omitted": "DG_O00257",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O15297",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O60260",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O75400",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_O95155",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P04049",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P05121",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P08397",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P12931",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31150",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P31689",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P37231",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P38398",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P42574",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P51587",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P63279",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_P78352",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q5VST9",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q8TE49",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9GZX7",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9NV35",
+            "delta": 0.0
+          },
+          {
+            "omitted": "DG_Q9Y617",
+            "delta": 0.0
+          }
+        ],
+        "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+      }
+    ]
+  },
+  "add_one_rule_to_PI": {
+    "charge_burial": {
+      "model": "positive_inside+charge_burial",
+      "reference": "positive_inside",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.46098755098776345,
+      "reference_mean_spearman": 0.4621941017707059,
+      "delta_spearman": -0.0012065507829424013,
+      "ci95_delta_spearman": [
+        -0.0073891749568689175,
+        0.002854261323780526
+      ],
+      "equal_group_mean_delta": -0.0014205716898996069,
+      "wins": 8,
+      "losses": 2,
+      "ties": 3,
+      "mean_mse_delta": 0.0004025792998973918,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0016043247290774224
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0016601858946354152
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.00167350548903085
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0013070966815209347
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0014339083483916645
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0005535399566742125
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0013070966815209347
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0015425485478337084
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0017104819174213325
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": 0.0014377767224737076
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0018555140823291502
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": -0.0013070966815209347
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    "glycosylation_loss": {
+      "model": "positive_inside+glycosylation_loss",
+      "reference": "positive_inside",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.45986508650656727,
+      "reference_mean_spearman": 0.4621941017707059,
+      "delta_spearman": -0.0023290152641386045,
+      "ci95_delta_spearman": [
+        -0.007569299608450465,
+        0.0
+      ],
+      "equal_group_mean_delta": -0.0025230998694834882,
+      "wins": 0,
+      "losses": 1,
+      "ties": 12,
+      "mean_mse_delta": 0.00016716262314829,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.0027524725848910784
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0025230998694834882
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    "disulfide_loss": {
+      "model": "positive_inside+disulfide_loss",
+      "reference": "positive_inside",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.4625964005606832,
+      "reference_mean_spearman": 0.4621941017707059,
+      "delta_spearman": 0.0004022987899773332,
+      "ci95_delta_spearman": [
+        -4.243256630231951e-07,
+        0.0009929793538348442
+      ],
+      "equal_group_mean_delta": 0.00025114966144495116,
+      "wins": 2,
+      "losses": 3,
+      "ties": 8,
+      "mean_mse_delta": -1.635435827921073e-05,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": 7.251887317940878e-05
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": 0.0004358568807091151
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": 0.00036911929677930594
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": 0.00043582368914211095
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": 0.0004360192561901205
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.00043582368914211095
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    }
+  },
+  "remove_one_rule_from_full": {
+    "charge_burial": {
+      "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+      "reference": "positive_inside+glycosylation_loss+disulfide_loss",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.45900324327115116,
+      "reference_mean_spearman": 0.46025956934383,
+      "delta_spearman": -0.001256326072678923,
+      "ci95_delta_spearman": [
+        -0.0074219385001720395,
+        0.0028049421814564175
+      ],
+      "equal_group_mean_delta": -0.0014662775123396848,
+      "wins": 8,
+      "losses": 3,
+      "ties": 2,
+      "mean_mse_delta": 0.00040756787272424726,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0016537599589072412
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0017141091251833141
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.0017144019410296758
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0013610199120688334
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0014882947842146256
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0006129097259111182
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0013610199120688334
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0016007200303132247
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0017520298339456328
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": 0.0013834086177922599
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0019150310104178961
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": -0.0013241982449081716
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    "glycosylation_loss": {
+      "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+      "reference": "positive_inside+charge_burial+disulfide_loss",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.45900324327115116,
+      "reference_mean_spearman": 0.4613740637192295,
+      "delta_spearman": -0.0023708204480783414,
+      "ci95_delta_spearman": [
+        -0.00770516645625461,
+        0.0
+      ],
+      "equal_group_mean_delta": -0.0025683888187515366,
+      "wins": 0,
+      "losses": 1,
+      "ties": 12,
+      "mean_mse_delta": 0.00017163935207900605,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.002801878711365313
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0025683888187515366
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    "disulfide_loss": {
+      "model": "positive_inside+charge_burial+glycosylation_loss+disulfide_loss",
+      "reference": "positive_inside+charge_burial+glycosylation_loss",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.45900324327115116,
+      "reference_mean_spearman": 0.4586241055179557,
+      "delta_spearman": 0.00037913775319540187,
+      "ci95_delta_spearman": [
+        -2.9468851011499032e-05,
+        0.0009484463604895642
+      ],
+      "equal_group_mean_delta": 0.00023427594637234644,
+      "wins": 6,
+      "losses": 4,
+      "ties": 3,
+      "mean_mse_delta": -1.4257794386693603e-05,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": 0.00041522056667976534
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": 0.00041073256596168536
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": 6.307562921782639e-05
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": 0.00041073256596168536
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": 0.0004103025522536272
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": 0.0004052860272726784
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": 0.00041073256596168536
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": 0.00033977992166726287
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": 0.00042310787998528385
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": 0.00041028769182813635
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": 0.0004053344354688476
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.00041872212575487397
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    }
+  },
+  "per_protein_file": "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\per_protein.csv",
+  "old_model_artifacts_modified": false,
+  "new_experimental_confirmation_opened": false,
+  "scope": "previously exposed development data only",
+  "non_membrane_scores_exactly_unchanged": true,
+  "fitted_coefficients": [
+    {
+      "fold": 1,
+      "evaluation_accessions": [
+        "O00257",
+        "P54725",
+        "Q00688"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.027774072349228324,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.027892241037966625,
+          "charge_burial": 0.04550380541879703,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.027774072349228324,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.027597191666165703,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.054534462628199346
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.027892241037966625,
+          "charge_burial": 0.04550380541879703,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.027708068395728036,
+          "charge_burial": 0.045817630489026706,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.057033927755296164
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.027597191666165703,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.054534462628199346
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.027708068395728036,
+          "charge_burial": 0.045817630489026706,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.057033927755296164
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "evaluation_accessions": [
+        "O15297"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.04791549914798447,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.048047152395640516,
+          "charge_burial": 0.05069637167050701,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.04791549914798447,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.047758484730966465,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04840945155060206
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.048047152395640516,
+          "charge_burial": 0.05069637167050701,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.047881849441494616,
+          "charge_burial": 0.050978043315999325,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.051190429967774634
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.047758484730966465,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04840945155060206
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.047881849441494616,
+          "charge_burial": 0.050978043315999325,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.051190429967774634
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "evaluation_accessions": [
+        "O60260"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.07681473406008871,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.07692648787801971,
+          "charge_burial": 0.04303359917280894,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.07681473406008871,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.07651508633469885,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.092385032661326
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.07692648787801971,
+          "charge_burial": 0.04303359917280894,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.07662048763063772,
+          "charge_burial": 0.04355501510059123,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09476106651973724
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.07651508633469885,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.092385032661326
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.07662048763063772,
+          "charge_burial": 0.04355501510059123,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09476106651973724
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "evaluation_accessions": [
+        "O75400"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.049498126883219244,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.049671405321761626,
+          "charge_burial": 0.06672519120667822,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.049498126883219244,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04923961196128566,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07970328983876805
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.049671405321761626,
+          "charge_burial": 0.06672519120667822,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.049402194207265195,
+          "charge_burial": 0.06718391947319244,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08336833890465421
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04923961196128566,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07970328983876805
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.049402194207265195,
+          "charge_burial": 0.06718391947319244,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08336833890465421
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "evaluation_accessions": [
+        "O95155"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.06989213505055,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.07005058532316963,
+          "charge_burial": 0.06101523551476905,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.06989213505055,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.06960899921097657,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08729421774369148
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.07005058532316963,
+          "charge_burial": 0.06101523551476905,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.0697578605649501,
+          "charge_burial": 0.06151403037751091,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09064996032825368
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.06960899921097657,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08729421774369148
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.0697578605649501,
+          "charge_burial": 0.06151403037751091,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09064996032825368
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "evaluation_accessions": [
+        "P02724"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.053602925399127,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05374191289126644,
+          "charge_burial": 0.0515359658355698,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.053602925399127,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05333135979013168,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08062222900839268
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05374191289126644,
+          "charge_burial": 0.0515359658355698,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05346202419216374,
+          "charge_burial": 0.05209274709999729,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0835389724310873
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05333135979013168,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08062222900839268
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05346202419216374,
+          "charge_burial": 0.05209274709999729,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0835389724310873
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "evaluation_accessions": [
+        "P04049"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.0513711678430609,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05154965755023017,
+          "charge_burial": 0.06873192036746271,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.0513711678430609,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.0510853438313374,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0881230138627368
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05154965755023017,
+          "charge_burial": 0.06873192036746271,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05125289588291219,
+          "charge_burial": 0.06923759401125446,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09190009595685918
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.0510853438313374,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0881230138627368
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05125289588291219,
+          "charge_burial": 0.06923759401125446,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09190009595685918
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "evaluation_accessions": [
+        "P04626"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.10276950921505076,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.10217947309181195,
+          "charge_burial": 0.034040080186468875,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.10276950921505076,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.10242731753569069,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09104676233151339
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.10217947309181195,
+          "charge_burial": 0.034040080186468875,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.1018198766282048,
+          "charge_burial": 0.03462349348369128,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09298698058533057
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.10242731753569069,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09104676233151339
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.1018198766282048,
+          "charge_burial": 0.03462349348369128,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09298698058533057
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "evaluation_accessions": [
+        "P05121"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.0501721258254782,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.050322828255817166,
+          "charge_burial": 0.05803173530571175,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.0501721258254782,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04995494663150178,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06695898292826247
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.050322828255817166,
+          "charge_burial": 0.05803173530571175,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05009631501515475,
+          "charge_burial": 0.058417707580392726,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0701458134418374
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04995494663150178,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06695898292826247
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05009631501515475,
+          "charge_burial": 0.058417707580392726,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0701458134418374
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "evaluation_accessions": [
+        "P08100",
+        "P51681"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.029622569099583065,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.029488351155467427,
+          "charge_burial": 0.03392690430041388,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.029622569099583065,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.029572978050931096,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.02622629480030008
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.029488351155467427,
+          "charge_burial": 0.03392690430041388,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.029437989022955857,
+          "charge_burial": 0.033939566533741285,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.026607591838940067
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.029572978050931096,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.02622629480030008
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.029437989022955857,
+          "charge_burial": 0.033939566533741285,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.026607591838940067
+        }
+      }
+    },
+    {
+      "fold": 11,
+      "evaluation_accessions": [
+        "P08397"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.036153183033244635,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.036317927717351955,
+          "charge_burial": 0.06343905589070718,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.036153183033244635,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.03596333253855587,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05853321305800461
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.036317927717351955,
+          "charge_burial": 0.06343905589070718,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.036117678110349494,
+          "charge_burial": 0.06378027566264055,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06201258493109988
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.03596333253855587,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05853321305800461
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.036117678110349494,
+          "charge_burial": 0.06378027566264055,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06201258493109988
+        }
+      }
+    },
+    {
+      "fold": 12,
+      "evaluation_accessions": [
+        "P08581"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.03486602378153829,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.03498917791763513,
+          "charge_burial": 0.04566502533931269,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.03486602378153829,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.034674913641203405,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.056736659538398466
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.03498917791763513,
+          "charge_burial": 0.04566502533931269,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.034790276100199094,
+          "charge_burial": 0.045992231302758015,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.059311826823968156
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.034674913641203405,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.056736659538398466
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.034790276100199094,
+          "charge_burial": 0.045992231302758015,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.059311826823968156
+        }
+      }
+    },
+    {
+      "fold": 13,
+      "evaluation_accessions": [
+        "P11712"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.030116113550660493,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.030343360042878173,
+          "charge_burial": 0.08045305774024535,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.030116113550660493,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.029856038273877648,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07657589993828998
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.030343360042878173,
+          "charge_burial": 0.08045305774024535,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.030069171615456004,
+          "charge_burial": 0.08090326344012669,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08110575962544732
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.029856038273877648,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07657589993828998
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.030069171615456004,
+          "charge_burial": 0.08090326344012669,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08110575962544732
+        }
+      }
+    },
+    {
+      "fold": 14,
+      "evaluation_accessions": [
+        "P12931"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.07686382582631582,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.07699051171878771,
+          "charge_burial": 0.04878356747373494,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.07686382582631582,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.07655410986826479,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09548919105944245
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.07699051171878771,
+          "charge_burial": 0.04878356747373494,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.07667347136881589,
+          "charge_burial": 0.04932379542988624,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09817992616069532
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.07655410986826479,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09548919105944245
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.07667347136881589,
+          "charge_burial": 0.04932379542988624,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09817992616069532
+        }
+      }
+    },
+    {
+      "fold": 15,
+      "evaluation_accessions": [
+        "P14151"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.05542116042476419,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05567027881144866,
+          "charge_burial": 0.09237202907652751,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.05542116042476419,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05512197747419585,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08882124818884471
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05567027881144866,
+          "charge_burial": 0.09237202907652751,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.055355209850863785,
+          "charge_burial": 0.09298412593135054,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09402755526273845
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05512197747419585,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08882124818884471
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.055355209850863785,
+          "charge_burial": 0.09298412593135054,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09402755526273845
+        }
+      }
+    },
+    {
+      "fold": 16,
+      "evaluation_accessions": [
+        "P29323"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.04627447308355906,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.046433703499845054,
+          "charge_burial": 0.05904195526791967,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.04627447308355906,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04597701082629337,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08831040983190507
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.046433703499845054,
+          "charge_burial": 0.05904195526791967,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.04612637408738614,
+          "charge_burial": 0.05954753142501556,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0916445567197282
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04597701082629337,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08831040983190507
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04612637408738614,
+          "charge_burial": 0.05954753142501556,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0916445567197282
+        }
+      }
+    },
+    {
+      "fold": 17,
+      "evaluation_accessions": [
+        "P31150",
+        "P60484"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.03935770697584382,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.039500336567427546,
+          "charge_burial": 0.05492308708579676,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.03935770697584382,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.039082858341804014,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08473917163780631
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.039500336567427546,
+          "charge_burial": 0.05492308708579676,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.03921693849505958,
+          "charge_burial": 0.05540598953473168,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08776170547895552
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.039082858341804014,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08473917163780631
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.03921693849505958,
+          "charge_burial": 0.05540598953473168,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08776170547895552
+        }
+      }
+    },
+    {
+      "fold": 18,
+      "evaluation_accessions": [
+        "P31645"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.02796526939629147,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.028066277339983854,
+          "charge_burial": 0.07655660665402748,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.02796526939629147,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.027812334408559677,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08375804787392674
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.028066277339983854,
+          "charge_burial": 0.07655660665402748,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.02790601604813749,
+          "charge_burial": 0.07704523969191533,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08812353354170424
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.027812334408559677,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08375804787392674
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.02790601604813749,
+          "charge_burial": 0.07704523969191533,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08812353354170424
+        }
+      }
+    },
+    {
+      "fold": 19,
+      "evaluation_accessions": [
+        "P31689"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.05997749289724658,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.060124462856273375,
+          "charge_burial": 0.056594453990894286,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.05997749289724658,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05976655439060169,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06503490323701223
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.060124462856273375,
+          "charge_burial": 0.056594453990894286,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05990441794180422,
+          "charge_burial": 0.05696940441728557,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06814272522895448
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05976655439060169,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06503490323701223
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05990441794180422,
+          "charge_burial": 0.05696940441728557,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06814272522895448
+        }
+      }
+    },
+    {
+      "fold": 20,
+      "evaluation_accessions": [
+        "P37231"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.042269907429154756,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.04243962195229227,
+          "charge_burial": 0.06535281655444436,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.042269907429154756,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04205863355348785,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06513830157922233
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.04243962195229227,
+          "charge_burial": 0.06535281655444436,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.0422176997131966,
+          "charge_burial": 0.06573096588988965,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06872408843154586
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04205863355348785,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06513830157922233
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.0422176997131966,
+          "charge_burial": 0.06573096588988965,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06872408843154586
+        }
+      }
+    },
+    {
+      "fold": 21,
+      "evaluation_accessions": [
+        "P38398"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.057344850388058706,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05748510555381989,
+          "charge_burial": 0.05400875511034696,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.057344850388058706,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05710074769222908,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07525982550876266
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05748510555381989,
+          "charge_burial": 0.05400875511034696,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.057232488274884946,
+          "charge_burial": 0.05443920794166533,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07822961902153616
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05710074769222908,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07525982550876266
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.057232488274884946,
+          "charge_burial": 0.05443920794166533,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07822961902153616
+        }
+      }
+    },
+    {
+      "fold": 22,
+      "evaluation_accessions": [
+        "P42574",
+        "P55210"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.0343126575346431,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.03442573319259877,
+          "charge_burial": 0.043542606693490485,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.0343126575346431,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.03415675571610082,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04806642392913234
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.03442573319259877,
+          "charge_burial": 0.043542606693490485,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.034262798850628724,
+          "charge_burial": 0.043820242289581555,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05045692658705511
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.03415675571610082,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04806642392913234
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.034262798850628724,
+          "charge_burial": 0.043820242289581555,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05045692658705511
+        }
+      }
+    },
+    {
+      "fold": 23,
+      "evaluation_accessions": [
+        "P51587"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.043248778402777445,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.04339897500844393,
+          "charge_burial": 0.05783695488021896,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.043248778402777445,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04299448941354401,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07840038346756137
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.04339897500844393,
+          "charge_burial": 0.05783695488021896,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.04313553869061441,
+          "charge_burial": 0.05828584305350584,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08158002044487225
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04299448941354401,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07840038346756137
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04313553869061441,
+          "charge_burial": 0.05828584305350584,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08158002044487225
+        }
+      }
+    },
+    {
+      "fold": 24,
+      "evaluation_accessions": [
+        "P63279"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.04590667894892868,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.04600878998111,
+          "charge_burial": 0.03932040364585234,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.04590667894892868,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04567865054391496,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07030392644394103
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.04600878998111,
+          "charge_burial": 0.03932040364585234,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.045774769253109374,
+          "charge_burial": 0.03971916847056963,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07247070537619614
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04567865054391496,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07030392644394103
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.045774769253109374,
+          "charge_burial": 0.03971916847056963,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07247070537619614
+        }
+      }
+    },
+    {
+      "fold": 25,
+      "evaluation_accessions": [
+        "P78352"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.05685156219377401,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05700063074236852,
+          "charge_burial": 0.05740256832610809,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.05685156219377401,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05663506194391209,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06674965621266295
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05700063074236852,
+          "charge_burial": 0.05740256832610809,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05677490452474095,
+          "charge_burial": 0.057787199535383346,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0699020909520777
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05663506194391209,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06674965621266295
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05677490452474095,
+          "charge_burial": 0.057787199535383346,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0699020909520777
+        }
+      }
+    },
+    {
+      "fold": 26,
+      "evaluation_accessions": [
+        "Q12809"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.016106309921456532,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.017478279196067908,
+          "charge_burial": 0.04223127870970931,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.016106309921456532,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.015749082747421917,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08825323342203203
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.017478279196067908,
+          "charge_burial": 0.04223127870970931,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.017129072449368135,
+          "charge_burial": 0.04277621301339441,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09064539489587058
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.015749082747421917,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08825323342203203
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.017129072449368135,
+          "charge_burial": 0.04277621301339441,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09064539489587058
+        }
+      }
+    },
+    {
+      "fold": 27,
+      "evaluation_accessions": [
+        "Q14524"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.0626046701673783,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.06289572872216895,
+          "charge_burial": 0.10792326348896038,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.0626046701673783,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.06247203815192415,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.03937571021364152
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.06289572872216895,
+          "charge_burial": 0.10792326348896038,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.06274347369808231,
+          "charge_burial": 0.10821480862473523,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0454348038277383
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.06247203815192415,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.03937571021364152
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.06274347369808231,
+          "charge_burial": 0.10821480862473523,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0454348038277383
+        }
+      }
+    },
+    {
+      "fold": 28,
+      "evaluation_accessions": [
+        "Q5VST9"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.0548104286918641,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.054963588058272735,
+          "charge_burial": 0.05897783991289824,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.0548104286918641,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05454255831192839,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08258769115355519
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.054963588058272735,
+          "charge_burial": 0.05897783991289824,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.054686425084988936,
+          "charge_burial": 0.05945011792606358,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08583084220637048
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05454255831192839,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08258769115355519
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.054686425084988936,
+          "charge_burial": 0.05945011792606358,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08583084220637048
+        }
+      }
+    },
+    {
+      "fold": 29,
+      "evaluation_accessions": [
+        "Q8TE49"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.047046575566581435,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.047192789899135126,
+          "charge_burial": 0.05630348114209107,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.047046575566581435,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.04682329424066213,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06884034431057945
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.047192789899135126,
+          "charge_burial": 0.05630348114209107,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.046960504125549085,
+          "charge_burial": 0.05669928965264367,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07193343087366319
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.04682329424066213,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.06884034431057945
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.046960504125549085,
+          "charge_burial": 0.05669928965264367,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07193343087366319
+        }
+      }
+    },
+    {
+      "fold": 30,
+      "evaluation_accessions": [
+        "Q9BQB6"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.03216999359425043,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.032232377520233446,
+          "charge_burial": 0.03405035268325086,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.03216999359425043,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.031964819329298316,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05429365235363306
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.032232377520233446,
+          "charge_burial": 0.03405035268325086,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.03202055207778171,
+          "charge_burial": 0.03439209346029744,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.056219382670981234
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.031964819329298316,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05429365235363306
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.03202055207778171,
+          "charge_burial": 0.03439209346029744,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.056219382670981234
+        }
+      }
+    },
+    {
+      "fold": 31,
+      "evaluation_accessions": [
+        "Q9BYF1"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.017953822625077144,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.018112630776588128,
+          "charge_burial": 0.058885381300843316,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.01792854509855441,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.12522007929988052,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.017698050270239057,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07593353754203684
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.018087723046217242,
+          "charge_burial": 0.05920441411911103,
+          "glycosylation_loss": 0.1276504403434865,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.017846849356211423,
+          "charge_burial": 0.05932260840535779,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07925509068553431
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.01767093561813789,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.12572688128279683,
+          "disulfide_loss": 0.07644856985288095
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.017820013044628942,
+          "charge_burial": 0.05964600567504109,
+          "glycosylation_loss": 0.12819757658002928,
+          "disulfide_loss": 0.07979835149611625
+        }
+      }
+    },
+    {
+      "fold": 32,
+      "evaluation_accessions": [
+        "Q9GZX7"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.057712963650967224,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05787961998658092,
+          "charge_burial": 0.06417518505574761,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.057712963650967224,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05742850324105837,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08770259886369118
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05787961998658092,
+          "charge_burial": 0.06417518505574761,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05758501927495427,
+          "charge_burial": 0.06467717649102372,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09123089889651623
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05742850324105837,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08770259886369118
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05758501927495427,
+          "charge_burial": 0.06467717649102372,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09123089889651623
+        }
+      }
+    },
+    {
+      "fold": 33,
+      "evaluation_accessions": [
+        "Q9NV35"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.03563862935943098,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.03575059391370888,
+          "charge_burial": 0.04311474846730961,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.03563862935943098,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.03547870298285663,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04930724404467574
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.03575059391370888,
+          "charge_burial": 0.04311474846730961,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.0355837269349465,
+          "charge_burial": 0.04339908516733521,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05167477153935137
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.03547870298285663,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.04930724404467574
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.0355837269349465,
+          "charge_burial": 0.04339908516733521,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05167477153935137
+        }
+      }
+    },
+    {
+      "fold": 34,
+      "evaluation_accessions": [
+        "Q9Y617"
+      ],
+      "coefficients": {
+        "positive_inside": {
+          "positive_inside": 0.05615234630370539,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial": {
+          "positive_inside": 0.05633503913083003,
+          "charge_burial": 0.07035043669901239,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+glycosylation_loss": {
+          "positive_inside": 0.05615234630370539,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+disulfide_loss": {
+          "positive_inside": 0.05591452755191126,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07332240925037199
+        },
+        "positive_inside+charge_burial+glycosylation_loss": {
+          "positive_inside": 0.05633503913083003,
+          "charge_burial": 0.07035043669901239,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "positive_inside+charge_burial+disulfide_loss": {
+          "positive_inside": 0.05608580038191717,
+          "charge_burial": 0.07077513260895221,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07718336787991299
+        },
+        "positive_inside+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05591452755191126,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07332240925037199
+        },
+        "positive_inside+charge_burial+glycosylation_loss+disulfide_loss": {
+          "positive_inside": 0.05608580038191717,
+          "charge_burial": 0.07077513260895221,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07718336787991299
+        }
+      }
+    }
+  ]
+}

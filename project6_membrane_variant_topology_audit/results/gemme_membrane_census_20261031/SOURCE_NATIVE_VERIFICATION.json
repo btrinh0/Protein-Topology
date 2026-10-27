@@ -1,0 +1,9 @@
+{
+  "proteins_checked": 1036,
+  "canonical_sequences_exact": true,
+  "positions_checked": 383480,
+  "source_native_missing": 383480,
+  "source_native_zero": 0,
+  "source_native_nonzero": 0,
+  "reference_diagonal_check_passed": true
+}

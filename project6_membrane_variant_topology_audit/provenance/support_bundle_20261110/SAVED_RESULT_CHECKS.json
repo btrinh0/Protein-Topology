@@ -1,0 +1,511 @@
+{
+  "origin": "support-bundle reconstruction dated 2026-11-10",
+  "project_root": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\output\\finalpaper_support_20261110\\project6_membrane_variant_topology_audit",
+  "scope": "saved-result checks",
+  "summary": {
+    "mean_spearman": {
+      "raw": 0.462330194841874,
+      "positive_inside": 0.4621941017707059,
+      "positive_inside+disulfide_loss": 0.4625964005606832,
+      "VespaG": 0.45089454596953976,
+      "GEMME": 0.42798858012635915
+    },
+    "actual_positive_inside_windows": [
+      5,
+      10,
+      20,
+      60
+    ],
+    "disulfide_evaluation_kind": "internal_annotation_consistency",
+    "encoder_timed": false,
+    "glycosylation_run_status": "complete"
+  },
+  "optional_score_checks": null,
+  "checks": [
+    {
+      "check": "training rows",
+      "observed": 127811.0,
+      "expected": 127811.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "training proteins",
+      "observed": 39.0,
+      "expected": 39.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "training membrane_proteins",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "training dependence_groups",
+      "observed": 34.0,
+      "expected": 34.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "training n_pc",
+      "observed": 64.0,
+      "expected": 64.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "DMS assay count",
+      "observed": 44.0,
+      "expected": 44.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "membrane measurements",
+      "observed": 43991.0,
+      "expected": 43991.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 protein count raw",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 mean raw",
+      "observed": 0.462330194841874,
+      "expected": 0.4623,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 protein count positive_inside",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 mean positive_inside",
+      "observed": 0.4621941017707059,
+      "expected": 0.4622,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 protein count positive_inside+disulfide_loss",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 mean positive_inside+disulfide_loss",
+      "observed": 0.4625964005606832,
+      "expected": 0.4626,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 protein count VespaG",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 mean VespaG",
+      "observed": 0.45089454596953976,
+      "expected": 0.4509,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 protein count GEMME",
+      "observed": 13.0,
+      "expected": 13.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 mean GEMME",
+      "observed": 0.42798858012635915,
+      "expected": 0.428,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 constrained mean",
+      "observed": 0.46083435654812127,
+      "expected": 0.4608,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 4 p VespaG",
+      "observed": 0.5859375,
+      "expected": 0.586,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "check": "Table 4 exact sign patterns VespaG",
+      "observed": 4096.0,
+      "expected": 4096.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 4 p GEMME",
+      "observed": 0.21142578125,
+      "expected": 0.211,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "check": "Table 4 exact sign patterns GEMME",
+      "observed": 4096.0,
+      "expected": 4096.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 5 positive inside guarded_oof_raw",
+      "observed": 0.00854133036841665,
+      "expected": 0.00854,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 5 positive inside guarded_oof__positive_inside+disulfide_loss",
+      "observed": -0.020286501333618163,
+      "expected": -0.02029,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "positive inside sensitivity settings",
+      "observed": 20.0,
+      "expected": 20.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "positive inside negative estimates",
+      "observed": 20.0,
+      "expected": 20.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 5 glyco existing_PI_DS A",
+      "observed": -0.011404225267981799,
+      "expected": -0.0114,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 5 glyco existing_PI_DS B",
+      "observed": 0.018112908616789183,
+      "expected": 0.01811,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 5 glyco PI_DS_constraint_glyco A",
+      "observed": 0.046959187736639915,
+      "expected": 0.04696,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 5 glyco PI_DS_constraint_glyco B",
+      "observed": -0.039768275170724184,
+      "expected": -0.03977,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 12 A estimate",
+      "observed": 0.12351240659173189,
+      "expected": 0.12351,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 12 A sites",
+      "observed": 23.0,
+      "expected": 23.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 12 A proteins",
+      "observed": 7.0,
+      "expected": 7.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 12 B estimate",
+      "observed": -0.11156742512694014,
+      "expected": -0.11157,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 12 B sites",
+      "observed": 26.0,
+      "expected": 26.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 12 B proteins",
+      "observed": 9.0,
+      "expected": 9.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 5 disulfide raw",
+      "observed": 0.05985714789839747,
+      "expected": 0.05986,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "disulfide contributing endpoints raw",
+      "observed": 44.0,
+      "expected": 44.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 5 disulfide PI_DS_constraint_glyco",
+      "observed": 0.12571905739302744,
+      "expected": 0.12572,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "disulfide contributing endpoints PI_DS_constraint_glyco",
+      "observed": 44.0,
+      "expected": 44.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "disulfide positive protein estimates",
+      "observed": 7.0,
+      "expected": 7.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 5 charge control",
+      "observed": 0.039451773933405224,
+      "expected": 0.039452,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "check": "Table 6 alphamissense",
+      "observed": 0.012088577992427593,
+      "expected": 0.0121,
+      "tolerance": 5e-05,
+      "passed": true
+    },
+    {
+      "check": "Table 6 alphamissense n_contributing_sites",
+      "observed": 173413.0,
+      "expected": 173413.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 6 alphamissense n_strata",
+      "observed": 29819.0,
+      "expected": 29819.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 6 alphamissense n_proteins",
+      "observed": 4517.0,
+      "expected": 4517.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 6 esm1b",
+      "observed": -0.14670440116744723,
+      "expected": -0.147,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "check": "Table 6 esm1b n_contributing_sites",
+      "observed": 173622.0,
+      "expected": 173622.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 6 esm1b n_strata",
+      "observed": 29858.0,
+      "expected": 29858.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 6 esm1b n_proteins",
+      "observed": 4534.0,
+      "expected": 4534.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 7 GEMME",
+      "observed": -0.18698282913023898,
+      "expected": -0.186983,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "check": "Table 7 GEMME proteins",
+      "observed": 959.0,
+      "expected": 959.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 7 GEMME sites",
+      "observed": 27591.0,
+      "expected": 27591.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 7 AlphaMissense",
+      "observed": 0.0008605341975295451,
+      "expected": 0.000861,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "check": "Table 7 AlphaMissense proteins",
+      "observed": 959.0,
+      "expected": 959.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 7 AlphaMissense sites",
+      "observed": 27591.0,
+      "expected": 27591.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 10 slope",
+      "observed": 0.8192481143246297,
+      "expected": 0.819,
+      "tolerance": 0.0005,
+      "passed": true
+    },
+    {
+      "check": "Table 10 noise free error",
+      "observed": 1.970645868709653e-15,
+      "expected": 1.97e-15,
+      "tolerance": 5e-18,
+      "passed": true
+    },
+    {
+      "check": "Table 10 implementation agreement",
+      "observed": 1.915134717478395e-15,
+      "expected": 1.92e-15,
+      "tolerance": 5e-18,
+      "passed": true
+    },
+    {
+      "check": "Table 10 side blind",
+      "observed": 3.621094011494426e-18,
+      "expected": 3.62e-18,
+      "tolerance": 5e-21,
+      "passed": true
+    },
+    {
+      "check": "Table 10 width ratio",
+      "observed": 2.3695009130466973,
+      "expected": 2.37,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "check": "fixed effects agreement",
+      "observed": 1.3877787807814457e-16,
+      "expected": 1.39e-16,
+      "tolerance": 5e-19,
+      "passed": true
+    },
+    {
+      "check": "Tier 2 maximum absolute bias",
+      "observed": 0.0006239034121626725,
+      "expected": 0.000624,
+      "tolerance": 5e-07,
+      "passed": true
+    },
+    {
+      "check": "cached timing milliseconds cached_embedding/Standalone_raw",
+      "observed": 846.8334999997751,
+      "expected": 847.0,
+      "tolerance": 0.5,
+      "passed": true
+    },
+    {
+      "check": "cached timing milliseconds correction_only/Standalone_PI_disulfide",
+      "observed": 0.7422000016958918,
+      "expected": 0.74,
+      "tolerance": 0.005,
+      "passed": true
+    },
+    {
+      "check": "Table 2 position",
+      "observed": 361.0,
+      "expected": 361.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "check": "Table 2 KR mean",
+      "observed": 0.5739423823206664,
+      "expected": 0.57394,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 2 comparator mean",
+      "observed": 0.5609967175606244,
+      "expected": 0.561,
+      "tolerance": 5e-06,
+      "passed": true
+    },
+    {
+      "check": "Table 2 within site contrast",
+      "observed": 0.012945664760041997,
+      "expected": 0.01295,
+      "tolerance": 5e-06,
+      "passed": true
+    }
+  ],
+  "passed": 69,
+  "failed": 0
+}

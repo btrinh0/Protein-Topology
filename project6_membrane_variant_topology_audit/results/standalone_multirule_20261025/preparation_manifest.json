@@ -1,0 +1,175 @@
+{
+  "prepared_utc": "2026-10-25T23:48:40.790780+00:00",
+  "state": "implemented_and_annotation_prepared;_real_calibration_and_benchmark_deferred",
+  "model": "standalone_DMS_trained_ProtT5_plus_18_tabular_features",
+  "predictor_score_inputs": [],
+  "rules": [
+    "positive_inside",
+    "charge_burial",
+    "glycosylation_loss",
+    "disulfide_loss"
+  ],
+  "feature_spec": {
+    "decay_length": 8.0,
+    "maximum_flank_distance": 60,
+    "minimum_tm_length": 17,
+    "annotation_evidence": "direct",
+    "disulfide_mode": "control_free_annotation_feature"
+  },
+  "preparation_cohort": "existing 13 fitted membrane proteins; annotation/feature integration only, never a fresh holdout",
+  "counts": {
+    "annotated_N_linked_sites": 26,
+    "annotated_disulfide_bonds": 50,
+    "canonical_positions": 10185,
+    "variants_with_positive_inside_feature": 3796,
+    "variants_with_charge_burial_feature": 5452,
+    "variants_with_glycosylation_loss_feature": 988,
+    "variants_with_disulfide_loss_feature": 1900
+  },
+  "variant_rows": 193515,
+  "sources": [
+    {
+      "accession": "P02724",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P02724.json",
+      "sha256": "d18b167bb5d704790f94778378c9a445959098c84df1a601da22777ba06b2a43"
+    },
+    {
+      "accession": "P04626",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P04626.json",
+      "sha256": "00b9dae0ddc89f1cb42ebb4cc1c98db6eb5a505044a170e61b9610c9cb47210a"
+    },
+    {
+      "accession": "P08100",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P08100.json",
+      "sha256": "c65a3c1e67cc986bb8a65be39101f80c1f2d0b3afb535076bf4b5258a06dd047"
+    },
+    {
+      "accession": "P08581",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P08581.json",
+      "sha256": "e889bf8efe1d16bb9704f05bf48b89b8bc59019490b5c36504ed2b6a68f93086"
+    },
+    {
+      "accession": "P11712",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P11712.json",
+      "sha256": "d5b65316fe6dd701ef71c258f1f80bfa8a8342ab6ab9ea6b52386d6a4b5c6256"
+    },
+    {
+      "accession": "P14151",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P14151.json",
+      "sha256": "8e428bee49ee8bd06990a1c814124e471e2ea294d7b11c12c323026252edda20"
+    },
+    {
+      "accession": "P29323",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P29323.json",
+      "sha256": "b06aa5084a2ca4f3092d7512e14160949ce184e51176736b0223f12d5f38ee55"
+    },
+    {
+      "accession": "P31645",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P31645.json",
+      "sha256": "230d427a5cca208acce799f60289221010296e39b801f5b2ba08db0de1e0ca47"
+    },
+    {
+      "accession": "P51681",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\P51681.json",
+      "sha256": "ba50b4027c580a89f37743fba84490a467d6f09d554b4deff075362ad783b5ce"
+    },
+    {
+      "accession": "Q12809",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\Q12809.json",
+      "sha256": "7f487c84b93a0b7298c7e1aec96745872200fad92f30d74f381ba11c69d4b3d6"
+    },
+    {
+      "accession": "Q14524",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\Q14524.json",
+      "sha256": "94565a132c2e85a7da5a2aea5b6f5961abb98641120afc6cfcf7c780838698db"
+    },
+    {
+      "accession": "Q9BQB6",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\Q9BQB6.json",
+      "sha256": "f353682f093d142f723b22686cb8a0683965a40962bf41b0650254ec031cc633"
+    },
+    {
+      "accession": "Q9BYF1",
+      "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\external\\proline_rule_20261025\\uniprot\\Q9BYF1.json",
+      "sha256": "0644bde2b11de00a3e9b3dd78e48d6a3cfb4603b680f0b3eeaa6e74556636110"
+    }
+  ],
+  "table_metadata_source": {
+    "path": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\results\\beat_am_20261016\\features\\l1_table.npz",
+    "sha256": "724ecd7e3ee61e4746a8a5ea10a35fb97eaef2bbeaccff1da8da96db2c538514",
+    "columns_read": [
+      "accession",
+      "position",
+      "native",
+      "alt",
+      "blosum62",
+      "grantham",
+      "d_composition",
+      "d_polarity",
+      "d_volume",
+      "d_hydro",
+      "d_charge",
+      "d_helix",
+      "d_strand",
+      "native_is_kr",
+      "alt_is_kr",
+      "side",
+      "distance",
+      "in_tm",
+      "tmd_index",
+      "loop_len",
+      "n_tmds",
+      "is_membrane"
+    ],
+    "target_array_read": false,
+    "am_array_read": false,
+    "esm1b_array_read": false
+  },
+  "artifacts": {
+    "prepared_variant_features.npz": "c3172a4296b0f59534203d02a9ad32ba863e8bf1d75e2ddc19cb05244f9ef464",
+    "annotation_bank.json": "b7c75cc155ee6cdce2d0824766aaf79235ace4661de7f29f843b62fc828e301c",
+    "feature_parity.json": "c123455b3965fe7d5d5f5e172613d9ab418f87521cf323e40c6b18d95fd909e6"
+  },
+  "source_sha256": {
+    "scripts\\beat_am\\m1_prepare_multirule_refinement.py": "d6aede65efd791563776e5addaea9ba60396110049f901f715baa4fc79f14f2c",
+    "scripts\\beat_am\\m2_standalone_refinement_scorer.py": "27f63fe7d4eb92a044dbf2323e03fa034a388ede9627aaa9858affcddb69eacc",
+    "tools\\membrane_rule_audit\\refinement.py": "fee4ed9c958f5e66c9e9d3c64415f99fa0f9fee65d4977dfcbd02d1f3f0dd53d",
+    "data\\raw\\topology_viewer.html": "c18aba78ca89abda12113eb4ecbd83f5dc45bfc86cc3144687e506060f6426bd"
+  },
+  "disulfide": {
+    "mode": "control_free_annotation_feature",
+    "verified_free_controls_required": false,
+    "interpretation": "later held-out functional prediction test; not isolated causal bond-loss estimation",
+    "endpoint_score_equalization": false
+  },
+  "old_positive_inside_beta_reused": false,
+  "real_model_loaded": false,
+  "real_model_scored": false,
+  "real_coefficients_fitted": false,
+  "experimental_benchmark_run": false,
+  "old_model_or_paper_modified": false,
+  "final_ablation_names": [
+    "raw",
+    "positive_inside",
+    "positive_inside+charge_burial",
+    "positive_inside+glycosylation_loss",
+    "positive_inside+disulfide_loss",
+    "positive_inside+charge_burial+glycosylation_loss",
+    "positive_inside+charge_burial+disulfide_loss",
+    "positive_inside+glycosylation_loss+disulfide_loss",
+    "positive_inside+charge_burial+glycosylation_loss+disulfide_loss"
+  ],
+  "final_stage": [
+    "freeze common family roles and prior-exposure ledger",
+    "fit baseline/preprocessing on supervised training families only, or use verified group-out-of-fold predictions",
+    "fit correction coefficients on calibration families; passing rules can be locked at zero",
+    "evaluate every declared ablation once on group-disjoint evaluation families",
+    "report functional accuracy, all rule audits, affected regions, per-protein harm and collateral changes"
+  ],
+  "caveats": [
+    "directional features do not guarantee total-score rule compliance",
+    "annotation counts are not performance results",
+    "no probability recalibration or speedup claim",
+    "the old predictor-free enforcement verdict remains invalidated by its review"
+  ]
+}

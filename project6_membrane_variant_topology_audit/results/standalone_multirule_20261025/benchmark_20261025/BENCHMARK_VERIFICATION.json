@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-26T00:20:52.844294+00:00",
+  "plan_sha256": "4f72b7ac61a29fcec9a4e816271da520e5c444221387ac283c03f5e219f37757",
+  "checked_outer_folds": 39,
+  "all_outer_and_inner_group_separation_checks_passed": true,
+  "inactive_coefficients_exactly_zero": true,
+  "all_held_out_predictions_finite": true,
+  "non_membrane_scores_exactly_unchanged": true,
+  "benchmark_design_tests_passed": 6,
+  "previous_refinement_regression_tests_passed": 107,
+  "reserved_experimental_outcomes_opened": false,
+  "old_model_artifacts_modified": false,
+  "result_sha256": {
+    "grouped_cv": "6f7e5ee991dd7348ba4ee55c4552d89c93a41f9693b6b831eec20698bd18374f",
+    "guarded_loocv": "000bfad2a0d9c4dd3d90cb070d4541722f2039996d815f50044392727f82964d"
+  }
+}

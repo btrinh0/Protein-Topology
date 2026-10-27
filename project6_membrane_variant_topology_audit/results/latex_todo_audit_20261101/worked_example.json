@@ -1,0 +1,20 @@
+{
+  "accession": "P14151",
+  "position": 361,
+  "native": "G",
+  "side": "cytosolic",
+  "distance_to_nearest_TM_boundary": 6,
+  "tmd_index": 1,
+  "score_source": "unchanged standalone guarded group-out predictions",
+  "selection": "First accession/position with native G, cytosolic side and distance 6; scores did not enter selection.",
+  "eligible_positions": 2,
+  "K_score": 0.5786736603741519,
+  "R_score": 0.569211104267181,
+  "KR_mean": 0.5739423823206664,
+  "comparator_residues": "ACFILMNPQSTVWY",
+  "comparator_count": 14,
+  "comparator_mean": 0.5609967175606244,
+  "z": 0.012945664760041997,
+  "score_sha256": "8d4bb2860253deefd8f266ca03870bbab8da242780b203fbec61f5cf5d9a9e92",
+  "annotation_sha256": "b7c75cc155ee6cdce2d0824766aaf79235ace4661de7f29f843b62fc828e301c"
+}

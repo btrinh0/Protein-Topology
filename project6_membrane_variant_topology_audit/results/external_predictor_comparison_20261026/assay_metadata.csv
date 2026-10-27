@@ -1,0 +1,45 @@
+assay,accession,gene,membrane,coarse_selection_type,selection_assay,selection_type,original_endpoint_type,existing_rows
+ACE2_HUMAN_Chan_2020,Q9BYF1,ACE2,1,Binding,Binding affinity,Flow Cytometry Assay,binding,2223
+AICDA_HUMAN_Gajula_2014_3cycles,Q9GZX7,AICDA,0,Activity,Enzymatic activity,bulk RNA-sequencing,function,209
+BRCA1_HUMAN_Findlay_2018,P38398,BRCA1,0,OrganismalFitness,Growth,Growth,function,1837
+BRCA2_HUMAN_Erwood_2022_HEK293T,P51587,BRCA2,0,OrganismalFitness,Fitness,Growth,unspecified,265
+CASP3_HUMAN_Roychowdhury_2020,P42574,CASP3,0,Activity,Fluorescence measurement,,unspecified,1507
+CASP7_HUMAN_Roychowdhury_2020,P55210,CASP7,0,Activity,Fluorescence measurement,,unspecified,1680
+CBX4_HUMAN_Tsuboyama_2023_2K28,O00257,CBX4,0,Stability,Stability,cDNA display proteolysis,unspecified,917
+CCR5_HUMAN_Gill_2023,P51681,CCR5,1,Binding,"binding affinity, surface expression",FACS,abundance,6137
+CP2C9_HUMAN_Amorosi_2021_abundance,P11712,CP2C9,1,Expression,protein abundance,protein abundance,abundance,6370
+CP2C9_HUMAN_Amorosi_2021_activity,P11712,CP2C9,1,Binding,"activity, binding (to fluorescent CYP probe)","Activity, binding",function,6142
+DLG4_HUMAN_Faure_2021,P78352,DLG4,0,OrganismalFitness,Yeast growth,Growth,function,1280
+DNJA1_HUMAN_Tsuboyama_2023_2LO1,P31689,DNJA1,0,Stability,Stability,cDNA display proteolysis,unspecified,1216
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,P29323,EPHB2,1,Stability,Stability,cDNA display proteolysis,unspecified,1239
+ERBB2_HUMAN_Elazar_2016,P04626,ERBB2,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,326
+FKBP3_HUMAN_Tsuboyama_2023_2KFV,Q00688,FKBP3,0,Stability,Stability,cDNA display proteolysis,unspecified,1237
+GDIA_HUMAN_Silverstein_2021,P31150,GDIA,0,OrganismalFitness,Yeast Growth,Growth,function,1154
+GLPA_HUMAN_Elazar_2016,P02724,GLPA,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,245
+HEM3_HUMAN_Loggerenberg_2023,P08397,HEM3,0,Activity,activity,Yeast complementation,function,5689
+KCNH2_HUMAN_Kozek_2020,Q12809,KCNH2,1,Activity,Voltage,Voltage,unspecified,200
+LYAM1_HUMAN_Elazar_2016,P14151,LYAM1,1,Expression,Membrane-protein insertion,TOXCAT-Beta-lactamase (TbL) screen,unspecified,359
+MET_HUMAN_Estevam_2023,P08581,MET,1,Activity,Human cell line with growth linked to kinase activity in the absense of IL-3,Growth,function,5393
+NUD15_HUMAN_Suiter_2020,Q9NV35,NUD15,0,Expression,,"VAMP-seq, drug sensitivity",unspecified,2844
+OBSCN_HUMAN_Tsuboyama_2023_1V1C,Q5VST9,OBSCN,0,Stability,Stability,cDNA display proteolysis,unspecified,1213
+OPSD_HUMAN_Wan_2019,P08100,OPSD,1,Expression,Expression,Flow Cytometry Assay,abundance,165
+OTU7A_HUMAN_Tsuboyama_2023_2L2D,Q8TE49,OTU7A,0,Stability,Stability,cDNA display proteolysis,unspecified,635
+PAI1_HUMAN_Huttinger_2021,P05121,PAI1,0,Activity,PAI-1 inhibition of uPA,phage fitness,unspecified,5345
+PPARG_HUMAN_Majithia_2016,P37231,PPARG,0,Activity,Expression of CD36,FACS,abundance,9576
+PPM1D_HUMAN_Miller_2022,O15297,PPM1D,0,OrganismalFitness,Fitness with GFP reporter,quantification and selection of GFP-positive cells by flow cytometry after DNA damage induced by daunorubicin,unspecified,7889
+PR40A_HUMAN_Tsuboyama_2023_1UZC,O75400,PR40A,0,Stability,Stability,cDNA display proteolysis,unspecified,1163
+PRKN_HUMAN_Clausen_2023,O60260,PRKN,0,Expression,protein stability,FACS,unspecified,8756
+PTEN_HUMAN_Matreyek_2021,P60484,PTEN,0,Expression,Protein abundance (FACS sorting for abundance of GFP-fused target),Protein stability,abundance,5083
+PTEN_HUMAN_Mighell_2018,P60484,PTEN,0,Activity,"growth (surrogate for enzymatic activity/hydrolysis of lipid phosphates to restore PIP2, which affects proliferation rate)",lipid phosphatase activity,function,7260
+RAF1_HUMAN_Zinkus-Boltz_2019,P04049,RAF1,0,OrganismalFitness,Viral Replication,binding assays,unspecified,297
+RD23A_HUMAN_Tsuboyama_2023_1IFY,P54725,RD23A,0,Stability,Stability,cDNA display proteolysis,unspecified,798
+SC6A4_HUMAN_Young_2021,P31645,SC6A4,1,Activity,Fluorescence,Fluorescence,unspecified,11576
+SCN5A_HUMAN_Glazer_2019,Q14524,SCN5A,1,OrganismalFitness,"drug resistance (triple-drug assay: veratridine + brevetoxin + ouabain; surrogate for sodium channel dysfunction, select against function)",,function,224
+SERC_HUMAN_Xie_2023,Q9Y617,SERC,0,OrganismalFitness,Yeast growth,,function,1914
+SRC_HUMAN_Ahler_2019,P12931,SRC,0,Activity,growth (surrogate for phosphorylation activity),Growth,function,3372
+SRC_HUMAN_Chakraborty_2023_binding-DAS_25uM,P12931,SRC,0,Activity,Fluorescence measurement,,binding,3637
+SRC_HUMAN_Nguyen_2022,P12931,SRC,0,OrganismalFitness,growth enrichment,,function,3366
+UBC9_HUMAN_Weile_2017,P63279,UBC9,0,OrganismalFitness,Yeast growth,complementation,function,2563
+UBE4B_HUMAN_Tsuboyama_2023_3L1X,O95155,UBE4B,0,Stability,Stability,cDNA display proteolysis,unspecified,1118
+VKOR1_HUMAN_Chiasson_2020_abundance,Q9BQB6,VKOR1,1,Expression,protein abundance (eGFP fusion reporter),Fluorescence,abundance,2695
+VKOR1_HUMAN_Chiasson_2020_activity,Q9BQB6,VKOR1,1,Activity,carboxylation activity (carboxylation reporter on cell surface),enzymatic activity,function,697

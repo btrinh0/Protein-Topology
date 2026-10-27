@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-11-01T04:23:26.090065+00:00",
+  "report": "docs\\GLYCOSYLATION_CONSTRAINT_REPAIR_20261031.md",
+  "audit_complete": true,
+  "accuracy_complete": true,
+  "independent_verification_complete": true,
+  "known_answer_tests_passed": 8,
+  "old_model_artifacts_preserved": true,
+  "manuscript_edited": false,
+  "primary_configuration": "PI_DS_constraint_glyco",
+  "finding": "Both aggregate glycosylation audits support the expected direction; all 16 feature-eligible protein/contrast point estimates have the expected sign.",
+  "accuracy_tradeoff": "Mean Spearman 0.462596 -> 0.460834 relative to PI+disulfide; no demonstrated accuracy gain."
+}

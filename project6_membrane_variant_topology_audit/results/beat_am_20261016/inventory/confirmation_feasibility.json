@@ -1,0 +1,95 @@
+{
+  "as_of_utc": "2026-10-17T05:21:51.296392+00:00",
+  "outcome_blind": "no confirmation outcome label read; A0 metadata + development paired differences on opened proteins only",
+  "inputs": {
+    "a0_feasibility": {
+      "path": "results\\route_a_20261012\\a0_feasibility.json",
+      "sha256": "98c2a2a1ffd08be0604f104a7a950c7a65f157fa9ddb5048b5a82809f5527b31"
+    },
+    "all_comparisons": {
+      "path": "results\\outperformance_research_20261012\\ALL_COMPARISONS.csv",
+      "sha256": "2c0b0195fb23a0b9a1cf70ebb4385055b63b3055374a5a7e404da829ee18bb11"
+    },
+    "run_phase_c": {
+      "path": "scripts\\run_phase_c.py",
+      "sha256": "996f36d4a26684acb9bb0ac7093f66058e01e32741d0f297cd7bf35ddd1e2bc2"
+    }
+  },
+  "pool": {
+    "assays_accepted": 25,
+    "proteins_total": 20,
+    "proteins_confirmation_eligible": 13,
+    "eligible": [
+      "A4",
+      "ACE2",
+      "ADRB2",
+      "CD19",
+      "EPHB2",
+      "ERBB2",
+      "GLPA",
+      "HMDH",
+      "LYAM1",
+      "MET",
+      "NPC1",
+      "S22A1",
+      "SCN5A"
+    ],
+    "excluded": {
+      "CCR5": "Phase C score set (CCR5); docs/PHASE_C_RESULTS_20260928.md",
+      "CP2C9": "Phase C score set (CYP2C9); docs/PHASE_C_RESULTS_20260928.md",
+      "KCNE1": "Phase C score set (KCNE1); docs/PHASE_C_RESULTS_20260928.md",
+      "KCNH2": "Phase C score set (KCNH2); docs/PHASE_C_RESULTS_20260928.md | KCNH2 full-length trafficking (Oct 12 benchmark)",
+      "OPSD": "Phase C score set (RHO); docs/PHASE_C_RESULTS_20260928.md | RHO/OPSD 2 endpoints (Oct 12 benchmark)",
+      "SC6A4": "SERT/SC6A4 trafficking (scripts/load_sert.py, docs/SERT_TRAFFICKING_*)",
+      "VKOR1": "Phase C score set (VKORC1); docs/PHASE_C_RESULTS_20260928.md"
+    },
+    "phase_c_score_set_parsed": {
+      "P51681": "CCR5",
+      "P61073": "CXCR4",
+      "Q15743": "GPR68",
+      "Q12809": "KCNH2",
+      "Q9BQB6": "VKORC1",
+      "P01130": "LDLR",
+      "P40238": "MPL",
+      "Q16585": "SGCB",
+      "P33261": "CYP2C19",
+      "P11712": "CYP2C9",
+      "Q16586": "SGCA",
+      "P42081": "CD86",
+      "P08100": "RHO",
+      "P15382": "KCNE1",
+      "P63252": "KCNJ2",
+      "P06213": "INSR"
+    }
+  },
+  "flank_coverage_among_eligible": {
+    "substantial_ge25_sites": [
+      "ADRB2",
+      "HMDH",
+      "S22A1"
+    ],
+    "token_1_to_24_sites": [
+      "A4",
+      "CD19",
+      "ERBB2",
+      "NPC1"
+    ],
+    "none": [
+      "ACE2",
+      "EPHB2",
+      "GLPA",
+      "LYAM1",
+      "MET",
+      "SCN5A"
+    ]
+  },
+  "assay_averaging_rule": "arithmetic mean of per-assay Spearman within a protein, so a protein with 2 assays carries the same weight as one with 1",
+  "signflip_arithmetic": {
+    "smallest_exact_two_sided_p": "2 / 2**n",
+    "n_required_for_p_below_0.05": 6,
+    "n_eligible_available": 13
+  },
+  "seed": 20261016,
+  "n_reps": 2000,
+  "n_boot": 1000
+}

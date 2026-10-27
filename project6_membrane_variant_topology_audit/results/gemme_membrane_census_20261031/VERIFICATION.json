@@ -1,0 +1,12 @@
+{
+  "original_audit_unchanged": true,
+  "all_sources_unchanged": true,
+  "source_matrices": 1036,
+  "source_sequences_exact": true,
+  "matched_am_positions": 50743,
+  "am_metadata_mismatches": 0,
+  "shared_mutation_cells": 964117,
+  "identity_substitutions_excluded": true,
+  "no_outcome_labels_or_fitting": true,
+  "protocol_sha256": "686609b15e841051df0d4103081141c94b27130648f64572cef6b699d7d9304b"
+}

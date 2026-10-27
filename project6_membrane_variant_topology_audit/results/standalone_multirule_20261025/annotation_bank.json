@@ -1,0 +1,3632 @@
+{
+  "P02724": {
+    "accession": "P02724",
+    "sequence": "MYGKIIFVLLLSEIVSISALSTTEVAMHTSTSSSVTKSYISSQTNDTHKRDTYAATPRAHEVSEISVRTVYPPEEETGERVQLAHHFSEPEITLIIFGVMAGVIGTILLISYGIRRLIKKSPSDVKPLPSPDTDVPLSSVEIENPETSDQ",
+    "sequence_sha256": "a38ca934dffb4f58e1d41b0880595ebf57d1976309f44a11f96abcba5b71d314",
+    "topology": {
+      "sequence": "MYGKIIFVLLLSEIVSISALSTTEVAMHTSTSSSVTKSYISSQTNDTHKRDTYAATPRAHEVSEISVRTVYPPEEETGERVQLAHHFSEPEITLIIFGVMAGVIGTILLISYGIRRLIKKSPSDVKPLPSPDTDVPLSSVEIENPETSDQ",
+      "tmds": [
+        {
+          "start": 89,
+          "end": 114,
+          "length": 26,
+          "deltaG": -0.562
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 20,
+          "end": 88,
+          "length": 69,
+          "location": "outside"
+        },
+        "2": {
+          "start": 115,
+          "end": 150,
+          "length": 36,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 45,
+        "motif": "NDT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "1059087"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "8286855"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [],
+    "exclusions": {
+      "not_single_N_linked_site": 16,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P04626": {
+    "accession": "P04626",
+    "sequence": "MELAALCRWGLLLALLPPGAASTQVCTGTDMKLRLPASPETHLDMLRHLYQGCQVVQGNLELTYLPTNASLSFLQDIQEVQGYVLIAHNQVRQVPLQRLRIVRGTQLFEDNYALAVLDNGDPLNNTTPVTGASPGGLRELQLRSLTEILKGGVLIQRNPQLCYQDTILWKDIFHKNNQLALTLIDTNRSRACHPCSPMCKGSRCWGESSEDCQSLTRTVCAGGCARCKGPLPTDCCHEQCAAGCTGPKHSDCLACLHFNHSGICELHCPALVTYNTDTFESMPNPEGRYTFGASCVTACPYNYLSTDVGSCTLVCPLHNQEVTAEDGTQRCEKCSKPCARVCYGLGMEHLREVRAVTSANIQEFAGCKKIFGSLAFLPESFDGDPASNTAPLQPEQLQVFETLEEITGYLYISAWPDSLPDLSVFQNLQVIRGRILHNGAYSLTLQGLGISWLGLRSLRELGSGLALIHHNTHLCFVHTVPWDQLFRNPHQALLHTANRPEDECVGEGLACHQLCARGHCWGPGPTQCVNCSQFLRGQECVEECRVLQGLPREYVNARHCLPCHPECQPQNGSVTCFGPEADQCVACAHYKDPPFCVARCPSGVKPDLSYMPIWKFPDEEGACQPCPINCTHSCVDLDDKGCPAEQRASPLTSIISAVVGILLVVVLGVVFGILIKRRQQKIRKYTMRRLLQETELVEPLTPSGAMPNQAQMRILKETELRKVKVLGSGAFGTVYKGIWIPDGENVKIPVAIKVLRENTSPKANKEILDEAYVMAGVGSPYVSRLLGICLTSTVQLVTQLMPYGCLLDHVRENRGRLGSQDLLNWCMQIAKGMSYLEDVRLVHRDLAARNVLVKSPNHVKITDFGLARLLDIDETEYHADGGKVPIKWMALESILRRRFTHQSDVWSYGVTVWELMTFGAKPYDGIPAREIPDLLEKGERLPQPPICTIDVYMIMVKCWMIDSECRPRFRELVSEFSRMARDPQRFVVIQNEDLGPASPLDSTFYRSLLEDDDMGDLVDAEEYLVPQQGFFCPDPAPGAGGMVHHRHRSSSTRSGGGDLTLGLEPSEEEAPRSPLAPSEGAGSDVFDGDLGMGAAKGLQSLPTHDPSPLQRYSEDPTVPLPSETDGYVAPLTCSPQPEYVNQPDVRPQPPSPREGPLPAARPAGATLERPKTLSPGKNGVVKDVFAFGGAVENPEYLTPQGGAAPQPHPPPAFSPAFDNLYYWDQDPPERGAPPSTFKGTPTAENPEYLGLDVPV",
+    "sequence_sha256": "a5f256fc653515d110f6dd48ad55b8ea21bf6d45af33b7f5c182c6c31455b636",
+    "topology": {
+      "sequence": "MELAALCRWGLLLALLPPGAASTQVCTGTDMKLRLPASPETHLDMLRHLYQGCQVVQGNLELTYLPTNASLSFLQDIQEVQGYVLIAHNQVRQVPLQRLRIVRGTQLFEDNYALAVLDNGDPLNNTTPVTGASPGGLRELQLRSLTEILKGGVLIQRNPQLCYQDTILWKDIFHKNNQLALTLIDTNRSRACHPCSPMCKGSRCWGESSEDCQSLTRTVCAGGCARCKGPLPTDCCHEQCAAGCTGPKHSDCLACLHFNHSGICELHCPALVTYNTDTFESMPNPEGRYTFGASCVTACPYNYLSTDVGSCTLVCPLHNQEVTAEDGTQRCEKCSKPCARVCYGLGMEHLREVRAVTSANIQEFAGCKKIFGSLAFLPESFDGDPASNTAPLQPEQLQVFETLEEITGYLYISAWPDSLPDLSVFQNLQVIRGRILHNGAYSLTLQGLGISWLGLRSLRELGSGLALIHHNTHLCFVHTVPWDQLFRNPHQALLHTANRPEDECVGEGLACHQLCARGHCWGPGPTQCVNCSQFLRGQECVEECRVLQGLPREYVNARHCLPCHPECQPQNGSVTCFGPEADQCVACAHYKDPPFCVARCPSGVKPDLSYMPIWKFPDEEGACQPCPINCTHSCVDLDDKGCPAEQRASPLTSIISAVVGILLVVVLGVVFGILIKRRQQKIRKYTMRRLLQETELVEPLTPSGAMPNQAQMRILKETELRKVKVLGSGAFGTVYKGIWIPDGENVKIPVAIKVLRENTSPKANKEILDEAYVMAGVGSPYVSRLLGICLTSTVQLVTQLMPYGCLLDHVRENRGRLGSQDLLNWCMQIAKGMSYLEDVRLVHRDLAARNVLVKSPNHVKITDFGLARLLDIDETEYHADGGKVPIKWMALESILRRRFTHQSDVWSYGVTVWELMTFGAKPYDGIPAREIPDLLEKGERLPQPPICTIDVYMIMVKCWMIDSECRPRFRELVSEFSRMARDPQRFVVIQNEDLGPASPLDSTFYRSLLEDDDMGDLVDAEEYLVPQQGFFCPDPAPGAGGMVHHRHRSSSTRSGGGDLTLGLEPSEEEAPRSPLAPSEGAGSDVFDGDLGMGAAKGLQSLPTHDPSPLQRYSEDPTVPLPSETDGYVAPLTCSPQPEYVNQPDVRPQPPSPREGPLPAARPAGATLERPKTLSPGKNGVVKDVFAFGGAVENPEYLTPQGGAAPQPHPPPAFSPAFDNLYYWDQDPPERGAPPSTFKGTPTAENPEYLGLDVPV",
+      "tmds": [
+        {
+          "start": 653,
+          "end": 675,
+          "length": 23,
+          "deltaG": -2.302
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 23,
+          "end": 652,
+          "length": 630,
+          "location": "outside"
+        },
+        "2": {
+          "start": 676,
+          "end": 1255,
+          "length": 580,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 68,
+        "motif": "NAS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20696930"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 187,
+        "motif": "NRS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 259,
+        "motif": "NHS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15093539"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19299620"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20696930"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 530,
+        "motif": "NCS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15093539"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19299620"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 571,
+        "motif": "NGS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "20696930"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 26,
+        "end": 53,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3H3B"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRL"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRM"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 162,
+        "end": 192,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3H3B"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRL"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRM"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 195,
+        "end": 204,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3H3B"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRL"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRM"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 199,
+        "end": 212,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3H3B"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRL"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRM"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 220,
+        "end": 227,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 224,
+        "end": 235,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 236,
+        "end": 244,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 240,
+        "end": 252,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 255,
+        "end": 264,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 268,
+        "end": 295,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 299,
+        "end": 311,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 315,
+        "end": 331,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 334,
+        "end": 338,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 342,
+        "end": 367,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 475,
+        "end": 504,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 511,
+        "end": 520,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 515,
+        "end": 528,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2A91"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 531,
+        "end": 540,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRN"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 544,
+        "end": 560,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRN"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 563,
+        "end": 576,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRN"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 567,
+        "end": 584,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WLW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3WSQ"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRN"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 587,
+        "end": 596,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1S78"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3MZW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4HRN"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 600,
+        "end": 623,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "1N8Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3BE1"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 626,
+        "end": 634,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 630,
+        "end": 642,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3N85"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 2,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P08100": {
+    "accession": "P08100",
+    "sequence": "MNGTEGPNFYVPFSNATGVVRSPFEYPQYYLAEPWQFSMLAAYMFLLIVLGFPINFLTLYVTVQHKKLRTPLNYILLNLAVADLFMVLGGFTSTLYTSLHGYFVFGPTGCNLEGFFATLGGEIALWSLVVLAIERYVVVCKPMSNFRFGENHAIMGVAFTWVMALACAAPPLAGWSRYIPEGLQCSCGIDYYTLKPEVNNESFVIYMFVVHFTIPMIIIFFCYGQLVFTVKEAAAQQQESATTQKAEKEVTRMVIIMVIAFLICWVPYASVAFYIFTHQGSNFGPIFMTIPAFFAKSAAIYNPVIYIMMNKQFRNCMLTTICCGKNPLGDDEASATVSKTETSQVAPA",
+    "sequence_sha256": "b59611b13c3509dcbb28613b8c35f400f97e67788dcf416dce0511a576c347c1",
+    "topology": {
+      "sequence": "MNGTEGPNFYVPFSNATGVVRSPFEYPQYYLAEPWQFSMLAAYMFLLIVLGFPINFLTLYVTVQHKKLRTPLNYILLNLAVADLFMVLGGFTSTLYTSLHGYFVFGPTGCNLEGFFATLGGEIALWSLVVLAIERYVVVCKPMSNFRFGENHAIMGVAFTWVMALACAAPPLAGWSRYIPEGLQCSCGIDYYTLKPEVNNESFVIYMFVVHFTIPMIIIFFCYGQLVFTVKEAAAQQQESATTQKAEKEVTRMVIIMVIAFLICWVPYASVAFYIFTHQGSNFGPIFMTIPAFFAKSAAIYNPVIYIMMNKQFRNCMLTTICCGKNPLGDDEASATVSKTETSQVAPA",
+      "tmds": [
+        {
+          "start": 35,
+          "end": 60,
+          "length": 26,
+          "deltaG": -2.484
+        },
+        {
+          "start": 73,
+          "end": 99,
+          "length": 27,
+          "deltaG": 0.507
+        },
+        {
+          "start": 109,
+          "end": 134,
+          "length": 26,
+          "deltaG": 2.155
+        },
+        {
+          "start": 151,
+          "end": 173,
+          "length": 23,
+          "deltaG": 2.116
+        },
+        {
+          "start": 201,
+          "end": 225,
+          "length": 25,
+          "deltaG": -0.101
+        },
+        {
+          "start": 253,
+          "end": 277,
+          "length": 25,
+          "deltaG": -1.517
+        },
+        {
+          "start": 286,
+          "end": 308,
+          "length": 23,
+          "deltaG": 3.645
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 34,
+          "length": 34,
+          "location": "outside"
+        },
+        "2": {
+          "start": 61,
+          "end": 72,
+          "length": 12,
+          "location": "inside"
+        },
+        "3": {
+          "start": 100,
+          "end": 108,
+          "length": 9,
+          "location": "outside"
+        },
+        "4": {
+          "start": 135,
+          "end": 150,
+          "length": 16,
+          "location": "inside"
+        },
+        "5": {
+          "start": 174,
+          "end": 200,
+          "length": 27,
+          "location": "outside"
+        },
+        "6": {
+          "start": 226,
+          "end": 252,
+          "length": 27,
+          "location": "inside"
+        },
+        "7": {
+          "start": 278,
+          "end": 285,
+          "length": 8,
+          "location": "outside"
+        },
+        "8": {
+          "start": 309,
+          "end": 348,
+          "length": 40,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 15,
+        "motif": "NAT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28753425"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 110,
+        "end": 187,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00521"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "26200343"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28753425"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 1,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P08581": {
+    "accession": "P08581",
+    "sequence": "MKAPAVLAPGILVLLFTLVQRSNGECKEALAKSEMNVNMKYQLPNFTAETPIQNVILHEHHIFLGATNYIYVLNEEDLQKVAEYKTGPVLEHPDCFPCQDCSSKANLSGGVWKDNINMALVVDTYYDDQLISCGSVNRGTCQRHVFPHNHTADIQSEVHCIFSPQIEEPSQCPDCVVSALGAKVLSSVKDRFINFFVGNTINSSYFPDHPLHSISVRRLKETKDGFMFLTDQSYIDVLPEFRDSYPIKYVHAFESNNFIYFLTVQRETLDAQTFHTRIIRFCSINSGLHSYMEMPLECILTEKRKKRSTKKEVFNILQAAYVSKPGAQLARQIGASLNDDILFGVFAQSKPDSAEPMDRSAMCAFPIKYVNDFFNKIVNKNNVRCLQHFYGPNHEHCFNRTLLRNSSGCEARRDEYRTEFTTALQRVDLFMGQFSEVLLTSISTFIKGDLTIANLGTSEGRFMQVVVSRSGPSTPHVNFLLDSHPVSPEVIVEHTLNQNGYTLVITGKKITKIPLNGLGCRHFQSCSQCLSAPPFVQCGWCHDKCVRSEECLSGTWTQQICLPAIYKVFPNSAPLEGGTRLTICGWDFGFRRNNKFDLKKTRVLLGNESCTLTLSESTMNTLKCTVGPAMNKHFNMSIIISNGHGTTQYSTFSYVDPVITSISPKYGPMAGGTLLTLTGNYLNSGNSRHISIGGKTCTLKSVSNSILECYTPAQTISTEFAVKLKIDLANRETSIFSYREDPIVYEIHPTKSFISGGSTITGVGKNLNSVSVPRMVINVHEAGRNFTVACQHRSNSEIICCTTPSLQQLNLQLPLKTKAFFMLDGILSKYFDLIYVHNPVFKPFEKPVMISMGNENVLEIKGNDIDPEAVKGEVLKVGNKSCENIHLHSEAVLCTVPNDLLKLNSELNIEWKQAISSTVLGKVIVQPDQNFTGLIAGVVSISTALLLLLGFFLWLKKRKQIKDLGSELVRYDARVHTPHLDRLVSARSVSPTTEMVSNESVDYRATFPEDQFPNSSQNGSCRQVQYPLTDMSPILTSGDSDISSPLLQNTVHIDLSALNPELVQAVQHVVIGPSSLIVHFNEVIGRGHFGCVYHGTLLDNDGKKIHCAVKSLNRITDIGEVSQFLTEGIIMKDFSHPNVLSLLGICLRSEGSPLVVLPYMKHGDLRNFIRNETHNPTVKDLIGFGLQVAKGMKYLASKKFVHRDLAARNCMLDEKFTVKVADFGLARDMYDKEYYSVHNKTGAKLPVKWMALESLQTQKFTTKSDVWSFGVLLWELMTRGAPPYPDVNTFDITVYLLQGRRLLQPEYCPDPLYEVMLKCWHPKAEMRPSFSELVSRISAIFSTFIGEHYVHVNATYVNVKCVAPYPSLLSSEDNADDEVDTRPASFWETS",
+    "sequence_sha256": "cc24e8701a5717fd1fa418174adb3b6cbaeae8a76f78b33a995f44c5bb394056",
+    "topology": {
+      "sequence": "MKAPAVLAPGILVLLFTLVQRSNGECKEALAKSEMNVNMKYQLPNFTAETPIQNVILHEHHIFLGATNYIYVLNEEDLQKVAEYKTGPVLEHPDCFPCQDCSSKANLSGGVWKDNINMALVVDTYYDDQLISCGSVNRGTCQRHVFPHNHTADIQSEVHCIFSPQIEEPSQCPDCVVSALGAKVLSSVKDRFINFFVGNTINSSYFPDHPLHSISVRRLKETKDGFMFLTDQSYIDVLPEFRDSYPIKYVHAFESNNFIYFLTVQRETLDAQTFHTRIIRFCSINSGLHSYMEMPLECILTEKRKKRSTKKEVFNILQAAYVSKPGAQLARQIGASLNDDILFGVFAQSKPDSAEPMDRSAMCAFPIKYVNDFFNKIVNKNNVRCLQHFYGPNHEHCFNRTLLRNSSGCEARRDEYRTEFTTALQRVDLFMGQFSEVLLTSISTFIKGDLTIANLGTSEGRFMQVVVSRSGPSTPHVNFLLDSHPVSPEVIVEHTLNQNGYTLVITGKKITKIPLNGLGCRHFQSCSQCLSAPPFVQCGWCHDKCVRSEECLSGTWTQQICLPAIYKVFPNSAPLEGGTRLTICGWDFGFRRNNKFDLKKTRVLLGNESCTLTLSESTMNTLKCTVGPAMNKHFNMSIIISNGHGTTQYSTFSYVDPVITSISPKYGPMAGGTLLTLTGNYLNSGNSRHISIGGKTCTLKSVSNSILECYTPAQTISTEFAVKLKIDLANRETSIFSYREDPIVYEIHPTKSFISGGSTITGVGKNLNSVSVPRMVINVHEAGRNFTVACQHRSNSEIICCTTPSLQQLNLQLPLKTKAFFMLDGILSKYFDLIYVHNPVFKPFEKPVMISMGNENVLEIKGNDIDPEAVKGEVLKVGNKSCENIHLHSEAVLCTVPNDLLKLNSELNIEWKQAISSTVLGKVIVQPDQNFTGLIAGVVSISTALLLLLGFFLWLKKRKQIKDLGSELVRYDARVHTPHLDRLVSARSVSPTTEMVSNESVDYRATFPEDQFPNSSQNGSCRQVQYPLTDMSPILTSGDSDISSPLLQNTVHIDLSALNPELVQAVQHVVIGPSSLIVHFNEVIGRGHFGCVYHGTLLDNDGKKIHCAVKSLNRITDIGEVSQFLTEGIIMKDFSHPNVLSLLGICLRSEGSPLVVLPYMKHGDLRNFIRNETHNPTVKDLIGFGLQVAKGMKYLASKKFVHRDLAARNCMLDEKFTVKVADFGLARDMYDKEYYSVHNKTGAKLPVKWMALESLQTQKFTTKSDVWSFGVLLWELMTRGAPPYPDVNTFDITVYLLQGRRLLQPEYCPDPLYEVMLKCWHPKAEMRPSFSELVSRISAIFSTFIGEHYVHVNATYVNVKCVAPYPSLLSSEDNADDEVDTRPASFWETS",
+      "tmds": [
+        {
+          "start": 934,
+          "end": 955,
+          "length": 22,
+          "deltaG": -2.21
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 25,
+          "end": 933,
+          "length": 909,
+          "location": "outside"
+        },
+        "2": {
+          "start": 956,
+          "end": 1390,
+          "length": 435,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 106,
+        "motif": "NLS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19196183"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 133,
+        "end": 141,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 172,
+        "end": 175,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 298,
+        "end": 363,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 385,
+        "end": 397,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 520,
+        "end": 538,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 526,
+        "end": 561,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 529,
+        "end": 545,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 541,
+        "end": 551,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 610,
+        "end": 624,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZX"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 697,
+        "end": 709,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17662939"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "2UZY"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 12,
+      "not_single_N_linked_site": 3,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P11712": {
+    "accession": "P11712",
+    "sequence": "MDSLVVLVLCLSCLLLLSLWRQSSGRGKLPPGPTPLPVIGNILQIGIKDISKSLTNLSKVYGPVFTLYFGLKPIVVLHGYEAVKEALIDLGEEFSGRGIFPLAERANRGFGIVFSNGKKWKEIRRFSLMTLRNFGMGKRSIEDRVQEEARCLVEELRKTKASPCDPTFILGCAPCNVICSIIFHKRFDYKDQQFLNLMEKLNENIKILSSPWIQICNNFSPIIDYFPGTHNKLLKNVAFMKSYILEKVKEHQESMDMNNPQDFIDCFLMKMEKEKHNQPSEFTIESLENTAVDLFGAGTETTSTTLRYALLLLLKHPEVTAKVQEEIERVIGRNRSPCMQDRSHMPYTDAVVHEVQRYIDLLPTSLPHAVTCDIKFRNYLIPKGTTILISLTSVLHDNKEFPNPEMFDPHHFLDEGGNFKKSKYFMPFSAGKRICVGEALAGMELFLFLTSILQNFNLKSLVDPKNLDTTPVVNGFASVPPFYQLCFIPV",
+    "sequence_sha256": "3f891626b6684fc43355f4146b0d0aad6273d9d39670b42340a49cff79fa8d24",
+    "topology": {
+      "sequence": "MDSLVVLVLCLSCLLLLSLWRQSSGRGKLPPGPTPLPVIGNILQIGIKDISKSLTNLSKVYGPVFTLYFGLKPIVVLHGYEAVKEALIDLGEEFSGRGIFPLAERANRGFGIVFSNGKKWKEIRRFSLMTLRNFGMGKRSIEDRVQEEARCLVEELRKTKASPCDPTFILGCAPCNVICSIIFHKRFDYKDQQFLNLMEKLNENIKILSSPWIQICNNFSPIIDYFPGTHNKLLKNVAFMKSYILEKVKEHQESMDMNNPQDFIDCFLMKMEKEKHNQPSEFTIESLENTAVDLFGAGTETTSTTLRYALLLLLKHPEVTAKVQEEIERVIGRNRSPCMQDRSHMPYTDAVVHEVQRYIDLLPTSLPHAVTCDIKFRNYLIPKGTTILISLTSVLHDNKEFPNPEMFDPHHFLDEGGNFKKSKYFMPFSAGKRICVGEALAGMELFLFLTSILQNFNLKSLVDPKNLDTTPVVNGFASVPPFYQLCFIPV",
+      "tmds": [
+        {
+          "start": 3,
+          "end": 22,
+          "length": 20,
+          "deltaG": -2.15
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 2,
+          "length": 2,
+          "location": "outside"
+        },
+        "2": {
+          "start": 23,
+          "end": 490,
+          "length": 468,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [],
+    "disulfides": [],
+    "exclusions": {
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P14151": {
+    "accession": "P14151",
+    "sequence": "MIFPWKCQSTQRDLWNIFKLWGWTMLCCDFLAHHGTDCWTYHYSEKPMNWQRARRFCRDNYTDLVAIQNKAEIEYLEKTLPFSRSYYWIGIRKIGGIWTWVGTNKSLTEEAENWGDGEPNNKKNKEDCVEIYIKRNKDAGKWNDDACHKLKAALCYTASCQPWSCSGHGECVEIINNYTCNCDVGYYGPQCQFVIQCEPLEAPELGTMDCTHPLGNFSFSSQCAFSCSEGTNLTGIEETTCGPFGNWSSPEPTCQVIQCEPLSAPDLGIMNCSHPLASFSFTSACTFICSEGTELIGKKKTICESSGIWSNPSPICQKLDKSFSMIKEGDYNPLFIPVAVMVTAFSGLAFIIWLARRLKKGKKSKRSMNDPY",
+    "sequence_sha256": "28ea52e4a2c9c8a43fc8f2ae203a75cf1c7e0bc0aec5158bcfa6c333d613342d",
+    "topology": {
+      "sequence": "MIFPWKCQSTQRDLWNIFKLWGWTMLCCDFLAHHGTDCWTYHYSEKPMNWQRARRFCRDNYTDLVAIQNKAEIEYLEKTLPFSRSYYWIGIRKIGGIWTWVGTNKSLTEEAENWGDGEPNNKKNKEDCVEIYIKRNKDAGKWNDDACHKLKAALCYTASCQPWSCSGHGECVEIINNYTCNCDVGYYGPQCQFVIQCEPLEAPELGTMDCTHPLGNFSFSSQCAFSCSEGTNLTGIEETTCGPFGNWSSPEPTCQVIQCEPLSAPDLGIMNCSHPLASFSFTSACTFICSEGTELIGKKKTICESSGIWSNPSPICQKLDKSFSMIKEGDYNPLFIPVAVMVTAFSGLAFIIWLARRLKKGKKSKRSMNDPY",
+      "tmds": [
+        {
+          "start": 333,
+          "end": 355,
+          "length": 23,
+          "deltaG": -0.882
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 29,
+          "end": 332,
+          "length": 304,
+          "location": "outside"
+        },
+        "2": {
+          "start": 356,
+          "end": 372,
+          "length": 17,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 60,
+        "motif": "NYT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "16335952"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19349973"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000305",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 104,
+        "motif": "NKS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19349973"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 57,
+        "end": 155,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5VC1"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 128,
+        "end": 147,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5VC1"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 160,
+        "end": 171,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5VC1"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 165,
+        "end": 180,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 182,
+        "end": 191,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28011641"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "28489325"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "3CFW"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5VC1"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 8,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P29323": {
+    "accession": "P29323",
+    "sequence": "MALRRLGAALLLLPLLAAVEETLMDSTTATAELGWMVHPPSGWEEVSGYDENMNTIRTYQVCNVFESSQNNWLRTKFIRRRGAHRIHVEMKFSVRDCSSIPSVPGSCKETFNLYYYEADFDSATKTFPNWMENPWVKVDTIAADESFSQVDLGGRVMKINTEVRSFGPVSRSGFYLAFQDYGGCMSLIAVRVFYRKCPRIIQNGAIFQETLSGAESTSLVAARGSCIANAEEVDVPIKLYCNGDGEWLVPIGRCMCKAGFEAVENGTVCRGCPSGTFKANQGDEACTHCPINSRTTSEGATNCVCRNGYYRADLDPLDMPCTTIPSAPQAVISSVNETSLMLEWTPPRDSGGREDLVYNIICKSCGSGRGACTRCGDNVQYAPRQLGLTEPRIYISDLLAHTQYTFEIQAVNGVTDQSPFSPQFASVNITTNQAAPSAVSIMHQVSRTVDSITLSWSQPDQPNGVILDYELQYYEKELSEYNATAIKSPTNTVTVQGLKAGAIYVFQVRARTVAGYGRYSGKMYFQTMTEAEYQTSIQEKLPLIIGSSAAGLVFLIAVVVIAIVCNRRGFERADSEYTDKLQHYTSGHMTPGMKIYIDPFTYEDPNEAVREFAKEIDISCVKIEQVIGAGEFGEVCSGHLKLPGKREIFVAIKTLKSGYTEKQRRDFLSEASIMGQFDHPNVIHLEGVVTKSTPVMIITEFMENGSLDSFLRQNDGQFTVIQLVGMLRGIAAGMKYLADMNYVHRDLAARNILVNSNLVCKVSDFGLSRFLEDDTSDPTYTSALGGKIPIRWTAPEAIQYRKFTSASDVWSYGIVMWEVMSYGERPYWDMTNQDVINAIEQDYRLPPPMDCPSALHQLMLDCWQKDRNHRPKFGQIVNTLDKMIRNPNSLKAMAPLSSGINLPLLDRTIPDYTSFNTVDEWLEAIKMGQYKESFANAGFTSFDVVSQMMMEDILRVGVTLAGHQKKILNSIQVMRAQMNQIQSVEGQPLARRPRATGRTKRCQPRDVTKKTCNSNDGKKKGMGKKKTDPGRGREIQGIFFKEDSHKESNDCSCGG",
+    "sequence_sha256": "0e2a4212efe4db1230afb680c18df3d12accbe13c325d91ac006a87635d9d000",
+    "topology": {
+      "sequence": "MALRRLGAALLLLPLLAAVEETLMDSTTATAELGWMVHPPSGWEEVSGYDENMNTIRTYQVCNVFESSQNNWLRTKFIRRRGAHRIHVEMKFSVRDCSSIPSVPGSCKETFNLYYYEADFDSATKTFPNWMENPWVKVDTIAADESFSQVDLGGRVMKINTEVRSFGPVSRSGFYLAFQDYGGCMSLIAVRVFYRKCPRIIQNGAIFQETLSGAESTSLVAARGSCIANAEEVDVPIKLYCNGDGEWLVPIGRCMCKAGFEAVENGTVCRGCPSGTFKANQGDEACTHCPINSRTTSEGATNCVCRNGYYRADLDPLDMPCTTIPSAPQAVISSVNETSLMLEWTPPRDSGGREDLVYNIICKSCGSGRGACTRCGDNVQYAPRQLGLTEPRIYISDLLAHTQYTFEIQAVNGVTDQSPFSPQFASVNITTNQAAPSAVSIMHQVSRTVDSITLSWSQPDQPNGVILDYELQYYEKELSEYNATAIKSPTNTVTVQGLKAGAIYVFQVRARTVAGYGRYSGKMYFQTMTEAEYQTSIQEKLPLIIGSSAAGLVFLIAVVVIAIVCNRRGFERADSEYTDKLQHYTSGHMTPGMKIYIDPFTYEDPNEAVREFAKEIDISCVKIEQVIGAGEFGEVCSGHLKLPGKREIFVAIKTLKSGYTEKQRRDFLSEASIMGQFDHPNVIHLEGVVTKSTPVMIITEFMENGSLDSFLRQNDGQFTVIQLVGMLRGIAAGMKYLADMNYVHRDLAARNILVNSNLVCKVSDFGLSRFLEDDTSDPTYTSALGGKIPIRWTAPEAIQYRKFTSASDVWSYGIVMWEVMSYGERPYWDMTNQDVINAIEQDYRLPPPMDCPSALHQLMLDCWQKDRNHRPKFGQIVNTLDKMIRNPNSLKAMAPLSSGINLPLLDRTIPDYTSFNTVDEWLEAIKMGQYKESFANAGFTSFDVVSQMMMEDILRVGVTLAGHQKKILNSIQVMRAQMNQIQSVEGQPLARRPRATGRTKRCQPRDVTKKTCNSNDGKKKGMGKKKTDPGRGREIQGIFFKEDSHKESNDCSCGG",
+      "tmds": [
+        {
+          "start": 544,
+          "end": 564,
+          "length": 21,
+          "deltaG": -0.553
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 19,
+          "end": 543,
+          "length": 525,
+          "location": "outside"
+        },
+        "2": {
+          "start": 565,
+          "end": 1055,
+          "length": 491,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [],
+    "disulfides": [
+      {
+        "start": 62,
+        "end": 184,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17897949"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 97,
+        "end": 107,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "17897949"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 4,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P31645": {
+    "accession": "P31645",
+    "sequence": "METTPLNSQKQLSACEDGEDCQENGVLQKVVPTPGDKVESGQISNGYSAVPSPGAGDDTRHSIPATTTTLVAELHQGERETWGKKVDFLLSVIGYAVDLGNVWRFPYICYQNGGGAFLLPYTIMAIFGGIPLFYMELALGQYHRNGCISIWRKICPIFKGIGYAICIIAFYIASYYNTIMAWALYYLISSFTDQLPWTSCKNSWNTGNCTNYFSEDNITWTLHSTSPAEEFYTRHVLQIHRSKGLQDLGGISWQLALCIMLIFTVIYFSIWKGVKTSGKVVWVTATFPYIILSVLLVRGATLPGAWRGVLFYLKPNWQKLLETGVWIDAAAQIFFSLGPGFGVLLAFASYNKFNNNCYQDALVTSVVNCMTSFVSGFVIFTVLGYMAEMRNEDVSEVAKDAGPSLLFITYAEAIANMPASTFFAIIFFLMLITLGLDSTFAGLEGVITAVLDEFPHVWAKRRERFVLAVVITCFFGSLVTLTFGGAYVVKLLEEYATGPAVLTVALIEAVAVSWFYGITQFCRDVKEMLGFSPGWFWRICWVAISPLFLLFIICSFLMSPPQLRLFQYNYPYWSIILGYCIGTSSFICIPTYIAYRLIITPGTFKERIIKSITPETPTEIPCGDIRLNAV",
+    "sequence_sha256": "08ab69187b319cff68eba5e95e6d06f77a7a8e75e4b1a83c000f7ed2c160d37f",
+    "topology": {
+      "sequence": "METTPLNSQKQLSACEDGEDCQENGVLQKVVPTPGDKVESGQISNGYSAVPSPGAGDDTRHSIPATTTTLVAELHQGERETWGKKVDFLLSVIGYAVDLGNVWRFPYICYQNGGGAFLLPYTIMAIFGGIPLFYMELALGQYHRNGCISIWRKICPIFKGIGYAICIIAFYIASYYNTIMAWALYYLISSFTDQLPWTSCKNSWNTGNCTNYFSEDNITWTLHSTSPAEEFYTRHVLQIHRSKGLQDLGGISWQLALCIMLIFTVIYFSIWKGVKTSGKVVWVTATFPYIILSVLLVRGATLPGAWRGVLFYLKPNWQKLLETGVWIDAAAQIFFSLGPGFGVLLAFASYNKFNNNCYQDALVTSVVNCMTSFVSGFVIFTVLGYMAEMRNEDVSEVAKDAGPSLLFITYAEAIANMPASTFFAIIFFLMLITLGLDSTFAGLEGVITAVLDEFPHVWAKRRERFVLAVVITCFFGSLVTLTFGGAYVVKLLEEYATGPAVLTVALIEAVAVSWFYGITQFCRDVKEMLGFSPGWFWRICWVAISPLFLLFIICSFLMSPPQLRLFQYNYPYWSIILGYCIGTSSFICIPTYIAYRLIITPGTFKERIIKSITPETPTEIPCGDIRLNAV",
+      "tmds": [
+        {
+          "start": 86,
+          "end": 109,
+          "length": 24,
+          "deltaG": 3.624
+        },
+        {
+          "start": 114,
+          "end": 140,
+          "length": 27,
+          "deltaG": 0.131
+        },
+        {
+          "start": 156,
+          "end": 192,
+          "length": 37,
+          "deltaG": 0.703
+        },
+        {
+          "start": 253,
+          "end": 271,
+          "length": 19,
+          "deltaG": -1.734
+        },
+        {
+          "start": 276,
+          "end": 301,
+          "length": 26,
+          "deltaG": 1.102
+        },
+        {
+          "start": 322,
+          "end": 348,
+          "length": 27,
+          "deltaG": 2.927
+        },
+        {
+          "start": 357,
+          "end": 381,
+          "length": 25,
+          "deltaG": 3.338
+        },
+        {
+          "start": 419,
+          "end": 450,
+          "length": 32,
+          "deltaG": -0.239
+        },
+        {
+          "start": 462,
+          "end": 482,
+          "length": 21,
+          "deltaG": -0.224
+        },
+        {
+          "start": 488,
+          "end": 515,
+          "length": 28,
+          "deltaG": 2.773
+        },
+        {
+          "start": 535,
+          "end": 559,
+          "length": 25,
+          "deltaG": -3.408
+        },
+        {
+          "start": 574,
+          "end": 598,
+          "length": 25,
+          "deltaG": 0.015
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 85,
+          "length": 85,
+          "location": "inside"
+        },
+        "2": {
+          "start": 110,
+          "end": 113,
+          "length": 4,
+          "location": "outside"
+        },
+        "3": {
+          "start": 141,
+          "end": 155,
+          "length": 15,
+          "location": "inside"
+        },
+        "4": {
+          "start": 193,
+          "end": 252,
+          "length": 60,
+          "location": "outside"
+        },
+        "5": {
+          "start": 272,
+          "end": 275,
+          "length": 4,
+          "location": "inside"
+        },
+        "6": {
+          "start": 302,
+          "end": 321,
+          "length": 20,
+          "location": "outside"
+        },
+        "7": {
+          "start": 349,
+          "end": 356,
+          "length": 8,
+          "location": "inside"
+        },
+        "8": {
+          "start": 382,
+          "end": 418,
+          "length": 37,
+          "location": "outside"
+        },
+        "9": {
+          "start": 451,
+          "end": 461,
+          "length": 11,
+          "location": "inside"
+        },
+        "10": {
+          "start": 483,
+          "end": 487,
+          "length": 5,
+          "location": "outside"
+        },
+        "11": {
+          "start": 516,
+          "end": 534,
+          "length": 19,
+          "location": "inside"
+        },
+        "12": {
+          "start": 560,
+          "end": 573,
+          "length": 14,
+          "location": "outside"
+        },
+        "13": {
+          "start": 599,
+          "end": 630,
+          "length": 32,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 208,
+        "motif": "NCT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27049939"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 217,
+        "motif": "NIT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27049939"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 200,
+        "end": 209,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I6X"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I6Z"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I71"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I73"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I74"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5I75"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "P51681": {
+    "accession": "P51681",
+    "sequence": "MDYQVSSPIYDINYYTSEPCQKINVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPFWAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVHAVFALKARTVTFGVVTSVITWVVAVFASLPGIIFTRSQKEGLHYTCSSHFPYSQYQFWKNFQTLKIVILGLVLPLLVMVICYSGILKTLLRCRNEKKRHRAVRLIFTIMIVYFLFWAPYNIVLLLNTFQEFFGLNNCSSSNRLDQAMQVTETLGMTHCCINPIIYAFVGEKFRNYLLVFFQKHIAKRFCKCCSIFQQEAPERASSVYTRSTGEQEISVGL",
+    "sequence_sha256": "7474668859b42bd1928b660b8e0f3588621456c10ad704453a6877db09d44e85",
+    "topology": {
+      "sequence": "MDYQVSSPIYDINYYTSEPCQKINVKQIAARLLPPLYSLVFIFGFVGNMLVILILINCKRLKSMTDIYLLNLAISDLFFLLTVPFWAHYAAAQWDFGNTMCQLLTGLYFIGFFSGIFFIILLTIDRYLAVVHAVFALKARTVTFGVVTSVITWVVAVFASLPGIIFTRSQKEGLHYTCSSHFPYSQYQFWKNFQTLKIVILGLVLPLLVMVICYSGILKTLLRCRNEKKRHRAVRLIFTIMIVYFLFWAPYNIVLLLNTFQEFFGLNNCSSSNRLDQAMQVTETLGMTHCCINPIIYAFVGEKFRNYLLVFFQKHIAKRFCKCCSIFQQEAPERASSVYTRSTGEQEISVGL",
+      "tmds": [
+        {
+          "start": 28,
+          "end": 53,
+          "length": 26,
+          "deltaG": -0.026
+        },
+        {
+          "start": 64,
+          "end": 91,
+          "length": 28,
+          "deltaG": -0.089
+        },
+        {
+          "start": 99,
+          "end": 125,
+          "length": 27,
+          "deltaG": -2.67
+        },
+        {
+          "start": 143,
+          "end": 165,
+          "length": 23,
+          "deltaG": 1.354
+        },
+        {
+          "start": 192,
+          "end": 216,
+          "length": 25,
+          "deltaG": -0.701
+        },
+        {
+          "start": 236,
+          "end": 260,
+          "length": 25,
+          "deltaG": -0.621
+        },
+        {
+          "start": 275,
+          "end": 300,
+          "length": 26,
+          "deltaG": 5.159
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 27,
+          "length": 27,
+          "location": "outside"
+        },
+        "2": {
+          "start": 54,
+          "end": 63,
+          "length": 10,
+          "location": "inside"
+        },
+        "3": {
+          "start": 92,
+          "end": 98,
+          "length": 7,
+          "location": "outside"
+        },
+        "4": {
+          "start": 126,
+          "end": 142,
+          "length": 17,
+          "location": "inside"
+        },
+        "5": {
+          "start": 166,
+          "end": 191,
+          "length": 26,
+          "location": "outside"
+        },
+        "6": {
+          "start": 217,
+          "end": 235,
+          "length": 19,
+          "location": "inside"
+        },
+        "7": {
+          "start": 261,
+          "end": 274,
+          "length": 14,
+          "location": "outside"
+        },
+        "8": {
+          "start": 301,
+          "end": 352,
+          "length": 52,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [],
+    "disulfides": [
+      {
+        "start": 20,
+        "end": 269,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4MBS"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5UIW"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 101,
+        "end": 178,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00521"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "4MBS"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "5UIW"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_single_N_linked_site": 2,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "Q12809": {
+    "accession": "Q12809",
+    "sequence": "MPVRRGHVAPQNTFLDTIIRKFEGQSRKFIIANARVENCAVIYCNDGFCELCGYSRAEVMQRPCTCDFLHGPRTQRRAAAQIAQALLGAEERKVEIAFYRKDGSCFLCLVDVVPVKNEDGAVIMFILNFEVVMEKDMVGSPAHDTNHRGPPTSWLAPGRAKTFRLKLPALLALTARESSVRSGGAGGAGAPGAVVVDVDLTPAAPSSESLALDEVTAMDNHVAGLGPAEERRALVGPGSPPRSAPGQLPSPRAHSLNPDASGSSCSLARTRSRESCASVRRASSADDIEAMRAGVLPPPPRHASTGAMHPLRSGLLNSTSDSDLVRYRTISKIPQITLNFVDLKGDPFLASPTSDREIIAPKIKERTHNVTEKVTQVLSLGADVLPEYKLQAPRIHRWTILHYSPFKAVWDWLILLLVIYTAVFTPYSAAFLLKETEEGPPATECGYACQPLAVVDLIVDIMFIVDILINFRTTYVNANEEVVSHPGRIAVHYFKGWFLIDMVAAIPFDLLIFGSGSEELIGLLKTARLLRLVRVARKLDRYSEYGAAVLFLLMCTFALIAHWLACIWYAIGNMEQPHMDSRIGWLHNLGDQIGKPYNSSGLGGPSIKDKYVTALYFTFSSLTSVGFGNVSPNTNSEKIFSICVMLIGSLMYASIFGNVSAIIQRLYSGTARYHTQMLRVREFIRFHQIPNPLRQRLEEYFQHAWSYTNGIDMNAVLKGFPECLQADICLHLNRSLLQHCKPFRGATKGCLRALAMKFKTTHAPPGDTLVHAGDLLTALYFISRGSIEILRGDVVVAILGKNDIFGEPLNLYARPGKSNGDVRALTYCDLHKIHRDDLLEVLDMYPEFSDHFWSSLEITFNLRDTNMIPGSPGSTELEGGFSRQRKRKLSFRRRTDKDTEQPGEVSALGPGRAGAGPSSRGRPGGPWGESPSSGPSSPESSEDEGPGRSSSPLRLVPFSSPRPPGEPPGGEPLMEDCEKSSDTCNPLSGAFSGVSNIFSFWGDSRGRQYQELPRCPAPTPSLLNIPLSSPGRRPRGDVESRLDALQRQLNRLETRLSADMATVLQLLQRQMTLVPPAYSAVTTPGPGPTSTSPLLPVSPLPTLTLDSLSQVSQFMACEELPPGAPELPQEGPTRRLSLPGQLGALTSQPLHRHGSDPGS",
+    "sequence_sha256": "287332153da38b59cc1be9554cc3a29f14d3b9e2a33150b4d54137773b22d1f7",
+    "topology": {
+      "sequence": "MPVRRGHVAPQNTFLDTIIRKFEGQSRKFIIANARVENCAVIYCNDGFCELCGYSRAEVMQRPCTCDFLHGPRTQRRAAAQIAQALLGAEERKVEIAFYRKDGSCFLCLVDVVPVKNEDGAVIMFILNFEVVMEKDMVGSPAHDTNHRGPPTSWLAPGRAKTFRLKLPALLALTARESSVRSGGAGGAGAPGAVVVDVDLTPAAPSSESLALDEVTAMDNHVAGLGPAEERRALVGPGSPPRSAPGQLPSPRAHSLNPDASGSSCSLARTRSRESCASVRRASSADDIEAMRAGVLPPPPRHASTGAMHPLRSGLLNSTSDSDLVRYRTISKIPQITLNFVDLKGDPFLASPTSDREIIAPKIKERTHNVTEKVTQVLSLGADVLPEYKLQAPRIHRWTILHYSPFKAVWDWLILLLVIYTAVFTPYSAAFLLKETEEGPPATECGYACQPLAVVDLIVDIMFIVDILINFRTTYVNANEEVVSHPGRIAVHYFKGWFLIDMVAAIPFDLLIFGSGSEELIGLLKTARLLRLVRVARKLDRYSEYGAAVLFLLMCTFALIAHWLACIWYAIGNMEQPHMDSRIGWLHNLGDQIGKPYNSSGLGGPSIKDKYVTALYFTFSSLTSVGFGNVSPNTNSEKIFSICVMLIGSLMYASIFGNVSAIIQRLYSGTARYHTQMLRVREFIRFHQIPNPLRQRLEEYFQHAWSYTNGIDMNAVLKGFPECLQADICLHLNRSLLQHCKPFRGATKGCLRALAMKFKTTHAPPGDTLVHAGDLLTALYFISRGSIEILRGDVVVAILGKNDIFGEPLNLYARPGKSNGDVRALTYCDLHKIHRDDLLEVLDMYPEFSDHFWSSLEITFNLRDTNMIPGSPGSTELEGGFSRQRKRKLSFRRRTDKDTEQPGEVSALGPGRAGAGPSSRGRPGGPWGESPSSGPSSPESSEDEGPGRSSSPLRLVPFSSPRPPGEPPGGEPLMEDCEKSSDTCNPLSGAFSGVSNIFSFWGDSRGRQYQELPRCPAPTPSLLNIPLSSPGRRPRGDVESRLDALQRQLNRLETRLSADMATVLQLLQRQMTLVPPAYSAVTTPGPGPTSTSPLLPVSPLPTLTLDSLSQVSQFMACEELPPGAPELPQEGPTRRLSLPGQLGALTSQPLHRHGSDPGS",
+      "tmds": [
+        {
+          "start": 405,
+          "end": 429,
+          "length": 25,
+          "deltaG": -0.349
+        },
+        {
+          "start": 451,
+          "end": 472,
+          "length": 22,
+          "deltaG": 1.967
+        },
+        {
+          "start": 489,
+          "end": 512,
+          "length": 24,
+          "deltaG": 1.903
+        },
+        {
+          "start": 522,
+          "end": 543,
+          "length": 22,
+          "deltaG": 5.144
+        },
+        {
+          "start": 547,
+          "end": 568,
+          "length": 22,
+          "deltaG": -2.099
+        },
+        {
+          "start": 637,
+          "end": 660,
+          "length": 24,
+          "deltaG": 1.911
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 404,
+          "length": 404,
+          "location": "inside"
+        },
+        "2": {
+          "start": 430,
+          "end": 450,
+          "length": 21,
+          "location": "outside"
+        },
+        "3": {
+          "start": 473,
+          "end": 488,
+          "length": 16,
+          "location": "inside"
+        },
+        "4": {
+          "start": 513,
+          "end": 521,
+          "length": 9,
+          "location": "outside"
+        },
+        "5": {
+          "start": 544,
+          "end": 546,
+          "length": 3,
+          "location": "inside"
+        },
+        "6": {
+          "start": 569,
+          "end": 636,
+          "length": 68,
+          "location": "outside"
+        },
+        "7": {
+          "start": 661,
+          "end": 1159,
+          "length": 499,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 598,
+        "motif": "NSS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "12063277"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [],
+    "exclusions": {
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "Q14524": {
+    "accession": "Q14524",
+    "sequence": "MANFLLPRGTSSFRRFTRESLAAIEKRMAEKQARGSTTLQESREGLPEEEAPRPQLDLQASKKLPDLYGNPPQELIGEPLEDLDPFYSTQKTFIVLNKGKTIFRFSATNALYVLSPFHPIRRAAVKILVHSLFNMLIMCTILTNCVFMAQHDPPPWTKYVEYTFTAIYTFESLVKILARGFCLHAFTFLRDPWNWLDFSVIIMAYTTEFVDLGNVSALRTFRVLRALKTISVISGLKTIVGALIQSVKKLADVMVLTVFCLSVFALIGLQLFMGNLRHKCVRNFTALNGTNGSVEADGLVWESLDLYLSDPENYLLKNGTSDVLLCGNSSDAGTCPEGYRCLKAGENPDHGYTSFDSFAWAFLALFRLMTQDCWERLYQQTLRSAGKIYMIFFMLVIFLGSFYLVNLILAVVAMAYEEQNQATIAETEEKEKRFQEAMEMLKKEHEALTIRGVDTVSRSSLEMSPLAPVNSHERRSKRRKRMSSGTEECGEDRLPKSDSEDGPRAMNHLSLTRGLSRTSMKPRSSRGSIFTFRRRDLGSEADFADDENSTAGESESHHTSLLVPWPLRRTSAQGQPSPGTSAPGHALHGKKNSTVDCNGVVSLLGAGDPEATSPGSHLLRPVMLEHPPDTTTPSEEPGGPQMLTSQAPCVDGFEEPGARQRALSAVSVLTSALEELEESRHKCPPCWNRLAQRYLIWECCPLWMSIKQGVKLVVMDPFTDLTITMCIVLNTLFMALEHYNMTSEFEEMLQVGNLVFTGIFTAEMTFKIIALDPYYYFQQGWNIFDSIIVILSLMELGLSRMSNLSVLRSFRLLRVFKLAKSWPTLNTLIKIIGNSVGALGNLTLVLAIIVFIFAVVGMQLFGKNYSELRDSDSGLLPRWHMMDFFHAFLIIFRILCGEWIETMWDCMEVSGQSLCLLVFLLVMVIGNLVVLNLFLALLLSSFSADNLTAPDEDREMNNLQLALARIQRGLRFVKRTTWDFCCGLLRQRPQKPAALAAQGQLPSCIATPYSPPPPETEKVPPTRKETRFEEGEQPGQGTPGDPEPVCVPIAVAESDTDDQEEDEENSLGTEEESSKQQESQPVSGGPEAPPDSRTWSQVSATASSEAEASASQADWRQQWKAEPQAPGCGETPEDSCSEGSTADMTNTAELLEQIPDLGQDVKDPEDCFTEGCVRRCPCCAVDTTQAPGKVWWRLRKTCYHIVEHSWFETFIIFMILLSSGALAFEDIYLEERKTIKVLLEYADKMFTYVFVLEMLLKWVAYGFKKYFTNAWCWLDFLIVDVSLVSLVANTLGFAEMGPIKSLRTLRALRPLRALSRFEGMRVVVNALVGAIPSIMNVLLVCLIFWLIFSIMGVNLFAGKFGRCINQTEGDLPLNYTIVNNKSQCESLNLTGELYWTKVKVNFDNVGAGYLALLQVATFKGWMDIMYAAVDSRGYEEQPQWEYNLYMYIYFVIFIIFGSFFTLNLFIGVIIDNFNQQKKKLGGQDIFMTEEQKKYYNAMKKLGSKKPQKPIPRPLNKYQGFIFDIVTKQAFDVTIMFLICLNMVTMMVETDDQSPEKINILAKINLLFVAIFTGECIVKLAALRHYYFTNSWNIFDFVVVILSIVGTVLSDIIQKYFFSPTLFRVIRLARIGRILRLIRGAKGIRTLLFALMMSLPALFNIGLLLFLVMFIYSIFGMANFAYVKWEAGIDDMFNFQTFANSMLCLFQITTSAGWDGLLSPILNTGPPYCDPTLPNSNGSRGDCGSPAVGILFFTTYIIISFLIVVNMYIAIILENFSVATEESTEPLSEDDFDMFYEIWEKFDPEATQFIEYSVLSDFADALSEPLRIAKPNQISLINMDLPMVSGDRIHCMDILFAFTKRVLGESGEMDALKIQMEEKFMAANPSKISYEPITTTLRRKHEEVSAMVIQRAFRRHLLQRSLKHASFLFRQQAGSGLSEEDAPEREGLIAYVMSENFSRPLGPPSSSSISSTSFPPSYDSVTRATSDNLQVRGSDYSHSEDLADFPPSPDRDRESIV",
+    "sequence_sha256": "3b1719ba4947964cb94b865175fff405120a047e44643495f0965aa8178f7f49",
+    "topology": {
+      "sequence": "MANFLLPRGTSSFRRFTRESLAAIEKRMAEKQARGSTTLQESREGLPEEEAPRPQLDLQASKKLPDLYGNPPQELIGEPLEDLDPFYSTQKTFIVLNKGKTIFRFSATNALYVLSPFHPIRRAAVKILVHSLFNMLIMCTILTNCVFMAQHDPPPWTKYVEYTFTAIYTFESLVKILARGFCLHAFTFLRDPWNWLDFSVIIMAYTTEFVDLGNVSALRTFRVLRALKTISVISGLKTIVGALIQSVKKLADVMVLTVFCLSVFALIGLQLFMGNLRHKCVRNFTALNGTNGSVEADGLVWESLDLYLSDPENYLLKNGTSDVLLCGNSSDAGTCPEGYRCLKAGENPDHGYTSFDSFAWAFLALFRLMTQDCWERLYQQTLRSAGKIYMIFFMLVIFLGSFYLVNLILAVVAMAYEEQNQATIAETEEKEKRFQEAMEMLKKEHEALTIRGVDTVSRSSLEMSPLAPVNSHERRSKRRKRMSSGTEECGEDRLPKSDSEDGPRAMNHLSLTRGLSRTSMKPRSSRGSIFTFRRRDLGSEADFADDENSTAGESESHHTSLLVPWPLRRTSAQGQPSPGTSAPGHALHGKKNSTVDCNGVVSLLGAGDPEATSPGSHLLRPVMLEHPPDTTTPSEEPGGPQMLTSQAPCVDGFEEPGARQRALSAVSVLTSALEELEESRHKCPPCWNRLAQRYLIWECCPLWMSIKQGVKLVVMDPFTDLTITMCIVLNTLFMALEHYNMTSEFEEMLQVGNLVFTGIFTAEMTFKIIALDPYYYFQQGWNIFDSIIVILSLMELGLSRMSNLSVLRSFRLLRVFKLAKSWPTLNTLIKIIGNSVGALGNLTLVLAIIVFIFAVVGMQLFGKNYSELRDSDSGLLPRWHMMDFFHAFLIIFRILCGEWIETMWDCMEVSGQSLCLLVFLLVMVIGNLVVLNLFLALLLSSFSADNLTAPDEDREMNNLQLALARIQRGLRFVKRTTWDFCCGLLRQRPQKPAALAAQGQLPSCIATPYSPPPPETEKVPPTRKETRFEEGEQPGQGTPGDPEPVCVPIAVAESDTDDQEEDEENSLGTEEESSKQQESQPVSGGPEAPPDSRTWSQVSATASSEAEASASQADWRQQWKAEPQAPGCGETPEDSCSEGSTADMTNTAELLEQIPDLGQDVKDPEDCFTEGCVRRCPCCAVDTTQAPGKVWWRLRKTCYHIVEHSWFETFIIFMILLSSGALAFEDIYLEERKTIKVLLEYADKMFTYVFVLEMLLKWVAYGFKKYFTNAWCWLDFLIVDVSLVSLVANTLGFAEMGPIKSLRTLRALRPLRALSRFEGMRVVVNALVGAIPSIMNVLLVCLIFWLIFSIMGVNLFAGKFGRCINQTEGDLPLNYTIVNNKSQCESLNLTGELYWTKVKVNFDNVGAGYLALLQVATFKGWMDIMYAAVDSRGYEEQPQWEYNLYMYIYFVIFIIFGSFFTLNLFIGVIIDNFNQQKKKLGGQDIFMTEEQKKYYNAMKKLGSKKPQKPIPRPLNKYQGFIFDIVTKQAFDVTIMFLICLNMVTMMVETDDQSPEKINILAKINLLFVAIFTGECIVKLAALRHYYFTNSWNIFDFVVVILSIVGTVLSDIIQKYFFSPTLFRVIRLARIGRILRLIRGAKGIRTLLFALMMSLPALFNIGLLLFLVMFIYSIFGMANFAYVKWEAGIDDMFNFQTFANSMLCLFQITTSAGWDGLLSPILNTGPPYCDPTLPNSNGSRGDCGSPAVGILFFTTYIIISFLIVVNMYIAIILENFSVATEESTEPLSEDDFDMFYEIWEKFDPEATQFIEYSVLSDFADALSEPLRIAKPNQISLINMDLPMVSGDRIHCMDILFAFTKRVLGESGEMDALKIQMEEKFMAANPSKISYEPITTTLRRKHEEVSAMVIQRAFRRHLLQRSLKHASFLFRQQAGSGLSEEDAPEREGLIAYVMSENFSRPLGPPSSSSISSTSFPPSYDSVTRATSDNLQVRGSDYSHSEDLADFPPSPDRDRESIV",
+      "tmds": [
+        {
+          "start": 132,
+          "end": 150,
+          "length": 19,
+          "deltaG": 1.259
+        },
+        {
+          "start": 156,
+          "end": 177,
+          "length": 22,
+          "deltaG": 4.549
+        },
+        {
+          "start": 191,
+          "end": 209,
+          "length": 19,
+          "deltaG": 3.094
+        },
+        {
+          "start": 215,
+          "end": 233,
+          "length": 19,
+          "deltaG": 4.819
+        },
+        {
+          "start": 252,
+          "end": 271,
+          "length": 20,
+          "deltaG": -0.662
+        },
+        {
+          "start": 387,
+          "end": 413,
+          "length": 27,
+          "deltaG": -3.423
+        },
+        {
+          "start": 719,
+          "end": 736,
+          "length": 18,
+          "deltaG": 0.847
+        },
+        {
+          "start": 745,
+          "end": 769,
+          "length": 25,
+          "deltaG": 4.03
+        },
+        {
+          "start": 779,
+          "end": 799,
+          "length": 21,
+          "deltaG": 2.388
+        },
+        {
+          "start": 804,
+          "end": 824,
+          "length": 21,
+          "deltaG": 4.787
+        },
+        {
+          "start": 838,
+          "end": 861,
+          "length": 24,
+          "deltaG": -2.568
+        },
+        {
+          "start": 912,
+          "end": 938,
+          "length": 27,
+          "deltaG": -3.957
+        },
+        {
+          "start": 1206,
+          "end": 1225,
+          "length": 20,
+          "deltaG": -0.068
+        },
+        {
+          "start": 1238,
+          "end": 1265,
+          "length": 28,
+          "deltaG": 2.72
+        },
+        {
+          "start": 1266,
+          "end": 1291,
+          "length": 26,
+          "deltaG": 1.013
+        },
+        {
+          "start": 1298,
+          "end": 1319,
+          "length": 22,
+          "deltaG": 6.491
+        },
+        {
+          "start": 1333,
+          "end": 1355,
+          "length": 23,
+          "deltaG": -1.8
+        },
+        {
+          "start": 1445,
+          "end": 1470,
+          "length": 26,
+          "deltaG": -3.298
+        },
+        {
+          "start": 1529,
+          "end": 1547,
+          "length": 19,
+          "deltaG": 0.375
+        },
+        {
+          "start": 1559,
+          "end": 1583,
+          "length": 25,
+          "deltaG": 0.053
+        },
+        {
+          "start": 1589,
+          "end": 1611,
+          "length": 23,
+          "deltaG": 1.848
+        },
+        {
+          "start": 1620,
+          "end": 1640,
+          "length": 21,
+          "deltaG": 2.523
+        },
+        {
+          "start": 1653,
+          "end": 1679,
+          "length": 27,
+          "deltaG": -2.357
+        },
+        {
+          "start": 1745,
+          "end": 1772,
+          "length": 28,
+          "deltaG": -2.473
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 131,
+          "length": 131,
+          "location": "inside"
+        },
+        "2": {
+          "start": 151,
+          "end": 155,
+          "length": 5,
+          "location": "outside"
+        },
+        "3": {
+          "start": 178,
+          "end": 190,
+          "length": 13,
+          "location": "inside"
+        },
+        "4": {
+          "start": 210,
+          "end": 214,
+          "length": 5,
+          "location": "outside"
+        },
+        "5": {
+          "start": 234,
+          "end": 251,
+          "length": 18,
+          "location": "inside"
+        },
+        "6": {
+          "start": 272,
+          "end": 386,
+          "length": 115,
+          "location": "outside"
+        },
+        "7": {
+          "start": 414,
+          "end": 718,
+          "length": 305,
+          "location": "inside"
+        },
+        "8": {
+          "start": 737,
+          "end": 744,
+          "length": 8,
+          "location": "outside"
+        },
+        "9": {
+          "start": 770,
+          "end": 778,
+          "length": 9,
+          "location": "inside"
+        },
+        "10": {
+          "start": 800,
+          "end": 803,
+          "length": 4,
+          "location": "outside"
+        },
+        "11": {
+          "start": 825,
+          "end": 837,
+          "length": 13,
+          "location": "inside"
+        },
+        "12": {
+          "start": 862,
+          "end": 911,
+          "length": 50,
+          "location": "outside"
+        },
+        "13": {
+          "start": 939,
+          "end": 1205,
+          "length": 267,
+          "location": "inside"
+        },
+        "14": {
+          "start": 1226,
+          "end": 1237,
+          "length": 12,
+          "location": "outside"
+        },
+        "16": {
+          "start": 1292,
+          "end": 1297,
+          "length": 6,
+          "location": "outside"
+        },
+        "17": {
+          "start": 1320,
+          "end": 1332,
+          "length": 13,
+          "location": "inside"
+        },
+        "18": {
+          "start": 1356,
+          "end": 1444,
+          "length": 89,
+          "location": "outside"
+        },
+        "19": {
+          "start": 1471,
+          "end": 1528,
+          "length": 58,
+          "location": "inside"
+        },
+        "20": {
+          "start": 1548,
+          "end": 1558,
+          "length": 11,
+          "location": "outside"
+        },
+        "21": {
+          "start": 1584,
+          "end": 1588,
+          "length": 5,
+          "location": "inside"
+        },
+        "22": {
+          "start": 1612,
+          "end": 1619,
+          "length": 8,
+          "location": "outside"
+        },
+        "23": {
+          "start": 1641,
+          "end": 1652,
+          "length": 12,
+          "location": "inside"
+        },
+        "24": {
+          "start": 1680,
+          "end": 1744,
+          "length": 65,
+          "location": "outside"
+        },
+        "25": {
+          "start": 1773,
+          "end": 2016,
+          "length": 244,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 283,
+        "motif": "NFT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 288,
+        "motif": "NGT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 291,
+        "motif": "NGS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 318,
+        "motif": "NGT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 328,
+        "motif": "NSS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 1365,
+        "motif": "NQT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 1374,
+        "motif": "NYT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 1380,
+        "motif": "NKS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 1388,
+        "motif": "NLT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 906,
+        "end": 915,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "33712541"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "40768348"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "7DTC"
+          },
+          {
+            "evidenceCode": "ECO:0007744",
+            "source": "PDB",
+            "id": "9ITH"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 6,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "Q9BQB6": {
+    "accession": "Q9BQB6",
+    "sequence": "MGSTWGSPGWVRLALCLTGLVLSLYALHVKAARARDRDYRALCDVGTAISCSRVFSSRWGRGFGLVEHVLGQDSILNQSNSIFGCIFYTLQLLLGCLRTRWASVLMLLSSLVSLAGSVYLAWILFFVLYDFCIVCITTYAINVSLMWLSFRKVQEPQGKAKRH",
+    "sequence_sha256": "f8e6c25683dd1eb29c9ddee6be595cb5ac278018a028b0d07316b906a864763d",
+    "topology": {
+      "sequence": "MGSTWGSPGWVRLALCLTGLVLSLYALHVKAARARDRDYRALCDVGTAISCSRVFSSRWGRGFGLVEHVLGQDSILNQSNSIFGCIFYTLQLLLGCLRTRWASVLMLLSSLVSLAGSVYLAWILFFVLYDFCIVCITTYAINVSLMWLSFRKVQEPQGKAKRH",
+      "tmds": [
+        {
+          "start": 10,
+          "end": 28,
+          "length": 19,
+          "deltaG": -0.488
+        },
+        {
+          "start": 78,
+          "end": 96,
+          "length": 19,
+          "deltaG": 3.377
+        },
+        {
+          "start": 101,
+          "end": 126,
+          "length": 26,
+          "deltaG": -1.419
+        },
+        {
+          "start": 133,
+          "end": 150,
+          "length": 18,
+          "deltaG": 2.032
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 1,
+          "end": 9,
+          "length": 9,
+          "location": "inside"
+        },
+        "2": {
+          "start": 29,
+          "end": 77,
+          "length": 49,
+          "location": "outside"
+        },
+        "3": {
+          "start": 97,
+          "end": 100,
+          "length": 4,
+          "location": "inside"
+        },
+        "4": {
+          "start": 127,
+          "end": 132,
+          "length": 6,
+          "location": "outside"
+        },
+        "5": {
+          "start": 151,
+          "end": 163,
+          "length": 13,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [],
+    "disulfides": [],
+    "exclusions": {
+      "competing_function_signal_or_nonstructural_bond": 2,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  },
+  "Q9BYF1": {
+    "accession": "Q9BYF1",
+    "sequence": "MSSSSWLLLSLVAVTAAQSTIEEQAKTFLDKFNHEAEDLFYQSSLASWNYNTNITEENVQNMNNAGDKWSAFLKEQSTLAQMYPLQEIQNLTVKLQLQALQQNGSSVLSEDKSKRLNTILNTMSTIYSTGKVCNPDNPQECLLLEPGLNEIMANSLDYNERLWAWESWRSEVGKQLRPLYEEYVVLKNEMARANHYEDYGDYWRGDYEVNGVDGYDYSRGQLIEDVEHTFEEIKPLYEHLHAYVRAKLMNAYPSYISPIGCLPAHLLGDMWGRFWTNLYSLTVPFGQKPNIDVTDAMVDQAWDAQRIFKEAEKFFVSVGLPNMTQGFWENSMLTDPGNVQKAVCHPTAWDLGKGDFRILMCTKVTMDDFLTAHHEMGHIQYDMAYAAQPFLLRNGANEGFHEAVGEIMSLSAATPKHLKSIGLLSPDFQEDNETEINFLLKQALTIVGTLPFTYMLEKWRWMVFKGEIPKDQWMKKWWEMKREIVGVVEPVPHDETYCDPASLFHVSNDYSFIRYYTRTLYQFQFQEALCQAAKHEGPLHKCDISNSTEAGQKLFNMLRLGKSEPWTLALENVVGAKNMNVRPLLNYFEPLFTWLKDQNKNSFVGWSTDWSPYADQSIKVRISLKSALGDKAYEWNDNEMYLFRSSVAYAMRQYFLKVKNQMILFGEEDVRVANLKPRISFNFFVTAPKNVSDIIPRTEVEKAIRMSRSRINDAFRLNDNSLEFLGIQPTLGPPNQPPVSIWLIVFGVVMGVIVVGIVILIFTGIRDRKKKNKARSGENPYASIDISKGENNPGFQNTDDVQTSF",
+    "sequence_sha256": "87630d0ccd9e8de7f77cb47c03fd56d745d66fbdceb8a2149b3518b04d71e1ea",
+    "topology": {
+      "sequence": "MSSSSWLLLSLVAVTAAQSTIEEQAKTFLDKFNHEAEDLFYQSSLASWNYNTNITEENVQNMNNAGDKWSAFLKEQSTLAQMYPLQEIQNLTVKLQLQALQQNGSSVLSEDKSKRLNTILNTMSTIYSTGKVCNPDNPQECLLLEPGLNEIMANSLDYNERLWAWESWRSEVGKQLRPLYEEYVVLKNEMARANHYEDYGDYWRGDYEVNGVDGYDYSRGQLIEDVEHTFEEIKPLYEHLHAYVRAKLMNAYPSYISPIGCLPAHLLGDMWGRFWTNLYSLTVPFGQKPNIDVTDAMVDQAWDAQRIFKEAEKFFVSVGLPNMTQGFWENSMLTDPGNVQKAVCHPTAWDLGKGDFRILMCTKVTMDDFLTAHHEMGHIQYDMAYAAQPFLLRNGANEGFHEAVGEIMSLSAATPKHLKSIGLLSPDFQEDNETEINFLLKQALTIVGTLPFTYMLEKWRWMVFKGEIPKDQWMKKWWEMKREIVGVVEPVPHDETYCDPASLFHVSNDYSFIRYYTRTLYQFQFQEALCQAAKHEGPLHKCDISNSTEAGQKLFNMLRLGKSEPWTLALENVVGAKNMNVRPLLNYFEPLFTWLKDQNKNSFVGWSTDWSPYADQSIKVRISLKSALGDKAYEWNDNEMYLFRSSVAYAMRQYFLKVKNQMILFGEEDVRVANLKPRISFNFFVTAPKNVSDIIPRTEVEKAIRMSRSRINDAFRLNDNSLEFLGIQPTLGPPNQPPVSIWLIVFGVVMGVIVVGIVILIFTGIRDRKKKNKARSGENPYASIDISKGENNPGFQNTDDVQTSF",
+      "tmds": [
+        {
+          "start": 741,
+          "end": 765,
+          "length": 25,
+          "deltaG": -4.021
+        }
+      ],
+      "loops": {
+        "1": {
+          "start": 18,
+          "end": 740,
+          "length": 723,
+          "location": "outside"
+        },
+        "2": {
+          "start": 766,
+          "end": 805,
+          "length": 40,
+          "location": "inside"
+        }
+      }
+    },
+    "glycosites": [
+      {
+        "position": 90,
+        "motif": "NLT",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "15084671"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19901337"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 103,
+        "motif": "NGS",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 432,
+        "motif": "NET",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      },
+      {
+        "position": 546,
+        "motif": "NST",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19159218"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "19901337"
+          }
+        ],
+        "description": "N-linked (GlcNAc...) asparagine"
+      }
+    ],
+    "disulfides": [
+      {
+        "start": 133,
+        "end": 141,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU01355"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 344,
+        "end": 361,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU01355"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "start": 530,
+        "end": 542,
+        "role": "annotated_bond_not_independently_functionally_validated",
+        "direct_evidence": true,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU01355"
+          },
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "14754895"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "exclusions": {
+      "not_direct_evidence": 3,
+      "ambiguous_partner_bonds": 0
+    },
+    "feature_spec": {
+      "decay_length": 8.0,
+      "maximum_flank_distance": 60,
+      "minimum_tm_length": 17,
+      "annotation_evidence": "direct",
+      "disulfide_mode": "control_free_annotation_feature"
+    },
+    "free_cysteine_controls_required": false,
+    "interpretation": "annotation-driven refinement candidate; no effect-size or pathogenicity conclusion"
+  }
+}

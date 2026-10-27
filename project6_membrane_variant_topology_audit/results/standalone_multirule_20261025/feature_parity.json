@@ -1,0 +1,54 @@
+{
+  "P02724": {
+    "rows": 245,
+    "all_18_features_exactly_match": true
+  },
+  "P04626": {
+    "rows": 326,
+    "all_18_features_exactly_match": true
+  },
+  "P08100": {
+    "rows": 165,
+    "all_18_features_exactly_match": true
+  },
+  "P08581": {
+    "rows": 5393,
+    "all_18_features_exactly_match": true
+  },
+  "P11712": {
+    "rows": 12512,
+    "all_18_features_exactly_match": true
+  },
+  "P14151": {
+    "rows": 359,
+    "all_18_features_exactly_match": true
+  },
+  "P29323": {
+    "rows": 1239,
+    "all_18_features_exactly_match": true
+  },
+  "P31645": {
+    "rows": 11576,
+    "all_18_features_exactly_match": true
+  },
+  "P51681": {
+    "rows": 6137,
+    "all_18_features_exactly_match": true
+  },
+  "Q12809": {
+    "rows": 200,
+    "all_18_features_exactly_match": true
+  },
+  "Q14524": {
+    "rows": 224,
+    "all_18_features_exactly_match": true
+  },
+  "Q9BQB6": {
+    "rows": 3392,
+    "all_18_features_exactly_match": true
+  },
+  "Q9BYF1": {
+    "rows": 2223,
+    "all_18_features_exactly_match": true
+  }
+}

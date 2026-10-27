@@ -1,0 +1,26 @@
+dms_id,protein,accession,endpoint_type,reference_agreement,census_length,n_single,flank_sites_measured,kr_gain_flank_single,kr_gain_sites_eligible,confirmation_eligible,exclusion_reasons
+A4_HUMAN_Seuma_2022,A4,P05067,unspecified,1.0,770,796,10,14,7,True,
+ACE2_HUMAN_Chan_2020,ACE2,Q9BYF1,unspecified,1.0,805,2223,0,0,0,True,
+ADRB2_HUMAN_Jones_2020,ADRB2,P07550,unspecified,1.0,413,7800,107,144,72,True,
+CCR5_HUMAN_Gill_2023,CCR5,P51681,unspecified,1.0,352,6137,101,140,70,False,Phase C score set (CCR5); docs/PHASE_C_RESULTS_20260928.md
+CD19_HUMAN_Klesmith_2019_FMC_singles,CD19,P15391,unspecified,1.0,556,3761,10,16,8,True,
+CP2C9_HUMAN_Amorosi_2021_abundance,CP2C9,P11712,abundance,1.0,490,6370,11,8,7,False,Phase C score set (CYP2C9); docs/PHASE_C_RESULTS_20260928.md
+CP2C9_HUMAN_Amorosi_2021_activity,CP2C9,P11712,function,1.0,490,6142,12,15,8,False,Phase C score set (CYP2C9); docs/PHASE_C_RESULTS_20260928.md
+EPHB2_HUMAN_Tsuboyama_2023_1F0M,EPHB2,P29323,unspecified,1.0,1055,1239,0,0,0,True,
+ERBB2_HUMAN_Elazar_2016,ERBB2,P04626,unspecified,1.0,1255,326,2,4,2,True,
+GLPA_HUMAN_Elazar_2016,GLPA,P02724,unspecified,1.0,150,245,0,0,0,True,
+HMDH_HUMAN_Jiang_2019,HMDH,P04035,unspecified,1.0,888,16853,126,192,96,True,
+KCNE1_HUMAN_Muhammad_2023_expression,KCNE1,P15382,abundance,0.9918768704574604,129,2339,19,17,9,False,Phase C score set (KCNE1); docs/PHASE_C_RESULTS_20260928.md
+KCNE1_HUMAN_Muhammad_2023_function,KCNE1,P15382,function,0.991792656587473,129,2315,19,17,9,False,Phase C score set (KCNE1); docs/PHASE_C_RESULTS_20260928.md
+KCNH2_HUMAN_Kozek_2020,KCNH2,Q12809,unspecified,1.0,1159,200,2,4,2,False,Phase C score set (KCNH2); docs/PHASE_C_RESULTS_20260928.md | KCNH2 full-length trafficking (Oct 12 benchmark)
+LYAM1_HUMAN_Elazar_2016,LYAM1,P14151,unspecified,1.0,372,359,0,0,0,True,
+MET_HUMAN_Estevam_2023,MET,P08581,unspecified,1.0,1390,5393,0,0,0,True,
+NPC1_HUMAN_Erwood_2022_HEK293T,NPC1,O15118,unspecified,1.0,1278,637,14,2,2,True,
+NPC1_HUMAN_Erwood_2022_RPE1,NPC1,O15118,unspecified,1.0,1278,63,0,0,0,True,
+OPSD_HUMAN_Wan_2019,OPSD,P08100,unspecified,1.0,348,165,24,2,1,False,Phase C score set (RHO); docs/PHASE_C_RESULTS_20260928.md | RHO/OPSD 2 endpoints (Oct 12 benchmark)
+S22A1_HUMAN_Yee_2023_abundance,S22A1,O15245,abundance,1.0,554,9803,103,139,75,True,
+S22A1_HUMAN_Yee_2023_activity,S22A1,O15245,function,1.0,554,10094,103,149,76,True,
+SC6A4_HUMAN_Young_2021,SC6A4,P31645,unspecified,1.0,630,11576,152,238,119,False,"SERT/SC6A4 trafficking (scripts/load_sert.py, docs/SERT_TRAFFICKING_*)"
+SCN5A_HUMAN_Glazer_2019,SCN5A,Q14524,unspecified,1.0,2016,224,0,0,0,True,
+VKOR1_HUMAN_Chiasson_2020_abundance,VKOR1,Q9BQB6,abundance,1.0,163,2695,48,58,32,False,Phase C score set (VKORC1); docs/PHASE_C_RESULTS_20260928.md
+VKOR1_HUMAN_Chiasson_2020_activity,VKOR1,Q9BQB6,function,1.0,163,697,43,14,12,False,Phase C score set (VKORC1); docs/PHASE_C_RESULTS_20260928.md

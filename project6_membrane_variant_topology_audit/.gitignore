@@ -1,10 +1,15 @@
-# Raw source snapshots: ~1.1 GB, redownloadable, hashes recorded in the run summaries.
+# Frozen metadata is tracked explicitly; raw inputs and generated caches remain local.
 data/raw/
-data/external/mavedb/
-
-# Derived score extracts are rebuilt by the project scripts.
-data/processed/gate0/*.npz
-
-# data/processed/gate0/blinded_flank_events.csv is deliberately NOT ignored.
-# It carries no clinical label and is the frozen input the preregistration refers to.
+data/external/
+data/processed/
+results/
+figures/
+output/
 snapshots/
+examples/toy/
+.venv_ml/
+.venv_modal/
+.venv_render/
+dist/
+tools/build/
+tools/*.egg-info/

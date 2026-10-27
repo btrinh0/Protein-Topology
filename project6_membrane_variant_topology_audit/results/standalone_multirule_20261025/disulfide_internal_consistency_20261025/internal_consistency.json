@@ -1,0 +1,276 @@
+{
+  "created_utc": "2026-10-26T02:41:57.934862+00:00",
+  "evaluation_kind": "circular_internal_annotation_consistency",
+  "circularity": "The same bond annotations activate the positive offset and label the target sites in the metric",
+  "criterion": "positive matched annotated-minus-unannotated gap; intervals are internal resampling summaries, not independent validation",
+  "protocol_status": "post-hoc interpretation of already evaluated outputs; no new biological preregistration",
+  "controls_are_verified_free": false,
+  "results": {
+    "saved_full_fit_raw": {
+      "S": {
+        "measurement": {
+          "estimate": 0.05718325773471444,
+          "ci95": [
+            0.00641032592465328,
+            0.10624935812529042
+          ],
+          "sd_of_values": 0.12650687171186167,
+          "estimate_standardized_within_this_scorer": 0.45201700872785683,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.5884563754753761,
+          "mean_free": 0.5312731177406615
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "A": {
+        "measurement": {
+          "estimate": 0.07761386765851483,
+          "ci95": [
+            0.04599671390887794,
+            0.1315368457162379
+          ],
+          "sd_of_values": 0.11605433329833237,
+          "estimate_standardized_within_this_scorer": 0.6687718196527703,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.540000906864049,
+          "mean_free": 0.46238703920553414
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "all19_mean": {
+        "measurement": {
+          "estimate": 0.06230691829761575,
+          "ci95": [
+            0.0025799234304215803,
+            0.11498622104740709
+          ],
+          "sd_of_values": 0.13559266248788443,
+          "estimate_standardized_within_this_scorer": 0.45951541296110354,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6559536929125825,
+          "mean_free": 0.5936467746149666
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      }
+    },
+    "guarded_oof_raw": {
+      "S": {
+        "measurement": {
+          "estimate": 0.05985714789839747,
+          "ci95": [
+            -0.0009287290722388968,
+            0.10438059794081743
+          ],
+          "sd_of_values": 0.12337627878960519,
+          "estimate_standardized_within_this_scorer": 0.4851592906321357,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6101300995513972,
+          "mean_free": 0.5502729516529996
+        },
+        "internal_status": "inconclusive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "A": {
+        "measurement": {
+          "estimate": 0.08289091356302267,
+          "ci95": [
+            0.04324893623844615,
+            0.1320287934413363
+          ],
+          "sd_of_values": 0.11165254600412744,
+          "estimate_standardized_within_this_scorer": 0.7424005679186075,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.5528352773184468,
+          "mean_free": 0.46994436375542425
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "all19_mean": {
+        "measurement": {
+          "estimate": 0.05776574635027057,
+          "ci95": [
+            -0.015276397548530381,
+            0.10708617085999451
+          ],
+          "sd_of_values": 0.1303854457842355,
+          "estimate_standardized_within_this_scorer": 0.4430383008074575,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6654489984498272,
+          "mean_free": 0.6076832520995565
+        },
+        "internal_status": "inconclusive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      }
+    },
+    "guarded_oof_PI": {
+      "S": {
+        "measurement": {
+          "estimate": 0.05985714789839747,
+          "ci95": [
+            -0.0009287290722388968,
+            0.10438059794081743
+          ],
+          "sd_of_values": 0.12337627878960519,
+          "estimate_standardized_within_this_scorer": 0.4851592906321357,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6101300995513972,
+          "mean_free": 0.5502729516529996
+        },
+        "internal_status": "inconclusive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "A": {
+        "measurement": {
+          "estimate": 0.08289091356302267,
+          "ci95": [
+            0.04324893623844615,
+            0.1320287934413363
+          ],
+          "sd_of_values": 0.11165254600412744,
+          "estimate_standardized_within_this_scorer": 0.7424005679186075,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.5528352773184468,
+          "mean_free": 0.46994436375542425
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "all19_mean": {
+        "measurement": {
+          "estimate": 0.05782199229193215,
+          "ci95": [
+            -0.01518891759489431,
+            0.10717132724563429
+          ],
+          "sd_of_values": 0.13040582267368345,
+          "estimate_standardized_within_this_scorer": 0.4434003873939052,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6655395511709311,
+          "mean_free": 0.6077175588789989
+        },
+        "internal_status": "inconclusive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      }
+    },
+    "guarded_oof_PI_plus_disulfide": {
+      "S": {
+        "measurement": {
+          "estimate": 0.12571905739302744,
+          "ci95": [
+            0.07139069400815681,
+            0.17022480263423853
+          ],
+          "sd_of_values": 0.1490207712140569,
+          "estimate_standardized_within_this_scorer": 0.8436344569203823,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.6759920090460271,
+          "mean_free": 0.5502729516529996
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "A": {
+        "measurement": {
+          "estimate": 0.14875282305765272,
+          "ci95": [
+            0.10611425216333017,
+            0.2013361512970364
+          ],
+          "sd_of_values": 0.13823869553507942,
+          "estimate_standardized_within_this_scorer": 1.0760577744304975,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.618697186813077,
+          "mean_free": 0.46994436375542425
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      },
+      "all19_mean": {
+        "measurement": {
+          "estimate": 0.12368378591512405,
+          "ci95": [
+            0.05785549482688326,
+            0.17451420461242875
+          ],
+          "sd_of_values": 0.1550407364174005,
+          "estimate_standardized_within_this_scorer": 0.7977502479228601,
+          "n_strata": 8,
+          "n_proteins": 7,
+          "n_bonded_sites": 44,
+          "n_free_sites": 55,
+          "mean_bonded": 0.7314012688238043,
+          "mean_free": 0.6077174829086802
+        },
+        "internal_status": "positive_annotation_association",
+        "background": "unannotated cysteines, not verified native free thiols"
+      }
+    }
+  },
+  "direct_component_checks": {
+    "eligible_missense_cells": 1900,
+    "directly_shifted_cells": 1900,
+    "negative_direct_penalties": 0,
+    "noneligible_direct_changes": 0,
+    "missing_native_cells_preserved": true,
+    "decomposition_verified": true
+  },
+  "new_fits": 0,
+  "new_experimental_outcome_reads": 0,
+  "old_artifacts_unchanged": true,
+  "source_sha256": {
+    "results\\standalone_multirule_20261025\\label_free_audit_20261025\\standalone_position_scores.npz": "8d4bb2860253deefd8f266ca03870bbab8da242780b203fbec61f5cf5d9a9e92",
+    "results\\standalone_multirule_20261025\\annotation_bank.json": "b7c75cc155ee6cdce2d0824766aaf79235ace4661de7f29f843b62fc828e301c",
+    "data\\external\\disulfide_rule_20261025\\human_reviewed_features.tsv": "d55f10ea7318421dec14ca7da53bdfbdabb1fbcd695fe57c9904586a4b4af56c",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_06.json": "050ecb437be9106d14f14fbd5ba843a0aef20bb7daa4971c0d94fdacf04cfb17",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_08.json": "0bd38f2f825f7d9a57be6405d2e8bcfaa894e83dfc4b57d301a320a1837b1d5b",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_10.json": "4987fc56248ae2f49a8ecd83da6a21844255d02b3fa978fd784e803d2a65e8e0",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_12.json": "4c709c999453d1986df0f7f5ab9e101b568ff9d82a19bb8314c23d14a4b2a98f",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_13.json": "c72797ca5411857e6ce01097c24cf545e664645515f1bc47681084caa43ff7f8",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_15.json": "a66ff9bfeca8563e66dbb473502feb3a2f74df44e9d5eb8ba866b9cd3b324ce5",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_16.json": "ff70c5e00428519135453f08103935914bd799243d3d0b0c9860338a9e493215",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_18.json": "6eb2ab9762b60f1bb69c70fe8165410d73e6c44322aae3bc92213a3471745518",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_26.json": "ee19def3ebd0f3120cb75cf9bdbd2083a883bd223b34d37b16ae4c7e5ddc086a",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_27.json": "edd5a1cca2716a34b86272156e107a60af0e44bcac8a1fe404424d64a8e0cff0",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_30.json": "96c195823fd9a63597ef1b676b545d6b809d049ecd76fd283eb75920df2d2199",
+    "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\fold_31.json": "7ba7651a451a9fa3a2b3cf62bc4a99a59161cfff7630cdce19e197705b6f82c4"
+  },
+  "independent_biological_validation": false,
+  "independent_predictive_accuracy_improvement": false
+}

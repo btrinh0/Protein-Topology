@@ -1,0 +1,44 @@
+CHECK run2_PI_DS_and_raw_match_comparator_file: file +0 | paper +0 | match
+three-rule minus PI+DS (file, text only): -0.001762 [-0.008324, +0.001968]
+CHECK three_rule_minus_PI_DS: file -0.001762044 | paper -0.001762 | match
+aggregation check: max |per_protein - mean(per_assay)| = 5.55e-17
+CHECK per_protein_is_mean_of_assays: file +5.5511151e-17 | paper +0 | match
+CHECK mean_Ours_raw_(table_only): file +0.46233019 | paper +0.4623 | match
+CHECK mean_GEMME: file +0.42798858 | paper +0.428 | match
+a GEMME: n=13 proteins, mean 0.427989, 95% t-interval [0.339600, 0.516377] (computed)
+CHECK mean_VespaG: file +0.45089455 | paper +0.451 | match
+a VespaG: n=13 proteins, mean 0.450895, 95% t-interval [0.356358, 0.545431] (computed)
+CHECK mean_Ours: file +0.4625964 | paper +0.4626 | match
+a Ours: n=13 proteins, mean 0.462596, 95% t-interval [0.357546, 0.567647] (computed)
+CHECK mean_Ours + glyco: file +0.46083436 | paper +0.4608 | match
+a Ours + glyco: n=13 proteins, mean 0.460834, 95% t-interval [0.352882, 0.568787] (computed)
+a ACE2: GEMME 0.217369, VespaG 0.189595, Ours 0.231958, Ours + glyco 0.198387
+a CCR5: GEMME 0.363580, VespaG 0.354965, Ours 0.320191, Ours + glyco 0.320191
+a CP2C9: GEMME 0.620953, VespaG 0.635883, Ours 0.568973, Ours + glyco 0.568973
+a EPHB2: GEMME 0.627412, VespaG 0.630160, Ours 0.680860, Ours + glyco 0.680860
+a ERBB2: GEMME 0.380700, VespaG 0.464632, Ours 0.616658, Ours + glyco 0.616658
+a GLPA: GEMME 0.348588, VespaG 0.425748, Ours 0.514573, Ours + glyco 0.514573
+a KCNH2: GEMME 0.460130, VespaG 0.527757, Ours 0.489212, Ours + glyco 0.489212
+a LYAM1: GEMME 0.349294, VespaG 0.480438, Ours 0.428857, Ours + glyco 0.428857
+a MET: GEMME 0.548300, VespaG 0.579962, Ours 0.570600, Ours + glyco 0.570600
+a OPSD: GEMME 0.511092, VespaG 0.474221, Ours 0.646021, Ours + glyco 0.655862
+a SC6A4: GEMME 0.541453, VespaG 0.528078, Ours 0.481561, Ours + glyco 0.482385
+a SCN5A: GEMME 0.143973, VespaG 0.106054, Ours 0.073956, Ours + glyco 0.073956
+a VKOR1: GEMME 0.451008, VespaG 0.464136, Ours 0.390332, Ours + glyco 0.390332
+refined minus raw (file, table only): +0.000266 [-0.000393, +0.000967]
+CHECK refined_minus_raw: file +0.00026620572 | paper +0.000266 | match
+b VKOR1: Ours - VespaG = -0.073804 (computed)
+b CP2C9: Ours - VespaG = -0.066910 (computed)
+b LYAM1: Ours - VespaG = -0.051582 (computed)
+b SC6A4: Ours - VespaG = -0.046517 (computed)
+b KCNH2: Ours - VespaG = -0.038545 (computed)
+b CCR5: Ours - VespaG = -0.034773 (computed)
+b SCN5A: Ours - VespaG = -0.032098 (computed)
+b MET: Ours - VespaG = -0.009362 (computed)
+b ACE2: Ours - VespaG = +0.042363 (computed)
+b EPHB2: Ours - VespaG = +0.050700 (computed)
+b GLPA: Ours - VespaG = +0.088825 (computed)
+b ERBB2: Ours - VespaG = +0.152026 (computed)
+b OPSD: Ours - VespaG = +0.171800 (computed)
+b paired test (file): delta +0.011702 [-0.027806, +0.050386], p 0.585938, wins/losses 5/8
+CHECK mean_of_differences_equals_file_delta: file +0.011701855 | paper +0.011701855 | match

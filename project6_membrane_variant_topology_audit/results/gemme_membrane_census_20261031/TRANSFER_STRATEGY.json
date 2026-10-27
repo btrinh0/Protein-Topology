@@ -1,0 +1,10 @@
+{
+  "reason": "source rate limit on many small byte-range requests",
+  "change": "coalesce requests into <=16 MiB blocks; sequential requests; respect Retry-After",
+  "analysis_protocol_unchanged": true,
+  "source_crc_checks_unchanged": true,
+  "resume_script_sha256": "0ce75f026c845cf685663cbe749e6ee9abb2011269fde0342effae2553434f90",
+  "remaining_proteins": 783,
+  "requests": 14,
+  "requested_bytes": 223723449
+}

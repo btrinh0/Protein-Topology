@@ -1,0 +1,308 @@
+{
+  "summary": {
+    "raw": {
+      "mean_spearman": 0.462330194841874
+    },
+    "existing_PI_DS": {
+      "mean_spearman": 0.4625964005606832
+    },
+    "existing_PI_glyco_DS": {
+      "mean_spearman": 0.46025956934383
+    },
+    "constraint_glyco": {
+      "mean_spearman": 0.4605553042502467
+    },
+    "PI_DS_constraint_glyco": {
+      "mean_spearman": 0.46083435654812127
+    }
+  },
+  "comparisons": [
+    {
+      "model": "constraint_glyco",
+      "reference": "raw",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.4605553042502467,
+      "reference_mean_spearman": 0.462330194841874,
+      "delta_spearman": -0.001774890591627229,
+      "ci95_delta_spearman": [
+        -0.008341772777639908,
+        0.0019458766329174758
+      ],
+      "equal_group_mean_delta": -0.0023281891061206392,
+      "wins": 2,
+      "losses": 1,
+      "ties": 10,
+      "mean_mse_delta": 0.00012031850137654939,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.002982087350521942
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0019933144227817826
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0019227981409294982
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0008812982122345658
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    {
+      "model": "PI_DS_constraint_glyco",
+      "reference": "existing_PI_DS",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.46083435654812127,
+      "reference_mean_spearman": 0.4625964005606832,
+      "delta_spearman": -0.001762044012561867,
+      "ci95_delta_spearman": [
+        -0.008324302635101468,
+        0.001968316725883579
+      ],
+      "equal_group_mean_delta": -0.002318946998167768,
+      "wins": 2,
+      "losses": 1,
+      "ties": 10,
+      "mean_mse_delta": 0.00011996415740607874,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.0029771050720656515
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0019775128570691525
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0019088810136086893
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0008887638125786209
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    {
+      "model": "PI_DS_constraint_glyco",
+      "reference": "raw",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.46083435654812127,
+      "reference_mean_spearman": 0.462330194841874,
+      "delta_spearman": -0.001495838293752575,
+      "ci95_delta_spearman": [
+        -0.008424391927080601,
+        0.002803666154541536
+      ],
+      "equal_group_mean_delta": -0.0022235358440689432,
+      "wins": 4,
+      "losses": 4,
+      "ties": 5,
+      "mean_mse_delta": 0.00010855923455169437,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": -0.001620491484898623
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": -0.0014613661001279161
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.0030835420398973783
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": -0.001620491484898623
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": -0.0016230135563653398
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": -0.001620491484898623
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": -0.001620491484898623
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": -0.0017713256278092855
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": -0.0015758653525105026
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": -0.001620491484898623
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": -0.0016419514106281174
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0011771533412886874
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    },
+    {
+      "model": "PI_DS_constraint_glyco",
+      "reference": "existing_PI_glyco_DS",
+      "scope": "membrane",
+      "proteins": 13,
+      "groups": 12,
+      "model_mean_spearman": 0.46083435654812127,
+      "reference_mean_spearman": 0.46025956934383,
+      "delta_spearman": 0.0005747872042912481,
+      "ci95_delta_spearman": [
+        -0.0007296011803288432,
+        0.0020232222006519494
+      ],
+      "equal_group_mean_delta": 0.00021262015342310656,
+      "wins": 2,
+      "losses": 1,
+      "ties": 10,
+      "mean_mse_delta": -4.7958806550559966e-05,
+      "leave_one_group_out_delta": [
+        {
+          "omitted": "DG_P02724",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P04626",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P08100",
+          "delta": -0.00021539545214833346
+        },
+        {
+          "omitted": "DG_P08581",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P11712",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P14151",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P29323",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_P31645",
+          "delta": 0.0005540542945217224
+        },
+        {
+          "omitted": "DG_Q12809",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_Q14524",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_Q9BQB6",
+          "delta": 0.0006226861379821855
+        },
+        {
+          "omitted": "DG_Q9BYF1",
+          "delta": 0.0008887638125786209
+        }
+      ],
+      "interpretation": "conditional_cross_validation_stability_not_independent_confirmation"
+    }
+  ],
+  "source": "results\\standalone_multirule_20261025\\benchmark_20261025\\guarded_loocv\\out_of_fold_predictions.npz",
+  "source_sha256": "157fbfe24071d6a52b5bb8d704d71ce65ddc8a66346d0f54d7ca9183d14df125",
+  "accuracy_implementation_sha256": "4ba2d706d3cc5ab0bce1433017f5fdbc7b1d699092a7f1dfbc315a8f525fb37f",
+  "mean_definition": "Spearman within each assay, assays averaged within protein, equal protein mean",
+  "new_coefficient_selection_after_accuracy": false,
+  "independent_confirmation": false,
+  "scope": "same previously exposed 13-protein development panel; guarded outer heads and group-disjoint floors"
+}

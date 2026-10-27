@@ -1,0 +1,5666 @@
+{
+  "6": {
+    "test_accessions": [
+      "P02724"
+    ],
+    "excluded_groups": [
+      "DG_P02724"
+    ],
+    "calibration_accessions": [
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "0974173c249b707d6cf26d4ab326c210da2726a67208df989a2401928b51951f",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.13293155063475207,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P02724"
+        ],
+        "constraint_count": 15,
+        "constraints": [
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0014165831399375053,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0014165831399375053
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.0015056587835096391,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0015056587835096391
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.01207757839503401,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.01207757839503401
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.0709906109052788,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0709906109052788
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.015794369100221778,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.015794369100221778
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.014979878285953013,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.014979878285953013
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.025270128667085175,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.025270128667085175
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.13293155063475207,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.13293155063475207
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.042510808693967374,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.042510808693967374
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.01567829973688445,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.049181051398111506,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.049181051398111506
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.0070382568235617575,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.0070382568235617575
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.030725248537193526,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.030725248537193526
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.04497994587185283,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.04497994587185283
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.003002601998917665,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.003002601998917665
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.13293155063475207,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.13160071373472623,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P02724"
+        ],
+        "constraint_count": 15,
+        "constraints": [
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0014043280035163361,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0014043280035163361
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.0015833709833876497,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0015833709833876497
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.013822693198966618,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.013822693198966618
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.07098582189891578,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.07098582189891578
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.015806603669969402,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.015806603669969402
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.014849142841993538,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.014849142841993538
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.02533364090934728,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.02533364090934728
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.13160071373472623,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.13160071373472623
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.04287604655291119,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.04287604655291119
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.016772947300292357,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.05028388653403901,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.05028388653403901
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.006395012581982868,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.006395012581982868
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.031294403656395436,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.031294403656395436
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.04490587453881099,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.04490587453881099
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.0030449223555835047,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.0030449223555835047
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.05333135979013168,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08062222900839268
+        },
+        "coefficients": {
+          "positive_inside": 0.05333135979013168,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.13160071373472623,
+          "disulfide_loss": 0.08062222900839268
+        }
+      }
+    }
+  },
+  "8": {
+    "test_accessions": [
+      "P04626"
+    ],
+    "excluded_groups": [
+      "DG_P04626"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "96fab2b791424337485de5c154e50ed0652d7614aafe62f9543f2b425dffbf68",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.10330427784704811,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P04626"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.017964375303704275,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.017964375303704275
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": -0.00015201825475563702,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.07319610234610424,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.07319610234610424
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.01596344093849815,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.01596344093849815
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.0013907564306587922,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.01180277345373424,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.01180277345373424
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.10330427784704811,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.10330427784704811
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.022061532042252613,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.022061532042252613
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.013027288828353911,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.029388838285689903,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.029388838285689903
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.003712071030684891,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.003712071030684891
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.026972279775685108,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.026972279775685108
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.04760247138883373,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.04760247138883373
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.010478061186865237,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.010478061186865237
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.10330427784704811,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.10074829475785675,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P04626"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.018148083373635437,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.018148083373635437
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.0031996200470250087,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0031996200470250087
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.07318690466058944,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.07318690466058944
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.015986938448506974,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.015986938448506974
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.0016418447375068225,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.011924754003849288,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.011924754003849288
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.10074829475785675,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.10074829475785675
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.02276300176478184,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.02276300176478184
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.015129650628391972,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.03150692500055474,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.03150692500055474
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.0024766668998980803,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.0024766668998980803
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.028065389577328344,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.028065389577328344
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.04746021122558971,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.04746021122558971
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.010559340955982204,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.010559340955982204
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.10242731753569069,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.09104676233151339
+        },
+        "coefficients": {
+          "positive_inside": 0.10242731753569069,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.10074829475785675,
+          "disulfide_loss": 0.09104676233151339
+        }
+      }
+    }
+  },
+  "10": {
+    "test_accessions": [
+      "P08100",
+      "P51681"
+    ],
+    "excluded_groups": [
+      "DG_P08100"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "840352c1f2fa46c3c71060e88491f22f3e7f39fce9e64c05593a285479cde7ba",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.15446330156838792,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P08100"
+        ],
+        "constraint_count": 15,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.030663696119470854,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.030663696119470854
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.000838566342740923,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0009451139034016703,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.06932240313964638,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.06932240313964638
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.052202486441514706,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.052202486441514706
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.01568894721479222,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.004229375145857046,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.004229375145857046
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.15446330156838792,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.15446330156838792
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.02305599652001282,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.02305599652001282
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.0014948535719712802,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0014948535719712802
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.04043639285727138,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.04043639285727138
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.012146264664270148,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.012146264664270148
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.0394064464089306,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.0394064464089306
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.026835078551482674,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.026835078551482674
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.009980300963506548,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.009980300963506548
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.15446330156838792,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.15372533406505196,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P08100"
+        ],
+        "constraint_count": 15,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.0307167366056474,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0307167366056474
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.0008453619857138496,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0009020214116608888,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.06931974756925369,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.06931974756925369
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.052209270679982156,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.052209270679982156
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.01576144183015374,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.004264593564321789,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.004264593564321789
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.15372533406505196,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.15372533406505196
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.023258525974135497,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.023258525974135497
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.0008878563288190616,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0008878563288190616
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.041047930222846224,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.041047930222846224
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.011789576818461264,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.011789576818461264
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03972205080968035,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03972205080968035
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.026794004970856374,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.026794004970856374
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.010003768187738443,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.010003768187738443
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.029572978050931096,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.02622629480030008
+        },
+        "coefficients": {
+          "positive_inside": 0.029572978050931096,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.15372533406505196,
+          "disulfide_loss": 0.02622629480030008
+        }
+      }
+    }
+  },
+  "12": {
+    "test_accessions": [
+      "P08581"
+    ],
+    "excluded_groups": [
+      "DG_P08581"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "654341eeac37acdd09d37545fe1197c6062c455a94b517bda2ccf7928d5cbb86",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.15877971392712492,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P08581"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.0031775104901614268,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0031775104901614268
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.0006779452091028638,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.009348800227287915,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.0036790029171667182,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0036790029171667182
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.0034665007183597996,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": -0.0041386811791057085,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.15877971392712492,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.15877971392712492
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.03184861672537921,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.03184861672537921
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.020891781219053232,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.043678118576111064,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.043678118576111064
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.012959335007625522,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.012959335007625522
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.039312684339825626,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.039312684339825626
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.03322224838471458,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.03322224838471458
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.022712595617506392,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.022712595617506392
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.15877971392712492,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.15791443213493886,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P08581"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.003239701530728653,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.003239701530728653
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.000685913237646243,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.009298273410978664,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.004813639374186968,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.004813639374186968
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.003551502118042449,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": -0.004097386872636416,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.15791443213493886,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.15791443213493886
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.0320860865980247,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.0320860865980247
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.021603497737778712,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.044395158480010924,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.044395158480010924
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.012541111309322655,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.012541111309322655
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.039682736869602435,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.039682736869602435
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.033174088782435135,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.033174088782435135
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.022740111411561275,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.022740111411561275
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.034674913641203405,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.056736659538398466
+        },
+        "coefficients": {
+          "positive_inside": 0.034674913641203405,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.15791443213493886,
+          "disulfide_loss": 0.056736659538398466
+        }
+      }
+    }
+  },
+  "13": {
+    "test_accessions": [
+      "P11712"
+    ],
+    "excluded_groups": [
+      "DG_P11712"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "e5c15899dc15111ce7dd54ff716d7009461a29ca72dbb6c455c77aa4f4e0d217",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.12842923360257047,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P11712"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.0076358010653155214,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0013531287874686126,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0013531287874686126
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0011608809228882272,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.006110850615762108,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.006110850615762108
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.03429607604344613,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.03429607604344613
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.022005052837346717,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.022005052837346717
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.0098333945868138,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0098333945868138
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.00975197162994627,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.00975197162994627
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.12842923360257047,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.12842923360257047
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.029161238433637535,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.029161238433637535
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.00835485593322359,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.045341535104133066,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.045341535104133066
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.006870664603678859,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.006870664603678859
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03763972885253376,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03763972885253376
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.024094048839338605,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.024094048839338605
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.010136378178550448,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.010136378178550448
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.12842923360257047,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.1276842025818011,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P11712"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.0075822528977070374,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0013462680994328743,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0013462680994328743
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0011173759677729836,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.007087803286452532,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.007087803286452532
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.03429339505504021,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.03429339505504021
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.022011902011717807,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.022011902011717807
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.0097602060832023,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0097602060832023
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.00978752714443718,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.00978752714443718
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.1276842025818011,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.1276842025818011
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.029365706415301757,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.029365706415301757
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.008967663101053597,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.045958925850545645,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.045958925850545645
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.006510562690440499,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.006510562690440499
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03795835408709623,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03795835408709623
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.02405258211951378,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.02405258211951378
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.010160070021273953,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.010160070021273953
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.029856038273877648,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07657589993828998
+        },
+        "coefficients": {
+          "positive_inside": 0.029856038273877648,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.1276842025818011,
+          "disulfide_loss": 0.07657589993828998
+        }
+      }
+    }
+  },
+  "15": {
+    "test_accessions": [
+      "P14151"
+    ],
+    "excluded_groups": [
+      "DG_P14151"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "93404b9157dafb21b61b514fbd5f221445fb8e6636f9a756c2b81eb02380f395",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.11587476474302298,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P14151"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.02386003953435485,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.02386003953435485
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.002515951448908105,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.002515951448908105
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0013240892799034204,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.0027628516389061886,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0027628516389061886
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.08215347622193248,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.08215347622193248
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.041502476214287376,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.041502476214287376
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.11587476474302298,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.11587476474302298
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.03228875376984279,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.03228875376984279
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.007184032834071874,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.007184032834071874
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.05905813124279599,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.05905813124279599
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.007976248603601133,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.007976248603601133
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.04896312030983692,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.04896312030983692
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.027189944504914083,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.027189944504914083
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.01764880104650752,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.01764880104650752
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.11587476474302298,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.11449924456289395,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P14151"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.02395890331733977,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.02395890331733977
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0025032848423109876,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0025032848423109876
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0012437678677361258,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.00456655923778973,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.00456655923778973
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.0821485264231292,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0821485264231292
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.04151512156367822,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.04151512156367822
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.11449924456289395,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.11449924456289395
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.03266625460823587,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.03266625460823587
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.006052632124061819,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.006052632124061819
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.060197994425725654,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.060197994425725654
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.007311407228203112,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.007311407228203112
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.0495513849965696,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.0495513849965696
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.027113386202866595,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.027113386202866595
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.01769254232286001,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.01769254232286001
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.05512197747419585,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08882124818884471
+        },
+        "coefficients": {
+          "positive_inside": 0.05512197747419585,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.11449924456289395,
+          "disulfide_loss": 0.08882124818884471
+        }
+      }
+    }
+  },
+  "16": {
+    "test_accessions": [
+      "P29323"
+    ],
+    "excluded_groups": [
+      "DG_P29323"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "b68cb6613d7e94249c9ed4cba6e90857a14af1a576b63821093abb725920e085",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.13584985234770763,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P29323"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.0012666239487029926,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.015236250719757169,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.015236250719757169
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.00823901215635485,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.01617896640912475,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.01617896640912475
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.06686336645383739,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.06686336645383739
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.04429506502486977,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.04429506502486977
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.019740344455311823,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.019740344455311823
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.019738940987995113,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.019738940987995113
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.13584985234770763,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.13584985234770763
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.01623795731041898,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.01623795731041898
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.0059166159555781445,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0059166159555781445
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.04516321755211565,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.04516321755211565
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.010050775164602488,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.010050775164602488
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03906545336633092,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03906545336633092
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.023864560895816508,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.023864560895816508
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.021953033055144903,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.021953033055144903
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.13584985234770763,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.13470253671950497,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P29323"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.0011841620808799233,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.015225685556181135,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.015225685556181135
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.008172016402464718,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.0176834313721273,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0176834313721273
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.06685923784736145,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.06685923784736145
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.04430561245789895,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.04430561245789895
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.019627637317410976,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.019627637317410976
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.01979369494629616,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.01979369494629616
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.13470253671950497,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.13470253671950497
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.01655282918057023,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.01655282918057023
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.004972919356207084,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.004972919356207084
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.04611397266474897,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.04611397266474897
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.009496233754531493,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.009496233754531493
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03955612248071995,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03955612248071995
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.023800703936335547,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.023800703936335547
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.021989517470773042,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.021989517470773042
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.04597701082629337,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08831040983190507
+        },
+        "coefficients": {
+          "positive_inside": 0.04597701082629337,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.13470253671950497,
+          "disulfide_loss": 0.08831040983190507
+        }
+      }
+    }
+  },
+  "18": {
+    "test_accessions": [
+      "P31645"
+    ],
+    "excluded_groups": [
+      "DG_P31645"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "6c66b2ffc93032cf71aaa01c1e686926d8a9f66236d0a988675603e6dc23073d",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.09575737665495818,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P31645"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.008275384751021492,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0012532990778032571,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0012532990778032571
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.0010629524982676275,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0010629524982676275
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.012475124344595245,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.012475124344595245
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.09575737665495818,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.09575737665495818
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.04838357343164042,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.04838357343164042
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.0027796204258415396,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0027796204258415396
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.031434625459845135,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.031434625459845135
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.00942502641074361,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.00942502641074361
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.027967749545477538,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.027967749545477538
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.005828177635652455,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.005828177635652455
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.02420368590971765,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.02420368590971765
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.04038268903171462,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.04038268903171462
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.017377547175012286,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.017377547175012286
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P08581",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.09575737665495818,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.095754879185421,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_P31645"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.008225502059592993,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.001246908017201968,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.001246908017201968
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.0011034794546238569,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0011034794546238569
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.013385202705606447,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.013385202705606447
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.095754879185421,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.095754879185421
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.048389953766709765,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.048389953766709765
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.0027114418175937655,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0027114418175937655
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.03146774713024284,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.03146774713024284
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.008854167084958064,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.008854167084958064
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.028542878694980355,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.028542878694980355
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.005492725398477669,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.005492725398477669
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.02450050062750996,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.02450050062750996
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.040344060789480524,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.040344060789480524
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.017399617265040215,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.017399617265040215
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P08581",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.027812334408559677,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08375804787392674
+        },
+        "coefficients": {
+          "positive_inside": 0.027812334408559677,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.095754879185421,
+          "disulfide_loss": 0.08375804787392674
+        }
+      }
+    }
+  },
+  "26": {
+    "test_accessions": [
+      "Q12809"
+    ],
+    "excluded_groups": [
+      "DG_Q12809"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q14524",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "b74dbb8130a462002710950565d5227971111397f597de1f807df8c1616acfae",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.1417891869910091,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q12809"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.001947459783691971,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.006891438864597002,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.006891438864597002
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.001052409817725558,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.018896160409983154,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.018896160409983154
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.07262064293265533,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.07262064293265533
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.0313609728251365,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.0313609728251365
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.009819052733910552,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.009819052733910552
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.015261065031218515,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.015261065031218515
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.1417891869910091,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.1417891869910091
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.01806843173564289,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.01806843173564289
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.009051935983812239,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.009051935983812239
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03903660901929188,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03903660901929188
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.027407863448134905,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.027407863448134905
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.018125034885763704,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.018125034885763704
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.1417891869910091,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.14139618256463954,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q14524",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q12809"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": -0.0019192130848198555,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.006887819846474507,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.006887819846474507
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0010294609210317607,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.019411503681916215,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.019411503681916215
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.07261922870924559,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.07261922870924559
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.03136458576979219,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.03136458576979219
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.009780445742957345,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.009780445742957345
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.015279820591976702,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.015279820591976702
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.14139618256463954,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.14139618256463954
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.01817628875045804,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.01817628875045804
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.00886198195250134,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.00886198195250134
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03920468407126324,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03920468407126324
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.02738598972209682,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.02738598972209682
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.0181375323507009,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.0181375323507009
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.015749082747421917,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.08825323342203203
+        },
+        "coefficients": {
+          "positive_inside": 0.015749082747421917,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.14139618256463954,
+          "disulfide_loss": 0.08825323342203203
+        }
+      }
+    }
+  },
+  "27": {
+    "test_accessions": [
+      "Q14524"
+    ],
+    "excluded_groups": [
+      "DG_Q14524"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q9BQB6",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "8f6b3f95d6c05b99769cf512021da82869c9f7b43817ad7e00f15c4e00b3f9d1",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.16133589748422142,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q14524"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.002749208512991111,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.002749208512991111
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.012737567024544294,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.012737567024544294
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.003979895599767455,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.003979895599767455
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.018668176189883895,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.018668176189883895
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.11328066450710572,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.11328066450710572
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.005925052935770059,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.005925052935770059
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.02265031099950977,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.02265031099950977
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.0074843755066452715,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.0074843755066452715
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.16133589748422142,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.16133589748422142
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.03156042709127459,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.03156042709127459
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.013233702243657358,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.013233702243657358
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.05370785438900777,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.05370785438900777
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.039219202974984935,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.039219202974984935
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.023596571871906932,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.023596571871906932
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.16133589748422142,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.1597769630426551,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q9BQB6",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q14524"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.0028612549653407038,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.0028612549653407038
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.012723211430517184,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.012723211430517184
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.004070927209213621,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.004070927209213621
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.020712393307913135,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.020712393307913135
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.11327505469349139,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.11327505469349139
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.005939384438117895,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.005939384438117895
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.022497168276823035,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.022497168276823035
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.007558773370066065,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.007558773370066065
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.1597769630426551,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.1597769630426551
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.031988264550290316,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.031988264550290316
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.011951438588403779,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.011951438588403779
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.05499970891808903,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.05499970891808903
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.039132436255329486,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.039132436255329486
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.02364614568638749,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.02364614568638749
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.06247203815192415,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.03937571021364152
+        },
+        "coefficients": {
+          "positive_inside": 0.06247203815192415,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.1597769630426551,
+          "disulfide_loss": 0.03937571021364152
+        }
+      }
+    }
+  },
+  "30": {
+    "test_accessions": [
+      "Q9BQB6"
+    ],
+    "excluded_groups": [
+      "DG_Q9BQB6"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BYF1"
+    ],
+    "outer_model_sha256": "a078c3400798fef488d86fecaec38264650725646117ad6b24a42d368261858d",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.11326358095220912,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q9BQB6"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.004444675359569002,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.004444675359569002
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.002251160902541048,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.004703599769547026,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.004703599769547026
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.02062820973066662,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.02062820973066662
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.04241128165174324,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.04241128165174324
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": -0.002027643416691982,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.00816236252479989,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.00816236252479989
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.014669250515651544,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.014669250515651544
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.11326358095220912,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.11326358095220912
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.024518770214741498,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.024518770214741498
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.016267879668116783,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.016267879668116783
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.07488103498760174,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.07488103498760174
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.005557782818859991,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.005557782818859991
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.06697159020374194,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.06697159020374194
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.03591836290968054,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.03591836290968054
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.009756264992163382,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.009756264992163382
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.11326358095220912,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.11246592716589104,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BYF1"
+        ],
+        "excluded_groups": [
+          "DG_Q9BQB6"
+        ],
+        "constraint_count": 16,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.004502005722268741,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.004502005722268741
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": 0.0022585061722491737,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": 0.004750177551147913,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.004750177551147913
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.021674166174231957,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.021674166174231957
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.04240841130071968,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.04240841130071968
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": -0.0020203104738775873,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": -0.008084004596883826,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.008084004596883826
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": 0.014707317374570865,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.014707317374570865
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.11246592716589104,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.11246592716589104
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.02473768010601939,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.02473768010601939
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": -0.01561178892279759,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.01561178892279759
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.07554203305719241,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.07554203305719241
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.005172246315616996,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.005172246315616996
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.067312720462322,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.067312720462322
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "A",
+            "baseline_delta": -0.03587396732727874,
+            "feature_delta": 1.0,
+            "weight": 3.6363636363636362,
+            "n_target": 4,
+            "n_reference": 40,
+            "n_strata": 4,
+            "minimum_beta": 0.03587396732727874
+          },
+          {
+            "accession": "Q9BYF1",
+            "group": "DG_Q9BYF1",
+            "contrast": "B",
+            "baseline_delta": 0.009781630228678983,
+            "feature_delta": -1.0,
+            "weight": 3.7040169133192387,
+            "n_target": 4,
+            "n_reference": 72,
+            "n_strata": 2,
+            "minimum_beta": 0.009781630228678983
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.031964819329298316,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.05429365235363306
+        },
+        "coefficients": {
+          "positive_inside": 0.031964819329298316,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.11246592716589104,
+          "disulfide_loss": 0.05429365235363306
+        }
+      }
+    }
+  },
+  "31": {
+    "test_accessions": [
+      "Q9BYF1"
+    ],
+    "excluded_groups": [
+      "DG_Q9BYF1"
+    ],
+    "calibration_accessions": [
+      "P02724",
+      "P04626",
+      "P08100",
+      "P08581",
+      "P11712",
+      "P14151",
+      "P29323",
+      "P31645",
+      "P51681",
+      "Q12809",
+      "Q14524",
+      "Q9BQB6"
+    ],
+    "outer_model_sha256": "4386d25c051319a35aa41789c0a49687dba4a26e9da15fbbc4c7daa311fd35ce",
+    "maximum_held_out_score_reproduction_error": 0.0,
+    "candidates": {
+      "constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.1427267295413704,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6"
+        ],
+        "excluded_groups": [
+          "DG_Q9BYF1"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.01614829662495458,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.01614829662495458
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0016883137806713144,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0016883137806713144
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.0019417944504351997,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.005394736372272557,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.005394736372272557
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.09142209609858876,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.09142209609858876
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.018296258135404905,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.018296258135404905
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.003033309059595848,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": -0.02585641380369806,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.1427267295413704,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.1427267295413704
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.014226894160561387,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.014226894160561387
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.00030034884320162547,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.04403804185146601,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.04403804185146601
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.001582698068234497,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.001582698068234497
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.033617034490789455,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.033617034490789455
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.0
+        },
+        "coefficients": {
+          "positive_inside": 0.0,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.1427267295413704,
+          "disulfide_loss": 0.0
+        }
+      },
+      "PI_DS_constraint_glyco": {
+        "version": 1,
+        "method": "minimum_nonnegative_affine_constraint_floor",
+        "rule": "glycosylation_loss",
+        "beta": 0.14228509035476744,
+        "margin": 0.0,
+        "calibration_groups": [
+          "DG_P02724",
+          "DG_P04626",
+          "DG_P08100",
+          "DG_P08581",
+          "DG_P11712",
+          "DG_P14151",
+          "DG_P29323",
+          "DG_P31645",
+          "DG_Q12809",
+          "DG_Q14524",
+          "DG_Q9BQB6"
+        ],
+        "excluded_groups": [
+          "DG_Q9BYF1"
+        ],
+        "constraint_count": 14,
+        "constraints": [
+          {
+            "accession": "P02724",
+            "group": "DG_P02724",
+            "contrast": "B",
+            "baseline_delta": 0.016180038886051656,
+            "feature_delta": -1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.016180038886051656
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "A",
+            "baseline_delta": -0.0016842469047974832,
+            "feature_delta": 1.0,
+            "weight": 4.588744588744588,
+            "n_target": 5,
+            "n_reference": 60,
+            "n_strata": 5,
+            "minimum_beta": 0.0016842469047974832
+          },
+          {
+            "accession": "P04626",
+            "group": "DG_P04626",
+            "contrast": "B",
+            "baseline_delta": -0.001916005600770265,
+            "feature_delta": -1.0,
+            "weight": 4.285714285714286,
+            "n_target": 5,
+            "n_reference": 30,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P08100",
+            "group": "DG_P08100",
+            "contrast": "B",
+            "baseline_delta": 0.0059738539805404825,
+            "feature_delta": -1.0,
+            "weight": 0.6666666666666666,
+            "n_target": 1,
+            "n_reference": 2,
+            "n_strata": 1,
+            "minimum_beta": 0.0059738539805404825
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "A",
+            "baseline_delta": -0.09142050686336783,
+            "feature_delta": 1.0,
+            "weight": 0.9090909090909091,
+            "n_target": 1,
+            "n_reference": 10,
+            "n_strata": 1,
+            "minimum_beta": 0.09142050686336783
+          },
+          {
+            "accession": "P08581",
+            "group": "DG_P08581",
+            "contrast": "B",
+            "baseline_delta": 0.01830031818621329,
+            "feature_delta": -1.0,
+            "weight": 0.9859154929577465,
+            "n_target": 1,
+            "n_reference": 70,
+            "n_strata": 1,
+            "minimum_beta": 0.01830031818621329
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "A",
+            "baseline_delta": 0.0030766937111105026,
+            "feature_delta": 1.0,
+            "weight": 1.8181818181818181,
+            "n_target": 2,
+            "n_reference": 20,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P14151",
+            "group": "DG_P14151",
+            "contrast": "B",
+            "baseline_delta": -0.025835337220225348,
+            "feature_delta": -1.0,
+            "weight": 1.9009661835748792,
+            "n_target": 2,
+            "n_reference": 39,
+            "n_strata": 2,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "A",
+            "baseline_delta": -0.14228509035476744,
+            "feature_delta": 1.0,
+            "weight": 0.8,
+            "n_target": 1,
+            "n_reference": 4,
+            "n_strata": 1,
+            "minimum_beta": 0.14228509035476744
+          },
+          {
+            "accession": "P31645",
+            "group": "DG_P31645",
+            "contrast": "B",
+            "baseline_delta": 0.014348098607881256,
+            "feature_delta": -1.0,
+            "weight": 1.5,
+            "n_target": 2,
+            "n_reference": 6,
+            "n_strata": 1,
+            "minimum_beta": 0.014348098607881256
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "A",
+            "baseline_delta": 0.0006636084278367621,
+            "feature_delta": 1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.0
+          },
+          {
+            "accession": "Q12809",
+            "group": "DG_Q12809",
+            "contrast": "B",
+            "baseline_delta": 0.044404018487956,
+            "feature_delta": -1.0,
+            "weight": 0.8888888888888888,
+            "n_target": 1,
+            "n_reference": 8,
+            "n_strata": 1,
+            "minimum_beta": 0.044404018487956
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "A",
+            "baseline_delta": -0.001369237002019338,
+            "feature_delta": 1.0,
+            "weight": 8.201704545454545,
+            "n_target": 9,
+            "n_reference": 94,
+            "n_strata": 7,
+            "minimum_beta": 0.001369237002019338
+          },
+          {
+            "accession": "Q14524",
+            "group": "DG_Q14524",
+            "contrast": "B",
+            "baseline_delta": 0.03380590902822553,
+            "feature_delta": -1.0,
+            "weight": 6.808695652173913,
+            "n_target": 9,
+            "n_reference": 34,
+            "n_strata": 2,
+            "minimum_beta": 0.03380590902822553
+          }
+        ],
+        "binding_constraints": [
+          {
+            "accession": "P31645",
+            "contrast": "A"
+          }
+        ],
+        "minimum_signed_calibration_slack": 0.0,
+        "experimental_labels_used": false,
+        "guarantee": "calibration protein-level matched contrasts only",
+        "other_coefficients": {
+          "positive_inside": 0.017698050270239057,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.0,
+          "disulfide_loss": 0.07593353754203684
+        },
+        "coefficients": {
+          "positive_inside": 0.017698050270239057,
+          "charge_burial": 0.0,
+          "glycosylation_loss": 0.14228509035476744,
+          "disulfide_loss": 0.07593353754203684
+        }
+      }
+    }
+  }
+}

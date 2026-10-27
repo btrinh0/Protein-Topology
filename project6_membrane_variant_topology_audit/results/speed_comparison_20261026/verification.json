@@ -1,0 +1,159 @@
+{
+  "feature_parity": true,
+  "saved_refinement_effects_reproduced": true,
+  "native_published_head_state_dicts_strict": true,
+  "lr_probability_formula_checked": true,
+  "synthetic_embedding_benchmarks": false,
+  "experimental_targets_read": false,
+  "model_hash_unchanged": true,
+  "asset_manifest_sha256": "97d8ee0a9423695461e1807bbfe1b6126d60e8c24550c8f4a2b91d6acc8eda1f",
+  "timing_tests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "path": "tests/test_speed_comparison.py",
+    "sha256": "2401aad5d835faf9f1f8d7a7a87d23582ff3b790a0f1b807ca819bf325f87a3b"
+  },
+  "timing_runner_snapshot_sha256": "6c1e5f4a42afa5008b5b9465262ff800636f558fc43a5d13fe6120b0a6e4c1ac",
+  "cached_input_scope_selected_by_user": true,
+  "thread_libraries_snapshot_after_timing": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 24,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 24,
+      "prefix": "vcomp",
+      "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 24,
+      "prefix": "libscipy_openblas",
+      "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 8,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+      "version": null
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+      "version": null
+    }
+  ],
+  "thread_limit_context_verified_after_run": {
+    "1": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+        "version": "0.3.34.106.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "vcomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+        "version": null
+      }
+    ],
+    "8": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 8,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-ed4f167a5330424524f45258e7ca2c8d.dll",
+        "version": "0.3.34.106.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 8,
+        "prefix": "vcomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 8,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 8,
+        "prefix": "libiomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\.venv_ml\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+        "version": null
+      }
+    ]
+  }
+}

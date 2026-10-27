@@ -1,0 +1,32 @@
+{
+  "charge_burial": "aggregate_direction_already_supported",
+  "glycosylation": "both_original_contrasts_opposite_in_both_head_sets; feature_wiring_correct_calibration_incomplete",
+  "disulfide": "pairing_signal_present_controls_inconclusive; magnitude_not_identified; uniform_magnitude_feature_invariant_to_pairing",
+  "no_new_fit": true,
+  "no_outcome_table_read": true,
+  "verification": {
+    "verified_utc": "2026-10-26T02:25:02.005753+00:00",
+    "known_answer_tests_passed": 5,
+    "source_hashes_unchanged": true,
+    "checks": {
+      "saved_full_fit": {
+        "glyco_probe_effect_exact": true,
+        "bond_loss_association_probe_exact": true,
+        "pairing_translation_invariant": true,
+        "charge_probe_expected_direction": true
+      },
+      "guarded_oof": {
+        "glyco_probe_effect_exact": true,
+        "bond_loss_association_probe_exact": true,
+        "pairing_translation_invariant": true,
+        "charge_probe_expected_direction": true
+      }
+    },
+    "existing_pairing_invariant": true,
+    "no_model_pca_or_correction_refit": true,
+    "no_experimental_outcome_table_read": true,
+    "results_sha256": "d254af8447a996955b5aa1d695190b92a049dd30c338d3c44a1f49217e6dbf6d",
+    "existing_refinement_results_sha256": "f705adcf29f0e3e55647117cd520b117f948e711722bce9061dbc1ac2da9ee0d"
+  },
+  "report": "docs\\STANDALONE_LABEL_FREE_RULE_AUDIT_20261025.md"
+}

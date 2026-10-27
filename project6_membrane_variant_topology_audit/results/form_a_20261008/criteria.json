@@ -1,0 +1,156 @@
+{
+  "gates": {
+    "s0_exact": 1e-09,
+    "s2_identity": 1e-09,
+    "coverage_min": 0.9,
+    "width_ratio": [
+      1.7,
+      2.5
+    ],
+    "bias_se_multiple": 4.0,
+    "slope": [
+      0.7,
+      1.1
+    ],
+    "sign_min": 0.95,
+    "null_within_min": 0.9
+  },
+  "S0_exact": {
+    "max_abs_error": 1.970645868709653e-15,
+    "passed": true
+  },
+  "S0n_calibration": {
+    "pooled_coverage": 0.9833333333333333,
+    "half_width_over_pooled_sd": 2.3695009130466973,
+    "pooled_sd": 0.002962166444960483,
+    "bias_within_4_se": true,
+    "passed": true
+  },
+  "S1": {
+    "slope_through_origin": 0.8192481143246297,
+    "sign_fraction": {
+      "P_neg05": 1.0,
+      "P_neg10": 1.0,
+      "P_pos10": 1.0,
+      "P_decay": 1.0
+    },
+    "null_within_margin": {
+      "N0": 1.0,
+      "S_main": 1.0
+    },
+    "recovery_ratio": {
+      "P_neg05": 0.7911868738485827,
+      "P_neg10": 0.9031213995613201,
+      "P_pos10": 0.850992119308566,
+      "P_decay": 0.75795142883194
+    },
+    "passed": true
+  },
+  "S2_identity": {
+    "max_abs_estimate": 3.621094011494426e-18,
+    "passed": true
+  },
+  "independent_arithmetic": {
+    "max_abs_difference": 1.915134717478395e-15,
+    "n_runs": 600,
+    "passed": true
+  },
+  "S3_reported": {
+    "N0": {
+      "mean_estimate": -5.2067377397531975e-05,
+      "oracle": 0.0,
+      "recovery_ratio": null
+    },
+    "S_main": {
+      "mean_estimate": 0.001683798939303275,
+      "oracle": 0.0,
+      "recovery_ratio": null
+    },
+    "P_neg05": {
+      "mean_estimate": -0.0017148191942241997,
+      "oracle": -0.04311665464977175,
+      "recovery_ratio": 0.0397716197639484
+    },
+    "P_neg10": {
+      "mean_estimate": -0.004219573114397631,
+      "oracle": -0.0862333092995435,
+      "recovery_ratio": 0.04893205593838863
+    },
+    "P_pos10": {
+      "mean_estimate": 0.004396481254039781,
+      "oracle": 0.0862333092995435,
+      "recovery_ratio": 0.05098356180171617
+    },
+    "P_decay": {
+      "mean_estimate": -0.00404741777628642,
+      "oracle": -0.11478243378496773,
+      "recovery_ratio": 0.03526164799631982
+    }
+  },
+  "form_b_may_start": true,
+  "amendment": {
+    "applied": "FORM_AB_AMENDMENT_01",
+    "document": "docs/FORM_AB_AMENDMENT_01.md",
+    "date": "2026-10-10",
+    "post_hoc": true,
+    "decided_by": "project owner",
+    "gate_changed": "G3 width ratio upper bound",
+    "frozen_window": [
+      1.7,
+      2.3
+    ],
+    "amended_window": [
+      1.7,
+      2.5
+    ],
+    "confirmatory_g3_ratio": 2.3695009130466973,
+    "confirmatory_g3_verdict": "fail",
+    "confirmatory_verdict_file": "criteria_confirmatory_g3_fail.json",
+    "G3_status": "exploratory",
+    "other_gates_status": "confirmatory; G1, G2, G4, G5 passed under the frozen thresholds",
+    "form_b_precondition": "met by amendment, not by the frozen gate; no Form B result follows a clean Form A"
+  },
+  "naive_comparators": [
+    {
+      "scenario": "N0",
+      "student": "S1",
+      "n": 20,
+      "matched": -0.0007253044629941913,
+      "charged_arm_only": 0.0083773877902411,
+      "pooled_paired": 0.04215369703956537,
+      "margin": 0.01724666185990831,
+      "sd_z0": 0.8623330929954156
+    },
+    {
+      "scenario": "N0",
+      "student": "S2",
+      "n": 20,
+      "matched": 6.461748089731456e-20,
+      "charged_arm_only": 0.009024250787627336,
+      "pooled_paired": 0.04299546302197091,
+      "margin": 0.01724666185990831,
+      "sd_z0": 0.8623330929954156
+    },
+    {
+      "scenario": "S_main",
+      "student": "S1",
+      "n": 20,
+      "matched": 0.0003867163037765878,
+      "charged_arm_only": 0.6095168470731757,
+      "pooled_paired": 0.0432627303371661,
+      "margin": 0.01724666185990831,
+      "sd_z0": 0.8623330929954156
+    },
+    {
+      "scenario": "S_main",
+      "student": "S2",
+      "n": 20,
+      "matched": -4.716844653271851e-19,
+      "charged_arm_only": 0.01046003586028978,
+      "pooled_paired": 0.042998417258868445,
+      "margin": 0.01724666185990831,
+      "sd_z0": 0.8623330929954156
+    }
+  ],
+  "stage": "full"
+}

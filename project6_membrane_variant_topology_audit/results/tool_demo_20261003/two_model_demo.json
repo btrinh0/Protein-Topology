@@ -1,0 +1,87 @@
+{
+  "scope": "Reusable tool and two-model demonstration using earlier settings",
+  "robustness_analyses_run": false,
+  "implementation_sha256": "25f106de77d45ae72054c23fbce043b1f98b9fc5c9ee6f6f6d77734b523fd6c8",
+  "results": {
+    "alphamissense": {
+      "tool": "membrane_rule_audit",
+      "version": "0.1.0",
+      "model": "alphamissense",
+      "scope": "Software demonstration of the existing raw-score comparison",
+      "scores": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\processed\\gate0\\am_full_flank_scores.npz",
+      "input_sha256": "f7641bdb32d020c804c849a1db029290d273d3aa9ec89848282baf6ef698c1a4",
+      "implementation_sha256": "c04805510465606b5590275f646d4a5f387e3b5521f4e848157ff26eccf71117",
+      "input_score_direction": "higher-is-damaging",
+      "output_score_direction": "higher-is-damaging",
+      "rule": "positive_charge_gain",
+      "comparator": "ACFGILMNPQSTVWY",
+      "scale": "raw",
+      "window_residues": 10,
+      "draws": 1999,
+      "seed": 20261003,
+      "robustness_analyses_run": false,
+      "clinical_labels_used": false,
+      "sign_convention": "Cytosolic minus outer within-site charge penalty",
+      "input_quality_control": {
+        "n_rows_within_window": 5504053,
+        "n_duplicate_rows": 0,
+        "n_archive_sites_within_window": 289687
+      },
+      "result": {
+        "n_sites": 212985,
+        "n_strata": 29819,
+        "n_contributing_sites": 173413,
+        "n_cytosolic": 109730,
+        "n_outer": 103255,
+        "penalty_sd": 0.15656056894897286,
+        "n_proteins": 4517,
+        "estimate_raw": 0.012088577992427593,
+        "ci95_raw": [
+          0.01047142630813246,
+          0.013767610095734116
+        ],
+        "interval_status": "Percentile protein-resampling stability interval"
+      }
+    },
+    "esm1b": {
+      "tool": "membrane_rule_audit",
+      "version": "0.1.0",
+      "model": "esm1b",
+      "scope": "Software demonstration of the existing raw-score comparison",
+      "scores": "C:\\Users\\test2\\Downloads\\AP SEMINAR\\project6_membrane_variant_topology_audit\\data\\processed\\gate0\\esm1b_flank_scores.npz",
+      "input_sha256": "f2203763815a08242c3a7cfe2022ca41ee6b1e4987063d1cc33dab9346fef640",
+      "implementation_sha256": "c04805510465606b5590275f646d4a5f387e3b5521f4e848157ff26eccf71117",
+      "input_score_direction": "higher-is-damaging",
+      "output_score_direction": "higher-is-damaging",
+      "rule": "positive_charge_gain",
+      "comparator": "ACFGILMNPQSTVWY",
+      "scale": "raw",
+      "window_residues": 10,
+      "draws": 1999,
+      "seed": 20261003,
+      "robustness_analyses_run": false,
+      "clinical_labels_used": false,
+      "sign_convention": "Cytosolic minus outer within-site charge penalty",
+      "input_quality_control": {
+        "n_rows_within_window": 5513667,
+        "n_duplicate_rows": 0,
+        "n_archive_sites_within_window": 290193
+      },
+      "result": {
+        "n_sites": 213349,
+        "n_strata": 29858,
+        "n_contributing_sites": 173622,
+        "n_cytosolic": 109895,
+        "n_outer": 103454,
+        "penalty_sd": 2.0195231488036884,
+        "n_proteins": 4534,
+        "estimate_raw": -0.14670440116744723,
+        "ci95_raw": [
+          -0.17183216448575947,
+          -0.12086682482830208
+        ],
+        "interval_status": "Percentile protein-resampling stability interval"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "sequence",
+  "seed": 20260929,
+  "counts": {
+    "train": {
+      "clusters": 2822,
+      "proteins": 2933
+    },
+    "validation": {
+      "clusters": 480,
+      "proteins": 519
+    },
+    "test": {
+      "clusters": 1355,
+      "proteins": 1411
+    }
+  },
+  "assignment_sha256": "2a4a3c56b20719e53a6c2cb0549e4118462068f81bea6bb0e2c86c1388e1d2a9"
+}

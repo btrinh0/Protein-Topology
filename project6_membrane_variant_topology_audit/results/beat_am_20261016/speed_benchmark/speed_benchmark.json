@@ -1,0 +1,56 @@
+{
+  "question": "is the DMS-trained, predictor-free scorer faster than AlphaMissense and ESM1b?",
+  "honest_answer": "not in any way a user would feel, and the framing is misleading. See accounting below.",
+  "accounting": {
+    "the_scorer_is_not_small": "it is a gradient-boosted tree head on ProtT5-XL, a 3B-parameter transformer. The trees are ~MB; the frontend is not.",
+    "vs_esm1b_end_to_end": "ProtT5-XL at 3B parameters is LARGER than ESM1b at 650M, so on a novel sequence this scorer needs more compute, not less",
+    "vs_alphamissense_in_practice": "AlphaMissense and ESM1b ship as precomputed proteome-wide score files. For any human protein a user's cost is a lookup, not a forward pass, so there is no inference time to beat",
+    "where_speed_could_matter": "sequences outside those released files -- engineered proteins, other organisms -- and there this scorer is the heavier option, not the lighter one"
+  },
+  "measured_here": {
+    "tree_inference_batch_1": {
+      "rows": 1,
+      "seconds": 0.0043140000000221335,
+      "variants_per_second": 231.80343068958493
+    },
+    "tree_inference_batch_1000": {
+      "rows": 1000,
+      "seconds": 0.00609800000006544,
+      "variants_per_second": 163988.192848355
+    },
+    "tree_inference_batch_100000": {
+      "rows": 100000,
+      "seconds": 0.721060800000032,
+      "variants_per_second": 138684.5603033691
+    },
+    "pca_1024_to_64": {
+      "rows": 100000,
+      "seconds": 0.08690520000004653,
+      "rows_per_second": 1150679.1308223957
+    },
+    "tabular_features": {
+      "rows": 127811,
+      "seconds": 0.012521099999958096,
+      "rows_per_second": 10207649.487698983
+    },
+    "artifact_sizes_mb": {
+      "predictor_free_model": 2.1,
+      "am_containing_model": 2.1,
+      "alphamissense_released_scores": 1151.4,
+      "esm1b_released_scores": 1273.5,
+      "prot_t5_site_embeddings": 1418.8
+    }
+  },
+  "not_measured_here": {
+    "prot_t5_forward_pass": "no GPU in this session; the project's own prior measurement is cited instead",
+    "prior_measurement": {
+      "hardware": "2x NVIDIA L40",
+      "proteins": 39,
+      "seconds": 4.7,
+      "source": "beat_am run log, route B embedding stage"
+    },
+    "alphamissense_inference": "weights are not runnable without AlphaFold-scale infrastructure; only released predictions were used anywhere in this project"
+  },
+  "fit_seconds": 6.603946700000051,
+  "backend": "sklearn HistGradientBoostingRegressor"
+}

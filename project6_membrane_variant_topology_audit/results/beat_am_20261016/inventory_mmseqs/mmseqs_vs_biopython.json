@@ -1,0 +1,336 @@
+{
+  "sequences": 89,
+  "mmseqs_version": "6f45232ac8daca14e354ae320a4359056ec524c2",
+  "stage1_clustering": {
+    "command": "easy-cluster --min-seq-id 0.3 -c 0.8 --cov-mode 0",
+    "n_clusters": 85
+  },
+  "stage2_overlap_audit": {
+    "command": "easy-search --min-seq-id 0.3 -c 0.5 --cov-mode 0 -e 1e-3",
+    "criterion": "identity >= 0.30 and min(qcov, tcov) >= 0.50",
+    "qualifying_pairs": 4
+  },
+  "combined_groups": 85,
+  "biopython_groups": 68,
+  "pair_level_agreement": {
+    "co_grouped_in_both": 4,
+    "co_grouped_biopython_only": 33,
+    "co_grouped_mmseqs_only": 0,
+    "note": "counted over all 89*88/2 accession pairs"
+  },
+  "split_changes": [
+    {
+      "gene": "AVPR2",
+      "accession": "P30518",
+      "role": "development_exposed",
+      "biopython_fitting_eligible": false,
+      "mmseqs_fitting_eligible": true,
+      "local_group": "G029",
+      "mmseqs_group": "M032"
+    },
+    {
+      "gene": "MC4R",
+      "accession": "P32245",
+      "role": "pending_confirmation_candidate",
+      "biopython_fitting_eligible": false,
+      "mmseqs_fitting_eligible": true,
+      "local_group": "G029",
+      "mmseqs_group": "M036"
+    },
+    {
+      "gene": "YAP1",
+      "accession": "P46937",
+      "role": "allhuman_pool",
+      "biopython_fitting_eligible": false,
+      "mmseqs_fitting_eligible": true,
+      "local_group": "G026",
+      "mmseqs_group": "M046"
+    },
+    {
+      "gene": "P2RY8",
+      "accession": "Q86VZ1",
+      "role": "pending_confirmation_candidate",
+      "biopython_fitting_eligible": false,
+      "mmseqs_fitting_eligible": true,
+      "local_group": "G029",
+      "mmseqs_group": "M068"
+    },
+    {
+      "gene": "SLC13A5",
+      "accession": "Q86YT5",
+      "role": "pending_confirmation_candidate",
+      "biopython_fitting_eligible": false,
+      "mmseqs_fitting_eligible": true,
+      "local_group": "G033",
+      "mmseqs_group": "M069"
+    }
+  ],
+  "split_unchanged": false,
+  "disagreements": [
+    {
+      "a": "CBX4",
+      "b": "RD23A",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M001",
+      "mmseqs_group_b": "M052"
+    },
+    {
+      "a": "CBX4",
+      "b": "FKBP3",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M001",
+      "mmseqs_group_b": "M058"
+    },
+    {
+      "a": "CBX4",
+      "b": "RBP1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M001",
+      "mmseqs_group_b": "M064"
+    },
+    {
+      "a": "CBX4",
+      "b": "SRBS1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M001",
+      "mmseqs_group_b": "M073"
+    },
+    {
+      "a": "CBX4",
+      "b": "TNKS2",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M001",
+      "mmseqs_group_b": "M077"
+    },
+    {
+      "a": "PPM1D",
+      "b": "KCNQ1",
+      "grouped_by": "biopython_only",
+      "local_group": "G003",
+      "mmseqs_group_a": "M004",
+      "mmseqs_group_b": "M051"
+    },
+    {
+      "a": "PPM1D",
+      "b": "KCNQ4",
+      "grouped_by": "biopython_only",
+      "local_group": "G003",
+      "mmseqs_group_a": "M004",
+      "mmseqs_group_b": "M051"
+    },
+    {
+      "a": "PPM1D",
+      "b": "AMFR",
+      "grouped_by": "biopython_only",
+      "local_group": "G003",
+      "mmseqs_group_a": "M004",
+      "mmseqs_group_b": "M082"
+    },
+    {
+      "a": "SOX30",
+      "b": "UBR5",
+      "grouped_by": "biopython_only",
+      "local_group": "G006",
+      "mmseqs_group_a": "M007",
+      "mmseqs_group_b": "M008"
+    },
+    {
+      "a": "ADRB2",
+      "b": "AVPR2",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M020",
+      "mmseqs_group_b": "M032"
+    },
+    {
+      "a": "ADRB2",
+      "b": "MC4R",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M020",
+      "mmseqs_group_b": "M036"
+    },
+    {
+      "a": "ADRB2",
+      "b": "P2RY8",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M020",
+      "mmseqs_group_b": "M068"
+    },
+    {
+      "a": "OPSD",
+      "b": "CCR5",
+      "grouped_by": "biopython_only",
+      "local_group": "G018",
+      "mmseqs_group_a": "M021",
+      "mmseqs_group_b": "M050"
+    },
+    {
+      "a": "CD19",
+      "b": "YAP1",
+      "grouped_by": "biopython_only",
+      "local_group": "G026",
+      "mmseqs_group_a": "M029",
+      "mmseqs_group_b": "M046"
+    },
+    {
+      "a": "AVPR2",
+      "b": "MC4R",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M032",
+      "mmseqs_group_b": "M036"
+    },
+    {
+      "a": "AVPR2",
+      "b": "P2RY8",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M032",
+      "mmseqs_group_b": "M068"
+    },
+    {
+      "a": "GDIA",
+      "b": "PTEN",
+      "grouped_by": "biopython_only",
+      "local_group": "G030",
+      "mmseqs_group_a": "M033",
+      "mmseqs_group_b": "M053"
+    },
+    {
+      "a": "MC4R",
+      "b": "P2RY8",
+      "grouped_by": "biopython_only",
+      "local_group": "G029",
+      "mmseqs_group_a": "M036",
+      "mmseqs_group_b": "M068"
+    },
+    {
+      "a": "CBS",
+      "b": "SLC13A5",
+      "grouped_by": "biopython_only",
+      "local_group": "G033",
+      "mmseqs_group_a": "M037",
+      "mmseqs_group_b": "M069"
+    },
+    {
+      "a": "MSH2",
+      "b": "SHOC2",
+      "grouped_by": "biopython_only",
+      "local_group": "G041",
+      "mmseqs_group_a": "M045",
+      "mmseqs_group_b": "M084"
+    },
+    {
+      "a": "CBPA2",
+      "b": "SUMO1",
+      "grouped_by": "biopython_only",
+      "local_group": "G042",
+      "mmseqs_group_a": "M047",
+      "mmseqs_group_b": "M055"
+    },
+    {
+      "a": "KCNQ1",
+      "b": "AMFR",
+      "grouped_by": "biopython_only",
+      "local_group": "G003",
+      "mmseqs_group_a": "M051",
+      "mmseqs_group_b": "M082"
+    },
+    {
+      "a": "RD23A",
+      "b": "FKBP3",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M052",
+      "mmseqs_group_b": "M058"
+    },
+    {
+      "a": "RD23A",
+      "b": "RBP1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M052",
+      "mmseqs_group_b": "M064"
+    },
+    {
+      "a": "RD23A",
+      "b": "SRBS1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M052",
+      "mmseqs_group_b": "M073"
+    },
+    {
+      "a": "RD23A",
+      "b": "TNKS2",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M052",
+      "mmseqs_group_b": "M077"
+    },
+    {
+      "a": "KCNQ4",
+      "b": "AMFR",
+      "grouped_by": "biopython_only",
+      "local_group": "G003",
+      "mmseqs_group_a": "M051",
+      "mmseqs_group_b": "M082"
+    },
+    {
+      "a": "FKBP3",
+      "b": "RBP1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M058",
+      "mmseqs_group_b": "M064"
+    },
+    {
+      "a": "FKBP3",
+      "b": "SRBS1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M058",
+      "mmseqs_group_b": "M073"
+    },
+    {
+      "a": "FKBP3",
+      "b": "TNKS2",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M058",
+      "mmseqs_group_b": "M077"
+    },
+    {
+      "a": "RBP1",
+      "b": "SRBS1",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M064",
+      "mmseqs_group_b": "M073"
+    },
+    {
+      "a": "RBP1",
+      "b": "TNKS2",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M064",
+      "mmseqs_group_b": "M077"
+    },
+    {
+      "a": "SRBS1",
+      "b": "TNKS2",
+      "grouped_by": "biopython_only",
+      "local_group": "G059",
+      "mmseqs_group_a": "M073",
+      "mmseqs_group_b": "M077"
+    }
+  ],
+  "outcome_blind": "sequences and metadata only; no assay score read"
+}

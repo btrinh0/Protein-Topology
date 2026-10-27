@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-04",
+  "main_figure_models": [
+    {
+      "model": "alphamissense",
+      "estimate_raw": 0.012088577992427593,
+      "normalizing_penalty_sd": 0.15656056894897286,
+      "estimate_sd": 0.07721342655804715,
+      "ci95_sd": [
+        0.06688418660221762,
+        0.08793791558218811
+      ],
+      "contributing_sites": 173413,
+      "contributing_proteins": 4517
+    },
+    {
+      "model": "esm1b",
+      "estimate_raw": -0.14670440116744723,
+      "normalizing_penalty_sd": 2.0195231488036884,
+      "estimate_sd": -0.07264308965923515,
+      "ci95_sd": [
+        -0.08508551367066441,
+        -0.059849190092176145
+      ],
+      "contributing_sites": 173622,
+      "contributing_proteins": 4534
+    }
+  ],
+  "main_figure_scenarios": [
+    "null",
+    "shared_position_confound",
+    "reference_composition_confound",
+    "true_outer_preference",
+    "opposite_preference",
+    "distance_decay",
+    "uneven_clustered_null"
+  ],
+  "input_hashes": {
+    "results/method_completion_20261004/benchmark_results.json": "01399a53aaccebfb8663ae49e9373882f7b44d055baf36f9322412621447dd54",
+    "results/method_completion_20261004/label_controls_and_counts.json": "e799f5e934ead7195e61d5f35ba54b245d5850083f3cb2f19e3fefbb6b357020",
+    "results/tool_demo_20261003/two_model_demo.json": "a0d7cc28fceddff8f853ac956c617233d82e8b6ec2a098a15e277d46c39741b9"
+  },
+  "figures": [
+    {
+      "path": "docs/figures/method_completion_20261004/method_plus_discovery.png",
+      "sha256": "40a3368b2de1757f9af2dab27a665d781835c0c5e6bd6e665bf1bb6ebb0b08fe"
+    },
+    {
+      "path": "docs/figures/method_completion_20261004/method_plus_discovery.svg",
+      "sha256": "93f7c5c50bf0816fff995b56b248d532547ea14ef39b928265a283038ff9ca8b"
+    },
+    {
+      "path": "docs/figures/method_completion_20261004/method_plus_discovery.pdf",
+      "sha256": "21dc0d35676dc28d0bdde3b9d544f93c7f233a7ac632c241d7bd3025b2d2f6f3"
+    },
+    {
+      "path": "docs/figures/method_completion_20261004/shuffled_label_controls.png",
+      "sha256": "b519a4ac107a86aedeb95cc5307efb7d226956032eba4ddbb273f8f5117adf04"
+    },
+    {
+      "path": "docs/figures/method_completion_20261004/shuffled_label_controls.svg",
+      "sha256": "72fcf0ce001d5d81bf2f8127cdbefda39b25252d324e4e0df3b56722f6997d0e"
+    },
+    {
+      "path": "docs/figures/method_completion_20261004/shuffled_label_controls.pdf",
+      "sha256": "e7429386227385fdbcf0b157ca03ea790b7a54812b07918bdaef2a7857845985"
+    }
+  ],
+  "script_sha256": "d76d27a39f79e51f44f09af20b5af999a7956f99c4603fadd0e6d11aa7d28563"
+}

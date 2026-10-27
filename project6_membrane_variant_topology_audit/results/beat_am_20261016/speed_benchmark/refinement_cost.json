@@ -1,0 +1,69 @@
+{
+  "question": "what does it cost to audit a scorer for a named rule and enforce that rule across a whole scored panel?",
+  "panel": {
+    "sites": 726444,
+    "alternatives": 20,
+    "scored_cells": 14528880,
+    "scope": "membrane-protein positions within 60 residues of a boundary -- not the whole human proteome"
+  },
+  "headline": {
+    "enforce_full_panel_seconds": 0.05446400000005269,
+    "audit_point_estimate_seconds": 0.07051840000008269,
+    "audit_paper_depth_1999_draws_seconds": 0.4079872999998315,
+    "audit_and_enforce_200_draws_seconds": 0.17548960000021907
+  },
+  "measured": {
+    "load_panel": {
+      "seconds": 1.4030901000000995,
+      "sites": 726444,
+      "alternatives": 20,
+      "cells": 14528880,
+      "note": "paid once; I/O bound"
+    },
+    "enforce_full_panel": {
+      "seconds": 0.05446400000005269,
+      "cells": 14528880,
+      "cells_per_second": 266761163.3369922,
+      "note": "one exponential shift on the rows the rule touches"
+    },
+    "fidelity_full_panel": {
+      "seconds": 3.4264545000000908,
+      "cells": 14528880,
+      "cells_per_second": 4240208.063466074,
+      "spearman": 0.9999677178681381,
+      "fraction_changed": 0.07776076628792193
+    },
+    "window_panel": {
+      "seconds": 0.016498700000056488,
+      "sites": 289687,
+      "note": "restrict to within 10 residues of a boundary, the rule's scope"
+    },
+    "audit_by_bootstrap_draws": {
+      "0": {
+        "seconds": 0.07051840000008269,
+        "sites": 289687
+      },
+      "50": {
+        "seconds": 0.07793700000001991,
+        "sites": 289687
+      },
+      "200": {
+        "seconds": 0.10452690000010989,
+        "sites": 289687
+      },
+      "1999": {
+        "seconds": 0.4079872999998315,
+        "sites": 289687
+      }
+    }
+  },
+  "interpretation": {
+    "enforcement_is_free_computationally": "the correction is a single decaying exponential applied to the rows the rule touches; it is memory-bandwidth bound, not compute bound",
+    "the_audit_is_the_cost_and_it_is_the_bootstrap": "the point estimate is cheap; the whole-protein resampling is what takes the time, and it scales linearly in draws",
+    "what_this_does_not_claim": "nothing here compares against AlphaMissense or ESM1b inference. Both ship as precomputed files, so there is no forward pass to race. This measures the refinement layer only."
+  },
+  "accuracy_cost_for_reference": {
+    "development_proteins": "+0.00005 Spearman",
+    "source": "rule/accuracy_cost_beta0.017660.json"
+  }
+}

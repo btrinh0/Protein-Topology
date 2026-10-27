@@ -1,0 +1,8 @@
+{
+  "reason": "large sequential transfers were slow; four bounded downloads use the existing thread pool",
+  "change": "<=16 MiB coalesced ranges; at most four concurrent requests; explicit Retry-After backoff",
+  "analysis_protocol_unchanged": true,
+  "source_crc_checks_unchanged": true,
+  "resume_script_sha256": "67751bb591fcfc6646cf7324f13aab2906e149564272c2c76746bf173e661886",
+  "backoff_script_sha256": "0ce75f026c845cf685663cbe749e6ee9abb2011269fde0342effae2553434f90"
+}

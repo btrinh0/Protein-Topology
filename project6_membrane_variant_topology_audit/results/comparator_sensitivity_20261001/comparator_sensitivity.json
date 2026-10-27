@@ -1,0 +1,143 @@
+{
+  "analysis": "Comparator sensitivity of the K/R gain side difference",
+  "question": "Does the sign depend on which uncharged residues form the comparator arm?",
+  "clinical_labels_used": false,
+  "as_of_utc": "2026-10-02T06:22:49.808764+00:00",
+  "window_residues": 10,
+  "results": {
+    "alphamissense": {
+      "all_uncharged": {
+        "estimate_raw": 0.012088577992427595,
+        "estimate_standardised": 0.07721342655804717,
+        "ci95_raw": [
+          0.010555063674609276,
+          0.013637641753692043
+        ],
+        "n_strata": 29819,
+        "n_proteins": 4517,
+        "n_sites": 212985,
+        "penalty_sd": 0.15656056894897286,
+        "comparator": "ACFGILMNPQSTVWY"
+      },
+      "polar_neutral_QNST": {
+        "estimate_raw": -0.001209631901103838,
+        "estimate_standardised": -0.008585797018355214,
+        "ci95_raw": [
+          -0.0025573792538543193,
+          0.0003801813522728954
+        ],
+        "n_strata": 29819,
+        "n_proteins": 4517,
+        "n_sites": 212985,
+        "penalty_sd": 0.1408875493466497,
+        "comparator": "NQST"
+      },
+      "hydrophobic_AVLIMF": {
+        "estimate_raw": 0.009603864024959932,
+        "estimate_standardised": 0.04821048360813306,
+        "ci95_raw": [
+          0.007473282605417218,
+          0.011701280596509113
+        ],
+        "n_strata": 29819,
+        "n_proteins": 4517,
+        "n_sites": 212985,
+        "penalty_sd": 0.19920696301291135,
+        "comparator": "AFILMV"
+      },
+      "small_AGS": {
+        "estimate_raw": 0.01118026653345316,
+        "estimate_standardised": 0.05168860524893527,
+        "ci95_raw": [
+          0.009221968511757172,
+          0.01360302036970723
+        ],
+        "n_strata": 29819,
+        "n_proteins": 4517,
+        "n_sites": 212985,
+        "penalty_sd": 0.21630041049876195,
+        "comparator": "AGS"
+      },
+      "aromatic_FWY": {
+        "estimate_raw": 0.010612536162003963,
+        "estimate_standardised": 0.04707883228384599,
+        "ci95_raw": [
+          0.009025672693349925,
+          0.012204287535098744
+        ],
+        "n_strata": 29819,
+        "n_proteins": 4517,
+        "n_sites": 212985,
+        "penalty_sd": 0.22542054777440623,
+        "comparator": "FWY"
+      }
+    },
+    "esm1b": {
+      "all_uncharged": {
+        "estimate_raw": -0.14670440116744726,
+        "estimate_standardised": -0.07264308965923516,
+        "ci95_raw": [
+          -0.17003501230294527,
+          -0.12445453362001511
+        ],
+        "n_strata": 29858,
+        "n_proteins": 4534,
+        "n_sites": 213349,
+        "penalty_sd": 2.0195231488036884,
+        "comparator": "ACFGILMNPQSTVWY"
+      },
+      "polar_neutral_QNST": {
+        "estimate_raw": -0.25416083669328504,
+        "estimate_standardised": -0.1567672851239858,
+        "ci95_raw": [
+          -0.273543553400039,
+          -0.23480266719717793
+        ],
+        "n_strata": 29858,
+        "n_proteins": 4534,
+        "n_sites": 213349,
+        "penalty_sd": 1.6212619647796513,
+        "comparator": "NQST"
+      },
+      "hydrophobic_AVLIMF": {
+        "estimate_raw": -0.09508175259427151,
+        "estimate_standardised": -0.03218924640719973,
+        "ci95_raw": [
+          -0.12560676241553967,
+          -0.06467639303229708
+        ],
+        "n_strata": 29858,
+        "n_proteins": 4534,
+        "n_sites": 213349,
+        "penalty_sd": 2.953835929908713,
+        "comparator": "AFILMV"
+      },
+      "small_AGS": {
+        "estimate_raw": -0.08376836319256466,
+        "estimate_standardised": -0.037178534744245685,
+        "ci95_raw": [
+          -0.11193156668463877,
+          -0.05595997839138132
+        ],
+        "n_strata": 29858,
+        "n_proteins": 4534,
+        "n_sites": 213349,
+        "penalty_sd": 2.2531378325911544,
+        "comparator": "AGS"
+      },
+      "aromatic_FWY": {
+        "estimate_raw": -0.36350108697858535,
+        "estimate_standardised": -0.1328701548823813,
+        "ci95_raw": [
+          -0.38788413517483433,
+          -0.3369168661378982
+        ],
+        "n_strata": 29858,
+        "n_proteins": 4534,
+        "n_sites": 213349,
+        "penalty_sd": 2.7357617464987687,
+        "comparator": "FWY"
+      }
+    }
+  }
+}

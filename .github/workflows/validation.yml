@@ -1,0 +1,73 @@
+name: Validate package and research helpers
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: project6_membrane_variant_topology_audit
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install ./tools
+      - name: Check installed interfaces and synthetic example
+        run: |
+          membrane-rule-audit --help
+          membrane-rule-panel --help
+          disulfide-rule-audit --help
+          proline-rule-audit --help
+          multi-rule-refine --help
+          python examples/generate_toy_example.py
+          membrane-rule-panel --scores examples/toy/toy_mapped_scores.npz --model SyntheticExample --score-direction higher-is-damaging --out results/toy_example
+      - name: Check maintained module introductions
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          import re
+          import subprocess
+          paths = subprocess.check_output(['git', 'ls-files', '*.py'], text=True).splitlines()
+          for filename in paths:
+              if filename.startswith('provenance/'):
+                  continue
+              text = Path(filename).read_text(encoding='utf-8-sig')
+              doc = ast.get_docstring(ast.parse(text)) or ''
+              sentences = re.split(r'(?<=[.!?])\s+', doc.strip()) if doc else []
+              assert 1 <= len(sentences) <= 2, filename
+          PY
+  analysis:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+    defaults:
+      run:
+        working-directory: project6_membrane_variant_topology_audit
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-analysis.txt
+      - name: Restore the original validated release
+        run: |
+          release=dist/membrane-rule-audit-v0.1.0-validated-20261004
+          mkdir -p "$release/wheel"
+          cp provenance/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl "$release/wheel/"
+          cp provenance/validated_release/RELEASE_MANIFEST.json "$release/"
+          python -m pip install --no-deps --force-reinstall provenance/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - run: python scripts/paper_support/recheck_final_paper.py --out results/ci_saved_checks.json

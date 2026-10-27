@@ -1,0 +1,45 @@
+{
+  "regenerated": [
+    "overview_arch_f4p",
+    "accuracy_f4p",
+    "refinement_f4p",
+    "forest_f4p"
+  ],
+  "matplotlib_version": "3.11.2",
+  "original_paper_caption_version": "3.10.8",
+  "font_warning": "Helvetica was unavailable and Matplotlib used its configured fallback",
+  "outputs": [
+    {
+      "file": "accuracy_f4p.pdf",
+      "bytes": 49422
+    },
+    {
+      "file": "accuracy_f4p.png",
+      "bytes": 633885
+    },
+    {
+      "file": "forest_f4p.pdf",
+      "bytes": 43253
+    },
+    {
+      "file": "forest_f4p.png",
+      "bytes": 425177
+    },
+    {
+      "file": "overview_arch_f4p.pdf",
+      "bytes": 64419
+    },
+    {
+      "file": "overview_arch_f4p.png",
+      "bytes": 132474
+    },
+    {
+      "file": "refinement_f4p.pdf",
+      "bytes": 44555
+    },
+    {
+      "file": "refinement_f4p.png",
+      "bytes": 431203
+    }
+  ]
+}
