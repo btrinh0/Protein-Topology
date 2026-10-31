@@ -17,7 +17,7 @@ sys.path.insert(0,str(ROOT/"scripts/beat_am"))
 import m7_audit_standalone_rules as audit
 
 OUT=audit.BASE/"disulfide_internal_consistency_20261025"
-REPORT=ROOT/"docs/DISULFIDE_INTERNAL_CONSISTENCY_20261025.md"
+REPORT = OUT/"REPORT.md"
 
 
 def criterion(result):
@@ -123,7 +123,6 @@ def main():
         "The earlier overall Spearman comparison, experimental targeted-error follow-up, and primary controlled-audit conclusions are unchanged. No new model or coefficient was fitted, and no experimental label table was read. An increase in this contrast is not a percentage improvement in predictive accuracy.", "",
         "Reproduction: `scripts/beat_am/m10_disulfide_internal_consistency.py`. Results and input hashes: `results/standalone_multirule_20261025/disulfide_internal_consistency_20261025/internal_consistency.json`."]
     REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
-    (OUT/"REPORT.md").write_text(REPORT.read_text(encoding="utf-8"),encoding="utf-8")
     print(json.dumps(dict(report=str(REPORT),before=before["estimate"],after=after["estimate"],
         interpretation="circular internal consistency only",scope_checks=checks,new_fits=0),indent=2))
 

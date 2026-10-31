@@ -15,7 +15,7 @@ from membrane_rule_audit.panel import (  # noqa: E402
     ALPHABET, NEUTRAL, arm_mean, gain_contrast, load_panel, sha256, stratum_parts,
 )
 
-PLAN = ROOT / "docs" / "METHOD_COMPLETION_PLAN_20261004.json"
+PLAN = ROOT / "config" / "METHOD_COMPLETION_PLAN_20261004.json"
 OUT = ROOT / "results" / "method_completion_20261004"
 SOURCES = {
     "alphamissense": ROOT / "data/processed/gate0/am_full_flank_scores.npz",

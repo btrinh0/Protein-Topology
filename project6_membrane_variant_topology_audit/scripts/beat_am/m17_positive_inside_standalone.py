@@ -23,7 +23,6 @@ BASE=ROOT/'results/standalone_multirule_20261025'
 BENCH=BASE/'benchmark_20261025'
 CACHE=BASE/'label_free_audit_20261025'
 OUT=ROOT/'results/positive_inside_standalone_20261028'
-DOC=ROOT/'docs/POSITIVE_INSIDE_STANDALONE_20261028.md'
 WINDOWS=[5,10,20,60]
 COMPARATORS={'all_uncharged':'ACFGILMNPQSTVWY','polar_neutral':'NQST',
              'hydrophobic':'AFILMV','small':'AGS','aromatic':'FWY'}
@@ -316,7 +315,7 @@ def report(primary,changes,results):
         'Canonical sequences, all native-cell masks, explicit side-code conversion and cached-generation source hashes were checked. A plain-Python estimator independently reproduces every primary-comparator point from the packaged audit. Known-answer direction, null, offset-cancellation and side-reversal checks passed. The original inputs and model/coefficient artifacts are unchanged.','',
         'Runner: `scripts/beat_am/m17_positive_inside_standalone.py`. Results: `results/positive_inside_standalone_20261028/`. The plan, full sensitivity table, per-stratum contributions and verification record are retained there.'])
     text='\n'.join(lines)+'\n'
-    (OUT/'REPORT.md').write_text(text,encoding='utf-8');DOC.write_text(text,encoding='utf-8')
+    (OUT/'REPORT.md').write_text(text,encoding='utf-8')
 
 
 if __name__=='__main__':main()

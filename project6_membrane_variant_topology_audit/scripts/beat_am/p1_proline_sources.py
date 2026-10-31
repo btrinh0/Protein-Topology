@@ -15,7 +15,7 @@ from urllib import request
 ROOT=Path(__file__).resolve().parents[2]
 RAW=ROOT/'data/external/proline_rule_20261025'
 OUT=ROOT/'results/proline_rule_20261025'
-PROTOCOL=ROOT/'docs/PROLINE_TM_PROTOCOL_20261025.json'
+PROTOCOL=ROOT/'config/PROLINE_TM_PROTOCOL_20261025.json'
 
 
 def sha(path):

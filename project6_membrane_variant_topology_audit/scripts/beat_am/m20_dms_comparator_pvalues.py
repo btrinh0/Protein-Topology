@@ -19,7 +19,6 @@ from m4_benchmark_multirule import ABLATIONS,sha,TABLE
 from membrane_rule_audit.refinement import write_json
 
 OUT=ROOT/'results/dms_comparator_pvalues_20261028'
-DOC=ROOT/'docs/DMS_COMPARATOR_PVALUES_20261028.md'
 BENCH=ROOT/'results/standalone_multirule_20261025/benchmark_20261025'
 EXISTING=ROOT/'results/external_predictor_comparison_20261026'
 MAIN=('GEMME','VESPA','VespaG')
@@ -222,7 +221,7 @@ def render(result):
         'Fixed hold-out experiments were archived at the user\'s request with byte-for-byte verification. Their historical outcome exposure remains in archive/fixed_holdout_20261028/. No archived hold-out scores were used to fit or select anything in this calculation.','',
         '## Reproduce','','```powershell','.\\.venv_ml\\Scripts\\python.exe scripts\\beat_am\\m20_dms_comparator_pvalues.py','```','',
         'Full per-assay/per-protein metrics, every configuration comparison, analysis specification, source hashes and independent exact-p verification are saved in results/dms_comparator_pvalues_20261028/.'])
-    text='\n'.join(lines)+'\n';DOC.write_text(text,encoding='utf-8');(OUT/'REPORT.md').write_text(text,encoding='utf-8')
+    text='\n'.join(lines)+'\n';(OUT/'REPORT.md').write_text(text,encoding='utf-8')
 
 
 def main():

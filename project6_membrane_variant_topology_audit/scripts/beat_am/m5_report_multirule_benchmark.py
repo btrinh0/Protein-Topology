@@ -13,7 +13,7 @@ sys.path.insert(0,str(ROOT/"scripts/beat_am"))
 from m4_benchmark_multirule import RULES,ABLATIONS,FULL
 
 OUT = ROOT/"results/standalone_multirule_20261025/benchmark_20261025"
-REPORT = ROOT/"docs/STANDALONE_MULTIRULE_BENCHMARK_20261025.md"
+REPORT = OUT/"REPORT.md"
 LABELS = {"raw":"Raw standalone baseline","positive_inside":"Positive-inside only",
           "charge_burial":"Charge burial","glycosylation_loss":"Glycosylation loss","disulfide_loss":"Disulfide loss"}
 
@@ -188,7 +188,6 @@ def main():
         "- Post-run verification: `BENCHMARK_VERIFICATION.json`.", "",
         "No reserved experimental outcome was opened and no old model artifact or manuscript was overwritten. No new final full-data predictor was selected or released from these comparisons."]
     REPORT.write_text("\n".join(lines)+"\n",encoding="utf-8")
-    (OUT/"REPORT.md").write_text(REPORT.read_text(encoding="utf-8"),encoding="utf-8")
     print(json.dumps(dict(report=str(REPORT),full_cv=full_cv,full_loocv=full_loo,
         add_one_ranking=[dict(rule=r,delta=loo["add_one_rule_to_PI"][r]["delta_spearman"]) for r in ranking]),indent=2))
 

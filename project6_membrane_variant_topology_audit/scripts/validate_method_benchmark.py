@@ -19,7 +19,7 @@ from membrane_rule_audit.panel import (  # noqa: E402
     ALPHABET, NEUTRAL, gain_contrast, sha256, stratum_parts, summarize_parts,
 )
 
-PLAN = ROOT / "docs" / "METHOD_COMPLETION_PLAN_20261004.json"
+PLAN = ROOT / "config" / "METHOD_COMPLETION_PLAN_20261004.json"
 OUT = ROOT / "results" / "method_completion_20261004"
 METHODS = (
     "naive_charge_arm_only", "naive_unstratified_paired",

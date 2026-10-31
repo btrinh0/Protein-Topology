@@ -44,8 +44,8 @@ ALT_TABLE = np.array([[a for a in range(20) if a != r] for r in range(20)], dtyp
 AM_ARCHIVE = ROOT / "data/processed/gate0/am_full_flank_scores.npz"
 ESM_ARCHIVE = ROOT / "data/processed/gate0/esm1b_flank_scores.npz"
 TOPOLOGY = ROOT / "data/raw/topology_viewer.html"
-WHEEL = ROOT / "dist/membrane-rule-audit-v0.1.0-validated-20261004/wheel/membrane_rule_audit-0.1.0-py3-none-any.whl"
-MANIFEST = ROOT / "dist/membrane-rule-audit-v0.1.0-validated-20261004/RELEASE_MANIFEST.json"
+WHEEL = ROOT / "tests/fixtures/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl"
+MANIFEST = ROOT / "tests/fixtures/validated_release/RELEASE_MANIFEST.json"
 WORKING_AUDIT = ROOT / "tools/membrane_rule_audit/audit.py"
 GEOMETRY = ("protein", "position", "side", "distance", "tmd_index", "ref_aa")
 

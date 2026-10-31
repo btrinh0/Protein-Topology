@@ -28,7 +28,6 @@ SOURCES = ROOT / "data/external/predictor_comparison_20261026"
 REFERENCE = ROOT / "data/raw/proteingym/reference_github_main/DMS_substitutions.csv"
 ASSAYS = ROOT / "data/raw/proteingym/v1.3_extracted/DMS_ProteinGym_substitutions"
 OUT = ROOT / "results/external_predictor_comparison_20261026"
-DOC = ROOT / "docs/STANDALONE_EXTERNAL_COMPARISON_20261026.md"
 NEW_EXTERNAL = ("GEMME", "VESPA", "VESPAl", "VespaG")
 REQUESTED_EXTERNAL = ("AlphaMissense", "ESM1b", "GEMME", "VESPA", "VESPAl")
 ALL_EXTERNAL = REQUESTED_EXTERNAL + ("VespaG",)
@@ -437,7 +436,6 @@ def report(results, out):
         "```", "",
         "Outputs: `results/external_predictor_comparison_20261026/`. The result JSON, row-aligned scores, per-assay/per-protein CSVs, paired intervals, download hashes, exclusions, and plan are retained.", "",
         "Sources: [ProteinGym repository](https://github.com/OATML-Markslab/ProteinGym), [official score archive](https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/zero_shot_substitutions_scores.zip), [VESPA](https://github.com/Rostlab/VESPA).", ""]
-    DOC.write_text("\n".join(lines), encoding="utf-8")
     (out/"REPORT.md").write_text("\n".join(lines), encoding="utf-8")
 
 

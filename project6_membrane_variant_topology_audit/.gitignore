@@ -13,3 +13,4 @@ examples/toy/
 dist/
 tools/build/
 tools/*.egg-info/
+docs/

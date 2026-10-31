@@ -3,6 +3,5 @@
 *.yml text eol=lf
 data/** -text
 results/** -text
-docs/** -text
-figures/** -text
-provenance/** -text
+config/** -text
+tests/fixtures/** -text

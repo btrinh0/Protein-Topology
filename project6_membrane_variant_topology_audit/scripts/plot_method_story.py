@@ -13,7 +13,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT / "results/method_completion_20261004"
-OUT = ROOT / "docs/figures/method_completion_20261004"
+OUT = ROOT / "results/figures/method_completion_20261004"
 
 
 def sha(path: Path) -> str:

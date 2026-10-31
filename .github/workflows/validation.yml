@@ -38,7 +38,7 @@ jobs:
           import subprocess
           paths = subprocess.check_output(['git', 'ls-files', '*.py'], text=True).splitlines()
           for filename in paths:
-              if filename.startswith('provenance/'):
+              if filename == 'tests/fixtures/runner_at_measurement_20261026.py':
                   continue
               text = Path(filename).read_text(encoding='utf-8-sig')
               doc = ast.get_docstring(ast.parse(text)) or ''
@@ -62,12 +62,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-analysis.txt
-      - name: Restore the original validated release
-        run: |
-          release=dist/membrane-rule-audit-v0.1.0-validated-20261004
-          mkdir -p "$release/wheel"
-          cp provenance/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl "$release/wheel/"
-          cp provenance/validated_release/RELEASE_MANIFEST.json "$release/"
-          python -m pip install --no-deps --force-reinstall provenance/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl
+      - name: Install the original validated release
+        run: python -m pip install --no-deps --force-reinstall tests/fixtures/validated_release/membrane_rule_audit-0.1.0-py3-none-any.whl
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
       - run: python scripts/paper_support/recheck_final_paper.py --out results/ci_saved_checks.json

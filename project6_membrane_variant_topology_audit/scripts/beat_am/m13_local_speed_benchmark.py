@@ -307,7 +307,6 @@ def write_report(result):
         "Sources: [AlphaMissense availability](https://github.com/google-deepmind/alphamissense), [VESPA](https://github.com/Rostlab/VESPA), [VespaG](https://github.com/JSchlensok/VespaG), [published cached ESM2 inputs](https://zenodo.org/records/11085958).", ""]
     text = "\n".join(lines)
     (OUT/"REPORT.md").write_text(text,encoding="utf-8")
-    (ROOT/"docs/STANDALONE_SPEED_COMPARISON_20261026.md").write_text(text,encoding="utf-8")
 
 
 def main():
@@ -363,7 +362,7 @@ def main():
     for row in result["measurements"]:
         if row["rows"] == len(frame) and row["threads"] == 1:
             print(row["method"],round(row["median_seconds"]*1000,3),"ms",flush=True)
-    print("Report:",ROOT/"docs/STANDALONE_SPEED_COMPARISON_20261026.md",flush=True)
+    print("Report:",OUT/"REPORT.md",flush=True)
 
 
 if __name__ == "__main__":

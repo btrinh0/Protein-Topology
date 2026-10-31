@@ -22,7 +22,7 @@ class TimingProvenanceChecks(unittest.TestCase):
 
     def test_retained_source_matches_the_recorded_measurement_hash(self):
         snapshot = finalizer.timing_snapshot(self.expected)
-        self.assertEqual(snapshot, (ROOT / "provenance/runner_at_measurement_20261026.py").read_bytes())
+        self.assertEqual(snapshot, (ROOT / "tests/fixtures/runner_at_measurement_20261026.py").read_bytes())
 
     def test_current_runner_documentation_does_not_change_measurement_provenance(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -30,15 +30,15 @@ class TimingProvenanceChecks(unittest.TestCase):
             current.write_text('"""A revised publication introduction."""\n', encoding="utf-8")
             with patch.object(speed, "__file__", str(current)):
                 snapshot = finalizer.timing_snapshot(self.expected)
-        self.assertEqual(snapshot, (ROOT / "provenance/runner_at_measurement_20261026.py").read_bytes())
+        self.assertEqual(snapshot, (ROOT / "tests/fixtures/runner_at_measurement_20261026.py").read_bytes())
 
     def test_modified_historical_source_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            provenance = root / "provenance"
-            provenance.mkdir()
-            copied = provenance / "runner_at_measurement_20261026.py"
-            shutil.copy2(ROOT / "provenance/runner_at_measurement_20261026.py", copied)
+            fixtures = root / "tests/fixtures"
+            fixtures.mkdir(parents=True)
+            copied = fixtures / "runner_at_measurement_20261026.py"
+            shutil.copy2(ROOT / "tests/fixtures/runner_at_measurement_20261026.py", copied)
             copied.write_bytes(copied.read_bytes() + b"\n")
             with patch.object(finalizer, "ROOT", root), self.assertRaises(ValueError):
                 finalizer.timing_snapshot(self.expected)
@@ -53,11 +53,9 @@ class TimingProvenanceChecks(unittest.TestCase):
             root = Path(folder)
             out = root / "results/speed"
             out.mkdir(parents=True)
-            (root / "provenance").mkdir()
-            (root / "docs").mkdir()
-            (root / "tests").mkdir()
-            shutil.copy2(ROOT / "provenance/runner_at_measurement_20261026.py",
-                         root / "provenance/runner_at_measurement_20261026.py")
+            (root / "tests/fixtures").mkdir(parents=True)
+            shutil.copy2(ROOT / "tests/fixtures/runner_at_measurement_20261026.py",
+                         root / "tests/fixtures/runner_at_measurement_20261026.py")
             shutil.copy2(Path(__file__), root / "tests/test_speed_comparison.py")
             samples = [dict(threads=1, method="cached_embedding/Standalone_raw", rows=43991,
                             median_seconds=0.1),
@@ -77,6 +75,8 @@ class TimingProvenanceChecks(unittest.TestCase):
             self.assertEqual(updated["source_hashes"], result["source_hashes"])
             self.assertEqual(verification["timing_tests"], historical)
             self.assertEqual(verification["timing_runner_snapshot_sha256"], self.expected)
+            self.assertTrue((out / "CONTRIBUTION.md").is_file())
+            self.assertFalse((root / "docs").exists())
 
 
 class TimingChecks(unittest.TestCase):

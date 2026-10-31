@@ -311,7 +311,6 @@ def audit(census,members,protocol):
             '[GEMME](https://doi.org/10.1093/molbev/msz179).','']
     text='\n'.join(lines)
     (OUT/'REPORT.md').write_text(text,encoding='utf-8')
-    (ROOT/'docs/GEMME_MEMBRANE_CENSUS_20261031.md').write_text(text,encoding='utf-8')
     print(pd.DataFrame(results).to_string(index=False),flush=True)
 
 

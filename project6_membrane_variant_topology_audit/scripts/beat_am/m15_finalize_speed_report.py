@@ -12,7 +12,7 @@ import m13_local_speed_benchmark as speed
 
 def timing_snapshot(expected_sha256):
     """Read the retained timing source and verify its recorded measurement hash."""
-    path = ROOT / "provenance/runner_at_measurement_20261026.py"
+    path = ROOT / "tests/fixtures/runner_at_measurement_20261026.py"
     snapshot = path.read_bytes()
     if hashlib.sha256(snapshot).hexdigest() != expected_sha256:
         raise ValueError("Retained timing source differs from the recorded measurement hash")
@@ -72,9 +72,9 @@ VespaG and VESPA-light were faster than the standalone predictor in the measured
 
 Novelty relative to all prior audit/constraint methods has not been established by these baseline papers alone. A final manuscript should compare the audit definition, controls, context handling, and repair/evaluation design with the closest prior methods before making a first-of-its-kind claim.
 
-Sources: [VESPA](https://doi.org/10.1007/s00439-021-02411-y), [VespaG](https://doi.org/10.1093/bioinformatics/btae621), `docs/STANDALONE_EXTERNAL_COMPARISON_20261026.md`, `docs/STANDALONE_LABEL_FREE_RULE_AUDIT_20261025.md`, and `docs/STANDALONE_SPEED_COMPARISON_20261026.md`.
+Sources: [VESPA](https://doi.org/10.1007/s00439-021-02411-y), [VespaG](https://doi.org/10.1093/bioinformatics/btae621), `results/external_predictor_comparison_20261026/`, `results/standalone_multirule_20261025/label_free_audit_20261025/`, and `results/speed_comparison_20261026/`.
 """
-    (ROOT/"docs/PAPER_CONTRIBUTION_POSITIONING_20261026.md").write_text(text,encoding="utf-8")
+    (out/"CONTRIBUTION.md").write_text(text,encoding="utf-8")
     print("Timing samples unchanged; original source verified; historical test record retained; reports finalized.")
 
 

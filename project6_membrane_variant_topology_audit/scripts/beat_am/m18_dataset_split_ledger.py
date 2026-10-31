@@ -10,7 +10,6 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'results/standalone_multirule_20261025/benchmark_20261025'
 OUT=ROOT/'results/standalone_dataset_accounting_20261028'
-DOC=ROOT/'docs/STANDALONE_DATASET_AND_SPLITS_20261028.md'
 SOURCES={}
 
 
@@ -156,7 +155,7 @@ def main():
         '## Complete inventories and sources','',
         'The accompanying folder `results/standalone_dataset_accounting_20261028/` contains the exact 39-protein list, 44-assay list, five-fold assignments, all 89 historical role statuses, three additional exposure conflicts, and the scheme comparison values. Gene labels are retained exactly as stored in the dataset.','',
         'Source records include the current benchmark plan/results, `features/l1_table.npz` metadata only, the frozen historical role manifest, the old evaluation accession list, the exposure-history register and the option-C protocol. No new model was fitted, new performance benchmark run, new experimental target read or reserved dataset fetched.'])
-    text='\n'.join(lines)+'\n';DOC.write_text(text,encoding='utf-8');(OUT/'REPORT.md').write_text(text,encoding='utf-8')
+    text='\n'.join(lines)+'\n';(OUT/'REPORT.md').write_text(text,encoding='utf-8')
     for filename,digest in SOURCES.items():
         if hashlib.sha256((ROOT/filename).read_bytes()).hexdigest()!=digest:raise AssertionError('Source changed')
     (OUT/'accounting.json').write_text(json.dumps(dict(created_utc=datetime.now(timezone.utc).isoformat(),
