@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the archived release.
+type: software
+title: "membrane-rule-audit: Biological audits of protein variant-effect scores"
+version: 0.1.1
+date-released: 2026-11-16
+authors:
+  - given-names: Brandon
+    family-names: Trinh
+repository-code: https://github.com/btrinh0/Protein-Topology
+url: https://github.com/btrinh0/Protein-Topology
+license: BSD-3-Clause
+keywords:
+  - protein variant effects
+  - membrane proteins
+  - bioinformatics
+  - model auditing
+  - biological constraints
+abstract: >-
+  A Python toolkit for auditing biological patterns in protein variant-effect
+  scores using supplied sequence, membrane-topology, and structural annotations.

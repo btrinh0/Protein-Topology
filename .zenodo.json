@@ -1,0 +1,21 @@
+{
+  "title": "membrane-rule-audit: Biological audits of protein variant-effect scores",
+  "upload_type": "software",
+  "version": "0.1.1",
+  "publication_date": "2026-11-16",
+  "creators": [
+    {
+      "name": "Trinh, Brandon"
+    }
+  ],
+  "access_right": "open",
+  "license": "bsd-3-clause",
+  "keywords": [
+    "protein variant effects",
+    "membrane proteins",
+    "bioinformatics",
+    "model auditing",
+    "biological constraints"
+  ],
+  "description": "membrane-rule-audit is a Python toolkit for assessing whether protein variant-effect scores reflect specified biological expectations. It provides audits for positive-inside preferences, disulfide loss, and proline introduction in transmembrane helices, together with tools for fitting and applying annotation-based score adjustments. The package provides command-line interfaces, synthetic examples, and optional Biopython SeqRecord integration for the positive-inside audit. Audit outputs include contrasts, contributing counts, and uncertainty intervals when the required groups are available."
+}

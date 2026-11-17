@@ -1,7 +1,0 @@
-*.py text eol=lf
-*.md text eol=lf
-*.yml text eol=lf
-data/** -text
-results/** -text
-config/** -text
-tests/fixtures/** -text

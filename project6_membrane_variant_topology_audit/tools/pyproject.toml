@@ -1,14 +1,23 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "membrane-rule-audit"
-version = "0.1.0"
-description = "Reusable within-site analysis of membrane-protein mutation scores"
-readme = {text = "Audit biological-rule contrasts and refinements in protein variant scores.", content-type = "text/plain"}
+version = "0.1.1"
+description = "Audit biological patterns in protein variant scores"
+readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.23"]
+license = "LicenseRef-Biopython OR BSD-3-Clause"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+biopython = ["biopython>=1.85"]
+
+[project.urls]
+Repository = "https://github.com/btrinh0/Protein-Topology"
+Documentation = "https://github.com/btrinh0/Protein-Topology/blob/main/project6_membrane_variant_topology_audit/tools/README.md"
 
 [project.scripts]
 membrane-rule-audit = "membrane_rule_audit.audit:main"
