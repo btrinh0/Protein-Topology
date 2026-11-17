@@ -13,11 +13,11 @@ The expected contrast is -0.30, with 16 contributing sites, 8 strata,
 and 2 proteins. The two proteins have identical planted contrasts.
 The input fixture predates this integration.
 
-After installing the optional extra, run from the repository root:
+After installing the optional extra, run from the package directory:
 
-    python project6_membrane_variant_topology_audit/examples/biopython_positive_inside.py
+    python examples/biopython_positive_inside.py
 
 Copyright (c) 2026, btrinh0. These synthetic fixtures and notes are dual
 licensed under the Biopython License Agreement or BSD 3-Clause; see
-../../tools/LICENSE.
+../../LICENSE.
 
