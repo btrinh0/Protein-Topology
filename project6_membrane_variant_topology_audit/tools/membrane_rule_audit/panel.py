@@ -147,7 +147,7 @@ def run_panel_audit(scores_path: Path, out_dir: Path, model: str,
     contrast = gain_contrast(panel)
     result = summarize_parts(stratum_parts(panel, contrast["penalty"], contrast["eligible"]), draws, seed)
     summary = {
-        "tool": "membrane_rule_audit", "version": "0.1.0", "model": model,
+        "tool": "membrane_rule_audit", "version": "0.1.1", "model": model,
         "scope": "Software demonstration of the existing raw-score comparison",
         "scores": str(Path(scores_path).resolve()), "input_sha256": sha256(scores_path),
         "implementation_sha256": sha256(Path(__file__)),
